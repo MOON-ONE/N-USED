@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-<<<<<<< HEAD
+
 #n-home {
   background-color: red; }
   #n-home .n-title-bar {
@@ -430,6 +430,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 35px;
 }
 
+<<<<<<< Updated upstream
 /* line 150, ../sass/screen.scss */
 #n-nav .n-container {
   height: 100vh;
@@ -503,3 +504,87 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -o-transform: translateY(-25px) translateX(0) rotate(945deg);
   transform: translateY(-25px) translateX(0) rotate(945deg);
 }
+=======
+.n-post .n-account-nav {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  vertical-align: middle;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  position: fixed;
+  margin: 0;
+  padding: 0 0 0 20px;
+  background: #BDC3C7;
+  color: white;
+  font-size: 25px; }
+  .n-post .n-account-nav .post-back-button {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    float: left; }
+
+#n-nav {
+  @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700); }
+  #n-nav .n-container {
+    height: 100vh;
+    background: #000; }
+  #n-nav body {
+    background: #3d566e;
+    color: #ecf0f1;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: center; }
+  #n-nav #hamburger-icon {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    display: block;
+    margin: 100px auto 50px auto; }
+    #n-nav #hamburger-icon .line {
+      display: block;
+      background: #ecf0f1;
+      width: 100px;
+      height: 8px;
+      position: absolute;
+      left: 0;
+      border-radius: 4px;
+      transition: all 0.4s;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s; }
+      #n-nav #hamburger-icon .line.line-1 {
+        top: 0; }
+      #n-nav #hamburger-icon .line.line-2 {
+        top: 50%; }
+      #n-nav #hamburger-icon .line.line-3 {
+        top: 100%; }
+    #n-nav #hamburger-icon:hover .line-1, #n-nav #hamburger-icon:focus .line-1 {
+      transform: translateY(-4px);
+      -webkit-transform: translateY(-4px);
+      -moz-transform: translateY(-4px); }
+    #n-nav #hamburger-icon:hover .line-3, #n-nav #hamburger-icon:focus .line-3 {
+      transform: translateY(4px);
+      -webkit-transform: translateY(4px);
+      -moz-transform: translateY(4px); }
+    #n-nav #hamburger-icon.active .line-1 {
+      transform: translateY(25px) translateX(0) rotate(45deg);
+      -webkit-transform: translateY(25px) translateX(0) rotate(45deg);
+      -moz-transform: translateY(25px) translateX(0) rotate(45deg); }
+    #n-nav #hamburger-icon.active .line-2 {
+      opacity: 0; }
+    #n-nav #hamburger-icon.active .line-3 {
+      transform: translateY(-25px) translateX(0) rotate(-45deg);
+      -webkit-transform: translateY(-25px) translateX(0) rotate(-45deg);
+      -moz-transform: translateY(-25px) translateX(0) rotate(-45deg); }
+  #n-nav h1 {
+    text-transform: uppercase; }
+  #n-nav a {
+    text-decoration: none;
+    color: #95a5a6;
+    margin: 0.5em 1.5em;
+    display: inline-block; }
+    #n-nav a:hover, #n-nav a:focus {
+      color: #ecf0f1; }
+
