@@ -1,5 +1,6 @@
 $(function() {
 
+
 // 总
 $('.n-main .n-container').css('margin-left', 50px);
 // 总完
@@ -32,9 +33,9 @@ $(document).on("click", "#n-home .toggle", function(){
 
 
 // 孙狗
-$(document).on("click","#nav a", function(e){
+$(document).on("click",".n-account-nav a",function(e){
     e.preventDefault();
-    $(".toggle").hide();
+    $(".n-account-toggle").hide();
     var toShow = $(this).attr('href');
     $(toShow).show();
 });
@@ -68,4 +69,3 @@ $(document).on("click", "#n-hamburger-icon", function() {
 
 // 雷狗完
 });
-
