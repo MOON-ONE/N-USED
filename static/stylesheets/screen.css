@@ -106,8 +106,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 148, ../sass/screen.scss */
 #n-nav #n-hamburger-icon {
-  width: 60px;
-  height: 40px;
+  width: 50px;
+  height: 30px;
   position: relative;
   display: block;
   margin: 20px auto 20px auto;
@@ -116,7 +116,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 #n-nav #n-hamburger-icon .n-line {
   display: block;
   background: #ecf0f1;
-  width: 60px;
+  width: 50px;
   height: 2px;
   position: absolute;
   left: 0;
@@ -154,10 +154,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 198, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-1 {
-  -webkit-transform: translateY(20px) translateX(0) rotate(-945deg);
-  -moz-transform: translateY(20px) translateX(0) rotate(-945deg);
-  -o-transform: translateY(20px) translateX(0) rotate(-945deg);
-  transform: translateY(20px) translateX(0) rotate(-945deg);
+  -webkit-transform: translateY(15px) translateX(0) rotate(-945deg);
+  -moz-transform: translateY(15px) translateX(0) rotate(-945deg);
+  -o-transform: translateY(15px) translateX(0) rotate(-945deg);
+  transform: translateY(15px) translateX(0) rotate(-945deg);
 }
 /* line 201, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-2 {
@@ -165,8 +165,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 /* line 204, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-3 {
-  -webkit-transform: translateY(-20px) translateX(0) rotate(945deg);
-  -moz-transform: translateY(-20px) translateX(0) rotate(945deg);
-  -o-transform: translateY(-20px) translateX(0) rotate(945deg);
-  transform: translateY(-20px) translateX(0) rotate(945deg);
+  -webkit-transform: translateY(-15px) translateX(0) rotate(945deg);
+  -moz-transform: translateY(-15px) translateX(0) rotate(945deg);
+  -o-transform: translateY(-15px) translateX(0) rotate(945deg);
+  transform: translateY(-15px) translateX(0) rotate(945deg);
 }
