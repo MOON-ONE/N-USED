@@ -32,9 +32,8 @@
     }
 }
 
-$n-post-nav-height: 60px;
+$n-post-nav-height: 80px;
 $n-post-nav-color: #BDC3C7;
-$n-post-nav-size: 25px;
 
 
 // 王狗
@@ -75,11 +74,15 @@ $n-post-nav-size: 25px;
 	    padding: 0 0 0 20px;
 	    background: $n-post-nav-color;
 	    color: white;
-	    font-size: $n-post-nav-size;
+	    font-size: 25px;
 	    .post-back-button {
 	    	text-decoration: none;
 	    	color: white;
-	    	margin-right: 10px;
+	    	margin-right: 20px;
+	    	float: left;
+	    }
+	    .post-module-code {
+	    	font-size: 35px;
 	    }
 	}
 }
