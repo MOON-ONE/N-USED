@@ -1,3 +1,8 @@
+
+$(function() {
+
+});
+
 // 王狗
 
 
@@ -64,3 +69,4 @@ $(document).on("click","#nav a", function(e){
 
 
 // 雷狗完
+
