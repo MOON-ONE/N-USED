@@ -1,20 +1,24 @@
-<section id="n-account">
+<section id="n-account" class="n-account">
 	<div class="n-container">
 
-	<div class="n-account-nav">
-    <a href="profile">Show content 1</a>
-    <a href="favorite">Show content 2</a>
-    <a href="history">Show content 3</a>
+	<div class="n-account-nav col-md-12">
+	<a href="#" class="n-account-back-button">
+	<i class="fa fa-angle-left fa-2x" style="padding-top: 10px;"></i>
+	</a>
+
+	<div class="n-account-toggle-button">
+    <a href="#profile">Show content 1</a>
+    <a href="#favourite">Show content 2</a>
+    <a href="#history">Show content 3</a>
+    </div>
+
 	</div>
 
-	<div id="content1" class="toggle" style="display:none">show the stuff1</div> 
-	<div id="content2" class="toggle" style="display:none">show the stuff2</div>
-	<div id="content3" class="toggle" style="display:none">show the stuff3</div>
 
   	<div class="row">
 
     <div class="col-sm-4">
-      <i class="fa fa-user"></i>
+      <i class="fa fa-user fa-5x"></i>
     </div>
 
     <div class="col-sm-8">
@@ -23,4 +27,8 @@
 
 	</div>
 	
+
+	<div id="profile" class="n-account-toggle" style="display:none">profile</div> 
+	<div id="favourite" class="n-account-toggle" style="display:none">favourite</div>
+	<div id="history" class="n-account-toggle" style="display:none">history</div>
 </section>
