@@ -1,2 +1,16 @@
 static/.sass-cache
 static/config.codekit
+
+static/sass/screen.scss
+
+static/stylesheets/screen.css
+
+*.css
+
+*.scss
+
+*.css
+
+*.css
+
+*.css
