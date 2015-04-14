@@ -235,7 +235,7 @@ $n-post-text-color: #7F8C8D;
 
 
 
-
+ 
 
 
 // 孙狗
@@ -251,22 +251,28 @@ $n-post-text-color: #7F8C8D;
 	    bottom: 0;
 	    left: 0;
 	    text-align: left;
-	    position: fixed;
 	    margin: 0;
 	    padding: 0 0 0 20px;
-	    background: $n-account-nav-color;
+	    background: rgba(189, 195, 199, 0);
 	    color: white;
-	    font-size: 25px;
+	    font-size: 20px;
 	    .n-account-back-button {
 	    	text-decoration: none;
-	    	color: white;
+	    	color: black;
 	    	margin-right: 20px;
 	    	float: left;
 	    }
+	    .n-account-toggle-button{
+	    	float: right;
+	    }
 	}
+	.n-account-icon{
+			padding: 20px 10px 20px 10px;
+	    	text-align: center;
+	    }
 }
  
- 
+
 
 
 
