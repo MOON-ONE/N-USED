@@ -73,7 +73,7 @@
 #n-post {
 	$n-post-nav-height: 80px;
 	$n-post-nav-color: #BDC3C7;
-	
+
 	.n-post-nav {
 		width: 100%;
 		height: $n-post-nav-height;
@@ -134,17 +134,7 @@
 
 // 雷狗
 #n-nav {
-	$background: #3d566e;
-	$color: #ecf0f1;
-
-	$height-icon: 50px;
-	$width-line: 100px;
-	$height-line: 8px;
-
-	$transition-time: 0.4s;
-	$rotation: -945deg;
-	$translateY: ($height-icon / 2);
-	$translateX: 0;
+	$nav-width: 90px;
 
 
 	.n-container {
@@ -152,43 +142,58 @@
 		background: #000;
 		top: 0;
 		position: fixed;
+		width: $nav-width;
 	}
 
 	#n-hamburger-icon {
-		width: $width-line;
-		height: $height-icon;
+		$icon-height: 40px;
+		$line-width: 60px;
+		$line-height: 2px;
+		$line-color: #ecf0f1;
+
+		$transition-time: 0.4s;
+		$rotation: -945deg;
+		$translateY: ($icon-height / 2);
+		$translateX: 0;
+
+
+		width: $line-width;
+		height: $icon-height;
 		position: relative;
 		display: block;
-		margin: ($height-icon * 2) auto $height-icon auto;
+		margin: 20px auto 20px auto;
 
 		.n-line {
 			display: block;
-			background: $color;
-			width: $width-line;
-			height: $height-line;
+			background: $line-color;
+			width: $line-width;
+			height: $line-height;
 			position: absolute;
 			left: 0;
-			border-radius: ($height-line / 2);
+			border-radius: ($line-height / 2);
 			@include transition(all $transition-time);
 
 			&.n-line-1 {
-			top: 0;
+				top: 0;
 			}
+
 			&.n-line-2 {
-			top: 50%;
+				top: 50%;
 			}
+
 			&.n-line-3 {
-			top: 100%;
+				top: 100%;
 			}
 		}
 		&:hover, &:focus {
 			.n-line-1 {
-				@include transform(translateY($height-line / 2 * -1));
+				@include transform(translateY($line-height / 2 * -1));
 			}
 			.n-line-3 {
-				@include transform(translateY($height-line / 2));
+				@include transform(translateY($line-height / 2));
 			}  
 		}
+
 		&.active {
 			.n-line-1 {
 				@include transform(translateY($translateY) translateX($translateX) rotate($rotation));
