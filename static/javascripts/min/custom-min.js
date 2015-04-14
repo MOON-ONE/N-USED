@@ -1,1 +1,0 @@
-$(document).on("click","#nav a",function(t){t.preventDefault(),$(".toggle").hide();var e=$(this).attr("href");$(e).show()});

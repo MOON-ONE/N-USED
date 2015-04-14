@@ -3,16 +3,10 @@ $(function() {
 
 
 // 王狗
-
-
-
-
-
-
-
-
-
-
+$(document).on("click", "#n-home .toggle", function(){
+	$(this).parent().toggleClass('closed');
+    $(this).prev().focus();
+});
 
 // 王狗完
 
@@ -70,6 +64,5 @@ $(document).on("click", "#n-hamburger-icon", function() {
 
 
 // 雷狗完
-
-
 });
+
