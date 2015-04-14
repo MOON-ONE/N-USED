@@ -69,6 +69,12 @@ $(document).on("click", "#n-hamburger-icon", function() {
 	return false;
 });
 
+$(document).on("click", "div[id^='n-nav-']", function() {
+	var section = $(this).attr('id').substr(6);
+	$(".n-main >div").hide();
+	$("#n-" + section + "-wrapper").css('display', 'inherit');
+	return false;
+});
 
 
 
