@@ -1,10 +1,5 @@
-<<<<<<< Updated upstream
-
 $(function() {
 
-
-=======
->>>>>>> Stashed changes
 // 王狗
 $(document).on("click", "#n-home .toggle", function(){
 	$(this).parent().toggleClass('closed');
@@ -67,8 +62,4 @@ $(document).on("click", "#n-hamburger-icon", function() {
 
 
 // 雷狗完
-<<<<<<< Updated upstream
 });
-
-=======
->>>>>>> Stashed changes
