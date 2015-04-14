@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 64, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 #n-post .n-post-nav {
   width: 100%;
   height: 60px;
@@ -85,33 +85,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 25px;
 }
 
-/* line 119, ../sass/screen.scss */
-#n-nav {
-  @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-}
-/* line 120, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 #n-nav .n-container {
   height: 100vh;
   background: #000;
+  top: 0;
+  position: fixed;
 }
-/* line 139, ../sass/screen.scss */
-#n-nav body {
-  background: #3d566e;
-  color: #ecf0f1;
-  font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-align: center;
-}
-/* line 147, ../sass/screen.scss */
-#n-nav #hamburger-icon {
+/* line 154, ../sass/screen.scss */
+#n-nav #n-hamburger-icon {
   width: 100px;
   height: 50px;
   position: relative;
   display: block;
   margin: 100px auto 50px auto;
 }
-/* line 154, ../sass/screen.scss */
-#n-nav #hamburger-icon .line {
+/* line 161, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line {
   display: block;
   background: #ecf0f1;
   width: 100px;
@@ -119,62 +109,52 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: absolute;
   left: 0;
   border-radius: 4px;
-  transition: all 0.4s;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
-/* line 166, ../sass/screen.scss */
-#n-nav #hamburger-icon .line.line-1 {
+/* line 171, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line.n-line-1 {
   top: 0;
 }
-/* line 169, ../sass/screen.scss */
-#n-nav #hamburger-icon .line.line-2 {
+/* line 174, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line.n-line-2 {
   top: 50%;
 }
-/* line 172, ../sass/screen.scss */
-#n-nav #hamburger-icon .line.line-3 {
+/* line 177, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line.n-line-3 {
   top: 100%;
 }
-/* line 177, ../sass/screen.scss */
-#n-nav #hamburger-icon:hover .line-1, #n-nav #hamburger-icon:focus .line-1 {
-  transform: translateY(-4px);
+/* line 182, ../sass/screen.scss */
+#n-nav #n-hamburger-icon:hover .n-line-1, #n-nav #n-hamburger-icon:focus .n-line-1 {
   -webkit-transform: translateY(-4px);
   -moz-transform: translateY(-4px);
+  -o-transform: translateY(-4px);
+  transform: translateY(-4px);
 }
-/* line 182, ../sass/screen.scss */
-#n-nav #hamburger-icon:hover .line-3, #n-nav #hamburger-icon:focus .line-3 {
-  transform: translateY(4px);
+/* line 185, ../sass/screen.scss */
+#n-nav #n-hamburger-icon:hover .n-line-3, #n-nav #n-hamburger-icon:focus .n-line-3 {
   -webkit-transform: translateY(4px);
   -moz-transform: translateY(4px);
+  -o-transform: translateY(4px);
+  transform: translateY(4px);
 }
-/* line 189, ../sass/screen.scss */
-#n-nav #hamburger-icon.active .line-1 {
-  transform: translateY(25px) translateX(0) rotate(45deg);
-  -webkit-transform: translateY(25px) translateX(0) rotate(45deg);
-  -moz-transform: translateY(25px) translateX(0) rotate(45deg);
+/* line 190, ../sass/screen.scss */
+#n-nav #n-hamburger-icon.active .n-line-1 {
+  -webkit-transform: translateY(25px) translateX(0) rotate(-945deg);
+  -moz-transform: translateY(25px) translateX(0) rotate(-945deg);
+  -o-transform: translateY(25px) translateX(0) rotate(-945deg);
+  transform: translateY(25px) translateX(0) rotate(-945deg);
 }
-/* line 194, ../sass/screen.scss */
-#n-nav #hamburger-icon.active .line-2 {
+/* line 193, ../sass/screen.scss */
+#n-nav #n-hamburger-icon.active .n-line-2 {
   opacity: 0;
 }
-/* line 197, ../sass/screen.scss */
-#n-nav #hamburger-icon.active .line-3 {
-  transform: translateY(-25px) translateX(0) rotate(-45deg);
-  -webkit-transform: translateY(-25px) translateX(0) rotate(-45deg);
-  -moz-transform: translateY(-25px) translateX(0) rotate(-45deg);
-}
-/* line 205, ../sass/screen.scss */
-#n-nav h1 {
-  text-transform: uppercase;
-}
-/* line 208, ../sass/screen.scss */
-#n-nav a {
-  text-decoration: none;
-  color: #95a5a6;
-  margin: 0.5em 1.5em;
-  display: inline-block;
-}
-/* line 213, ../sass/screen.scss */
-#n-nav a:hover, #n-nav a:focus {
-  color: #ecf0f1;
+/* line 196, ../sass/screen.scss */
+#n-nav #n-hamburger-icon.active .n-line-3 {
+  -webkit-transform: translateY(-25px) translateX(0) rotate(945deg);
+  -moz-transform: translateY(-25px) translateX(0) rotate(945deg);
+  -o-transform: translateY(-25px) translateX(0) rotate(945deg);
+  transform: translateY(-25px) translateX(0) rotate(945deg);
 }

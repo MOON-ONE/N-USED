@@ -1,7 +1,6 @@
 
 $(function() {
 
-});
 
 // 王狗
 
@@ -52,8 +51,10 @@ $(function() {
 
 
 // 雷狗
-
-
+$(document).on("click", "#n-hamburger-icon", function() {
+	$(this).toggleClass('active');
+	return false;
+});
 
 
 
@@ -65,3 +66,5 @@ $(function() {
 
 // 雷狗完
 
+
+});
