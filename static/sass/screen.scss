@@ -51,26 +51,46 @@
 // 王狗
 
 #n-home {
-    background-color: red;
+    $bg-color: #333;
+    background-color: $bg-color;
 
     .n-title-bar {
         display: block;
         height: 75px;
 
+
+        .n-title {
+            position: absolute;
+            display: block;
+            color: white;
+            padding: 15px;
+            font-size: 30px;
+            vertical-align: middle;
+            line-height: 1.5em;
+
+            @include xs {
+                display: none;
+            }
+        }
+
+
         $height: 40px;
-        $width: 300px;
+        $width: 70%;
         $border-width: 2px;
         $color: white;
-        $bg-color: #E62878;
         $defualt-transition-function: cubic-bezier(.73,.01,.53,1.38);
         $defualt-animation-timing-function: cubic-bezier(1,.01,.46,1.48);
 
         .search-bar {
             @include transition(all 0.5s cubic-bezier(.7,.03,.17,.97) .25s);
-            position: relative;
+            position: absolute;
             width: $width;
+            @include xs {
+                width: calc(100% - 30px);
+            }
             height: $height;
-            margin: 0 auto;
+            top: 15px;
+            right: 15px;
             input {
                 outline: none;
                 box-shadow: none;
