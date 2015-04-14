@@ -501,17 +501,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     float: left; }
   .n-account .n-account-nav .n-account-toggle-button {
     float: right; }
-.n-account .n-account-icon {
-  padding: 20px 10px 20px 10px;
-  text-align: center; }
-  .n-account .n-account-icon .fa-5x {
-    padding: 0 0 0 20px;
-    font-size: 10em; }
-.n-account .n-account-name {
-  font-size: 50px;
+.n-account .col-sm-4 .fa-5x {
+  float: right;
+  font-size: 10em;
   display: block;
-  float: left;
-  padding: 50px 0 0 10px; }
+  height: 200px;
+  width: 200px;
+  line-height: 200px;
+  border: solid 5px;
+  -moz-border-radius: 30px;
+  /* or 50% */
+  border-radius: 100px;
+  /* or 50% */
+  background-color: white;
+  color: black;
+  text-align: center; }
+.n-account .col-sm-8 .n-account-name {
+  padding: 0 0 0 40px;
+  font-size: 40px; }
 
 #n-nav .n-container {
   height: 100vh;
