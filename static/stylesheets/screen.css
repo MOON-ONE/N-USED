@@ -461,16 +461,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   line-height: 30px;
   vertical-align: middle;
   font-size: 20px;
-  margin-top: 100px;
-  color: #BDC3C7;
+  margin-top: 120px;
+  color: #7F8C8D;
   position: absolute;
   margin-left: 40px; }
-  .n-post .post-textbook-info .info-row .post-label {
-    margin: 0 20px 0 0;
-    float: left; }
-  .n-post .post-textbook-info .info-row .post-input {
-    width: 80%;
-    float: left; }
+  .n-post .post-textbook-info .info-row {
+    color: #BDC3C7;
+    margin-bottom: 15px;
+    border-bottom: solid;
+    border-width: 1px;
+    width: 90%; }
+    .n-post .post-textbook-info .info-row .post-label {
+      color: #7F8C8D;
+      margin: 0 20px 0 0;
+      float: left; }
+    .n-post .post-textbook-info .info-row .post-input {
+      color: #7F8C8D;
+      width: 80%;
+      float: left; }
 
 .n-account .n-account-nav {
   width: 100%;
