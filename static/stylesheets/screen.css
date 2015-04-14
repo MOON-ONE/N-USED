@@ -55,7 +55,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: block; }
     #n-home .n-container .n-title-bar {
       height: 75px;
-      width: 100%; }
+      width: 100%;
+      margin: 0; }
       #n-home .n-container .n-title-bar .n-title {
         display: block;
         color: white;
@@ -72,7 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         -moz-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
         -o-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
         transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
-        position: relative;
+        position: absolute;
         width: 70%;
         height: 40px;
         top: 15px;
