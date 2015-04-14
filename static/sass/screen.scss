@@ -386,6 +386,19 @@ $n-post-text-color: #2C3E50;
 		&.active {
 			width: $nav-active-width;
 		}
+
+		.n-nav-icons {
+			margin-top: 60px;
+			$icon-width : 60px;
+			.n-nav-icon {
+				.fa {
+					font-size: $icon-width;
+					color: #fff;
+				}
+				margin-left: ($nav-width - $icon-width) / 2;
+				margin-bottom: 20px;
+			}
+		}
 	}
 
 	#n-hamburger-icon {
