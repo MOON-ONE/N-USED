@@ -627,9 +627,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 251, ../sass/screen.scss */
 .n-post .post-contact-info {
   text-align: center;
+  margin-top: 120px;
+  color: #2C3E50;
+}
+/* line 255, ../sass/screen.scss */
+.n-post .post-contact-info .post-contact-avatar {
+  margin-bottom: 40px;
+}
+/* line 258, ../sass/screen.scss */
+.n-post .post-contact-info .contact-row {
+  color: #34495E;
+  margin-bottom: 15px;
+}
+/* line 261, ../sass/screen.scss */
+.n-post .post-contact-info .contact-row .contact-name-label {
+  font-size: 25px;
+  color: #2C3E50;
+}
+/* line 265, ../sass/screen.scss */
+.n-post .post-contact-info .contact-row .contact-label {
+  font-size: 20px;
+  color: #2C3E50;
 }
 
-/* line 272, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 .n-account .n-account-nav {
   width: 100%;
   height: 80px;
@@ -645,28 +666,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: white;
   font-size: 20px;
 }
-/* line 286, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 .n-account .n-account-nav .n-account-back-button {
   text-decoration: none;
   color: black;
   margin-right: 20px;
   float: left;
 }
-/* line 292, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 .n-account .n-account-nav .n-account-toggle-button {
   float: right;
 }
-/* line 297, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 .n-account .n-account-icon {
   padding: 20px 10px 20px 10px;
   text-align: center;
 }
-/* line 300, ../sass/screen.scss */
+/* line 317, ../sass/screen.scss */
 .n-account .n-account-icon .fa-5x {
   padding: 0 0 0 20px;
   font-size: 10em;
 }
-/* line 305, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 .n-account .n-account-name {
   font-size: 50px;
   display: block;
@@ -674,7 +695,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 50px 0 0 10px;
 }
 
-/* line 331, ../sass/screen.scss */
+/* line 348, ../sass/screen.scss */
 #n-nav .n-container {
   height: 100vh;
   background: #000;
@@ -682,7 +703,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: fixed;
   width: 90px;
 }
-/* line 339, ../sass/screen.scss */
+/* line 356, ../sass/screen.scss */
 #n-nav #n-hamburger-icon {
   width: 50px;
   height: 30px;
@@ -690,7 +711,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
   margin: 20px auto 20px auto;
 }
-/* line 357, ../sass/screen.scss */
+/* line 374, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line {
   display: block;
   background: #ecf0f1;
@@ -704,44 +725,44 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 367, ../sass/screen.scss */
+/* line 384, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-1 {
   top: 0;
 }
-/* line 371, ../sass/screen.scss */
+/* line 388, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-2 {
   top: 50%;
 }
-/* line 375, ../sass/screen.scss */
+/* line 392, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-3 {
   top: 100%;
 }
-/* line 380, ../sass/screen.scss */
+/* line 397, ../sass/screen.scss */
 #n-nav #n-hamburger-icon:hover .n-line-1, #n-nav #n-hamburger-icon:focus .n-line-1 {
   -webkit-transform: translateY(-1px);
   -moz-transform: translateY(-1px);
   -o-transform: translateY(-1px);
   transform: translateY(-1px);
 }
-/* line 383, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 #n-nav #n-hamburger-icon:hover .n-line-3, #n-nav #n-hamburger-icon:focus .n-line-3 {
   -webkit-transform: translateY(1px);
   -moz-transform: translateY(1px);
   -o-transform: translateY(1px);
   transform: translateY(1px);
 }
-/* line 389, ../sass/screen.scss */
+/* line 406, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-1 {
   -webkit-transform: translateY(15px) translateX(0) rotate(-945deg);
   -moz-transform: translateY(15px) translateX(0) rotate(-945deg);
   -o-transform: translateY(15px) translateX(0) rotate(-945deg);
   transform: translateY(15px) translateX(0) rotate(-945deg);
 }
-/* line 392, ../sass/screen.scss */
+/* line 409, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-2 {
   opacity: 0;
 }
-/* line 395, ../sass/screen.scss */
+/* line 412, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-3 {
   -webkit-transform: translateY(-15px) translateX(0) rotate(945deg);
   -moz-transform: translateY(-15px) translateX(0) rotate(945deg);
