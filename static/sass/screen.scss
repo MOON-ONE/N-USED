@@ -258,11 +258,22 @@ $n-post-text-color: #BDC3C7;
 	    .n-account-toggle-button{
 	    	float: right;
 	    }
+	    
 	}
 	.n-account-icon{
 			padding: 20px 10px 20px 10px;
 	    	text-align: center;
+	    	.fa-5x{
+	    	padding: 0 0 0 20px;
+	    	font-size: 10em;
+	    	}
 	    }
+	.n-account-name{
+			font-size: 50px;
+    		display:block;
+    		float:left;
+    		padding: 50px 0 0 10px;
+	}
 }
  
 
