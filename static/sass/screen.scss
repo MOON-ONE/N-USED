@@ -33,6 +33,20 @@
     }
 }
 
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
 
 // 王狗
 
@@ -136,8 +150,6 @@
             100% { height: $height/2; @include transform(translate(-$height/2, $height/4) rotate(-45deg)); }
         }
     }
-
-
 }
 
 
@@ -156,19 +168,36 @@
 
 
 // 林狗
-.n-post-nav {
-	width: 100%;
-	height: 40px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    text-align: left;
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    color: blue;
+#n-post {
+	$n-post-nav-height: 80px;
+	$n-post-nav-color: #BDC3C7;
+	
+	.n-post-nav {
+		width: 100%;
+		height: $n-post-nav-height;
+		line-height: $n-post-nav-height;
+		vertical-align: middle;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    text-align: left;
+	    position: fixed;
+	    margin: 0;
+	    padding: 0 0 0 20px;
+	    background: $n-post-nav-color;
+	    color: white;
+	    font-size: 25px;
+	    .post-back-button {
+	    	text-decoration: none;
+	    	color: white;
+	    	margin-right: 20px;
+	    	float: left;
+	    }
+	    .post-module-code {
+	    	font-size: 35px;
+	    }
+	}
 }
-
 
  
 
@@ -184,7 +213,9 @@
 
 
 // 孙狗
+#n-account {
 
+}
 
 
 
@@ -200,15 +231,74 @@
 
 
 // 雷狗
+#n-nav {
+	$background: #3d566e;
+	$color: #ecf0f1;
+
+	$height-icon: 50px;
+	$width-line: 100px;
+	$height-line: 8px;
+
+	$transition-time: 0.4s;
+	$rotation: -945deg;
+	$translateY: ($height-icon / 2);
+	$translateX: 0;
 
 
+	.n-container {
+		height: 100vh;
+		background: #000;
+		top: 0;
+		position: fixed;
+	}
 
+	#n-hamburger-icon {
+		width: $width-line;
+		height: $height-icon;
+		position: relative;
+		display: block;
+		margin: ($height-icon * 2) auto $height-icon auto;
 
+		.n-line {
+			display: block;
+			background: $color;
+			width: $width-line;
+			height: $height-line;
+			position: absolute;
+			left: 0;
+			border-radius: ($height-line / 2);
+			@include transition(all $transition-time);
 
-
-
-
-
-
+			&.n-line-1 {
+			top: 0;
+			}
+			&.n-line-2 {
+			top: 50%;
+			}
+			&.n-line-3 {
+			top: 100%;
+			}
+		}
+		&:hover, &:focus {
+			.n-line-1 {
+				@include transform(translateY($height-line / 2 * -1));
+			}
+			.n-line-3 {
+				@include transform(translateY($height-line / 2));
+			}  
+		}
+		&.active {
+			.n-line-1 {
+				@include transform(translateY($translateY) translateX($translateX) rotate($rotation));
+			}
+			.n-line-2 {
+				opacity: 0;
+			}
+			.n-line-3 {
+				@include transform(translateY($translateY * -1) translateX($translateX) rotate($rotation * -1));
+			}
+		}
+	}
+}
 
 // 雷狗完
