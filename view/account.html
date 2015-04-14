@@ -1,26 +1,21 @@
-<section id="n-account">
+<section id="n-account" class="n-account">
 	<div class="n-container">
 
-	<div id="nav">
-    <a href="#content1">Show content 1</a>
-    <a href="#content2">Show content 2</a>
-    <a href="#content3">Show content 3</a>
-</div>
+	<div class="n-account-nav col-md-12">
+	<a href="#" class="n-account-back-button">
+	<i class="fa fa-angle-left fa-2x" style="padding-top: 10px;"></i>
+	</a>
 
-<div id="content1" class="toggle" style="display:none">show the stuff1</div> 
-<div id="content2" class="toggle" style="display:none">show the stuff2</div>
-<div id="content3" class="toggle" style="display:none">show the stuff3</div>
+	<div class="n-account-toggle-button">
+    <a href="#profile">Show content 1</a>
+    <a href="#favourite">Show content 2</a>
+    <a href="#history">Show content 3</a>
+    </div>
+
+	</div>
+
+
   	<div class="row">
-
-//   	<script>
-// $("#nav a").click(function(e){
-//     e.preventDefault();
-//     $(".toggle").hide();
-//     var toShow = $(this).attr('href');
-//     $(toShow).show();
-// });
-
-  	</script>
 
     <div class="col-sm-4">
       <i class="fa fa-user fa-5x"></i>
@@ -32,4 +27,8 @@
 
 	</div>
 	
+
+	<div id="profile" class="n-account-toggle" style="display:none">profile</div> 
+	<div id="favourite" class="n-account-toggle" style="display:none">favourite</div>
+	<div id="history" class="n-account-toggle" style="display:none">history</div>
 </section>
