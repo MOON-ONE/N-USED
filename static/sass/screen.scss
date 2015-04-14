@@ -173,7 +173,7 @@
 // 林狗
 $n-post-nav-height: 80px;
 $n-post-nav-color: #BDC3C7;
-$n-post-text-color: #BDC3C7;
+$n-post-text-color: #7F8C8D;
 .n-post {
 	.n-post-nav {
 		width: 100%;
@@ -202,16 +202,23 @@ $n-post-text-color: #BDC3C7;
 		line-height: 30px;
 		vertical-align: middle;
 		font-size: 20px;
-		margin-top: 100px;
+		margin-top: 120px;
 	    color: $n-post-text-color;
 	    position: absolute;
 	    margin-left: 40px;
 	    .info-row {
+	    	color: $n-post-nav-color;
+	    	margin-bottom: 15px;
+	    	border-bottom: solid;
+	    	border-width: 1px;
+	    	width: 90%;
 		    .post-label {
+		    	color: $n-post-text-color;
 		    	margin: 0 20px 0 0;
 		    	float: left;
 		    }
 		    .post-input {
+		    	color: $n-post-text-color;
 		    	width: 80%;
 		    	float: left;
 		    }
@@ -228,7 +235,7 @@ $n-post-text-color: #BDC3C7;
 
 
 
-
+ 
 
 
 // 孙狗
@@ -244,22 +251,28 @@ $n-post-text-color: #BDC3C7;
 	    bottom: 0;
 	    left: 0;
 	    text-align: left;
-	    position: fixed;
 	    margin: 0;
 	    padding: 0 0 0 20px;
-	    background: $n-account-nav-color;
+	    background: rgba(189, 195, 199, 0);
 	    color: white;
-	    font-size: 25px;
+	    font-size: 20px;
 	    .n-account-back-button {
 	    	text-decoration: none;
-	    	color: white;
+	    	color: black;
 	    	margin-right: 20px;
 	    	float: left;
 	    }
+	    .n-account-toggle-button{
+	    	float: right;
+	    }
 	}
+	.n-account-icon{
+			padding: 20px 10px 20px 10px;
+	    	text-align: center;
+	    }
 }
  
- 
+
 
 
 

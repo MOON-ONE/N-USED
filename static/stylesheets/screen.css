@@ -572,23 +572,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   line-height: 30px;
   vertical-align: middle;
   font-size: 20px;
-  margin-top: 100px;
-  color: #BDC3C7;
+  margin-top: 120px;
+  color: #7F8C8D;
   position: absolute;
   margin-left: 40px;
 }
-/* line 210, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
+.n-post .post-textbook-info .info-row {
+  color: #BDC3C7;
+  margin-bottom: 15px;
+  border-bottom: solid;
+  border-width: 1px;
+  width: 90%;
+}
+/* line 215, ../sass/screen.scss */
 .n-post .post-textbook-info .info-row .post-label {
+  color: #7F8C8D;
   margin: 0 20px 0 0;
   float: left;
 }
-/* line 214, ../sass/screen.scss */
+/* line 220, ../sass/screen.scss */
 .n-post .post-textbook-info .info-row .post-input {
+  color: #7F8C8D;
   width: 80%;
   float: left;
 }
 
-/* line 238, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 .n-account .n-account-nav {
   width: 100%;
   height: 80px;
@@ -598,22 +608,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   bottom: 0;
   left: 0;
   text-align: left;
-  position: fixed;
   margin: 0;
   padding: 0 0 0 20px;
-  background: #BDC3C7;
+  background: rgba(189, 195, 199, 0);
   color: white;
-  font-size: 25px;
+  font-size: 20px;
 }
-/* line 253, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .n-account .n-account-nav .n-account-back-button {
   text-decoration: none;
-  color: white;
+  color: black;
   margin-right: 20px;
   float: left;
 }
+/* line 265, ../sass/screen.scss */
+.n-account .n-account-nav .n-account-toggle-button {
+  float: right;
+}
+/* line 269, ../sass/screen.scss */
+.n-account .n-account-icon {
+  padding: 20px 10px 20px 10px;
+  text-align: center;
+}
 
-/* line 280, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 #n-nav .n-container {
   height: 100vh;
   background: #000;
@@ -621,7 +639,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: fixed;
   width: 90px;
 }
-/* line 288, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 #n-nav #n-hamburger-icon {
   width: 50px;
   height: 30px;
@@ -629,7 +647,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
   margin: 20px auto 20px auto;
 }
-/* line 306, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line {
   display: block;
   background: #ecf0f1;
@@ -643,44 +661,44 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 316, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-1 {
   top: 0;
 }
-/* line 320, ../sass/screen.scss */
+/* line 333, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-2 {
   top: 50%;
 }
-/* line 324, ../sass/screen.scss */
+/* line 337, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-3 {
   top: 100%;
 }
-/* line 329, ../sass/screen.scss */
+/* line 342, ../sass/screen.scss */
 #n-nav #n-hamburger-icon:hover .n-line-1, #n-nav #n-hamburger-icon:focus .n-line-1 {
   -webkit-transform: translateY(-1px);
   -moz-transform: translateY(-1px);
   -o-transform: translateY(-1px);
   transform: translateY(-1px);
 }
-/* line 332, ../sass/screen.scss */
+/* line 345, ../sass/screen.scss */
 #n-nav #n-hamburger-icon:hover .n-line-3, #n-nav #n-hamburger-icon:focus .n-line-3 {
   -webkit-transform: translateY(1px);
   -moz-transform: translateY(1px);
   -o-transform: translateY(1px);
   transform: translateY(1px);
 }
-/* line 338, ../sass/screen.scss */
+/* line 351, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-1 {
   -webkit-transform: translateY(15px) translateX(0) rotate(-945deg);
   -moz-transform: translateY(15px) translateX(0) rotate(-945deg);
   -o-transform: translateY(15px) translateX(0) rotate(-945deg);
   transform: translateY(15px) translateX(0) rotate(-945deg);
 }
-/* line 341, ../sass/screen.scss */
+/* line 354, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-2 {
   opacity: 0;
 }
-/* line 344, ../sass/screen.scss */
+/* line 357, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-3 {
   -webkit-transform: translateY(-15px) translateX(0) rotate(945deg);
   -moz-transform: translateY(-15px) translateX(0) rotate(945deg);
