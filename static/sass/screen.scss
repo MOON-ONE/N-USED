@@ -63,7 +63,7 @@
         .n-title-bar {
             height: 75px;
             width: 100%;
-
+            margin: 0;
 
             .n-title {
                 display: block;
@@ -89,7 +89,7 @@
             .search-bar {
                 display: block;
                 @include transition(all 0.5s cubic-bezier(.7,.03,.17,.97) .25s);
-                position: relative;
+                position: absolute;
                 width: $width;
                 @include xs {
                     width: calc(100% - 30px);
