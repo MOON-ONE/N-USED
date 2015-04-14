@@ -54,9 +54,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
-  margin-left: 90px; }
+  margin-left: 90px;
+  margin-right: 0; }
   .n-main .n-container.active {
-    margin-left: 390px; }
+    margin-left: 390px;
+    margin-right: -390px; }
 
 #n-home .n-container {
   display: block;
@@ -503,7 +505,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       width: 80%;
       float: left; }
 .n-post .post-contact-info {
-  text-align: center; }
+  text-align: center;
+  margin-top: 120px;
+  color: #2C3E50; }
+  .n-post .post-contact-info .post-contact-avatar {
+    margin-bottom: 40px; }
+  .n-post .post-contact-info .contact-row {
+    color: #34495E;
+    margin-bottom: 15px; }
+    .n-post .post-contact-info .contact-row .contact-name-label {
+      font-size: 25px;
+      color: #2C3E50; }
+    .n-post .post-contact-info .contact-row .contact-label {
+      font-size: 20px;
+      color: #2C3E50; }
 
 .n-account .n-account-nav {
   width: 100%;
@@ -522,11 +537,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .n-account .n-account-nav .n-account-back-button {
     text-decoration: none;
     color: black;
-    margin-right: 20px;
+    margin-left: 150px;
     float: left; }
   .n-account .n-account-nav .n-account-toggle-button {
-    float: right; }
-.n-account .col-sm-4 .fa-5x {
+    float: right;
+    margin-right: 80px; }
+.n-account .col-sm-4 .account-profile-pic {
   float: right;
   font-size: 10em;
   display: block;
@@ -542,8 +558,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: black;
   text-align: center; }
 .n-account .col-sm-8 .n-account-name {
-  padding: 0 0 0 40px;
-  font-size: 40px; }
+  position: absolute;
+  padding: 0 0 0 50px;
+  font-size: 40px;
+  margin-top: 90px; }
+.n-account .n-account-profile-info {
+  line-height: 30px;
+  vertical-align: middle;
+  font-size: 20px;
+  margin-top: 100px;
+  margin-left: 220px;
+  color: #2C3E50; }
+  .n-account .n-account-profile-info .info-row {
+    color: #BDC3C7;
+    margin-bottom: 15px;
+    border-bottom: solid;
+    border-width: 1px;
+    width: 90%; }
+    .n-account .n-account-profile-info .info-row .account-label {
+      color: #2C3E50;
+      margin: 0 20px 0 0;
+      float: left; }
 
 #n-nav .n-container {
   height: 100vh;
@@ -557,12 +592,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all 0.4s; }
   #n-nav .n-container.active {
     width: 390px; }
+  #n-nav .n-container .n-nav-icons {
+    margin-top: 60px; }
+    #n-nav .n-container .n-nav-icons .n-nav-icon {
+      margin-left: 15px;
+      margin-bottom: 20px; }
+      #n-nav .n-container .n-nav-icons .n-nav-icon .fa {
+        font-size: 60px;
+        color: #fff; }
 #n-nav #n-hamburger-icon {
   width: 50px;
   height: 30px;
   position: relative;
   display: block;
-  margin: 20px auto 20px auto; }
+  margin: 20px auto 20px 20px; }
   #n-nav #n-hamburger-icon .n-line {
     display: block;
     background: #ecf0f1;
