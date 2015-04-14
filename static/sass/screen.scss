@@ -250,6 +250,23 @@ $n-post-text-color: #2C3E50;
 	}
 	.post-contact-info {
 		text-align: center;
+		margin-top: 120px;
+	    color: $n-post-text-color;
+	    .post-contact-avatar {
+	    	margin-bottom: 40px;
+	    }
+	    .contact-row {
+	    	color: $n-post-nav-color;
+	    	margin-bottom: 15px;
+		    .contact-name-label {
+		    	font-size: 25px;
+		    	color: $n-post-text-color;
+		    }
+		    .contact-label {
+		    	font-size: 20px;
+		    	color: $n-post-text-color;
+		    }
+		}
 	}
 }
  
