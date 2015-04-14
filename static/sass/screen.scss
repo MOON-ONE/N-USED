@@ -172,8 +172,8 @@
 
 // 林狗
 $n-post-nav-height: 80px;
-$n-post-nav-color: #BDC3C7;
-$n-post-text-color: #7F8C8D;
+$n-post-nav-color: #34495E;
+$n-post-text-color: #2C3E50;
 .n-post {
 	.n-post-nav {
 		width: 100%;
@@ -204,8 +204,7 @@ $n-post-text-color: #7F8C8D;
 		font-size: 20px;
 		margin-top: 120px;
 	    color: $n-post-text-color;
-	    position: absolute;
-	    margin-left: 40px;
+	    margin-left: 50px;
 	    .info-row {
 	    	color: $n-post-nav-color;
 	    	margin-bottom: 15px;
@@ -225,7 +224,7 @@ $n-post-text-color: #7F8C8D;
 		}
 	}
 	.post-contact-info {
-		
+		text-align: center;
 	}
 }
  
