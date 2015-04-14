@@ -96,76 +96,77 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 35px;
 }
 
-/* line 150, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 #n-nav .n-container {
   height: 100vh;
   background: #000;
   top: 0;
   position: fixed;
+  width: 90px;
 }
-/* line 157, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 #n-nav #n-hamburger-icon {
-  width: 100px;
-  height: 50px;
+  width: 60px;
+  height: 40px;
   position: relative;
   display: block;
-  margin: 100px auto 50px auto;
+  margin: 20px auto 20px auto;
 }
-/* line 164, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line {
   display: block;
   background: #ecf0f1;
-  width: 100px;
-  height: 8px;
+  width: 60px;
+  height: 2px;
   position: absolute;
   left: 0;
-  border-radius: 4px;
+  border-radius: 1px;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 174, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-1 {
   top: 0;
 }
-/* line 177, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-2 {
   top: 50%;
 }
-/* line 180, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-3 {
   top: 100%;
 }
-/* line 185, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 #n-nav #n-hamburger-icon:hover .n-line-1, #n-nav #n-hamburger-icon:focus .n-line-1 {
-  -webkit-transform: translateY(-4px);
-  -moz-transform: translateY(-4px);
-  -o-transform: translateY(-4px);
-  transform: translateY(-4px);
+  -webkit-transform: translateY(-1px);
+  -moz-transform: translateY(-1px);
+  -o-transform: translateY(-1px);
+  transform: translateY(-1px);
 }
-/* line 188, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 #n-nav #n-hamburger-icon:hover .n-line-3, #n-nav #n-hamburger-icon:focus .n-line-3 {
-  -webkit-transform: translateY(4px);
-  -moz-transform: translateY(4px);
-  -o-transform: translateY(4px);
-  transform: translateY(4px);
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -o-transform: translateY(1px);
+  transform: translateY(1px);
 }
-/* line 193, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-1 {
-  -webkit-transform: translateY(25px) translateX(0) rotate(-945deg);
-  -moz-transform: translateY(25px) translateX(0) rotate(-945deg);
-  -o-transform: translateY(25px) translateX(0) rotate(-945deg);
-  transform: translateY(25px) translateX(0) rotate(-945deg);
+  -webkit-transform: translateY(20px) translateX(0) rotate(-945deg);
+  -moz-transform: translateY(20px) translateX(0) rotate(-945deg);
+  -o-transform: translateY(20px) translateX(0) rotate(-945deg);
+  transform: translateY(20px) translateX(0) rotate(-945deg);
 }
-/* line 196, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-2 {
   opacity: 0;
 }
-/* line 199, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-3 {
-  -webkit-transform: translateY(-25px) translateX(0) rotate(945deg);
-  -moz-transform: translateY(-25px) translateX(0) rotate(945deg);
-  -o-transform: translateY(-25px) translateX(0) rotate(945deg);
-  transform: translateY(-25px) translateX(0) rotate(945deg);
+  -webkit-transform: translateY(-20px) translateX(0) rotate(945deg);
+  -moz-transform: translateY(-20px) translateX(0) rotate(945deg);
+  -o-transform: translateY(-20px) translateX(0) rotate(945deg);
+  transform: translateY(-20px) translateX(0) rotate(945deg);
 }
