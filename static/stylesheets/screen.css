@@ -50,19 +50,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block; }
 
 #n-home {
-  background-color: red; }
+  background-color: #333; }
   #n-home .n-title-bar {
     display: block;
     height: 75px; }
+    #n-home .n-title-bar .n-title {
+      position: absolute;
+      display: block;
+      color: white;
+      padding: 15px;
+      font-size: 30px;
+      vertical-align: middle;
+      line-height: 1.5em; }
+      @media only screen and (max-width: 767px) {
+        #n-home .n-title-bar .n-title {
+          display: none; } }
     #n-home .n-title-bar .search-bar {
       -webkit-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
       -moz-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
       -o-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
       transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
-      position: relative;
-      width: 300px;
+      position: absolute;
+      width: 70%;
       height: 40px;
-      margin: 0 auto; }
+      top: 15px;
+      right: 15px; }
+      @media only screen and (max-width: 767px) {
+        #n-home .n-title-bar .search-bar {
+          width: calc(100% - 30px); } }
       #n-home .n-title-bar .search-bar input {
         outline: none;
         box-shadow: none;
@@ -88,7 +103,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         top: 0;
         border-radius: 40px; }
         #n-home .n-title-bar .search-bar .toggle .toggle:after, #n-home .n-title-bar .search-bar .toggle .toggle:before {
-          border-color: #ee6da3; }
+          border-color: #595959; }
       #n-home .n-title-bar .search-bar .toggle:after, #n-home .n-title-bar .search-bar .toggle:before {
         content: '';
         display: block;
@@ -118,7 +133,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       #n-home .n-title-bar .search-bar.closed {
         width: 40px; }
         #n-home .n-title-bar .search-bar.closed input {
-          color: #E62878; }
+          color: #333; }
         #n-home .n-title-bar .search-bar.closed .toggle:before {
           -moz-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
           -webkit-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
