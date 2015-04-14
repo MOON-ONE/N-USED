@@ -5,7 +5,7 @@
                 <span class="n-title">N-USED</span>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <div class="search-bar">
+                <div class="search-bar closed">
                     <input type="text" ng-model="BookSearchQuery">
                     <div class="toggle"></div>
                 </div>
@@ -25,7 +25,7 @@
                     </tr>
                 </thead>
                 <tbody>
-	                <tr ng-repeat="book in books | filter: BookSearchQuery | orderBy: orderList">
+	                <tr ng-repeat="book in books | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
 	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
 	                    <td data-title="Title">{{ book.title }}</td>
 	                    <td data-title="Condition">{{ book.condition.rank }}</td>
