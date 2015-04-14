@@ -94,7 +94,6 @@
                 .toggle:after, .toggle:before { border-color: lighten($bg-color, 15); }
             }
             .toggle:after, .toggle:before {
-                @include transition;
                 content:'';
                 display: block;
                 position: absolute;
