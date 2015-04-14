@@ -212,11 +212,13 @@
 
 
 // 孙狗
-.n-post {
+.n-account {
+	$n-account-nav-height: 80px;
+	$n-account-nav-color: #BDC3C7;
 	.n-account-nav{
 		width: 100%;
-		height: $n-post-nav-height;
-		line-height: $n-post-nav-height;
+		height: $n-account-nav-height;
+		line-height: $n-account-nav-height;
 		vertical-align: middle;
 	    top: 0;
 	    bottom: 0;
@@ -225,10 +227,10 @@
 	    position: fixed;
 	    margin: 0;
 	    padding: 0 0 0 20px;
-	    background: $n-post-nav-color;
+	    background: $n-account-nav-color;
 	    color: white;
 	    font-size: 25px;
-	    .post-back-button {
+	    .n-account-back-button {
 	    	text-decoration: none;
 	    	color: white;
 	    	margin-right: 20px;
