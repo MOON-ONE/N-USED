@@ -75,8 +75,10 @@ $n-post-nav-size: 25px;
 	    background: $n-post-nav-color;
 	    color: white;
 	    font-size: $n-post-nav-size;
-	    .n-back-button {
-	    	
+	    .post-back-button {
+	    	text-decoration: none;
+	    	color: white;
+	    	margin-right: 10px;
 	    }
 	}
 }
