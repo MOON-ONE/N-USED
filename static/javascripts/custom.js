@@ -1,14 +1,8 @@
 // 王狗
-
-
-
-
-
-
-
-
-
-
+$(document).on("click", "#n-home .toggle", function(){
+	$(this).parent().toggleClass('closed');
+    $(this).prev().focus();
+});
 
 // 王狗完
 
