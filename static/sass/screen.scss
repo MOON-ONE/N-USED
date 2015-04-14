@@ -32,8 +32,6 @@
     }
 }
 
-$n-post-nav-height: 80px;
-$n-post-nav-color: #BDC3C7;
 
 
 // 王狗
@@ -59,22 +57,23 @@ $n-post-nav-color: #BDC3C7;
 
 
 // 林狗
+$n-post-nav-height: 80px;
+$n-post-nav-color: #BDC3C7;
+$n-post-text-color: #BDC3C7;
 .n-post {
 	.n-post-nav {
 		width: 100%;
 		height: $n-post-nav-height;
 		line-height: $n-post-nav-height;
 		vertical-align: middle;
-	    top: 0;
-	    bottom: 0;
-	    left: 0;
 	    text-align: left;
-	    position: fixed;
+	    position: absolute;
 	    margin: 0;
 	    padding: 0 0 0 20px;
 	    background: $n-post-nav-color;
 	    color: white;
 	    font-size: 25px;
+	    display: block;
 	    .post-back-button {
 	    	text-decoration: none;
 	    	color: white;
@@ -84,6 +83,25 @@ $n-post-nav-color: #BDC3C7;
 	    .post-module-code {
 	    	font-size: 35px;
 	    }
+	}
+	.post-textbook-info {
+		line-height: 30px;
+		vertical-align: middle;
+		font-size: 20px;
+		margin-top: 100px;
+	    color: $n-post-text-color;
+	    position: absolute;
+	    margin-left: 40px;
+	    .info-row {
+		    .post-label {
+		    	margin: 0 20px 0 0;
+		    	float: left;
+		    }
+		    .post-input {
+		    	width: 80%;
+		    	float: left;
+		    }
+		}
 	}
 }
 
