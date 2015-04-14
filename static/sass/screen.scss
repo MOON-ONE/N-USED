@@ -90,10 +90,7 @@
                 display: block;
                 @include transition(all 0.5s cubic-bezier(.7,.03,.17,.97) .25s);
                 position: absolute;
-                width: $width;
-                @include xs {
-                    width: calc(100% - 30px);
-                }
+                width: calc(100% - 30px);
                 height: $height;
                 top: 15px;
                 right: 15px;

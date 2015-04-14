@@ -74,13 +74,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         -o-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
         transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
         position: absolute;
-        width: 70%;
+        width: calc(100% - 30px);
         height: 40px;
         top: 15px;
         right: 15px; }
-        @media only screen and (max-width: 767px) {
-          #n-home .n-container .n-title-bar .search-bar {
-            width: calc(100% - 30px); } }
         #n-home .n-container .n-title-bar .search-bar input {
           outline: none;
           box-shadow: none;
