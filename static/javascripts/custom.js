@@ -1,5 +1,8 @@
-
 $(function() {
+
+// 总
+$('.n-main .n-container').css('margin-left', 50px);
+// 总完
 
 
 // 王狗
