@@ -84,6 +84,110 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 69, ../sass/screen.scss */
 #n-home {
+<<<<<<< HEAD
+  background-color: #333; }
+  #n-home .n-container {
+    display: block; }
+    #n-home .n-container .n-title-bar {
+      height: 75px;
+      width: 100%;
+      margin: 0; }
+      #n-home .n-container .n-title-bar .n-title {
+        display: block;
+        color: white;
+        padding: 15px;
+        font-size: 30px;
+        vertical-align: middle;
+        line-height: 1.5em; }
+        @media only screen and (max-width: 767px) {
+          #n-home .n-container .n-title-bar .n-title {
+            display: none; } }
+      #n-home .n-container .n-title-bar .search-bar {
+        display: block;
+        -webkit-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+        -moz-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+        -o-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+        transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+        position: absolute;
+        width: calc(100% - 30px);
+        height: 40px;
+        top: 15px;
+        right: 15px; }
+        #n-home .n-container .n-title-bar .search-bar input {
+          outline: none;
+          box-shadow: none;
+          height: 40px;
+          line-height: 40px;
+          width: 100%;
+          padding: 0em 1em;
+          box-sizing: border-box;
+          background: transparent;
+          color: white;
+          border: 2px solid white;
+          border-radius: 40px; }
+        #n-home .n-container .n-title-bar .search-bar .toggle {
+          -webkit-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+          -moz-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+          -o-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+          transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          right: 0;
+          top: 0;
+          border-radius: 40px; }
+          #n-home .n-container .n-title-bar .search-bar .toggle .toggle:after, #n-home .n-container .n-title-bar .search-bar .toggle .toggle:before {
+            border-color: #595959; }
+        #n-home .n-container .n-title-bar .search-bar .toggle:after, #n-home .n-container .n-title-bar .search-bar .toggle:before {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 0;
+          width: 0;
+          height: 20px;
+          border-left: 2px solid white;
+          border-radius: 2px;
+          top: 0; }
+        #n-home .n-container .n-title-bar .search-bar .toggle:before {
+          -moz-animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+          -webkit-animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+          animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+          -webkit-transform: translate(-20px, 10px) rotate(45deg);
+          -moz-transform: translate(-20px, 10px) rotate(45deg);
+          -o-transform: translate(-20px, 10px) rotate(45deg);
+          transform: translate(-20px, 10px) rotate(45deg); }
+        #n-home .n-container .n-title-bar .search-bar .toggle:after {
+          -moz-animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+          -webkit-animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+          animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+          -webkit-transform: translate(-20px, 10px) rotate(-45deg);
+          -moz-transform: translate(-20px, 10px) rotate(-45deg);
+          -o-transform: translate(-20px, 10px) rotate(-45deg);
+          transform: translate(-20px, 10px) rotate(-45deg); }
+        #n-home .n-container .n-title-bar .search-bar.closed {
+          width: 40px; }
+          #n-home .n-container .n-title-bar .search-bar.closed input {
+            color: #333; }
+          #n-home .n-container .n-title-bar .search-bar.closed .toggle:before {
+            -moz-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+            -webkit-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+            animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+            height: 0px;
+            -webkit-transform: translate(-8px, 8px) rotate(45deg);
+            -moz-transform: translate(-8px, 8px) rotate(45deg);
+            -o-transform: translate(-8px, 8px) rotate(45deg);
+            transform: translate(-8px, 8px) rotate(45deg); }
+          #n-home .n-container .n-title-bar .search-bar.closed .toggle:after {
+            -moz-animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+            -webkit-animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+            animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+            height: 20px;
+            -webkit-transform: translate(0, 30px) rotate(-45deg);
+            -moz-transform: translate(0, 30px) rotate(-45deg);
+            -o-transform: translate(0, 30px) rotate(-45deg);
+            transform: translate(0, 30px) rotate(-45deg); }
+=======
   background-color: #333;
 }
 /* line 73, ../sass/screen.scss */
@@ -224,6 +328,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -o-transform: translate(0, 30px) rotate(-45deg);
   transform: translate(0, 30px) rotate(-45deg);
 }
+>>>>>>> 764ed2a2c800f48e54551e6226d880a74b473c3e
 @-moz-keyframes close-one {
   0% {
     height: 20px;
