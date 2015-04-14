@@ -47,8 +47,21 @@
 	transform: $transform;
 }
 
-// 总
+$nav-width: 90px;
+$nav-active-width: 390px;
+$container-transition-time: 0.4s;
+ 
 
+// 总
+.n-main .n-container {
+	@include transition(all $container-transition-time);
+	margin-left: $nav-width;
+	margin-right: 0;
+	&.active {
+		margin-left: $nav-active-width;
+		margin-right: -$nav-active-width;
+	}
+}
 // 总完
 
 
@@ -90,10 +103,7 @@
                 display: block;
                 @include transition(all 0.5s cubic-bezier(.7,.03,.17,.97) .25s);
                 position: absolute;
-                width: $width;
-                @include xs {
-                    width: calc(100% - 30px);
-                }
+                width: calc(100% - 30px);
                 height: $height;
                 top: 15px;
                 right: 15px;
@@ -286,6 +296,8 @@ $n-post-text-color: #2C3E50;
 .n-account {
 	$n-account-nav-height: 80px;
 	$n-account-nav-color: #BDC3C7;
+	$n-account-text-color: #2C3E50;
+
 	.n-account-nav{
 		width: 100%;
 		height: $n-account-nav-height;
@@ -303,27 +315,65 @@ $n-post-text-color: #2C3E50;
 	    .n-account-back-button {
 	    	text-decoration: none;
 	    	color: black;
-	    	margin-right: 20px;
+	    	margin-left: 150px;
 	    	float: left;
+
 	    }
 	    .n-account-toggle-button{
 	    	float: right;
+	    	margin-right: 80px;
 	    }
 
 	}
-	.n-account-icon{
-			padding: 20px 10px 20px 10px;
-	    	text-align: center;
-	    	.fa-5x{
-	    	padding: 0 0 0 20px;
+	.col-sm-4{
+	    	.account-profile-pic{
+	    	float:right;
+	    	// margin:0 auto;
 	    	font-size: 10em;
+
+
+    		display: block;
+    		height: 200px;
+    		width: 200px;
+    		line-height: 200px;
+    		border:solid 5px ;
+
+    		-moz-border-radius: 30px; /* or 50% */
+    		border-radius: 100px; /* or 50% */
+
+    		background-color: white;
+    		color: black;
+    		text-align: center;
 	    	}
 	    }
-	.n-account-name{
-			font-size: 50px;
-    		display:block;
-    		float:left;
-    		padding: 50px 0 0 10px;
+	.col-sm-8{
+		.n-account-name{
+			position:absolute;
+			padding: 0 0 0 50px;
+			font-size: 40px;
+			margin-top: 90px;
+		}	
+	}
+
+	.n-account-profile-info {
+		line-height: 30px;
+		vertical-align: middle;
+		font-size: 20px;
+		margin-top: 100px;
+		margin-left: 220px;
+	    color: $n-account-text-color;
+	    .info-row {
+	    	color: $n-account-nav-color;
+	    	margin-bottom: 15px;
+	    	border-bottom: solid;
+	    	border-width: 1px;
+	    	width: 90%;
+		    .account-label {
+		    	color: $n-account-text-color;
+		    	margin: 0 20px 0 0;
+		    	float: left;
+		    }
+		}
 	}
 }
  
@@ -342,15 +392,30 @@ $n-post-text-color: #2C3E50;
 
 // 雷狗
 #n-nav {
-	$nav-width: 90px;
-
-
 	.n-container {
 		height: 100vh;
 		background: #000;
 		top: 0;
 		position: fixed;
 		width: $nav-width;
+		@include transition(all $container-transition-time);
+
+		&.active {
+			width: $nav-active-width;
+		}
+
+		.n-nav-icons {
+			margin-top: 60px;
+			$icon-width : 60px;
+			.n-nav-icon {
+				.fa {
+					font-size: $icon-width;
+					color: #fff;
+				}
+				margin-left: ($nav-width - $icon-width) / 2;
+				margin-bottom: 20px;
+			}
+		}
 	}
 
 	#n-hamburger-icon {
@@ -359,7 +424,6 @@ $n-post-text-color: #2C3E50;
 		$line-height: 2px;
 		$line-color: #ecf0f1;
 
-		$transition-time: 0.4s;
 		$rotation: -945deg;
 		$translateY: ($icon-height / 2);
 		$translateX: 0;
@@ -369,7 +433,7 @@ $n-post-text-color: #2C3E50;
 		height: $icon-height;
 		position: relative;
 		display: block;
-		margin: 20px auto 20px auto;
+		margin: 20px auto 20px ($nav-width - $line-width) / 2;
 
 		.n-line {
 			display: block;
@@ -379,7 +443,7 @@ $n-post-text-color: #2C3E50;
 			position: absolute;
 			left: 0;
 			border-radius: ($line-height / 2);
-			@include transition(all $transition-time);
+			@include transition(all $container-transition-time);
 
 			&.n-line-1 {
 				top: 0;
