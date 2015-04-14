@@ -279,6 +279,7 @@ $n-post-text-color: #2C3E50;
 .n-account {
 	$n-account-nav-height: 80px;
 	$n-account-nav-color: #BDC3C7;
+	$n-account-text-color: #2C3E50;
 
 	.n-account-nav{
 		width: 100%;
@@ -297,11 +298,13 @@ $n-post-text-color: #2C3E50;
 	    .n-account-back-button {
 	    	text-decoration: none;
 	    	color: black;
-	    	margin-right: 20px;
+	    	margin-left: 150px;
 	    	float: left;
+
 	    }
 	    .n-account-toggle-button{
 	    	float: right;
+	    	margin-right: 80px;
 	    }
 
 	}
@@ -328,11 +331,33 @@ $n-post-text-color: #2C3E50;
 	    }
 	.col-sm-8{
 		.n-account-name{
-			padding: 0 0 0 40px;
+			position:absolute;
+			padding: 0 0 0 50px;
 			font-size: 40px;
+			margin-top: 90px;
 		}	
 	}
-	
+
+	.n-account-profile-info {
+		line-height: 30px;
+		vertical-align: middle;
+		font-size: 20px;
+		margin-top: 100px;
+		margin-left: 220px;
+	    color: $n-account-text-color;
+	    .info-row {
+	    	color: $n-account-nav-color;
+	    	margin-bottom: 15px;
+	    	border-bottom: solid;
+	    	border-width: 1px;
+	    	width: 90%;
+		    .account-label {
+		    	color: $n-account-text-color;
+		    	margin: 0 20px 0 0;
+		    	float: left;
+		    }
+		}
+	}
 }
  
 
