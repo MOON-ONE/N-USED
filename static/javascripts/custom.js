@@ -20,8 +20,6 @@ $(document).on("click", "#n-home .toggle", function(){
     $(this).prev().focus();
 });
 
-$("#n-home table").floatThead();
-
 // 王狗完
 
 
