@@ -31,7 +31,12 @@
 
 
 // 孙狗
-
+$(document).on("click","#nav a", function(e){
+    e.preventDefault();
+    $(".toggle").hide();
+    var toShow = $(this).attr('href');
+    $(toShow).show();
+});
 
 
 
