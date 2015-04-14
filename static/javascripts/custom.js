@@ -1,3 +1,7 @@
+
+$(function() {
+
+
 // 王狗
 $(document).on("click", "#n-home .toggle", function(){
 	$(this).parent().toggleClass('closed');
@@ -25,7 +29,12 @@ $(document).on("click", "#n-home .toggle", function(){
 
 
 // 孙狗
-
+$(document).on("click","#nav a", function(e){
+    e.preventDefault();
+    $(".toggle").hide();
+    var toShow = $(this).attr('href');
+    $(toShow).show();
+});
 
 
 
@@ -41,8 +50,10 @@ $(document).on("click", "#n-home .toggle", function(){
 
 
 // 雷狗
-
-
+$(document).on("click", "#n-hamburger-icon", function() {
+	$(this).toggleClass('active');
+	return false;
+});
 
 
 
@@ -53,3 +64,5 @@ $(document).on("click", "#n-home .toggle", function(){
 
 
 // 雷狗完
+});
+
