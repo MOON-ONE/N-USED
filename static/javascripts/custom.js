@@ -56,9 +56,23 @@ $(document).on("click",".n-account-nav a",function(e){
     $(toShow).show();
 });
 
+$(document).on("click",".n-account-edit-info", function(){
 
+            var $this = $(this);
+            var text = $this.text();
+            if(text=="Edit"){
+                $this.text("Cancel");
+            }
+                        else{
+                             $this.text("Edit");
+                        }
+            $(".account-label").toggle();
+        });
 
+        $("input.account-label").change(function(){
+            $(this).prev().text($(this).text());
 
+        });
 
 
 // 孙狗完

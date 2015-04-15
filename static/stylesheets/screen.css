@@ -593,7 +593,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   line-height: 30px;
   vertical-align: middle;
   font-size: 20px;
-  margin-top: 100px;
+  margin-top: 60px;
   margin-left: 220px;
   color: #2C3E50; }
   .n-account .n-account-profile-info .info-row {
@@ -606,10 +606,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       color: #2C3E50;
       margin: 0 20px 0 0;
       float: left; }
+    .n-account .n-account-profile-info .info-row .account-label-title {
+      color: #2C3E50;
+      margin: 0 20px 0 0;
+      float: left; }
 .n-account .n-account-edit-info {
   width: 100px;
   height: 50px;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: 380px; }
 
 #n-nav .n-container {
