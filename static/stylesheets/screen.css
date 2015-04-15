@@ -67,34 +67,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .n-main .n-container {
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
   margin-left: 90px;
   margin-right: 0;
+  position: relative;
 }
-/* line 60, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 .n-main .n-container.active {
   margin-left: 390px;
   margin-right: -390px;
 }
+/* line 70, ../sass/screen.scss */
+.n-main section {
+  overflow-x: hidden;
+}
 
-/* line 72, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 #n-home .n-container {
   display: block;
   color: black;
 }
-/* line 75, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 #n-home .n-container .n-title-bar {
   background-color: #333;
   height: 70px;
   width: 100%;
   margin: 0;
 }
-/* line 81, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .n-title {
   display: block;
   color: white;
@@ -104,16 +110,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   line-height: 1.5em;
 }
 @media only screen and (max-width: 767px) {
-  /* line 81, ../sass/screen.scss */
+  /* line 90, ../sass/screen.scss */
   #n-home .n-container .n-title-bar .n-title {
     display: none;
   }
 }
-/* line 102, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .search-bar {
   display: block;
   -webkit-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
   -moz-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+  -ms-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
   -o-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
   transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
   position: absolute;
@@ -122,7 +129,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   top: 15px;
   right: 15px;
 }
-/* line 110, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .search-bar input {
   outline: none;
   box-shadow: none;
@@ -136,10 +143,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border: 2px solid white;
   border-radius: 40px;
 }
-/* line 123, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .search-bar .toggle {
   -webkit-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
   -moz-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+  -ms-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
   -o-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
   transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
   position: absolute;
@@ -150,11 +158,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   top: 0;
   border-radius: 40px;
 }
-/* line 130, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .search-bar .toggle .toggle:after, #n-home .n-container .n-title-bar .search-bar .toggle .toggle:before {
   border-color: #595959;
 }
-/* line 132, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .search-bar .toggle:after, #n-home .n-container .n-title-bar .search-bar .toggle:before {
   content: '';
   display: block;
@@ -166,35 +174,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-radius: 2px;
   top: 0;
 }
-/* line 141, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .search-bar .toggle:before {
   -moz-animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
   -webkit-animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
   animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
   -webkit-transform: translate(-20px, 10px) rotate(45deg);
   -moz-transform: translate(-20px, 10px) rotate(45deg);
+  -ms-transition: translate(-20px, 10px) rotate(45deg);
   -o-transform: translate(-20px, 10px) rotate(45deg);
   transform: translate(-20px, 10px) rotate(45deg);
 }
-/* line 145, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .search-bar .toggle:after {
   -moz-animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
   -webkit-animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
   animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
   -webkit-transform: translate(-20px, 10px) rotate(-45deg);
   -moz-transform: translate(-20px, 10px) rotate(-45deg);
+  -ms-transition: translate(-20px, 10px) rotate(-45deg);
   -o-transform: translate(-20px, 10px) rotate(-45deg);
   transform: translate(-20px, 10px) rotate(-45deg);
 }
-/* line 149, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .search-bar.closed {
   width: 40px;
 }
-/* line 151, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .search-bar.closed input {
   color: #333;
 }
-/* line 152, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .search-bar.closed .toggle:before {
   -moz-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
   -webkit-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
@@ -202,10 +212,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 0px;
   -webkit-transform: translate(-8px, 8px) rotate(45deg);
   -moz-transform: translate(-8px, 8px) rotate(45deg);
+  -ms-transition: translate(-8px, 8px) rotate(45deg);
   -o-transform: translate(-8px, 8px) rotate(45deg);
   transform: translate(-8px, 8px) rotate(45deg);
 }
-/* line 156, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 #n-home .n-container .n-title-bar .search-bar.closed .toggle:after {
   -moz-animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
   -webkit-animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
@@ -213,6 +224,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 20px;
   -webkit-transform: translate(0, 30px) rotate(-45deg);
   -moz-transform: translate(0, 30px) rotate(-45deg);
+  -ms-transition: translate(0, 30px) rotate(-45deg);
   -o-transform: translate(0, 30px) rotate(-45deg);
   transform: translate(0, 30px) rotate(-45deg);
 }
@@ -221,6 +233,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -228,6 +241,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -235,6 +249,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -242,6 +257,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -251,6 +267,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -258,6 +275,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -265,6 +283,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -272,6 +291,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -281,6 +301,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -288,6 +309,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -295,6 +317,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -302,6 +325,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -311,6 +335,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(-45deg);
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
+    -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
     transform: translate(-20px, 10px) rotate(-45deg);
   }
@@ -318,6 +343,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
+    -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
     transform: translate(-6px, 30px) rotate(-45deg);
   }
@@ -325,6 +351,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
+    -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
     transform: translate(-6px, 30px) rotate(-45deg);
   }
@@ -332,6 +359,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(0, 30px) rotate(-45deg);
     -moz-transform: translate(0, 30px) rotate(-45deg);
+    -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
     transform: translate(0, 30px) rotate(-45deg);
   }
@@ -341,6 +369,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(-45deg);
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
+    -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
     transform: translate(-20px, 10px) rotate(-45deg);
   }
@@ -348,6 +377,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
+    -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
     transform: translate(-6px, 30px) rotate(-45deg);
   }
@@ -355,6 +385,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
+    -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
     transform: translate(-6px, 30px) rotate(-45deg);
   }
@@ -362,6 +393,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(0, 30px) rotate(-45deg);
     -moz-transform: translate(0, 30px) rotate(-45deg);
+    -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
     transform: translate(0, 30px) rotate(-45deg);
   }
@@ -371,6 +403,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(-45deg);
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
+    -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
     transform: translate(-20px, 10px) rotate(-45deg);
   }
@@ -378,6 +411,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
+    -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
     transform: translate(-6px, 30px) rotate(-45deg);
   }
@@ -385,6 +419,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
+    -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
     transform: translate(-6px, 30px) rotate(-45deg);
   }
@@ -392,6 +427,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(0, 30px) rotate(-45deg);
     -moz-transform: translate(0, 30px) rotate(-45deg);
+    -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
     transform: translate(0, 30px) rotate(-45deg);
   }
@@ -401,6 +437,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -408,6 +445,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -415,6 +453,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -422,6 +461,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -431,6 +471,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -438,6 +479,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -445,6 +487,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -452,6 +495,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -461,6 +505,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -468,6 +513,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
+    -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
     transform: translate(-8px, 8px) rotate(45deg);
   }
@@ -475,6 +521,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -482,6 +529,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
+    -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
     transform: translate(-20px, 10px) rotate(45deg);
   }
@@ -491,6 +539,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(0, 30px) rotate(-45deg);
     -moz-transform: translate(0, 30px) rotate(-45deg);
+    -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
     transform: translate(0, 30px) rotate(-45deg);
   }
@@ -498,6 +547,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
+    -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
     transform: translate(-6px, 33px) rotate(-45deg);
   }
@@ -505,6 +555,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
+    -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
     transform: translate(-6px, 33px) rotate(-45deg);
   }
@@ -512,6 +563,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(-45deg);
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
+    -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
     transform: translate(-20px, 10px) rotate(-45deg);
   }
@@ -521,6 +573,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(0, 30px) rotate(-45deg);
     -moz-transform: translate(0, 30px) rotate(-45deg);
+    -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
     transform: translate(0, 30px) rotate(-45deg);
   }
@@ -528,6 +581,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
+    -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
     transform: translate(-6px, 33px) rotate(-45deg);
   }
@@ -535,6 +589,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
+    -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
     transform: translate(-6px, 33px) rotate(-45deg);
   }
@@ -542,6 +597,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(-45deg);
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
+    -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
     transform: translate(-20px, 10px) rotate(-45deg);
   }
@@ -551,6 +607,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(0, 30px) rotate(-45deg);
     -moz-transform: translate(0, 30px) rotate(-45deg);
+    -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
     transform: translate(0, 30px) rotate(-45deg);
   }
@@ -558,6 +615,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
+    -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
     transform: translate(-6px, 33px) rotate(-45deg);
   }
@@ -565,6 +623,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
+    -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
     transform: translate(-6px, 33px) rotate(-45deg);
   }
@@ -572,11 +631,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(-45deg);
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
+    -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
     transform: translate(-20px, 10px) rotate(-45deg);
   }
 }
-/* line 213, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 .n-post .n-post-nav {
   width: 100%;
   height: 80px;
@@ -591,19 +651,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 25px;
   display: block;
 }
-/* line 226, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 .n-post .n-post-nav .post-back-button {
   text-decoration: none;
   color: white;
   margin-right: 20px;
   float: left;
 }
-/* line 232, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .n-post .n-post-nav .post-module-code {
   font-size: 35px;
   float: left;
 }
-/* line 236, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 .n-post .n-post-nav .n-post-like {
   margin-top: -3px;
   margin-left: 15px;
@@ -611,15 +671,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 30px;
   cursor: pointer;
 }
-/* line 243, ../sass/screen.scss */
+/* line 252, ../sass/screen.scss */
 .n-post .n-post-nav .on {
   color: gold;
 }
-/* line 246, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 .n-post .n-post-nav .off {
   color: grey;
 }
-/* line 250, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .n-post .post-textbook-info {
   line-height: 30px;
   vertical-align: middle;
@@ -629,7 +689,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-bottom: 20px;
   color: #2C3E50;
 }
-/* line 258, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 .n-post .post-textbook-info .info-row {
   color: #34495E;
   margin-bottom: 15px;
@@ -637,13 +697,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-width: 1px;
   width: 90%;
 }
-/* line 264, ../sass/screen.scss */
+/* line 273, ../sass/screen.scss */
 .n-post .post-textbook-info .info-row .post-label {
   color: #2C3E50;
   margin: 0 20px 0 0;
   float: left;
 }
-/* line 269, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 .n-post .post-textbook-info .info-row .post-condition-label {
   color: #2C3E50;
   margin: 0 20px 0 0;
@@ -651,18 +711,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 15px;
   width: 100%;
 }
-/* line 278, ../sass/screen.scss */
+/* line 287, ../sass/screen.scss */
 .n-post .post-contact-info {
   text-align: center;
   margin-top: 110px;
   color: #2C3E50;
   margin-bottom: 20px;
 }
-/* line 283, ../sass/screen.scss */
+/* line 292, ../sass/screen.scss */
 .n-post .post-contact-info .post-contact-avatar {
   margin-bottom: 40px;
 }
-/* line 285, ../sass/screen.scss */
+/* line 294, ../sass/screen.scss */
 .n-post .post-contact-info .post-contact-avatar .account-profile-pic {
   height: 150px;
   width: 150px;
@@ -670,33 +730,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-border-radius: 30px;
   border-radius: 100px;
 }
-/* line 293, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 .n-post .post-contact-info .contact-row {
   color: #34495E;
   margin-bottom: 15px;
 }
-/* line 296, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 .n-post .post-contact-info .contact-row .contact-name-label {
   font-size: 25px;
   color: #2C3E50;
 }
-/* line 300, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 .n-post .post-contact-info .contact-row .contact-label {
   font-size: 20px;
   color: #2C3E50;
 }
-/* line 306, ../sass/screen.scss */
+/* line 315, ../sass/screen.scss */
 .n-post .post-image-section {
   margin-left: 50px;
 }
-/* line 308, ../sass/screen.scss */
+/* line 317, ../sass/screen.scss */
 .n-post .post-image-section .post-image {
   height: 165px;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 
-/* line 315, ../sass/screen.scss */
+/* line 324, ../sass/screen.scss */
 .create-post-textbook-info {
   line-height: 30px;
   vertical-align: middle;
@@ -706,7 +766,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-bottom: 20px;
   color: #2C3E50;
 }
-/* line 323, ../sass/screen.scss */
+/* line 332, ../sass/screen.scss */
 .create-post-textbook-info .create-info-row {
   color: #34495E;
   margin-bottom: 15px;
@@ -714,43 +774,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-width: 1px;
   width: 90%;
 }
-/* line 329, ../sass/screen.scss */
+/* line 338, ../sass/screen.scss */
 .create-post-textbook-info .create-info-row .post-label {
   color: #2C3E50;
   float: left;
   margin-top: 7px;
 }
-/* line 334, ../sass/screen.scss */
+/* line 343, ../sass/screen.scss */
 .create-post-textbook-info .create-info-row .post-label-right {
   color: #2C3E50;
   margin-top: 0px;
 }
-/* line 338, ../sass/screen.scss */
+/* line 347, ../sass/screen.scss */
 .create-post-textbook-info .create-info-row .create-post-condition-label {
   color: #2C3E50;
   display: inline;
   font-size: 15px;
   width: 100%;
 }
-/* line 344, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 .create-post-textbook-info .create-info-row .post-input {
   width: 90%;
   margin-bottom: 10px;
 }
-/* line 348, ../sass/screen.scss */
+/* line 357, ../sass/screen.scss */
 .create-post-textbook-info .create-info-row .post-input-short {
   width: 70%;
   display: inline;
   margin-right: 20px;
 }
-/* line 353, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 .create-post-textbook-info .create-info-row .condition-check {
   float: left;
   margin-right: 10px;
   margin-top: 10px;
 }
 
-/* line 378, ../sass/screen.scss */
+/* line 387, ../sass/screen.scss */
 .n-account .n-account-nav {
   width: 100%;
   height: 80px;
@@ -766,19 +826,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: white;
   font-size: 20px;
 }
-/* line 392, ../sass/screen.scss */
+/* line 401, ../sass/screen.scss */
 .n-account .n-account-nav .n-account-back-button {
   text-decoration: none;
   color: black;
-  margin-left: 150px;
+  margin-left: 0px;
   float: left;
 }
-/* line 399, ../sass/screen.scss */
+/* line 408, ../sass/screen.scss */
 .n-account .n-account-nav .n-account-toggle-button {
   float: right;
   margin-right: 80px;
 }
-/* line 406, ../sass/screen.scss */
+/* line 415, ../sass/screen.scss */
 .n-account .col-sm-4 .account-profile-pic {
   float: right;
   font-size: 10em;
@@ -795,23 +855,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: black;
   text-align: center;
 }
-/* line 427, ../sass/screen.scss */
+/* line 436, ../sass/screen.scss */
 .n-account .col-sm-8 .n-account-name {
   position: absolute;
   padding: 0 0 0 50px;
   font-size: 40px;
   margin-top: 90px;
 }
-/* line 435, ../sass/screen.scss */
+/* line 444, ../sass/screen.scss */
 .n-account .n-account-profile-info {
   line-height: 30px;
   vertical-align: middle;
   font-size: 20px;
-  margin-top: 100px;
+  margin-top: 60px;
   margin-left: 220px;
   color: #2C3E50;
 }
-/* line 442, ../sass/screen.scss */
+/* line 451, ../sass/screen.scss */
 .n-account .n-account-profile-info .info-row {
   color: #BDC3C7;
   margin-bottom: 15px;
@@ -819,14 +879,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-width: 1px;
   width: 90%;
 }
-/* line 448, ../sass/screen.scss */
+/* line 457, ../sass/screen.scss */
 .n-account .n-account-profile-info .info-row .account-label {
   color: #2C3E50;
   margin: 0 20px 0 0;
   float: left;
 }
+/* line 462, ../sass/screen.scss */
+.n-account .n-account-profile-info .info-row .account-label-title {
+  color: #2C3E50;
+  margin: 0 20px 0 0;
+  float: left;
+}
+/* line 467, ../sass/screen.scss */
+.n-account .n-account-profile-info .info-row input {
+  border-radius: 10px;
+  height: 30px;
+}
+/* line 474, ../sass/screen.scss */
+.n-account .n-account-edit-info {
+  width: 100px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 380px;
+}
 
-/* line 472, ../sass/screen.scss */
+/* line 497, ../sass/screen.scss */
 #n-nav .n-container {
   height: 100vh;
   background: #000;
@@ -835,28 +913,76 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 90px;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 480, ../sass/screen.scss */
+/* line 505, ../sass/screen.scss */
 #n-nav .n-container.active {
   width: 390px;
 }
-/* line 484, ../sass/screen.scss */
+/* line 509, ../sass/screen.scss */
 #n-nav .n-container .n-nav-icons {
-  margin-top: 60px;
-}
-/* line 487, ../sass/screen.scss */
-#n-nav .n-container .n-nav-icons .n-nav-icon {
+  margin-top: 70px;
   margin-left: 15px;
-  margin-bottom: 20px;
 }
-/* line 488, ../sass/screen.scss */
-#n-nav .n-container .n-nav-icons .n-nav-icon .fa {
-  font-size: 60px;
+/* line 520, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-nav-icon.active a {
+  border-color: #fff;
+}
+/* line 523, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-nav-icon.active i {
   color: #fff;
 }
-/* line 498, ../sass/screen.scss */
+/* line 529, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .fa-twitter {
+  padding: 0px 0px 0px 0px;
+}
+/* line 532, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .fa-thumb-tack {
+  padding: 2px 2px 3px 2px;
+}
+/* line 535, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .fa-street-view {
+  padding: 0px 0px 0px 0px;
+}
+/* line 539, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a {
+  color: #aaa;
+  padding: 20px;
+  border: 2px solid #aaa;
+  border-radius: 50px;
+}
+/* line 545, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a i {
+  font-size: 20px;
+  margin-bottom: 70px;
+}
+/* line 550, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a:hover {
+  color: #fff !important;
+  border-color: #fff !important;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+  -ms-transition: 0.8s ease;
+  -o-transition: 0.8s ease;
+  transition: 0.8s ease;
+}
+/* line 555, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a:hover i {
+  color: #fff;
+  -webkit-transform: scale(1.6, 1.6);
+  -moz-transform: scale(1.6, 1.6);
+  -ms-transition: scale(1.6, 1.6);
+  -o-transform: scale(1.6, 1.6);
+  transform: scale(1.6, 1.6);
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+/* line 565, ../sass/screen.scss */
 #n-nav #n-hamburger-icon {
   width: 50px;
   height: 30px;
@@ -864,7 +990,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
   margin: 20px auto 20px 20px;
 }
-/* line 515, ../sass/screen.scss */
+/* line 582, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line {
   display: block;
   background: #ecf0f1;
@@ -875,50 +1001,55 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-radius: 1px;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 525, ../sass/screen.scss */
+/* line 592, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-1 {
   top: 0;
 }
-/* line 529, ../sass/screen.scss */
+/* line 596, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-2 {
   top: 50%;
 }
-/* line 533, ../sass/screen.scss */
+/* line 600, ../sass/screen.scss */
 #n-nav #n-hamburger-icon .n-line.n-line-3 {
   top: 100%;
 }
-/* line 538, ../sass/screen.scss */
+/* line 606, ../sass/screen.scss */
 #n-nav #n-hamburger-icon:hover .n-line-1, #n-nav #n-hamburger-icon:focus .n-line-1 {
   -webkit-transform: translateY(-1px);
   -moz-transform: translateY(-1px);
+  -ms-transition: translateY(-1px);
   -o-transform: translateY(-1px);
   transform: translateY(-1px);
 }
-/* line 541, ../sass/screen.scss */
+/* line 609, ../sass/screen.scss */
 #n-nav #n-hamburger-icon:hover .n-line-3, #n-nav #n-hamburger-icon:focus .n-line-3 {
   -webkit-transform: translateY(1px);
   -moz-transform: translateY(1px);
+  -ms-transition: translateY(1px);
   -o-transform: translateY(1px);
   transform: translateY(1px);
 }
-/* line 547, ../sass/screen.scss */
+/* line 615, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-1 {
   -webkit-transform: translateY(15px) translateX(0) rotate(-945deg);
   -moz-transform: translateY(15px) translateX(0) rotate(-945deg);
+  -ms-transition: translateY(15px) translateX(0) rotate(-945deg);
   -o-transform: translateY(15px) translateX(0) rotate(-945deg);
   transform: translateY(15px) translateX(0) rotate(-945deg);
 }
-/* line 550, ../sass/screen.scss */
+/* line 618, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-2 {
   opacity: 0;
 }
-/* line 553, ../sass/screen.scss */
+/* line 621, ../sass/screen.scss */
 #n-nav #n-hamburger-icon.active .n-line-3 {
   -webkit-transform: translateY(-15px) translateX(0) rotate(945deg);
   -moz-transform: translateY(-15px) translateX(0) rotate(945deg);
+  -ms-transition: translateY(-15px) translateX(0) rotate(945deg);
   -o-transform: translateY(-15px) translateX(0) rotate(945deg);
   transform: translateY(-15px) translateX(0) rotate(945deg);
 }
