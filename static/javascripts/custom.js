@@ -17,7 +17,7 @@ $("#n-account-wrapper").load("view/account.html", function () {
 // 王狗
 $(document).on("click", "#n-home .toggle", function(){
 	$(this).parent().toggleClass('closed');
-    $(this).prev().focus();
+	$(this).prev().focus();
 });
 
 // 王狗完
@@ -50,29 +50,29 @@ $(document).on("click", ".like", function() {
 
 // 孙狗
 $(document).on("click",".n-account-nav a",function(e){
-    e.preventDefault();
-    $(".n-account-toggle").hide();
-    var toShow = $(this).attr('href');
-    $(toShow).show();
+	e.preventDefault();
+	$(".n-account-toggle").hide();
+	var toShow = $(this).attr('href');
+	$(toShow).show();
 });
 
 $(document).on("click",".n-account-edit-info", function(){
 
-            var $this = $(this);
-            var text = $this.text();
-            if(text=="Edit"){
-                $this.text("Cancel");
-            }
-                        else{
-                             $this.text("Edit");
-                        }
-            $(".account-label").toggle();
-        });
+			var $this = $(this);
+			var text = $this.text();
+			if(text=="Edit"){
+				$this.text("Cancel");
+			}
+						else{
+							 $this.text("Edit");
+						}
+			$(".account-label").toggle();
+		});
 
-        $("input.account-label").change(function(){
-            $(this).prev().text($(this).text());
+		$("input.account-label").change(function(){
+			$(this).prev().text($(this).text());
 
-        });
+		});
 
 
 // 孙狗完
