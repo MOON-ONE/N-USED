@@ -87,14 +87,21 @@ $(document).on("click",".n-account-edit-info", function(){
 $(document).on("click", "#n-hamburger-icon", function() {
 	$(".n-container").toggleClass('active');
 	$(this).toggleClass('active');
-	
+	setTimeout(function (){
+		$(".n-nav-text").toggleClass('active');
+	}, 200);
 	return false;
 });
 
 $(document).on("click", "div[id^='n-nav-']", function() {
 	var section = $(this).attr('id').substr(6);
-	$(".n-main >div").hide();
-	$("#n-" + section + "-wrapper").css('display', 'inherit');
+
+	$(".n-nav-icon").removeClass("active");
+	$(this).addClass("active");
+	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
+		$("#n-" + section + "-wrapper").fadeIn(200);
+	});
+
 	return false;
 });
 
