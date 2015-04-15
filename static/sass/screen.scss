@@ -253,7 +253,7 @@ $n-post-text-color: #2C3E50;
 		font-size: 20px;
 		margin-top: 120px;
 	    margin-left: 50px;
-	    margin-bottom: 50px;
+	    margin-bottom: 20px;
 	    color: $n-post-text-color;
 	    .info-row {
 	    	color: $n-post-nav-color;
@@ -266,20 +266,29 @@ $n-post-text-color: #2C3E50;
 		    	margin: 0 20px 0 0;
 		    	float: left;
 		    }
-		    .post-input {
+		    .post-condition-label {
 		    	color: $n-post-text-color;
-		    	width: 80%;
+		    	margin: 0 20px 0 0;
 		    	float: left;
+		    	font-size: 15px;
+		    	width: 100%;
 		    }
 		}
 	}
 	.post-contact-info {
 		text-align: center;
-		margin-top: 120px;
+		margin-top: 100px;
 	    color: $n-post-text-color;
-	    margin-bottom: 50px;
+	    margin-bottom: 20px;
 	    .post-contact-avatar {
 	    	margin-bottom: 40px;
+	    	.account-profile-pic {
+	    		height: 150px;
+	    		width: 150px;
+	    		border:solid 5px ;
+	    		-moz-border-radius: 30px;
+	    		border-radius: 100px;
+	    	}
 	    }
 	    .contact-row {
 	    	color: $n-post-nav-color;
@@ -297,8 +306,9 @@ $n-post-text-color: #2C3E50;
 	.post-image-section {
 		margin-left: 50px;
 		.post-image {
-			height: 200px;
+			height: 165px;
 			margin-right: 20px;
+			margin-bottom: 20px;
 		}
 	}
 }
