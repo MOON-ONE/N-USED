@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -49,6 +49,10 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
+<<<<<<< HEAD
+=======
+/* line 67, ../sass/screen.scss */
+>>>>>>> origin/master
 .n-main .n-container {
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -57,13 +61,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all 0.4s;
   margin-left: 90px;
   margin-right: 0;
+<<<<<<< HEAD
   position: relative; }
   .n-main .n-container.active {
     margin-left: 390px;
     margin-right: -390px; }
+=======
+  position: relative;
+}
+/* line 72, ../sass/screen.scss */
+.n-main .n-container.active {
+  margin-left: 390px;
+  margin-right: -390px;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -ms-filter: blur(3px);
+  -o-filter: blur(3px);
+  filter: blur(3px);
+}
+/* line 79, ../sass/screen.scss */
+>>>>>>> origin/master
 .n-main section {
   overflow-x: hidden; }
 
+<<<<<<< HEAD
 #n-home .n-container {
   display: block;
   color: black; }
@@ -173,6 +194,148 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
           -ms-transition: translate(0, 30px) rotate(-45deg);
           -o-transform: translate(0, 30px) rotate(-45deg);
           transform: translate(0, 30px) rotate(-45deg); }
+=======
+/* line 90, ../sass/screen.scss */
+#n-home .n-container {
+  display: block;
+  color: black;
+}
+/* line 93, ../sass/screen.scss */
+#n-home .n-container .n-title-bar {
+  background-color: #333;
+  height: 70px;
+  width: 100%;
+  margin: 0;
+}
+/* line 99, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .n-title {
+  display: block;
+  color: white;
+  padding: 15px;
+  font-size: 30px;
+  vertical-align: middle;
+  line-height: 1.5em;
+}
+@media only screen and (max-width: 767px) {
+  /* line 99, ../sass/screen.scss */
+  #n-home .n-container .n-title-bar .n-title {
+    display: none;
+  }
+}
+/* line 120, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar {
+  display: block;
+  -webkit-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+  -moz-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+  -ms-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+  -o-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+  transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 40px;
+  top: 15px;
+  right: 15px;
+}
+/* line 128, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar input {
+  outline: none;
+  box-shadow: none;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  padding: 0em 1em;
+  box-sizing: border-box;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 40px;
+}
+/* line 141, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar .toggle {
+  -webkit-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+  -moz-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+  -ms-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+  -o-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+  transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  border-radius: 40px;
+}
+/* line 148, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar .toggle .toggle:after, #n-home .n-container .n-title-bar .search-bar .toggle .toggle:before {
+  border-color: #595959;
+}
+/* line 150, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar .toggle:after, #n-home .n-container .n-title-bar .search-bar .toggle:before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 20px;
+  border-left: 2px solid white;
+  border-radius: 2px;
+  top: 0;
+}
+/* line 159, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar .toggle:before {
+  -moz-animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-transform: translate(-20px, 10px) rotate(45deg);
+  -moz-transform: translate(-20px, 10px) rotate(45deg);
+  -ms-transition: translate(-20px, 10px) rotate(45deg);
+  -o-transform: translate(-20px, 10px) rotate(45deg);
+  transform: translate(-20px, 10px) rotate(45deg);
+}
+/* line 163, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar .toggle:after {
+  -moz-animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-transform: translate(-20px, 10px) rotate(-45deg);
+  -moz-transform: translate(-20px, 10px) rotate(-45deg);
+  -ms-transition: translate(-20px, 10px) rotate(-45deg);
+  -o-transform: translate(-20px, 10px) rotate(-45deg);
+  transform: translate(-20px, 10px) rotate(-45deg);
+}
+/* line 167, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar.closed {
+  width: 40px;
+}
+/* line 169, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar.closed input {
+  color: #333;
+}
+/* line 170, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar.closed .toggle:before {
+  -moz-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  height: 0px;
+  -webkit-transform: translate(-8px, 8px) rotate(45deg);
+  -moz-transform: translate(-8px, 8px) rotate(45deg);
+  -ms-transition: translate(-8px, 8px) rotate(45deg);
+  -o-transform: translate(-8px, 8px) rotate(45deg);
+  transform: translate(-8px, 8px) rotate(45deg);
+}
+/* line 174, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar.closed .toggle:after {
+  -moz-animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  height: 20px;
+  -webkit-transform: translate(0, 30px) rotate(-45deg);
+  -moz-transform: translate(0, 30px) rotate(-45deg);
+  -ms-transition: translate(0, 30px) rotate(-45deg);
+  -o-transform: translate(0, 30px) rotate(-45deg);
+  transform: translate(0, 30px) rotate(-45deg);
+}
+>>>>>>> origin/master
 @-moz-keyframes close-one {
   0% {
     height: 20px;
@@ -520,11 +683,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
     -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
+<<<<<<< HEAD
     transform: translate(-20px, 10px) rotate(-45deg); } }
+=======
+    transform: translate(-20px, 10px) rotate(-45deg);
+  }
+}
+/* line 231, ../sass/screen.scss */
+>>>>>>> origin/master
 .n-post .n-post-nav {
   width: 100%;
-  height: 80px;
-  line-height: 80px;
+  height: 70px;
+  line-height: 70px;
   vertical-align: middle;
   text-align: left;
   position: absolute;
@@ -533,6 +703,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background: #34495E;
   color: white;
   font-size: 25px;
+<<<<<<< HEAD
   display: block; }
   .n-post .n-post-nav .post-back-button {
     text-decoration: none;
@@ -552,6 +723,49 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: gold; }
   .n-post .n-post-nav .off {
     color: grey; }
+=======
+  display: block;
+}
+/* line 244, ../sass/screen.scss */
+.n-post .n-post-nav .post-back-button {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  float: left;
+}
+/* line 250, ../sass/screen.scss */
+.n-post .n-post-nav .post-module-code {
+  font-size: 35px;
+  margin-top: 5px;
+  float: left;
+}
+/* line 255, ../sass/screen.scss */
+.n-post .n-post-nav .post-create {
+  font-size: 35px;
+  float: right;
+  margin-top: 5px;
+  margin-right: 40px;
+  color: #2ECC71;
+  text-decoration: none;
+}
+/* line 263, ../sass/screen.scss */
+.n-post .n-post-nav .n-post-like {
+  margin-top: -3px;
+  margin-left: 15px;
+  float: left;
+  font-size: 30px;
+  cursor: pointer;
+}
+/* line 270, ../sass/screen.scss */
+.n-post .n-post-nav .on {
+  color: gold;
+}
+/* line 273, ../sass/screen.scss */
+.n-post .n-post-nav .off {
+  color: grey;
+}
+/* line 277, ../sass/screen.scss */
+>>>>>>> origin/master
 .n-post .post-textbook-info {
   line-height: 30px;
   vertical-align: middle;
@@ -559,6 +773,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-top: 120px;
   margin-left: 50px;
   margin-bottom: 20px;
+<<<<<<< HEAD
   color: #2C3E50; }
   .n-post .post-textbook-info .info-row {
     color: #34495E;
@@ -576,10 +791,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       float: left;
       font-size: 15px;
       width: 100%; }
+=======
+  color: #2C3E50;
+}
+/* line 285, ../sass/screen.scss */
+.n-post .post-textbook-info .info-row {
+  color: #34495E;
+  margin-bottom: 15px;
+  border-bottom: solid;
+  border-width: 1px;
+  width: 90%;
+}
+/* line 291, ../sass/screen.scss */
+.n-post .post-textbook-info .info-row .post-label {
+  color: #2C3E50;
+  margin: 0 20px 0 0;
+  float: left;
+}
+/* line 296, ../sass/screen.scss */
+.n-post .post-textbook-info .info-row .post-condition-label {
+  color: #2C3E50;
+  margin: 0 20px 0 0;
+  float: left;
+  font-size: 15px;
+  width: 100%;
+}
+/* line 305, ../sass/screen.scss */
+>>>>>>> origin/master
 .n-post .post-contact-info {
   text-align: center;
   margin-top: 110px;
   color: #2C3E50;
+<<<<<<< HEAD
   margin-bottom: 20px; }
   .n-post .post-contact-info .post-contact-avatar {
     margin-bottom: 40px; }
@@ -605,13 +848,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-right: 20px;
     margin-bottom: 20px; }
 
+=======
+  margin-bottom: 20px;
+}
+/* line 310, ../sass/screen.scss */
+.n-post .post-contact-info .post-contact-avatar {
+  margin-bottom: 40px;
+}
+/* line 312, ../sass/screen.scss */
+.n-post .post-contact-info .post-contact-avatar .account-profile-pic {
+  height: 150px;
+  width: 150px;
+  border: solid 5px;
+  -moz-border-radius: 30px;
+  border-radius: 100px;
+}
+/* line 320, ../sass/screen.scss */
+.n-post .post-contact-info .contact-row {
+  color: #34495E;
+  margin-bottom: 15px;
+}
+/* line 323, ../sass/screen.scss */
+.n-post .post-contact-info .contact-row .contact-name-label {
+  font-size: 25px;
+  color: #2C3E50;
+}
+/* line 327, ../sass/screen.scss */
+.n-post .post-contact-info .contact-row .contact-label {
+  font-size: 20px;
+  color: #2C3E50;
+}
+
+/* line 334, ../sass/screen.scss */
+>>>>>>> origin/master
 .create-post-textbook-info {
   line-height: 30px;
   vertical-align: middle;
   font-size: 20px;
-  margin-top: 100px;
+  margin-top: 110px;
   margin-left: 50px;
   margin-bottom: 20px;
+<<<<<<< HEAD
   color: #2C3E50; }
   .create-post-textbook-info .create-info-row {
     color: #34495E;
@@ -643,6 +920,66 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       margin-right: 10px;
       margin-top: 10px; }
 
+=======
+  color: #2C3E50;
+}
+/* line 342, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row {
+  color: #34495E;
+  margin-bottom: 15px;
+  border-bottom: solid;
+  border-width: 1px;
+  width: 90%;
+}
+/* line 348, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .post-label {
+  color: #2C3E50;
+  float: left;
+  margin-top: 7px;
+}
+/* line 353, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .post-label-right {
+  color: #2C3E50;
+  margin-top: 0px;
+}
+/* line 357, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .create-post-condition-label {
+  color: #2C3E50;
+  display: inline;
+  font-size: 15px;
+  width: 100%;
+}
+/* line 363, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .post-input {
+  width: 90%;
+  margin-bottom: 10px;
+}
+/* line 367, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .post-input-short {
+  width: 70%;
+  display: inline;
+  margin-right: 20px;
+}
+/* line 372, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .condition-check {
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+/* line 379, ../sass/screen.scss */
+.create-post-image-section {
+  margin-top: 110px;
+}
+/* line 381, ../sass/screen.scss */
+.create-post-image-section .post-image {
+  height: 150px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 404, ../sass/screen.scss */
+>>>>>>> origin/master
 .n-account .n-account-nav {
   width: 100%;
   height: 80px;
@@ -656,6 +993,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 0 0 0 20px;
   background: rgba(189, 195, 199, 0);
   color: white;
+<<<<<<< HEAD
   font-size: 20px; }
   .n-account .n-account-nav .n-account-back-button {
     text-decoration: none;
@@ -665,6 +1003,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .n-account .n-account-nav .n-account-toggle-button {
     float: right;
     margin-right: 80px; }
+=======
+  font-size: 20px;
+}
+/* line 418, ../sass/screen.scss */
+.n-account .n-account-nav .n-account-back-button {
+  text-decoration: none;
+  color: black;
+  margin-left: 0px;
+  float: left;
+}
+/* line 425, ../sass/screen.scss */
+.n-account .n-account-nav .n-account-toggle-button {
+  float: right;
+  margin-right: 80px;
+}
+/* line 432, ../sass/screen.scss */
+>>>>>>> origin/master
 .n-account .col-sm-4 .account-profile-pic {
   float: right;
   font-size: 10em;
@@ -679,18 +1034,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   /* or 50% */
   background-color: white;
   color: black;
+<<<<<<< HEAD
   text-align: center; }
+=======
+  text-align: center;
+}
+/* line 453, ../sass/screen.scss */
+>>>>>>> origin/master
 .n-account .col-sm-8 .n-account-name {
   position: absolute;
   padding: 0 0 0 50px;
   font-size: 40px;
+<<<<<<< HEAD
   margin-top: 90px; }
+=======
+  margin-top: 90px;
+}
+/* line 461, ../sass/screen.scss */
+>>>>>>> origin/master
 .n-account .n-account-profile-info {
   line-height: 30px;
   vertical-align: middle;
   font-size: 20px;
   margin-top: 60px;
   margin-left: 220px;
+<<<<<<< HEAD
   color: #2C3E50; }
   .n-account .n-account-profile-info .info-row {
     color: #BDC3C7;
@@ -707,12 +1075,46 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     .n-account .n-account-profile-info .info-row input {
       border-radius: 10px;
       height: 30px; }
+=======
+  color: #2C3E50;
+}
+/* line 468, ../sass/screen.scss */
+.n-account .n-account-profile-info .info-row {
+  color: #BDC3C7;
+  margin-bottom: 15px;
+  border-bottom: solid;
+  border-width: 1px;
+  width: 90%;
+}
+/* line 474, ../sass/screen.scss */
+.n-account .n-account-profile-info .info-row .account-label {
+  color: #2C3E50;
+  margin: 0 20px 0 0;
+  float: left;
+}
+/* line 479, ../sass/screen.scss */
+.n-account .n-account-profile-info .info-row .account-label-title {
+  color: #2C3E50;
+  margin: 0 20px 0 0;
+  float: left;
+}
+/* line 484, ../sass/screen.scss */
+.n-account .n-account-profile-info .info-row input {
+  border-radius: 10px;
+  height: 30px;
+}
+/* line 491, ../sass/screen.scss */
+>>>>>>> origin/master
 .n-account .n-account-edit-info {
   width: 100px;
   height: 50px;
   margin-top: 20px;
   margin-left: 380px; }
 
+<<<<<<< HEAD
+=======
+/* line 514, ../sass/screen.scss */
+>>>>>>> origin/master
 #n-nav .n-container {
   height: 100vh;
   background: #000;
@@ -723,6 +1125,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
+<<<<<<< HEAD
   transition: all 0.4s; }
   #n-nav .n-container.active {
     width: 390px; }
@@ -767,11 +1170,115 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
           -ms-transition: 0.3s ease;
           -o-transition: 0.3s ease;
           transition: 0.3s ease; }
+=======
+  transition: all 0.4s;
+}
+/* line 522, ../sass/screen.scss */
+#n-nav .n-container.active {
+  width: 390px;
+}
+/* line 526, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons {
+  margin-top: 70px;
+  margin-left: 15px;
+}
+/* line 536, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-nav-text {
+  color: #fff;
+  width: 0;
+  height: 0;
+  opacity: 0.0;
+  -webkit-transition: opacity 0s ease-in;
+  -moz-transition: opacity 0s ease-in;
+  -ms-transition: opacity 0s ease-in;
+  -o-transition: opacity 0s ease-in;
+  transition: opacity 0s ease-in;
+}
+/* line 544, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-nav-text.active {
+  width: auto;
+  height: auto;
+  display: inline;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+  -ms-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+/* line 553, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-bottom-icon {
+  bottom: 0;
+  margin-top: calc(100vh - 70px - (20px + 70px) * 3 - 140px);
+}
+/* line 560, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-nav-icon.active a {
+  border-color: #fff;
+}
+/* line 563, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-nav-icon.active i {
+  color: #fff;
+}
+/* line 569, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .fa-twitter {
+  padding: 0px 0px 0px 0px;
+}
+/* line 572, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .fa-thumb-tack {
+  padding: 2px 2px 3px 2px;
+}
+/* line 575, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .fa-street-view {
+  padding: 0px 0px 0px 0px;
+}
+/* line 579, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .fa-sign-out {
+  padding: 0px 0px 0px 0px;
+}
+/* line 584, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a {
+  color: #aaa;
+  padding: 20px;
+  border: 2px solid #aaa;
+  border-radius: 50px;
+}
+/* line 590, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a i {
+  font-size: 20px;
+  margin-bottom: 70px;
+}
+/* line 595, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a:hover {
+  color: #fff !important;
+  border-color: #fff !important;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+  -ms-transition: 0.8s ease;
+  -o-transition: 0.8s ease;
+  transition: 0.8s ease;
+}
+/* line 600, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a:hover i {
+  color: #fff;
+  -webkit-transform: scale(1.6, 1.6);
+  -moz-transform: scale(1.6, 1.6);
+  -ms-transition: scale(1.6, 1.6);
+  -o-transform: scale(1.6, 1.6);
+  transform: scale(1.6, 1.6);
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+/* line 610, ../sass/screen.scss */
+>>>>>>> origin/master
 #n-nav #n-hamburger-icon {
   width: 50px;
   height: 30px;
   position: relative;
   display: block;
+<<<<<<< HEAD
   margin: 20px auto 20px 20px; }
   #n-nav #n-hamburger-icon .n-line {
     display: block;
@@ -818,3 +1325,70 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -ms-transition: translateY(-15px) translateX(0) rotate(945deg);
     -o-transform: translateY(-15px) translateX(0) rotate(945deg);
     transform: translateY(-15px) translateX(0) rotate(945deg); }
+=======
+  margin: 20px auto 20px 20px;
+}
+/* line 627, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line {
+  display: block;
+  background: #ecf0f1;
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  border-radius: 1px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* line 637, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line.n-line-1 {
+  top: 0;
+}
+/* line 641, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line.n-line-2 {
+  top: 50%;
+}
+/* line 645, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line.n-line-3 {
+  top: 100%;
+}
+/* line 651, ../sass/screen.scss */
+#n-nav #n-hamburger-icon:hover .n-line-1, #n-nav #n-hamburger-icon:focus .n-line-1 {
+  -webkit-transform: translateY(-1px);
+  -moz-transform: translateY(-1px);
+  -ms-transition: translateY(-1px);
+  -o-transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+/* line 654, ../sass/screen.scss */
+#n-nav #n-hamburger-icon:hover .n-line-3, #n-nav #n-hamburger-icon:focus .n-line-3 {
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -ms-transition: translateY(1px);
+  -o-transform: translateY(1px);
+  transform: translateY(1px);
+}
+/* line 660, ../sass/screen.scss */
+#n-nav #n-hamburger-icon.active .n-line-1 {
+  -webkit-transform: translateY(15px) translateX(0) rotate(-945deg);
+  -moz-transform: translateY(15px) translateX(0) rotate(-945deg);
+  -ms-transition: translateY(15px) translateX(0) rotate(-945deg);
+  -o-transform: translateY(15px) translateX(0) rotate(-945deg);
+  transform: translateY(15px) translateX(0) rotate(-945deg);
+}
+/* line 663, ../sass/screen.scss */
+#n-nav #n-hamburger-icon.active .n-line-2 {
+  opacity: 0;
+}
+/* line 666, ../sass/screen.scss */
+#n-nav #n-hamburger-icon.active .n-line-3 {
+  -webkit-transform: translateY(-15px) translateX(0) rotate(945deg);
+  -moz-transform: translateY(-15px) translateX(0) rotate(945deg);
+  -ms-transition: translateY(-15px) translateX(0) rotate(945deg);
+  -o-transform: translateY(-15px) translateX(0) rotate(945deg);
+  transform: translateY(-15px) translateX(0) rotate(945deg);
+}
+>>>>>>> origin/master
