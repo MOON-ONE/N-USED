@@ -348,7 +348,7 @@ $n-post-text-color: #2C3E50;
 	    .n-account-back-button {
 	    	text-decoration: none;
 	    	color: black;
-	    	margin-left: 150px;
+	    	margin-left: 0px;
 	    	float: left;
 
 	    }
@@ -407,6 +407,14 @@ $n-post-text-color: #2C3E50;
 		    	float: left;
 		    }
 		}
+	}
+
+	.n-account-edit-info{
+		width: 100px;
+		height: 50px;
+		// border: none;
+		margin-top: 30px;
+		margin-left: 380px;
 	}
 }
  
