@@ -82,17 +82,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-right: -390px;
 }
 
-/* line 70, ../sass/screen.scss */
-#n-home {
-  background-color: #333;
-}
-/* line 74, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 #n-home .n-container {
   display: block;
+  color: black;
 }
-/* line 76, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 #n-home .n-container .n-title-bar {
-  height: 75px;
+  background-color: #333;
+  height: 70px;
   width: 100%;
   margin: 0;
 }

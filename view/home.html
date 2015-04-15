@@ -1,15 +1,38 @@
 <section id="n-home">
-	<div class="n-container">
-		<div class="row n-title-bar">
-			<div class="col-xs-12 col-sm-3">
-				<span class="n-title">N-USED</span>
-			</div>
-			<div class="col-xs-12 col-sm-9">
-				<div class="search-bar closed">
-					<input type="text" />
-					<div class="toggle"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="n-container">
+        <div class="row n-title-bar">
+            <div class="col-xs-12 col-sm-3">
+                <span class="n-title">N-USED</span>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <div class="search-bar closed">
+                    <input type="text" ng-model="BookSearchQuery">
+                    <div class="toggle"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Responsive table starts here -->
+        <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
+        <div class="table-responsive-vertical shadow-z-1">
+            <!-- Table starts here -->
+            <table class="table table-hover table-mc-light-blue">
+                <thead>
+                    <tr>
+                        <th>Module Code</th>
+                        <th>Title</th>
+                        <th>Condition</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+	                <tr ng-repeat="book in books | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
+	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
+	                    <td data-title="Title">{{ book.title }}</td>
+	                    <td data-title="Condition">{{ book.condition.rank }}</td>
+	                    <td data-title="Price">{{ book.price }}</td>
+	                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </section>
