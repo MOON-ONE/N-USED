@@ -21,7 +21,6 @@ app.controller('main', ['$scope', function($scope) {
     };
     
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
-                    $("#n-home table").floatThead();
                     $("#n-home .toggle").parent().toggleClass('closed');
                     setTimeout(function(){ 
     					$("#n-home .toggle").prev().focus();
