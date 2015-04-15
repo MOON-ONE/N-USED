@@ -49,6 +49,14 @@
 	transform: $transform;
 }
 
+@mixin filter($filter) {
+    -webkit-filter: $filter;
+    -moz-filter: $filter;
+    -ms-filter: $filter;
+    -o-filter: $filter;
+    filter: $filter;
+}
+
 $nav-width: 90px;
 $nav-active-width: 390px;
 $container-transition-time: 0.4s;
@@ -64,6 +72,7 @@ $container-transition-time: 0.4s;
 		&.active {
 			margin-left: $nav-active-width;
 			margin-right: -$nav-active-width;
+			@include filter(blur(3px));
 		}
 	}
 
@@ -468,8 +477,31 @@ $n-post-text-color: #2C3E50;
 			$icon-size: 20px;
 			$icon-padding: 20px;
 			$icon-width: $icon-size + 2 * $icon-padding;
-			margin-top: 70px;
+			$icon-gap: 70px;
+			margin-top: $icon-gap;
 			margin-left: ($nav-width - $icon-width) / 2;
+
+			.n-nav-text {
+				color: $icon-hover-color;
+				// display: none;
+				width: 0;
+				height: 0;
+				opacity: 0.0;
+				@include transition(opacity 0s ease-in);
+
+				&.active {
+					width: auto;
+					height: auto;
+					display: inline;
+					opacity: 1;
+					@include transition(opacity 0.2s ease-in);
+				}
+			}
+
+			.n-bottom-icon {
+				bottom: 0;
+				margin-top: calc(100vh - #{$icon-gap} - (#{$icon-size} + #{$icon-gap}) * 3 - 140px);
+			}
 
 			.n-nav-icon {
 				&.active {
@@ -492,6 +524,11 @@ $n-post-text-color: #2C3E50;
 				padding: 0px 0px 0px 0px;
 			}
 
+			.fa-sign-out{
+				padding: 0px 0px 0px 0px;
+			}
+
+
 			a {
 				color: $icon-color;
 				padding: $icon-padding;
@@ -500,7 +537,7 @@ $n-post-text-color: #2C3E50;
 
 				i {
 					font-size: $icon-size;
-					margin-bottom: 70px;
+					margin-bottom: $icon-gap;
 				}
 
 				&:hover {
