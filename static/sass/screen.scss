@@ -238,8 +238,9 @@ $n-post-text-color: #2C3E50;
 		vertical-align: middle;
 		font-size: 20px;
 		margin-top: 120px;
-	    color: $n-post-text-color;
 	    margin-left: 50px;
+	    margin-bottom: 50px;
+	    color: $n-post-text-color;
 	    .info-row {
 	    	color: $n-post-nav-color;
 	    	margin-bottom: 15px;
@@ -262,6 +263,7 @@ $n-post-text-color: #2C3E50;
 		text-align: center;
 		margin-top: 120px;
 	    color: $n-post-text-color;
+	    margin-bottom: 50px;
 	    .post-contact-avatar {
 	    	margin-bottom: 40px;
 	    }
@@ -276,6 +278,12 @@ $n-post-text-color: #2C3E50;
 		    	font-size: 20px;
 		    	color: $n-post-text-color;
 		    }
+		}
+	}
+	.post-image-section {
+		margin-left: 50px;
+		.post-image {
+			height: 200px;
 		}
 	}
 }
