@@ -53,13 +53,20 @@ $container-transition-time: 0.4s;
  
 
 // 总
-.n-main .n-container {
-	@include transition(all $container-transition-time);
-	margin-left: $nav-width;
-	margin-right: 0;
-	&.active {
-		margin-left: $nav-active-width;
-		margin-right: -$nav-active-width;
+.n-main {
+	.n-container {
+		@include transition(all $container-transition-time);
+		margin-left: $nav-width;
+		margin-right: 0;
+		position: relative;
+		&.active {
+			margin-left: $nav-active-width;
+			margin-right: -$nav-active-width;
+		}
+	}
+
+	section {
+		overflow-x: hidden;
 	}
 }
 // 总完
