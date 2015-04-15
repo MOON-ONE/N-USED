@@ -155,3 +155,31 @@ var books = [
     'price': 20,
     'sellId': "Uskdhiu63f"
 }];
+
+var favourite = [
+{
+    'moduleCode': 'CS2100',
+    'title': 'title 1',
+    'edition': 'edition 1',
+    'authors': 'author 1',
+    'condition': {
+        'rank': 10,
+        'checkList': [true, false, false, false, true, false]
+    },
+    'description': "Description 1",
+    'price': 20,
+    'sellId': "Uskdhiu63f"
+},
+{
+    'moduleCode': 'CS2102',
+    'title': 'title 1',
+    'edition': 'edition 1',
+    'authors': 'author 1',
+    'condition': {
+        'rank': 10,
+        'checkList': [true, false, false, false, true, false]
+    },
+    'description': "Description 1",
+    'price': 20,
+    'sellId': "Uskdhiu63f"
+}];
