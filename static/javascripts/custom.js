@@ -28,7 +28,7 @@ $(document).on("click", "#n-home .toggle", function(){
 
 
 // 林狗
-
+$(".fancybox").fancybox();
 
 
 
