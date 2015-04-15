@@ -680,6 +680,58 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     float: right;
     font-size: 15px;
     padding: 0 5px 0 5px; }
+  .n-account .n-account-nav .n-nav-icons .icons {
+    margin-top: 15px;
+    margin-right: 10%; }
+  .n-account .n-account-nav .n-nav-icons .n-bottom-icon {
+    bottom: 0; }
+  .n-account .n-account-nav .n-nav-icons .n-nav-icon.active a {
+    border-color: #bbb; }
+  .n-account .n-account-nav .n-nav-icons .n-nav-icon.active i {
+    color: #bbb; }
+  .n-account .n-account-nav .n-nav-icons .fa-twitter {
+    padding: 0px 0px 0px 0px; }
+  .n-account .n-account-nav .n-nav-icons .fa-thumb-tack {
+    padding: 2px 2px 3px 2px; }
+  .n-account .n-account-nav .n-nav-icons .fa-street-view {
+    padding: 0px 0px 0px 0px; }
+  .n-account .n-account-nav .n-nav-icons .fa-sign-out {
+    padding: 0px 0px 0px 0px; }
+  .n-account .n-account-nav .n-nav-icons a {
+    color: #aaa;
+    padding: 5px;
+    border: 2px solid #aaa;
+    border-radius: 50px;
+    /* height: 35px; */
+    line-height: 1.5;
+    width: 39px;
+    margin-left: 100px; }
+    .n-account .n-account-nav .n-nav-icons a i {
+      font-size: 18px;
+      margin-bottom: auto;
+      padding: 0 0 0 4px; }
+      .n-account .n-account-nav .n-nav-icons a i span {
+        margin-left: 18px; }
+    .n-account .n-account-nav .n-nav-icons a:hover {
+      color: #bbb !important;
+      border-color: #bbb !important;
+      -webkit-transition: 0.8s ease;
+      -moz-transition: 0.8s ease;
+      -ms-transition: 0.8s ease;
+      -o-transition: 0.8s ease;
+      transition: 0.8s ease; }
+      .n-account .n-account-nav .n-nav-icons a:hover i {
+        color: #bbb;
+        -webkit-transform: scale(1.6, 1.6);
+        -moz-transform: scale(1.6, 1.6);
+        -ms-transition: scale(1.6, 1.6);
+        -o-transform: scale(1.6, 1.6);
+        transform: scale(1.6, 1.6);
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        -ms-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
+        transition: 0.3s ease; }
 .n-account .account-pic-and-name {
   text-align: center; }
   .n-account .account-pic-and-name .account-profile-pic {
