@@ -8,9 +8,9 @@
 			</a>
 		</div>
 
-		<div class="col-md-8">
-    			<a href="#history">History</a>
+		<div class="col-md-8">	
     			<a href="#favourite">Favourite</a>
+    			<a href="#history">History</a>
     			<a href="#profile">Profile</a>
     	</div>
 	</div>
@@ -118,7 +118,7 @@
                     </tr>
                 </thead>
                 <tbody>
-	                <tr ng-repeat="book in books | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
+	                <tr ng-repeat="book in historyPost | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
 	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
 	                    <td data-title="Title">{{ book.title }}</td>
 	                    <td data-title="Condition">{{ book.condition.rank }}</td>
