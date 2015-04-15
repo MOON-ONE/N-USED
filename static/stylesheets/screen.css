@@ -564,7 +564,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   .n-account .n-account-nav .n-account-back-button {
     text-decoration: none;
     color: black;
-    margin-left: 150px;
+    margin-left: 0px;
     float: left; }
   .n-account .n-account-nav .n-account-toggle-button {
     float: right;
@@ -606,6 +606,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       color: #2C3E50;
       margin: 0 20px 0 0;
       float: left; }
+.n-account .n-account-edit-info {
+  width: 100px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 380px; }
 
 #n-nav .n-container {
   height: 100vh;
