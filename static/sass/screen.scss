@@ -463,13 +463,24 @@ $n-post-text-color: #2C3E50;
 		}
 
 		.n-nav-icons {
-			$icon-color : #ccc;
+			$icon-color : #aaa;
 			$icon-hover-color: #fff;
 			$icon-size: 20px;
 			$icon-padding: 20px;
 			$icon-width: $icon-size + 2 * $icon-padding;
 			margin-top: 70px;
 			margin-left: ($nav-width - $icon-width) / 2;
+
+			.n-nav-icon {
+				&.active {
+					a {
+						border-color: $icon-hover-color;
+					}
+					i {
+						color: $icon-hover-color;
+					}
+				}
+			}
 
 			.fa-twitter{
 				padding: 0px 0px 0px 0px;

@@ -93,6 +93,8 @@ $(document).on("click", "#n-hamburger-icon", function() {
 
 $(document).on("click", "div[id^='n-nav-']", function() {
 	var section = $(this).attr('id').substr(6);
+	$(".n-nav-icon").removeClass("active");
+	$(this).addClass("active");
 	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
 		$("#n-" + section + "-wrapper").fadeIn(00);
 	});
