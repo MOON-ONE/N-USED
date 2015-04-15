@@ -428,6 +428,85 @@ $n-post-text-color: #2C3E50;
 			padding: 0 5px 0 5px;
 		}
 
+		.n-nav-icons {
+			$icon-color : #aaa;
+			$icon-hover-color: #bbb;
+			$icon-size: 10px;
+			$icon-padding: 10px;
+			$icon-width: $icon-size + 2 * $icon-padding;
+			$icon-gap: 0px;
+			// margin-top: $icon-gap;
+			// margin-left: ($nav-width - $icon-width) / 2;
+
+			.icons{
+				margin-top: 15px;
+				margin-right:10%; 
+			}
+
+			.n-bottom-icon {
+				bottom: 0;
+				// margin-top: calc(100vh - #{$icon-gap} - (#{$icon-size} + #{$icon-gap}) * 3 - 140px);
+			}
+
+			.n-nav-icon {
+				&.active {
+					a {
+						border-color: $icon-hover-color;
+					}
+					i {
+						color: $icon-hover-color;
+					}
+				}
+			}
+
+			.fa-twitter{
+				padding: 0px 0px 0px 0px;
+			}
+			.fa-thumb-tack{
+				padding: 2px 2px 3px 2px;
+			}
+			.fa-street-view{
+				padding: 0px 0px 0px 0px;
+			}
+
+			.fa-sign-out{
+				padding: 0px 0px 0px 0px;
+			}
+
+
+			a {
+				color: #aaa;
+  				padding: 5px;
+  				border: 2px solid #aaa;
+  				border-radius: 50px;
+  				/* height: 35px; */
+  				line-height: 1.5;
+  				width: 39px;
+  				margin-left: 100px;
+
+				i {
+					font-size: 18px;
+  					margin-bottom: auto;
+  					padding: 0 0 0 4px;
+  					span{
+  						margin-left: 18px;
+  					}
+				}
+
+				&:hover {
+					color: $icon-hover-color !important;
+					border-color: $icon-hover-color !important;
+					@include transition(.8s ease);
+
+					i {
+						color: $icon-hover-color;
+						@include transform(scale(1.6, 1.6));
+						@include transition(.3s ease);
+					}
+				}
+			}
+		}
+
 	}
 	
 	.account-pic-and-name {
@@ -500,6 +579,8 @@ $n-post-text-color: #2C3E50;
 				margin-top: 20px;
 			}
 	}
+
+	
 }
 
 
