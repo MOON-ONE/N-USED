@@ -56,7 +56,7 @@ $(document).on("click",".n-account-nav a",function(e){
     $(toShow).show();
 });
 
-$(document).on("click",".n-account-edit-info", function(){
+$(document).on("click",".n-account-edit-button", function(){
 
             var $this = $(this);
             var text = $this.text();

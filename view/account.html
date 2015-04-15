@@ -1,38 +1,37 @@
 <section id="n-account" class="n-account">
 	<div class="n-container">
 
-	<div class="n-account-nav col-md-12">
-	<a href="#" class="n-account-back-button">
-	<i class="fa fa-angle-left fa-2x" style="padding-top: 10px;"></i>
-	</a>
+	<div class="row n-account-nav">
+		<div class="col-md-4">
+			<a href="#" class="n-account-back-button">
+				<i class="fa fa-angle-left fa-2x" style="padding-top: 10px;"></i>
+			</a>
+		</div>
 
-	<div class="n-account-toggle-button">
-    <a href="#profile">Profile</a>
-    <a href="#favourite">Favourite</a>
-    <a href="#history">History</a>
-    </div>
-
+		<div class="col-md-8">
+    			<a href="#history">History</a>
+    			<a href="#favourite">Favourite</a>
+    			<a href="#profile">Profile</a>
+    	</div>
 	</div>
 
-
-  	<div class="row">
-
-    <div class="col-sm-4">
-      <!-- <i class="fa fa-user fa-5x"></i> -->
-      <img class="account-profile-pic" src="view/images/gebilaowang.png"></img>
+	<div class="row account-pic-and-name">
+  		<div class="col-md-10">
+  			<div class="col-sm-1"></div>
+    		<div class="col-sm-4">
+      			<img class="account-profile-pic" src="view/images/gebilaowang.png">
+      		</div>
+      		<div class="col-sm-3">
+      			<h1 class="n-account-name">王进喜</h1>
+      		</div>
+    	</div>
     </div>
-
-    <div class="col-sm-8">
-     	<span class="n-account-name">王进喜</span>
- 	</div>
-
-	</div>
 	
 	
 	<div id="profile" class="n-account-toggle">
 
 		<div class="row">
-			<div class="n-account-profile-info col-md-6">
+			<div class="n-account-profile-info col-md-7">
 				<div class="row info-row">
 					<div class="col-md-3">
 						<label class="account-label-title">Gender:</label>
@@ -73,7 +72,11 @@
 			</div>
 		</div>
 
-		<button class="n-account-edit-info">Edit</button>
+		<div class="row">
+			<div class="n-account-edit-info col-md-7">
+				<button class="n-account-edit-button">Edit</button>
+			</div>
+		</div>
 
 	</div> 
 	<div id="favourite" class="n-account-toggle" style="display:none">
