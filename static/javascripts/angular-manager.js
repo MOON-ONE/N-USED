@@ -18,11 +18,10 @@ app.directive('onFinishRender', function ($timeout) {
 app.controller('main', ['$scope', function($scope) {
     $scope.init = function() {
         $scope.books = books;
+        $scope.favourite = favourite;
+        $scope.historyPost = historyPost;
     };
 
-    $scope.init = function() {
-        $scope.favourite = favourite;
-    };
     
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
                     $("#n-home .toggle").parent().toggleClass('closed');
