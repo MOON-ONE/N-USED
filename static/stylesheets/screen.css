@@ -720,6 +720,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       -ms-transition: 0.8s ease;
       -o-transition: 0.8s ease;
       transition: 0.8s ease; }
+      .n-account .n-account-nav .n-nav-icons a:hover span {
+        color: #bbb; }
 .n-account .account-pic-and-name {
   text-align: center; }
   .n-account .account-pic-and-name .account-profile-pic {

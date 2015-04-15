@@ -498,11 +498,11 @@ $n-post-text-color: #2C3E50;
 					border-color: $icon-hover-color !important;
 					@include transition(.8s ease);
 
-					// span {
-					// 	color: $icon-hover-color;
-					// 	@include transform(scale(1.6, 1.6));
-					// 	@include transition(.3s ease);
-					// }
+					span{
+						color: $icon-hover-color;
+						// @include transform(scale(1.6, 1.6));
+						// @include transition(.3s ease);
+					}
 				}
 			}
 		}

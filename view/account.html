@@ -23,8 +23,8 @@
     		<div class="col-sm-4">
       			<img class="account-profile-pic" src="view/images/gebilaowang.png">
       		</div>
-      		<div class="col-sm-3">
-      			<h1 class="n-account-name">王进喜</h1>
+      		<div class="col-sm-4" ng-repeat="user in user" on-finish-render="ngRepeatFinished">
+      			<h1 class="n-account-name" data-title="name">{{ user.name }}</h1>
       		</div>
     	</div>
     </div>
@@ -32,24 +32,14 @@
 	
 	<div id="profile" class="n-account-toggle">
 
-		<div class="row">
+		<div class="row" ng-repeat="user in user" on-finish-render="ngRepeatFinished">
 			<div class="n-account-profile-info col-md-7">
-				<div class="row info-row">
-					<div class="col-md-3">
-						<label class="account-label-title">Gender:</label>
-					</div>
-					<div class="col-md-9">
-						<label class="account-label">Male</label>
-						<input class="form-control post-input account-label" type="text" name="type" style="display:none"/>
-					</div>
-				</div>
-			
 				<div class="row info-row">
 					<div class="col-md-3">
 						<label class="account-label-title">Contact:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="account-label">98994794</label>
+						<label class="account-label" data-title="contact">{{ user.contact }}</label>
 						<input class="form-control post-input account-label" type="text" name="type" style="display:none"/>
 					</div>
 				</div>
@@ -58,7 +48,7 @@
 						<label class="account-label-title">Email:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="account-label">syx0628@gmail.com</label>
+						<label class="account-label" data-title="email">{{ user.email }}</label>
 						<input class="form-control post-input account-label" type="text" name="type" style="display:none"/>
 					</div>
 				</div>
@@ -67,7 +57,7 @@
 						<label class="account-label-title">Address:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="account-label">NUS PGP block A room 204</label>
+						<label class="account-label" data-title="address">{{ user.address }}</label>
 						<input class="form-control post-input account-label" type="text" name="type" style="display:none"/>
 					</div>
 				</div>
