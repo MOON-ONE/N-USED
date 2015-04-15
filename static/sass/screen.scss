@@ -62,7 +62,7 @@ $nav-active-width: 390px;
 $container-transition-time: 0.4s;
  
 
-// 总
+// 总 
 .n-main {
 	.n-container {
 		@include transition(all $container-transition-time);
@@ -224,7 +224,7 @@ $container-transition-time: 0.4s;
 
 
 // 林狗
-$n-post-nav-height: 80px;
+$n-post-nav-height: 70px;
 $n-post-nav-color: #34495E;
 $n-post-text-color: #2C3E50;
 .n-post {
@@ -249,7 +249,16 @@ $n-post-text-color: #2C3E50;
 		}
 		.post-module-code {
 			font-size: 35px;
+			margin-top: 5px;
 			float: left;
+		}
+		.post-create {
+			font-size: 35px;
+			float: right;
+			margin-top: 5px;
+			margin-right: 40px;
+			color: #2ECC71;
+			text-decoration: none;
 		}
 		.n-post-like {
 			margin-top: -3px;
@@ -295,43 +304,86 @@ $n-post-text-color: #2C3E50;
 	}
 	.post-contact-info {
 		text-align: center;
-		margin-top: 100px;
-		color: $n-post-text-color;
-		margin-bottom: 20px;
-		.post-contact-avatar {
-			margin-bottom: 40px;
-			.account-profile-pic {
-				height: 150px;
-				width: 150px;
-				border:solid 5px ;
-				-moz-border-radius: 30px;
-				border-radius: 100px;
-			}
-		}
-		.contact-row {
-			color: $n-post-nav-color;
-			margin-bottom: 15px;
-			.contact-name-label {
-				font-size: 25px;
-				color: $n-post-text-color;
-			}
-			.contact-label {
-				font-size: 20px;
-				color: $n-post-text-color;
-			}
-		}
-	}
-	.post-image-section {
-		margin-left: 50px;
-		.post-image {
-			height: 165px;
-			margin-right: 20px;
-			margin-bottom: 20px;
+		margin-top: 110px;
+	    color: $n-post-text-color;
+	    margin-bottom: 20px;
+	    .post-contact-avatar {
+	    	margin-bottom: 40px;
+	    	.account-profile-pic {
+	    		height: 150px;
+	    		width: 150px;
+	    		border:solid 5px ;
+	    		-moz-border-radius: 30px;
+	    		border-radius: 100px;
+	    	}
+	    }
+	    .contact-row {
+	    	color: $n-post-nav-color;
+	    	margin-bottom: 15px;
+		    .contact-name-label {
+		    	font-size: 25px;
+		    	color: $n-post-text-color;
+		    }
+		    .contact-label {
+		    	font-size: 20px;
+		    	color: $n-post-text-color;
+		    }
 		}
 	}
 }
- 
-
+.create-post-textbook-info {
+	line-height: 30px;
+	vertical-align: middle;
+	font-size: 20px;
+	margin-top: 110px;
+	margin-left: 50px;
+	margin-bottom: 20px;
+	color: $n-post-text-color;
+	.create-info-row {
+		color: $n-post-nav-color;
+		margin-bottom: 15px;
+		border-bottom: solid;
+		border-width: 1px;
+		width: 90%;
+		.post-label {
+			color: $n-post-text-color;
+			float: left;
+			margin-top: 7px;
+		}
+		.post-label-right {
+			color: $n-post-text-color;
+			margin-top: 0px;
+		}
+		.create-post-condition-label {
+			color: $n-post-text-color;
+			display: inline;
+			font-size: 15px;
+			width: 100%;
+		}
+		.post-input {
+			width: 90%;
+			margin-bottom: 10px;
+		}
+		.post-input-short {
+			width: 70%;
+			display: inline;
+			margin-right: 20px;
+		}
+		.condition-check {
+			float: left;
+			margin-right: 10px;
+			margin-top: 10px;
+		}
+	}
+}
+.create-post-image-section {
+	margin-top: 110px;
+	.post-image {
+		height: 150px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+}
 
 
 
