@@ -21,6 +21,14 @@
         <!--Font Awesome-->
         <link rel="stylesheet" type="text/css" href="plug-in/Font-Awesome/css/font-awesome.min.css">
         
+        <!--Fancybox-->
+        <link rel="stylesheet" href="plug-in/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+  		<script src="plug-in/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  		<link rel="stylesheet" href="plug-in/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" media="screen" />
+	    <script src="plug-in/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	    <script src="plug-in/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+	    <link rel="stylesheet" href="plug-in/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" media="screen" />
+	    <script src="plug-in/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
         
         <!--Customized Stylesheet-->
 		<link href='static/stylesheets/screen.css' rel='stylesheet' type='text/css'>
@@ -30,8 +38,8 @@
 	<body ng-app="app" ng-controller="main" ng-init="init()">
 	<div ng-include="'view/nav.html'"></div>
 		<section class="n-main">
-			<div id="n-home-wrapper" ng-include="'view/home.html'"></div>
-			<div id="n-post-wrapper" style="display: none"></div>
+			<div id="n-home-wrapper" ng-include="'view/home.html'" style="display: none"></div>
+			<div id="n-post-wrapper"></div>
 			<div id="n-account-wrapper" style="display: none"></div>
 			<!-- <div ng-include="'view/home.html'"></div>
 			<div ng-include="'view/post.html'"></div>
