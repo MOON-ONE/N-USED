@@ -35,33 +35,95 @@
 			<div class="n-account-profile-info col-md-6">
 				<div class="row info-row">
 					<div class="col-md-3">
-						<label class="account-label">Gender:</label>
+						<label class="account-label-title">Gender:</label>
 					</div>
 					<div class="col-md-9">
 						<label class="account-label">Male</label>
+						<input class="account-label" type="text" name="type" style="display:none"/>
 					</div>
 				</div>
 			
 				<div class="row info-row">
 					<div class="col-md-3">
-						<label class="account-label">Contact:</label>
+						<label class="account-label-title">Contact:</label>
 					</div>
 					<div class="col-md-9">
 						<label class="account-label">98994794</label>
+						<input class="account-label" type="text" name="type" style="display:none"/>
 					</div>
 				</div>
 				<div class="row info-row">
 					<div class="col-md-3">
-						<label class="account-label">Email:</label>
+						<label class="account-label-title">Email:</label>
 					</div>
 					<div class="col-md-9">
 						<label class="account-label">syx0628@gmail.com</label>
+						<input class="account-label" type="text" name="type" style="display:none"/>
+					</div>
+				</div>
+				<div class="row info-row">
+					<div class="col-md-3">
+						<label class="account-label-title">Address:</label>
+					</div>
+					<div class="col-md-9">
+						<label class="account-label">NUS PGP block A room 204</label>
+						<input class="account-label" type="text" name="type" style="display:none"/>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<button class="n-account-edit-info">Edit</button>
+
 	</div> 
-	<div id="favourite" class="n-account-toggle" style="display:none">favourite</div>
-	<div id="history" class="n-account-toggle" style="display:none">history</div>
+	<div id="favourite" class="n-account-toggle" style="display:none">
+		
+		        <div class="table-responsive-vertical shadow-z-1">
+            <!-- Table starts here -->
+            <table class="table table-hover table-mc-light-blue">
+                <thead>
+                    <tr>
+                        <th>Module Code</th>
+                        <th>Title</th>
+                        <th>Condition</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+	                <tr ng-repeat="book in books | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
+	                    <td data-title="Module Code">CS3240</td>
+	                    <td data-title="Title">Interaction design</td>
+	                    <td data-title="Condition">10</td>
+	                    <td data-title="Price">10</td>
+	                </tr>
+                </tbody>
+            </table>
+        </div>
+
+	</div>
+	<div id="history" class="n-account-toggle" style="display:none">
+		
+		    <div class="table-responsive-vertical shadow-z-1">
+            <!-- Table starts here -->
+            <table class="table table-hover table-mc-light-blue">
+                <thead>
+                    <tr>
+                        <th>Module Code</th>
+                        <th>Title</th>
+                        <th>Condition</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+	                <tr ng-repeat="book in books | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
+	                     <td data-title="Module Code">CS3240</td>
+	                    <td data-title="Title">Interaction design</td>
+	                    <td data-title="Condition">10</td>
+	                    <td data-title="Price">10</td>
+	                </tr>
+                </tbody>
+            </table>
+        </div>
+
+	</div>
 </section>
