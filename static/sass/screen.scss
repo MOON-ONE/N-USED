@@ -450,9 +450,10 @@ $n-post-text-color: #2C3E50;
 	    color: $n-account-text-color;
 	    .info-row {
 	    	color: $n-account-nav-color;
-	    	margin-bottom: 15px;
-	    	border-bottom: solid;
-	    	border-width: 1px;
+	    	// margin-bottom: 15px;
+	    	// border-bottom: solid;
+	    	// border-width: 1px;
+	    	margin-bottom: 12px;
 	    	width: 90%;
 		    .account-label {
 		    	color: $n-account-text-color;

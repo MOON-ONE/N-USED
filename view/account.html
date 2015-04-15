@@ -78,7 +78,7 @@
 	</div> 
 	<div id="favourite" class="n-account-toggle" style="display:none">
 		
-		        <div class="table-responsive-vertical shadow-z-1">
+            <div class="table-responsive-vertical shadow-z-1">
             <!-- Table starts here -->
             <table class="table table-hover table-mc-light-blue">
                 <thead>
@@ -91,10 +91,10 @@
                 </thead>
                 <tbody>
 	                <tr ng-repeat="book in books | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
-	                    <td data-title="Module Code">CS3240</td>
-	                    <td data-title="Title">Interaction design</td>
-	                    <td data-title="Condition">10</td>
-	                    <td data-title="Price">10</td>
+	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
+	                    <td data-title="Title">{{ book.title }}</td>
+	                    <td data-title="Condition">{{ book.condition.rank }}</td>
+	                    <td data-title="Price">{{ book.price }}</td>
 	                </tr>
                 </tbody>
             </table>
@@ -103,7 +103,7 @@
 	</div>
 	<div id="history" class="n-account-toggle" style="display:none">
 		
-		    <div class="table-responsive-vertical shadow-z-1">
+            <div class="table-responsive-vertical shadow-z-1">
             <!-- Table starts here -->
             <table class="table table-hover table-mc-light-blue">
                 <thead>
@@ -116,10 +116,10 @@
                 </thead>
                 <tbody>
 	                <tr ng-repeat="book in books | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
-	                     <td data-title="Module Code">CS3240</td>
-	                    <td data-title="Title">Interaction design</td>
-	                    <td data-title="Condition">10</td>
-	                    <td data-title="Price">10</td>
+	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
+	                    <td data-title="Title">{{ book.title }}</td>
+	                    <td data-title="Condition">{{ book.condition.rank }}</td>
+	                    <td data-title="Price">{{ book.price }}</td>
 	                </tr>
                 </tbody>
             </table>
