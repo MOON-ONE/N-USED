@@ -687,7 +687,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     bottom: 0; }
   .n-account .n-account-nav .n-nav-icons .n-nav-icon.active a {
     border-color: #bbb; }
-  .n-account .n-account-nav .n-nav-icons .n-nav-icon.active i {
+  .n-account .n-account-nav .n-nav-icons .n-nav-icon.active span {
     color: #bbb; }
   .n-account .n-account-nav .n-nav-icons .fa-twitter {
     padding: 0px 0px 0px 0px; }
@@ -699,9 +699,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding: 0px 0px 0px 0px; }
   .n-account .n-account-nav .n-nav-icons a {
     color: #aaa;
-    padding: 5px;
+    padding: 6px;
     border: 2px solid #aaa;
-    border-radius: 50px;
+    border-radius: 80px;
     /* height: 35px; */
     line-height: 1.5;
     width: 39px;
@@ -709,7 +709,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     .n-account .n-account-nav .n-nav-icons a i {
       font-size: 18px;
       margin-bottom: auto;
-      padding: 0 0 0 4px; }
+      padding: 1px 0 0 3px; }
       .n-account .n-account-nav .n-nav-icons a i span {
         margin-left: 18px; }
     .n-account .n-account-nav .n-nav-icons a:hover {
@@ -720,18 +720,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       -ms-transition: 0.8s ease;
       -o-transition: 0.8s ease;
       transition: 0.8s ease; }
-      .n-account .n-account-nav .n-nav-icons a:hover i {
-        color: #bbb;
-        -webkit-transform: scale(1.6, 1.6);
-        -moz-transform: scale(1.6, 1.6);
-        -ms-transition: scale(1.6, 1.6);
-        -o-transform: scale(1.6, 1.6);
-        transform: scale(1.6, 1.6);
-        -webkit-transition: 0.3s ease;
-        -moz-transition: 0.3s ease;
-        -ms-transition: 0.3s ease;
-        -o-transition: 0.3s ease;
-        transition: 0.3s ease; }
 .n-account .account-pic-and-name {
   text-align: center; }
   .n-account .account-pic-and-name .account-profile-pic {
