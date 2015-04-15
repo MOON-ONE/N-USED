@@ -435,7 +435,6 @@ $n-post-text-color: #2C3E50;
 		margin-left: 380px;
 	}
 }
- 
 
 
 
@@ -466,25 +465,30 @@ $n-post-text-color: #2C3E50;
 		.n-nav-icons {
 			$icon-color : #ccc;
 			$icon-hover-color: #fff;
+			$icon-size: 20px;
+			$icon-padding: 20px;
+			$icon-width: $icon-size + 2 * $icon-padding;
+			margin-top: 70px;
+			margin-left: ($nav-width - $icon-width) / 2;
 
 			.fa-twitter{
 				padding: 0px 0px 0px 0px;
 			}
-			.fa-facebook{
-				padding: 2px 4px 3px 3px;
+			.fa-thumb-tack{
+				padding: 2px 2px 3px 2px;
 			}
-			.fa-dribbble{
+			.fa-street-view{
 				padding: 0px 0px 0px 0px;
 			}
 
 			a {
 				color: $icon-color;
-				padding: 25px;
+				padding: $icon-padding;
 				border: 2px solid $icon-color;
 				border-radius: 50px;
 
 				i {
-					font-size: 20px;
+					font-size: $icon-size;
 					margin-bottom: 70px;
 				}
 
