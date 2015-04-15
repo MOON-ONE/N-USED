@@ -29,7 +29,15 @@ $(document).on("click", "#n-home .toggle", function(){
 
 // 林狗
 $(".fancybox").fancybox();
-
+$(document).on("click", ".like", function() {
+	if ($(this).hasClass("on")) {
+		$(this).removeClass("on");
+		$(this).addClass("off");
+	} else {
+		$(this).removeClass("off");
+		$(this).addClass("on");
+	}
+})
 
 
 
