@@ -20,6 +20,7 @@ app.controller('main', ['$scope', function($scope) {
         $scope.books = books;
         $scope.favourite = favourite;
         $scope.historyPost = historyPost;
+        $scope.user = user;
     };
 
     

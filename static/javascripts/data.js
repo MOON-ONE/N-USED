@@ -198,3 +198,11 @@ var historyPost = [
     'price': 20,
     'sellId': "Uskdhiu63f"
 }];
+
+var user = [
+{
+    'name': 'Wang Jingxi',
+    'contact': '98264921',
+    'email': 'jingxi@gmail.com',
+    'address': 'NUS PGP block A room 204',
+}];
