@@ -93,7 +93,7 @@
                     </tr>
                 </thead>
                 <tbody>
-	                <tr ng-repeat="book in books | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
+	                <tr ng-repeat="book in favourite | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
 	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
 	                    <td data-title="Title">{{ book.title }}</td>
 	                    <td data-title="Condition">{{ book.condition.rank }}</td>

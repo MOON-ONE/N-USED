@@ -19,6 +19,10 @@ app.controller('main', ['$scope', function($scope) {
     $scope.init = function() {
         $scope.books = books;
     };
+
+    $scope.init = function() {
+        $scope.favourite = favourite;
+    };
     
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
                     $("#n-home .toggle").parent().toggleClass('closed');
