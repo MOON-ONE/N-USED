@@ -93,8 +93,9 @@ $(document).on("click", "#n-hamburger-icon", function() {
 
 $(document).on("click", "div[id^='n-nav-']", function() {
 	var section = $(this).attr('id').substr(6);
-	$(".n-main >div").hide();
-	$("#n-" + section + "-wrapper").css('display', 'inherit');
+	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
+		$("#n-" + section + "-wrapper").fadeIn(00);
+	});
 	return false;
 });
 
