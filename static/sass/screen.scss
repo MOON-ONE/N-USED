@@ -394,9 +394,132 @@ $n-post-text-color: #2C3E50;
 	}
 }
 
+#progressbar {
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
 
+.bg-image {
+  background-position: top center;
+  background-size: cover;
+  
+  &.aspect-square {
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+}
 
+@mixin cover-horizontal {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
 
+@mixin cover-vertical {
+  bottom: 0;
+  top: 0;
+}
+
+@mixin FontAwesome {
+    font-family: FontAwesome;
+}
+
+$upload-text-color: #fff;
+$upload-size: 100%;
+$global-delay: .3s;
+.image-select {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  width: $upload-size;
+  
+  input[type="file"] {
+    @include cover-horizontal;
+    @include cover-vertical;
+    position: initial;
+    cursor: pointer;
+    display: block;
+    opacity: 0;
+    z-index: 15;
+  }
+  
+  &__message:after {
+    @include cover-horizontal;
+    background-color: black(0.75);
+    bottom: 0;
+    color: $upload-text-color;
+    content: "Browse for file...";
+    display: block;
+    font-weight: bold;
+    height: 3em;
+    line-height: 3em;
+    opacity: 0;
+    padding: 0 1em;
+    transition: transform $global-delay ease,
+                opacity $global-delay ease;
+    transform: translateY(100%);
+    text-shadow: 0 1px 1px black(0.3);
+    z-index: 5;
+    
+    .image-select:hover & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  &__icon {
+    bottom: .25em;
+    color: $upload-text-color;
+    position: absolute;
+    right: .5em;
+    text-shadow: 0 1px 1px black(0.3);
+    transition: transform $global-delay ease,
+                opacity $global-delay ease;
+    z-index: 10;
+    
+    .image-select:hover & {
+      transform: scale(0.8,0.8);
+    }
+  }
+}
+$file-hover-bg-color: black(0.5);
+$file-hover-icon-color: #fff;
+$file-hover-icon: "\f0ee";
+$file-hover-icon-size: 5em;
+.file-hover {
+  position: relative;
+  
+  &:before {
+    @include cover-horizontal;
+    @include cover-vertical;
+    background-color: $file-hover-bg-color;
+    content: "";
+    display: block;
+    z-index: 30;
+  }
+  
+  &:after {
+    @include FontAwesome;
+    animation: 1.5s bounce infinite;
+    color: $file-hover-icon-color;
+    content: $file-hover-icon;
+    font-size: $file-hover-icon-size;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -0.5em 0 0 -0.5em;
+    z-index: 35;
+  }
+}
+@keyframes bounce {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(25%) }
+  100% { transform: translateY(0) }
+}
 // 林狗完
 
 
