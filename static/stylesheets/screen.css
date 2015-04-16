@@ -90,7 +90,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-right: 0; }
 #n-home .n-container {
   display: block;
-  color: black; }
+  color: black;
+  background-color: #333;
+  height: 100vh; }
   #n-home .n-container .n-more-option-bar {
     margin-left: 0;
     margin-right: 0;
@@ -150,6 +152,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       cursor: pointer;
       background-color: #eef2e7;
       color: #333; }
+  #n-home .n-container .n-book-list-table {
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    background-color: white; }
 
 .n-post .n-post-nav {
   width: 100%;

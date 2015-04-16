@@ -25,10 +25,12 @@ app.controller('main', ['$scope', function($scope) {
 
     
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
-                    $("#n-home .toggle").parent().toggleClass('closed');
-                    setTimeout(function(){ 
-    					$("#n-home .toggle").prev().focus();
-                    }, 1000);
+                    var table = $(".n-book-list-table table");
+                    table.floatThead({
+                        scrollContainer: function($table){
+                            return $('.n-book-list-table');
+                        }
+                    });
                 });
     
     $scope.orderList = "moduleCode";

@@ -122,6 +122,8 @@ $container-transition-time: 0.4s;
 	.n-container {
 		display: block;
 		color: black;
+		background-color: $bg-color;
+		height: 100vh;
 
 		.n-more-option-bar {
 			margin-left: 0;
@@ -206,6 +208,12 @@ $container-transition-time: 0.4s;
 				background-color: $color;
 				color: $bg-color;
 			}
+		}
+
+		.n-book-list-table {
+			height: calc(100vh - 70px);
+			overflow-y: scroll;
+			background-color: white;
 		}
 	}
 }
