@@ -24,7 +24,6 @@ $(document).on("click", "#n-home .sort-button", function(){
 		moreOptionBar.hide();
 		$(this).html('<i class="fa fa-chevron-down">');
 	}
-	
 });
 
 // 王狗完
