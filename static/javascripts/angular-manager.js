@@ -25,7 +25,9 @@ app.controller('main', ['$scope', function($scope) {
 
     
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
+                    viewDidLoad();
                     var table = $(".n-book-list-table table");
+                    $('[data-toggle="tooltip"]').tooltip()
                     table.floatThead({
                         scrollContainer: function($table){
                             return $('.n-book-list-table');
