@@ -50,11 +50,11 @@
 }
 
 @mixin filter($filter) {
-    -webkit-filter: $filter;
-    -moz-filter: $filter;
-    -ms-filter: $filter;
-    -o-filter: $filter;
-    filter: $filter;
+	-webkit-filter: $filter;
+	-moz-filter: $filter;
+	-ms-filter: $filter;
+	-o-filter: $filter;
+	filter: $filter;
 }
 
 $nav-width: 90px;
@@ -72,7 +72,7 @@ $container-transition-time: 0.4s;
 		&.active {
 			margin-left: $nav-active-width;
 			margin-right: -$nav-active-width;
-			@include filter(blur(3px));
+			@include filter(blur(10px));
 		}
 	}
 
@@ -309,29 +309,29 @@ $n-post-text-color: #2C3E50;
 	.post-contact-info {
 		text-align: center;
 		margin-top: 110px;
-	    color: $n-post-text-color;
-	    margin-bottom: 20px;
-	    .post-contact-avatar {
-	    	margin-bottom: 40px;
-	    	.account-profile-pic {
-	    		height: 150px;
-	    		width: 150px;
-	    		border:solid 5px ;
-	    		-moz-border-radius: 30px;
-	    		border-radius: 100px;
-	    	}
-	    }
-	    .contact-row {
-	    	color: $n-post-nav-color;
-	    	margin-bottom: 15px;
-		    .contact-name-label {
-		    	font-size: 25px;
-		    	color: $n-post-text-color;
-		    }
-		    .contact-label {
-		    	font-size: 20px;
-		    	color: $n-post-text-color;
-		    }
+		color: $n-post-text-color;
+		margin-bottom: 20px;
+		.post-contact-avatar {
+			margin-bottom: 40px;
+			.account-profile-pic {
+				height: 150px;
+				width: 150px;
+				border:solid 5px ;
+				-moz-border-radius: 30px;
+				border-radius: 100px;
+			}
+		}
+		.contact-row {
+			color: $n-post-nav-color;
+			margin-bottom: 15px;
+			.contact-name-label {
+				font-size: 25px;
+				color: $n-post-text-color;
+			}
+			.contact-label {
+				font-size: 20px;
+				color: $n-post-text-color;
+			}
 		}
 	}
 	.post-image-section {
@@ -558,28 +558,28 @@ $n-post-text-color: #2C3E50;
 		font-size: 20px;
 		margin-top: 30px;
 		margin-left: 13%;
-	    color: $n-account-text-color;
-	    .info-row {
-	    	color: $n-account-nav-color;
-	    	// margin-bottom: 15px;
-	    	// border-bottom: solid;
-	    	// border-width: 1px;
-	    	margin-bottom: 12px;
-	    	width: 90%;
-		    .account-label {
-		    	color: $n-account-text-color;
-		    	margin: 0 20px 0 0;
-		    	float: left;
-		    }
-		    .account-label-title {
-		    	color: $n-account-text-color;
-		    	margin: 0 20px 0 0;
-		    	float: left;
-		    }
-		    input {
-		    	border-radius: 10px;
-		    	height: 30px;
-		    }
+		color: $n-account-text-color;
+		.info-row {
+			color: $n-account-nav-color;
+			// margin-bottom: 15px;
+			// border-bottom: solid;
+			// border-width: 1px;
+			margin-bottom: 12px;
+			width: 90%;
+			.account-label {
+				color: $n-account-text-color;
+				margin: 0 20px 0 0;
+				float: left;
+			}
+			.account-label-title {
+				color: $n-account-text-color;
+				margin: 0 20px 0 0;
+				float: left;
+			}
+			input {
+				border-radius: 10px;
+				height: 30px;
+			}
 		}
 	}
 
