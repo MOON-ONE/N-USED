@@ -94,6 +94,24 @@ $container-transition-time: 0.4s;
 // 王狗
 
 #n-home {
+	.col-xs-0,
+	.col-xs-1,
+	.col-xs-2,
+	.col-xs-3,
+	.col-xs-4,
+	.col-xs-5,
+	.col-xs-6,
+	.col-xs-7,
+	.col-xs-8,
+	.col-xs-9,
+	.col-xs-10,
+	.col-xs-11,
+	.col-xs-12 {
+		padding-left: 0;
+	}
+
+
+
 	$bg-color: #333;
 	$color: #eef2e7;
 	.n-container {
@@ -106,6 +124,7 @@ $container-transition-time: 0.4s;
 			height: $title-bar-height;
 			width: 100%;
 			margin: 0;
+			padding-left: 15px;
 
 			.n-title {
 				display: block;
@@ -129,6 +148,7 @@ $container-transition-time: 0.4s;
 				margin-top: calc((#{$title-bar-height} - #{$height})/2 + 2px);
 				background-color: $bg-color;
 				color: $color;
+				border-color: $color;
 				input {
 					height: $height;
 					background-color: $bg-color;
@@ -139,13 +159,38 @@ $container-transition-time: 0.4s;
 					cursor: pointer;
 					background-color: $bg-color;
 					color: $color;
-					transition: .1s linear color;
+					transition:	 .1s linear color;
 				}
 
 				a:active {
 					background-color: $color;
 					color: $bg-color;	
 				}
+			}
+
+			.sort-button {
+				display: block;
+				text-align: center;
+				vertical-align: center;
+				padding: 8px 0;
+				height: $height;
+				margin-top: calc((#{$title-bar-height} - #{$height})/2 + 2px);
+				background-color: $bg-color;
+				color: $color;
+				border: solid 1px #ccc;
+				border-radius: 4px;
+				font-size: 20px;
+				transition:	 .1s linear color;
+			}
+
+			.sort-button:hover {
+				cursor: pointer;
+			}
+
+			.sort-button:active {
+				cursor: pointer;
+				background-color: $color;
+				color: $bg-color;
 			}
 		}
 	}
