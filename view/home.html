@@ -5,9 +5,9 @@
                 <span class="n-title">N-USED</span>
             </div>
             <div class="col-xs-12 col-sm-9">
-                <div class="search-bar closed">
-                    <input type="text" ng-model="BookSearchQuery">
-                    <div class="toggle"></div>
+                <div class="input-group search-bar">
+                    <input type="text" class="form-control" placeholder="Module Code  /  Key Words  /  Figures" ng-model="BookSearchQuery">
+                    <a class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></a>
                 </div>
             </div>
         </div>
@@ -15,10 +15,10 @@
         <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
         <div class="table-responsive-vertical shadow-z-1">
             <!-- Table starts here -->
-            <table class="table table-hover table-mc-light-blue">
+            <table class="table table-hover table-mc-teal">
                 <thead>
                     <tr>
-                        <th>Module Code</th>
+                        <th>Module</th>
                         <th>Title</th>
                         <th>Condition</th>
                         <th>Price</th>
@@ -26,10 +26,10 @@
                 </thead>
                 <tbody>
 	                <tr ng-repeat="book in books | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
-	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
-	                    <td data-title="Title">{{ book.title }}</td>
-	                    <td data-title="Condition">{{ book.condition.rank }}</td>
-	                    <td data-title="Price">{{ book.price }}</td>
+	                    <td class="col-mc" data-title="Module Code">{{ book.moduleCode }}</td>
+	                    <td class="col-title" data-title="Title">{{ book.title }}</td>
+	                    <td class="col-condition" data-title="Condition">{{ book.condition.rank + " / 10"}}</td>
+	                    <td class="col-price" data-title="Price">{{ "S$" + book.price }}</td>
 	                </tr>
                 </tbody>
             </table>
