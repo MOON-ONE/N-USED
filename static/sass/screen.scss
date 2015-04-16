@@ -110,6 +110,11 @@ $container-transition-time: 0.4s;
 		padding-left: 0;
 	}
 
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 
 
 	$bg-color: #333;
@@ -123,7 +128,7 @@ $container-transition-time: 0.4s;
 			margin-right: 0;
 			padding: 15px;
 			display: none;
-			background-color: gray;
+			background-color: rgb(178, 223, 219);
 		}
 		
 		.n-title-bar {
