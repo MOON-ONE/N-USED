@@ -93,6 +93,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 #n-home .n-container {
   display: block;
   color: black; }
+  #n-home .n-container .n-more-option-bar {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 15px;
+    display: none;
+    background-color: gray; }
   #n-home .n-container .n-title-bar {
     background-color: #333;
     height: 70px;
