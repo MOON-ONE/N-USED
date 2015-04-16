@@ -15,9 +15,16 @@ $("#n-account-wrapper").load("view/account.html", function () {
 
 
 // 王狗
-$(document).on("click", "#n-home .toggle", function(){
-	$(this).parent().toggleClass('closed');
-    $(this).prev().focus();
+$(document).on("click", "#n-home .sort-button", function(){
+	var moreOptionBar = $("#n-home .n-more-option-bar");
+	if (moreOptionBar.css("display") == "none") {
+		moreOptionBar.show();
+		$(this).html('<i class="fa fa-chevron-up">');
+	} else {
+		moreOptionBar.hide();
+		$(this).html('<i class="fa fa-chevron-down">');
+	}
+	
 });
 
 // 王狗完
