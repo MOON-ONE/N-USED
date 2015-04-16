@@ -94,11 +94,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-color: #333;
   height: 100vh; }
   #n-home .n-container .n-more-option-bar {
+    color: #eef2e7;
     margin-left: 0;
     margin-right: 0;
-    padding: 15px;
+    padding-left: 15px;
     display: none;
     background-color: #333; }
+    #n-home .n-container .n-more-option-bar .bar-inner-container {
+      padding-right: 0; }
+      #n-home .n-container .n-more-option-bar .bar-inner-container .col-xs-6 {
+        margin-bottom: 15px; }
+        #n-home .n-container .n-more-option-bar .bar-inner-container .col-xs-6 input {
+          margin-right: 10px; }
+    #n-home .n-container .n-more-option-bar .col-button {
+      text-align: center; }
+  #n-home .n-container .title-bar-item {
+    border: solid 1px #ccc;
+    padding: 6px 12px;
+    line-height: 1.9em;
+    font-size: 14px;
+    border-radius: 4px; }
   #n-home .n-container .n-title-bar {
     background-color: #333;
     height: 70px;
@@ -155,7 +170,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #n-home .n-container .n-book-list-table {
     height: calc(100vh - 70px);
     overflow-y: scroll;
-    background-color: white; }
+    background-color: white;
+    cursor: pointer; }
+  #n-home .n-container .clear-selection-button {
+    color: #ec2e38;
+    cursor: pointer;
+    transition: .1s linear color; }
+  #n-home .n-container .clear-selection-button:hover {
+    color: rgba(236, 46, 56, 0.9); }
+  #n-home .n-container .clear-selection-button:active {
+    color: rgba(236, 46, 56, 0.5); }
+  @media only screen and (max-width: 767px) {
+    #n-home .n-container thead {
+      display: none; } }
 
 .n-post .n-post-nav {
   width: 100%;

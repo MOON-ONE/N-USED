@@ -1,4 +1,4 @@
-$(document).ready(function() {
+function viewDidLoad() {
 
 
 // 总
@@ -10,7 +10,9 @@ $("#n-post-wrapper").load("view/create-post.html", function () {
 // }); 
 $("#n-account-wrapper").load("view/account.html", function () {
 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
-}); 
+});
+
+$('[data-toggle="tooltip"]').tooltip()
 // 总完
 
 
@@ -28,12 +30,23 @@ $(document).on("click", "#n-home .sort-button", function(){
 	}
 });
 
+$(document).on("click", "#n-home .clear-selection-button", function() {
+	$("#n-home .col-selection input").each(function(index) {
+		$(this).attr('checked', false);
+	})
+})
+
 function updateTableContainerHeight(height) {
 	var windowHeight = $(window).height();
 	var tableContainer = $(".n-book-list-table").css("height", (windowHeight - height) + "px");
 }
 
-
+var table = $(".n-book-list-table table");
+table.floatThead({
+    scrollContainer: function($table){
+        return $('.n-book-list-table');
+    }
+});
 
 // 王狗完
 
@@ -128,4 +141,6 @@ $(document).on("click", "div[id^='n-nav-']", function() {
 
 
 // 雷狗完
-});
+}
+
+$(document).ready(viewDidLoad)
