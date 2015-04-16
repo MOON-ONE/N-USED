@@ -5,9 +5,9 @@ $(document).ready(function() {
 $("#n-post-wrapper").load("view/post.html", function () {
 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
 });
-$("#n-home-wrapper").load("view/home.html", function () {
-	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
-}); 
+// $("#n-home-wrapper").load("view/home.html", function () {
+// 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
+// }); 
 $("#n-account-wrapper").load("view/account.html", function () {
 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
 }); 
