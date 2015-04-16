@@ -98,10 +98,41 @@
 				<a class="fancybox col-md-6" rel="group" href="view/images/gebilaowang.png">
 					<img class="post-image" src="view/images/gebilaowang.png">
 				</a>
-				<a class="fancybox col-md-6" rel="group" href="view/images/gebilaowang.png">
-					<img class="post-image" src="view/images/gebilaowang.png">
-				</a>
+				<div class="col-md-6" rel="group" data-toggle="modal" data-target="#avatar-modal">
+	                <img class="post-image" src="view/images/gebilaowang.png">
+	            </div>
 			</div>
+			<div class="modal fade" id="avatar-modal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Add Photo</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label for="image">
+                            <form action="" class="image-select" data-droppable="">
+                                <input id="image" type="file" data-droppable-input="" />
+                                <i class="fa fa-camera fa-2x image-select__icon"></i>
+                                <div class="image-select__message"></div>
+                                <div class="bg-image aspect-square" style="background-image: url('view/images/gebilaowang.png');" data-droppable-image=""></div>
+                            </form>
+                        </label>
+                        <br>
+                        <div id="progress-status">
+                            <div id="progressbar" class='progress'></div>
+                            <div id="status"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="uploadPhotoAjax()" data-dismiss="modal">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 		</div>
 	</div>
 </section>
