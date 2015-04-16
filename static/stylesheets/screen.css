@@ -82,11 +82,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .n-main .n-container.active {
   margin-left: 390px;
   margin-right: -390px;
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -ms-filter: blur(3px);
-  -o-filter: blur(3px);
-  filter: blur(3px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter: blur(10px);
 }
 /* line 79, ../sass/screen.scss */
 .n-main section {
