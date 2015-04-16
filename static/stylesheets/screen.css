@@ -76,6 +76,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .n-content-row {
   margin: 0px !important; }
 
+#n-home .col-xs-0,
+#n-home .col-xs-1,
+#n-home .col-xs-2,
+#n-home .col-xs-3,
+#n-home .col-xs-4,
+#n-home .col-xs-5,
+#n-home .col-xs-6,
+#n-home .col-xs-7,
+#n-home .col-xs-8,
+#n-home .col-xs-9,
+#n-home .col-xs-10,
+#n-home .col-xs-11,
+#n-home .col-xs-12 {
+  padding-left: 0; }
 #n-home .n-container {
   display: block;
   color: black; }
@@ -83,7 +97,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background-color: #333;
     height: 70px;
     width: 100%;
-    margin: 0; }
+    margin: 0;
+    padding-left: 15px; }
     #n-home .n-container .n-title-bar .n-title {
       display: block;
       color: white;
@@ -98,7 +113,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       height: 40px;
       margin-top: calc((70px - 40px)/2 + 2px);
       background-color: #333;
-      color: #eef2e7; }
+      color: #eef2e7;
+      border-color: #eef2e7; }
       #n-home .n-container .n-title-bar .search-bar input {
         height: 40px;
         background-color: #333;
@@ -111,6 +127,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       #n-home .n-container .n-title-bar .search-bar a:active {
         background-color: #eef2e7;
         color: #333; }
+    #n-home .n-container .n-title-bar .sort-button {
+      display: block;
+      text-align: center;
+      vertical-align: center;
+      padding: 8px 0;
+      height: 40px;
+      margin-top: calc((70px - 40px)/2 + 2px);
+      background-color: #333;
+      color: #eef2e7;
+      border: solid 1px #ccc;
+      border-radius: 4px;
+      font-size: 20px;
+      transition: .1s linear color; }
+    #n-home .n-container .n-title-bar .sort-button:hover {
+      cursor: pointer; }
+    #n-home .n-container .n-title-bar .sort-button:active {
+      cursor: pointer;
+      background-color: #eef2e7;
+      color: #333; }
 
 .n-post .n-post-nav {
   width: 100%;
