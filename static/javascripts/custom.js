@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 
 // 总
-$("#n-post-wrapper").load("view/post.html", function () {
+$("#n-post-wrapper").load("view/create-post.html", function () {
 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
 });
 $("#n-home-wrapper").load("view/home.html", function () {
