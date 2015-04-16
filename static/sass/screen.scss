@@ -76,7 +76,7 @@ $container-transition-time: 0.4s;
 		&.active {
 			margin-left: $nav-active-width;
 			margin-right: -$nav-active-width;
-			@include filter(blur(10px));
+			// @include filter(blur(10px));
 		}
 	}
 
