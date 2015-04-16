@@ -2,8 +2,9 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -20,35 +21,53 @@ time, mark, audio, video {
   border: 0;
   font: inherit;
   font-size: 100%;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
-  line-height: 1; }
+  line-height: 1;
+}
 
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
-  quotes: none; }
-  q:before, q:after, blockquote:before, blockquote:after {
-    content: "";
-    content: none; }
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
 
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
-  border: none; }
+  border: none;
+}
 
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block; }
+  display: block;
+}
 
+/* line 67, ../sass/screen.scss */
 .n-main .n-container {
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -57,127 +76,168 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all 0.4s;
   margin-left: 90px;
   margin-right: 0;
-  position: relative; }
-  .n-main .n-container.active {
-    margin-left: 390px;
-    margin-right: -390px;
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -ms-filter: blur(3px);
-    -o-filter: blur(3px);
-    filter: blur(3px); }
+  position: relative;
+}
+/* line 72, ../sass/screen.scss */
+.n-main .n-container.active {
+  margin-left: 390px;
+  margin-right: -390px;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -ms-filter: blur(3px);
+  -o-filter: blur(3px);
+  filter: blur(3px);
+}
+/* line 79, ../sass/screen.scss */
 .n-main section {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
+/* line 84, ../sass/screen.scss */
+.n-content-row {
+  margin: 0px !important;
+}
+
+/* line 94, ../sass/screen.scss */
 #n-home .n-container {
   display: block;
-  color: black; }
-  #n-home .n-container .n-title-bar {
-    background-color: #333;
-    height: 70px;
-    width: 100%;
-    margin: 0; }
-    #n-home .n-container .n-title-bar .n-title {
-      display: block;
-      color: white;
-      padding: 15px;
-      font-size: 30px;
-      vertical-align: middle;
-      line-height: 1.5em; }
-      @media only screen and (max-width: 767px) {
-        #n-home .n-container .n-title-bar .n-title {
-          display: none; } }
-    #n-home .n-container .n-title-bar .search-bar {
-      display: block;
-      -webkit-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
-      -moz-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
-      -ms-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
-      -o-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
-      transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
-      position: absolute;
-      width: calc(100% - 30px);
-      height: 40px;
-      top: 15px;
-      right: 15px; }
-      #n-home .n-container .n-title-bar .search-bar input {
-        outline: none;
-        box-shadow: none;
-        height: 40px;
-        line-height: 40px;
-        width: 100%;
-        padding: 0em 1em;
-        box-sizing: border-box;
-        background: transparent;
-        color: white;
-        border: 2px solid white;
-        border-radius: 40px; }
-      #n-home .n-container .n-title-bar .search-bar .toggle {
-        -webkit-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
-        -moz-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
-        -ms-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
-        -o-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
-        transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        right: 0;
-        top: 0;
-        border-radius: 40px; }
-        #n-home .n-container .n-title-bar .search-bar .toggle .toggle:after, #n-home .n-container .n-title-bar .search-bar .toggle .toggle:before {
-          border-color: #595959; }
-      #n-home .n-container .n-title-bar .search-bar .toggle:after, #n-home .n-container .n-title-bar .search-bar .toggle:before {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 0;
-        width: 0;
-        height: 20px;
-        border-left: 2px solid white;
-        border-radius: 2px;
-        top: 0; }
-      #n-home .n-container .n-title-bar .search-bar .toggle:before {
-        -moz-animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-        -webkit-animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-        animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-        -webkit-transform: translate(-20px, 10px) rotate(45deg);
-        -moz-transform: translate(-20px, 10px) rotate(45deg);
-        -ms-transition: translate(-20px, 10px) rotate(45deg);
-        -o-transform: translate(-20px, 10px) rotate(45deg);
-        transform: translate(-20px, 10px) rotate(45deg); }
-      #n-home .n-container .n-title-bar .search-bar .toggle:after {
-        -moz-animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-        -webkit-animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-        animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-        -webkit-transform: translate(-20px, 10px) rotate(-45deg);
-        -moz-transform: translate(-20px, 10px) rotate(-45deg);
-        -ms-transition: translate(-20px, 10px) rotate(-45deg);
-        -o-transform: translate(-20px, 10px) rotate(-45deg);
-        transform: translate(-20px, 10px) rotate(-45deg); }
-      #n-home .n-container .n-title-bar .search-bar.closed {
-        width: 40px; }
-        #n-home .n-container .n-title-bar .search-bar.closed input {
-          color: #333; }
-        #n-home .n-container .n-title-bar .search-bar.closed .toggle:before {
-          -moz-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-          -webkit-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-          animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-          height: 0px;
-          -webkit-transform: translate(-8px, 8px) rotate(45deg);
-          -moz-transform: translate(-8px, 8px) rotate(45deg);
-          -ms-transition: translate(-8px, 8px) rotate(45deg);
-          -o-transform: translate(-8px, 8px) rotate(45deg);
-          transform: translate(-8px, 8px) rotate(45deg); }
-        #n-home .n-container .n-title-bar .search-bar.closed .toggle:after {
-          -moz-animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-          -webkit-animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-          animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
-          height: 20px;
-          -webkit-transform: translate(0, 30px) rotate(-45deg);
-          -moz-transform: translate(0, 30px) rotate(-45deg);
-          -ms-transition: translate(0, 30px) rotate(-45deg);
-          -o-transform: translate(0, 30px) rotate(-45deg);
-          transform: translate(0, 30px) rotate(-45deg); }
+  color: black;
+}
+/* line 97, ../sass/screen.scss */
+#n-home .n-container .n-title-bar {
+  background-color: #333;
+  height: 70px;
+  width: 100%;
+  margin: 0;
+}
+/* line 103, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .n-title {
+  display: block;
+  color: white;
+  padding: 15px;
+  font-size: 30px;
+  vertical-align: middle;
+  line-height: 1.5em;
+}
+@media only screen and (max-width: 767px) {
+  /* line 103, ../sass/screen.scss */
+  #n-home .n-container .n-title-bar .n-title {
+    display: none;
+  }
+}
+/* line 124, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar {
+  display: block;
+  -webkit-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+  -moz-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+  -ms-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+  -o-transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+  transition: all 0.5s cubic-bezier(0.7, 0.03, 0.17, 0.97) 0.25s;
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 40px;
+  top: 15px;
+  right: 15px;
+}
+/* line 132, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar input {
+  outline: none;
+  box-shadow: none;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  padding: 0em 1em;
+  box-sizing: border-box;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 40px;
+}
+/* line 145, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar .toggle {
+  -webkit-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+  -moz-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+  -ms-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+  -o-transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+  transition: all 0.5s cubic-bezier(0.98, 0.02, 0.46, 0.99) 0.25s;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  right: 0;
+  top: 0;
+  border-radius: 40px;
+}
+/* line 152, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar .toggle .toggle:after, #n-home .n-container .n-title-bar .search-bar .toggle .toggle:before {
+  border-color: #595959;
+}
+/* line 154, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar .toggle:after, #n-home .n-container .n-title-bar .search-bar .toggle:before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 20px;
+  border-left: 2px solid white;
+  border-radius: 2px;
+  top: 0;
+}
+/* line 163, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar .toggle:before {
+  -moz-animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  animation: close-one-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-transform: translate(-20px, 10px) rotate(45deg);
+  -moz-transform: translate(-20px, 10px) rotate(45deg);
+  -ms-transition: translate(-20px, 10px) rotate(45deg);
+  -o-transform: translate(-20px, 10px) rotate(45deg);
+  transform: translate(-20px, 10px) rotate(45deg);
+}
+/* line 167, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar .toggle:after {
+  -moz-animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  animation: close-two-reverse 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-transform: translate(-20px, 10px) rotate(-45deg);
+  -moz-transform: translate(-20px, 10px) rotate(-45deg);
+  -ms-transition: translate(-20px, 10px) rotate(-45deg);
+  -o-transform: translate(-20px, 10px) rotate(-45deg);
+  transform: translate(-20px, 10px) rotate(-45deg);
+}
+/* line 171, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar.closed {
+  width: 40px;
+}
+/* line 173, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar.closed input {
+  color: #333;
+}
+/* line 174, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar.closed .toggle:before {
+  -moz-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  animation: close-one 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  height: 0px;
+  -webkit-transform: translate(-8px, 8px) rotate(45deg);
+  -moz-transform: translate(-8px, 8px) rotate(45deg);
+  -ms-transition: translate(-8px, 8px) rotate(45deg);
+  -o-transform: translate(-8px, 8px) rotate(45deg);
+  transform: translate(-8px, 8px) rotate(45deg);
+}
+/* line 178, ../sass/screen.scss */
+#n-home .n-container .n-title-bar .search-bar.closed .toggle:after {
+  -moz-animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  -webkit-animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  animation: close-two 0.85s 1 normal cubic-bezier(1, 0.01, 0.46, 1.48);
+  height: 20px;
+  -webkit-transform: translate(0, 30px) rotate(-45deg);
+  -moz-transform: translate(0, 30px) rotate(-45deg);
+  -ms-transition: translate(0, 30px) rotate(-45deg);
+  -o-transform: translate(0, 30px) rotate(-45deg);
+  transform: translate(0, 30px) rotate(-45deg);
+}
 @-moz-keyframes close-one {
   0% {
     height: 20px;
@@ -185,28 +245,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
   10% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
   60% {
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
   100% {
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); } }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
+}
 @-webkit-keyframes close-one {
   0% {
     height: 20px;
@@ -214,28 +279,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
   10% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
   60% {
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
   100% {
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); } }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
+}
 @keyframes close-one {
   0% {
     height: 20px;
@@ -243,28 +313,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
   10% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
   60% {
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
   100% {
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); } }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
+}
 @-moz-keyframes close-two {
   0% {
     height: 20px;
@@ -272,28 +347,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
     -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
-    transform: translate(-20px, 10px) rotate(-45deg); }
+    transform: translate(-20px, 10px) rotate(-45deg);
+  }
   60% {
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
     -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
-    transform: translate(-6px, 30px) rotate(-45deg); }
+    transform: translate(-6px, 30px) rotate(-45deg);
+  }
   70% {
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
     -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
-    transform: translate(-6px, 30px) rotate(-45deg); }
+    transform: translate(-6px, 30px) rotate(-45deg);
+  }
   100% {
     height: 20px;
     -webkit-transform: translate(0, 30px) rotate(-45deg);
     -moz-transform: translate(0, 30px) rotate(-45deg);
     -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
-    transform: translate(0, 30px) rotate(-45deg); } }
+    transform: translate(0, 30px) rotate(-45deg);
+  }
+}
 @-webkit-keyframes close-two {
   0% {
     height: 20px;
@@ -301,28 +381,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
     -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
-    transform: translate(-20px, 10px) rotate(-45deg); }
+    transform: translate(-20px, 10px) rotate(-45deg);
+  }
   60% {
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
     -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
-    transform: translate(-6px, 30px) rotate(-45deg); }
+    transform: translate(-6px, 30px) rotate(-45deg);
+  }
   70% {
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
     -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
-    transform: translate(-6px, 30px) rotate(-45deg); }
+    transform: translate(-6px, 30px) rotate(-45deg);
+  }
   100% {
     height: 20px;
     -webkit-transform: translate(0, 30px) rotate(-45deg);
     -moz-transform: translate(0, 30px) rotate(-45deg);
     -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
-    transform: translate(0, 30px) rotate(-45deg); } }
+    transform: translate(0, 30px) rotate(-45deg);
+  }
+}
 @keyframes close-two {
   0% {
     height: 20px;
@@ -330,28 +415,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
     -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
-    transform: translate(-20px, 10px) rotate(-45deg); }
+    transform: translate(-20px, 10px) rotate(-45deg);
+  }
   60% {
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
     -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
-    transform: translate(-6px, 30px) rotate(-45deg); }
+    transform: translate(-6px, 30px) rotate(-45deg);
+  }
   70% {
     height: 2px;
     -webkit-transform: translate(-6px, 30px) rotate(-45deg);
     -moz-transform: translate(-6px, 30px) rotate(-45deg);
     -ms-transition: translate(-6px, 30px) rotate(-45deg);
     -o-transform: translate(-6px, 30px) rotate(-45deg);
-    transform: translate(-6px, 30px) rotate(-45deg); }
+    transform: translate(-6px, 30px) rotate(-45deg);
+  }
   100% {
     height: 20px;
     -webkit-transform: translate(0, 30px) rotate(-45deg);
     -moz-transform: translate(0, 30px) rotate(-45deg);
     -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
-    transform: translate(0, 30px) rotate(-45deg); } }
+    transform: translate(0, 30px) rotate(-45deg);
+  }
+}
 @-moz-keyframes close-one-reverse {
   0% {
     height: 0px;
@@ -359,28 +449,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
   40% {
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
   80% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
   100% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); } }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
+}
 @-webkit-keyframes close-one-reverse {
   0% {
     height: 0px;
@@ -388,28 +483,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
   40% {
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
   80% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
   100% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); } }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
+}
 @keyframes close-one-reverse {
   0% {
     height: 0px;
@@ -417,28 +517,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
   40% {
     height: 0px;
     -webkit-transform: translate(-8px, 8px) rotate(45deg);
     -moz-transform: translate(-8px, 8px) rotate(45deg);
     -ms-transition: translate(-8px, 8px) rotate(45deg);
     -o-transform: translate(-8px, 8px) rotate(45deg);
-    transform: translate(-8px, 8px) rotate(45deg); }
+    transform: translate(-8px, 8px) rotate(45deg);
+  }
   80% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
   100% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(45deg);
     -moz-transform: translate(-20px, 10px) rotate(45deg);
     -ms-transition: translate(-20px, 10px) rotate(45deg);
     -o-transform: translate(-20px, 10px) rotate(45deg);
-    transform: translate(-20px, 10px) rotate(45deg); } }
+    transform: translate(-20px, 10px) rotate(45deg);
+  }
+}
 @-moz-keyframes close-two-reverse {
   0% {
     height: 20px;
@@ -446,28 +551,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(0, 30px) rotate(-45deg);
     -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
-    transform: translate(0, 30px) rotate(-45deg); }
+    transform: translate(0, 30px) rotate(-45deg);
+  }
   40% {
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
     -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
-    transform: translate(-6px, 33px) rotate(-45deg); }
+    transform: translate(-6px, 33px) rotate(-45deg);
+  }
   50% {
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
     -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
-    transform: translate(-6px, 33px) rotate(-45deg); }
+    transform: translate(-6px, 33px) rotate(-45deg);
+  }
   100% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(-45deg);
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
     -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
-    transform: translate(-20px, 10px) rotate(-45deg); } }
+    transform: translate(-20px, 10px) rotate(-45deg);
+  }
+}
 @-webkit-keyframes close-two-reverse {
   0% {
     height: 20px;
@@ -475,28 +585,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(0, 30px) rotate(-45deg);
     -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
-    transform: translate(0, 30px) rotate(-45deg); }
+    transform: translate(0, 30px) rotate(-45deg);
+  }
   40% {
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
     -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
-    transform: translate(-6px, 33px) rotate(-45deg); }
+    transform: translate(-6px, 33px) rotate(-45deg);
+  }
   50% {
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
     -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
-    transform: translate(-6px, 33px) rotate(-45deg); }
+    transform: translate(-6px, 33px) rotate(-45deg);
+  }
   100% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(-45deg);
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
     -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
-    transform: translate(-20px, 10px) rotate(-45deg); } }
+    transform: translate(-20px, 10px) rotate(-45deg);
+  }
+}
 @keyframes close-two-reverse {
   0% {
     height: 20px;
@@ -504,28 +619,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -moz-transform: translate(0, 30px) rotate(-45deg);
     -ms-transition: translate(0, 30px) rotate(-45deg);
     -o-transform: translate(0, 30px) rotate(-45deg);
-    transform: translate(0, 30px) rotate(-45deg); }
+    transform: translate(0, 30px) rotate(-45deg);
+  }
   40% {
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
     -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
-    transform: translate(-6px, 33px) rotate(-45deg); }
+    transform: translate(-6px, 33px) rotate(-45deg);
+  }
   50% {
     height: 2px;
     -webkit-transform: translate(-6px, 33px) rotate(-45deg);
     -moz-transform: translate(-6px, 33px) rotate(-45deg);
     -ms-transition: translate(-6px, 33px) rotate(-45deg);
     -o-transform: translate(-6px, 33px) rotate(-45deg);
-    transform: translate(-6px, 33px) rotate(-45deg); }
+    transform: translate(-6px, 33px) rotate(-45deg);
+  }
   100% {
     height: 20px;
     -webkit-transform: translate(-20px, 10px) rotate(-45deg);
     -moz-transform: translate(-20px, 10px) rotate(-45deg);
     -ms-transition: translate(-20px, 10px) rotate(-45deg);
     -o-transform: translate(-20px, 10px) rotate(-45deg);
-    transform: translate(-20px, 10px) rotate(-45deg); } }
+    transform: translate(-20px, 10px) rotate(-45deg);
+  }
+}
+/* line 235, ../sass/screen.scss */
 .n-post .n-post-nav {
   width: 100%;
   height: 70px;
@@ -538,33 +659,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background: #34495E;
   color: white;
   font-size: 25px;
-  display: block; }
-  .n-post .n-post-nav .post-back-button {
-    text-decoration: none;
-    color: white;
-    margin-right: 20px;
-    float: left; }
-  .n-post .n-post-nav .post-module-code {
-    font-size: 35px;
-    margin-top: 5px;
-    float: left; }
-  .n-post .n-post-nav .post-create {
-    font-size: 35px;
-    float: right;
-    margin-top: 5px;
-    margin-right: 40px;
-    color: #2ECC71;
-    text-decoration: none; }
-  .n-post .n-post-nav .n-post-like {
-    margin-top: -3px;
-    margin-left: 15px;
-    float: left;
-    font-size: 30px;
-    cursor: pointer; }
-  .n-post .n-post-nav .on {
-    color: gold; }
-  .n-post .n-post-nav .off {
-    color: grey; }
+  display: block;
+}
+/* line 248, ../sass/screen.scss */
+.n-post .n-post-nav .post-back-button {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  float: left;
+}
+/* line 254, ../sass/screen.scss */
+.n-post .n-post-nav .post-module-code {
+  font-size: 35px;
+  margin-top: 5px;
+  float: left;
+}
+/* line 259, ../sass/screen.scss */
+.n-post .n-post-nav .post-create {
+  font-size: 35px;
+  float: right;
+  margin-top: 5px;
+  margin-right: 40px;
+  color: #2ECC71;
+  text-decoration: none;
+}
+/* line 267, ../sass/screen.scss */
+.n-post .n-post-nav .n-post-like {
+  margin-top: -3px;
+  margin-left: 15px;
+  float: left;
+  font-size: 30px;
+  cursor: pointer;
+}
+/* line 274, ../sass/screen.scss */
+.n-post .n-post-nav .on {
+  color: gold;
+}
+/* line 277, ../sass/screen.scss */
+.n-post .n-post-nav .off {
+  color: grey;
+}
+/* line 281, ../sass/screen.scss */
 .n-post .post-textbook-info {
   line-height: 30px;
   vertical-align: middle;
@@ -572,46 +707,66 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-top: 120px;
   margin-left: 50px;
   margin-bottom: 20px;
-  color: #2C3E50; }
-  .n-post .post-textbook-info .info-row {
-    color: #34495E;
-    margin-bottom: 15px;
-    border-bottom: solid;
-    border-width: 1px;
-    width: 90%; }
-    .n-post .post-textbook-info .info-row .post-label {
-      color: #2C3E50;
-      margin: 0 20px 0 0;
-      float: left; }
-    .n-post .post-textbook-info .info-row .post-condition-label {
-      color: #2C3E50;
-      margin: 0 20px 0 0;
-      float: left;
-      font-size: 15px;
-      width: 100%; }
+  color: #2C3E50;
+}
+/* line 289, ../sass/screen.scss */
+.n-post .post-textbook-info .info-row {
+  color: #34495E;
+  margin-bottom: 15px;
+  border-bottom: solid;
+  border-width: 1px;
+  width: 90%;
+}
+/* line 295, ../sass/screen.scss */
+.n-post .post-textbook-info .info-row .post-label {
+  color: #2C3E50;
+  margin: 0 20px 0 0;
+  float: left;
+}
+/* line 300, ../sass/screen.scss */
+.n-post .post-textbook-info .info-row .post-condition-label {
+  color: #2C3E50;
+  margin: 0 20px 0 0;
+  float: left;
+  font-size: 15px;
+  width: 100%;
+}
+/* line 309, ../sass/screen.scss */
 .n-post .post-contact-info {
   text-align: center;
   margin-top: 110px;
   color: #2C3E50;
-  margin-bottom: 20px; }
-  .n-post .post-contact-info .post-contact-avatar {
-    margin-bottom: 40px; }
-    .n-post .post-contact-info .post-contact-avatar .account-profile-pic {
-      height: 150px;
-      width: 150px;
-      border: solid 5px;
-      -moz-border-radius: 30px;
-      border-radius: 100px; }
-  .n-post .post-contact-info .contact-row {
-    color: #34495E;
-    margin-bottom: 15px; }
-    .n-post .post-contact-info .contact-row .contact-name-label {
-      font-size: 25px;
-      color: #2C3E50; }
-    .n-post .post-contact-info .contact-row .contact-label {
-      font-size: 20px;
-      color: #2C3E50; }
+  margin-bottom: 20px;
+}
+/* line 314, ../sass/screen.scss */
+.n-post .post-contact-info .post-contact-avatar {
+  margin-bottom: 40px;
+}
+/* line 316, ../sass/screen.scss */
+.n-post .post-contact-info .post-contact-avatar .account-profile-pic {
+  height: 150px;
+  width: 150px;
+  border: solid 5px;
+  -moz-border-radius: 30px;
+  border-radius: 100px;
+}
+/* line 324, ../sass/screen.scss */
+.n-post .post-contact-info .contact-row {
+  color: #34495E;
+  margin-bottom: 15px;
+}
+/* line 327, ../sass/screen.scss */
+.n-post .post-contact-info .contact-row .contact-name-label {
+  font-size: 25px;
+  color: #2C3E50;
+}
+/* line 331, ../sass/screen.scss */
+.n-post .post-contact-info .contact-row .contact-label {
+  font-size: 20px;
+  color: #2C3E50;
+}
 
+/* line 338, ../sass/screen.scss */
 .create-post-textbook-info {
   line-height: 30px;
   vertical-align: middle;
@@ -619,44 +774,64 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-top: 110px;
   margin-left: 50px;
   margin-bottom: 20px;
-  color: #2C3E50; }
-  .create-post-textbook-info .create-info-row {
-    color: #34495E;
-    margin-bottom: 15px;
-    border-bottom: solid;
-    border-width: 1px;
-    width: 90%; }
-    .create-post-textbook-info .create-info-row .post-label {
-      color: #2C3E50;
-      float: left;
-      margin-top: 7px; }
-    .create-post-textbook-info .create-info-row .post-label-right {
-      color: #2C3E50;
-      margin-top: 0px; }
-    .create-post-textbook-info .create-info-row .create-post-condition-label {
-      color: #2C3E50;
-      display: inline;
-      font-size: 15px;
-      width: 100%; }
-    .create-post-textbook-info .create-info-row .post-input {
-      width: 90%;
-      margin-bottom: 10px; }
-    .create-post-textbook-info .create-info-row .post-input-short {
-      width: 70%;
-      display: inline;
-      margin-right: 20px; }
-    .create-post-textbook-info .create-info-row .condition-check {
-      float: left;
-      margin-right: 10px;
-      margin-top: 10px; }
+  color: #2C3E50;
+}
+/* line 346, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row {
+  color: #34495E;
+  margin-bottom: 15px;
+  border-bottom: solid;
+  border-width: 1px;
+  width: 90%;
+}
+/* line 352, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .post-label {
+  color: #2C3E50;
+  float: left;
+  margin-top: 7px;
+}
+/* line 357, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .post-label-right {
+  color: #2C3E50;
+  margin-top: 0px;
+}
+/* line 361, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .create-post-condition-label {
+  color: #2C3E50;
+  display: inline;
+  font-size: 15px;
+  width: 100%;
+}
+/* line 367, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .post-input {
+  width: 90%;
+  margin-bottom: 10px;
+}
+/* line 371, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .post-input-short {
+  width: 70%;
+  display: inline;
+  margin-right: 20px;
+}
+/* line 376, ../sass/screen.scss */
+.create-post-textbook-info .create-info-row .condition-check {
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
 
+/* line 383, ../sass/screen.scss */
 .create-post-image-section {
-  margin-top: 110px; }
-  .create-post-image-section .post-image {
-    height: 150px;
-    margin-right: 20px;
-    margin-bottom: 20px; }
+  margin-top: 110px;
+}
+/* line 385, ../sass/screen.scss */
+.create-post-image-section .post-image {
+  height: 150px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
 
+/* line 408, ../sass/screen.scss */
 .n-account .n-account-nav {
   width: 100%;
   height: 80px;
@@ -670,107 +845,159 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 0 0 0 20px;
   background: rgba(189, 195, 199, 0);
   color: white;
-  font-size: 20px; }
-  .n-account .n-account-nav .n-account-back-button {
-    text-decoration: none;
-    color: black;
-    margin-left: 0px;
-    float: left; }
-  .n-account .n-account-nav a {
-    float: right;
-    font-size: 15px;
-    padding: 0 5px 0 5px; }
-  .n-account .n-account-nav .n-nav-icons .icons {
-    margin-top: 15px;
-    margin-right: 10%; }
-  .n-account .n-account-nav .n-nav-icons .n-bottom-icon {
-    bottom: 0; }
-  .n-account .n-account-nav .n-nav-icons .n-nav-icon.active a {
-    border-color: #bbb; }
-  .n-account .n-account-nav .n-nav-icons .n-nav-icon.active span {
-    color: #bbb; }
-  .n-account .n-account-nav .n-nav-icons .fa-twitter {
-    padding: 0px 0px 0px 0px; }
-  .n-account .n-account-nav .n-nav-icons .fa-thumb-tack {
-    padding: 2px 2px 3px 2px; }
-  .n-account .n-account-nav .n-nav-icons .fa-street-view {
-    padding: 0px 0px 0px 0px; }
-  .n-account .n-account-nav .n-nav-icons .fa-sign-out {
-    padding: 0px 0px 0px 0px; }
-  .n-account .n-account-nav .n-nav-icons a {
-    color: #aaa;
-    padding: 6px;
-    border: 2px solid #aaa;
-    border-radius: 80px;
-    /* height: 35px; */
-    line-height: 1.5;
-    width: 39px;
-    margin-left: 100px; }
-    .n-account .n-account-nav .n-nav-icons a i {
-      font-size: 18px;
-      margin-bottom: auto;
-      padding: 1px 0 0 3px; }
-      .n-account .n-account-nav .n-nav-icons a i span {
-        margin-left: 18px; }
-    .n-account .n-account-nav .n-nav-icons a:hover {
-      color: #bbb !important;
-      border-color: #bbb !important;
-      -webkit-transition: 0.8s ease;
-      -moz-transition: 0.8s ease;
-      -ms-transition: 0.8s ease;
-      -o-transition: 0.8s ease;
-      transition: 0.8s ease; }
-      .n-account .n-account-nav .n-nav-icons a:hover span {
-        color: #bbb; }
+  font-size: 20px;
+}
+/* line 422, ../sass/screen.scss */
+.n-account .n-account-nav .n-account-back-button {
+  text-decoration: none;
+  color: black;
+  margin-left: 0px;
+  float: left;
+}
+/* line 429, ../sass/screen.scss */
+.n-account .n-account-nav a {
+  float: right;
+  font-size: 15px;
+  padding: 0 5px 0 5px;
+}
+/* line 445, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons .icons {
+  margin-top: 15px;
+  margin-right: 10%;
+}
+/* line 450, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons .n-bottom-icon {
+  bottom: 0;
+}
+/* line 457, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons .n-nav-icon.active a {
+  border-color: #bbb;
+}
+/* line 460, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons .n-nav-icon.active span {
+  color: #bbb;
+}
+/* line 466, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons .fa-twitter {
+  padding: 0px 0px 0px 0px;
+}
+/* line 469, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons .fa-thumb-tack {
+  padding: 2px 2px 3px 2px;
+}
+/* line 472, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons .fa-street-view {
+  padding: 0px 0px 0px 0px;
+}
+/* line 476, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons .fa-sign-out {
+  padding: 0px 0px 0px 0px;
+}
+/* line 481, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons a {
+  color: #aaa;
+  padding: 6px;
+  border: 2px solid #aaa;
+  border-radius: 80px;
+  /* height: 35px; */
+  line-height: 1.5;
+  width: 39px;
+  margin-left: 100px;
+}
+/* line 491, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons a i {
+  font-size: 18px;
+  margin-bottom: auto;
+  padding: 1px 0 0 3px;
+}
+/* line 495, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons a i span {
+  margin-left: 18px;
+}
+/* line 500, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons a:hover {
+  color: #bbb !important;
+  border-color: #bbb !important;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+  -ms-transition: 0.8s ease;
+  -o-transition: 0.8s ease;
+  transition: 0.8s ease;
+}
+/* line 505, ../sass/screen.scss */
+.n-account .n-account-nav .n-nav-icons a:hover span {
+  color: #bbb;
+}
+/* line 516, ../sass/screen.scss */
 .n-account .account-pic-and-name {
-  text-align: center; }
-  .n-account .account-pic-and-name .account-profile-pic {
-    font-size: 10em;
-    height: 250px;
-    width: 250px;
-    line-height: 200px;
-    border: solid 5px;
-    -moz-border-radius: 30px;
-    /* or 50% */
-    border-radius: 125px;
-    /* or 50% */
-    background-color: white;
-    color: black;
-    text-align: center; }
-  .n-account .account-pic-and-name .n-account-name {
-    vertical-align: middle;
-    position: relative;
-    font-size: 40px;
-    margin-top: 100px;
-    margin-bottom: 20px; }
+  text-align: center;
+}
+/* line 519, ../sass/screen.scss */
+.n-account .account-pic-and-name .account-profile-pic {
+  font-size: 10em;
+  height: 250px;
+  width: 250px;
+  line-height: 200px;
+  border: solid 5px;
+  -moz-border-radius: 30px;
+  /* or 50% */
+  border-radius: 125px;
+  /* or 50% */
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+/* line 535, ../sass/screen.scss */
+.n-account .account-pic-and-name .n-account-name {
+  vertical-align: middle;
+  position: relative;
+  font-size: 40px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+/* line 545, ../sass/screen.scss */
 .n-account .n-account-profile-info {
   line-height: 30px;
   font-size: 20px;
   margin-top: 30px;
   margin-left: 13%;
-  color: #2C3E50; }
-  .n-account .n-account-profile-info .info-row {
-    color: #BDC3C7;
-    margin-bottom: 12px;
-    width: 90%; }
-    .n-account .n-account-profile-info .info-row .account-label {
-      color: #2C3E50;
-      margin: 0 20px 0 0;
-      float: left; }
-    .n-account .n-account-profile-info .info-row .account-label-title {
-      color: #2C3E50;
-      margin: 0 20px 0 0;
-      float: left; }
-    .n-account .n-account-profile-info .info-row input {
-      border-radius: 10px;
-      height: 30px; }
+  color: #2C3E50;
+}
+/* line 553, ../sass/screen.scss */
+.n-account .n-account-profile-info .info-row {
+  color: #BDC3C7;
+  margin-bottom: 12px;
+  width: 90%;
+}
+/* line 560, ../sass/screen.scss */
+.n-account .n-account-profile-info .info-row .account-label {
+  color: #2C3E50;
+  margin: 0 20px 0 0;
+  float: left;
+}
+/* line 565, ../sass/screen.scss */
+.n-account .n-account-profile-info .info-row .account-label-title {
+  color: #2C3E50;
+  margin: 0 20px 0 0;
+  float: left;
+}
+/* line 570, ../sass/screen.scss */
+.n-account .n-account-profile-info .info-row input {
+  border-radius: 10px;
+  height: 30px;
+}
+/* line 577, ../sass/screen.scss */
 .n-account .n-account-edit-info {
-  text-align: center; }
-  .n-account .n-account-edit-info button {
-    width: 100px;
-    height: 50px;
-    margin-top: 20px; }
+  text-align: center;
+}
+/* line 579, ../sass/screen.scss */
+.n-account .n-account-edit-info button {
+  width: 100px;
+  height: 50px;
+  margin-top: 20px;
+}
 
+/* line 604, ../sass/screen.scss */
 #n-nav .n-container {
   height: 100vh;
   background: #000;
@@ -781,123 +1008,174 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
-  transition: all 0.4s; }
-  #n-nav .n-container.active {
-    width: 390px; }
-  #n-nav .n-container .n-nav-icons {
-    margin-top: 70px;
-    margin-left: 15px; }
-    #n-nav .n-container .n-nav-icons .n-nav-text {
-      color: #fff;
-      width: 0;
-      height: 0;
-      opacity: 0.0;
-      -webkit-transition: opacity 0s ease-in;
-      -moz-transition: opacity 0s ease-in;
-      -ms-transition: opacity 0s ease-in;
-      -o-transition: opacity 0s ease-in;
-      transition: opacity 0s ease-in; }
-      #n-nav .n-container .n-nav-icons .n-nav-text.active {
-        width: auto;
-        height: auto;
-        display: inline;
-        opacity: 1;
-        -webkit-transition: opacity 0.2s ease-in;
-        -moz-transition: opacity 0.2s ease-in;
-        -ms-transition: opacity 0.2s ease-in;
-        -o-transition: opacity 0.2s ease-in;
-        transition: opacity 0.2s ease-in; }
-    #n-nav .n-container .n-nav-icons .n-bottom-icon {
-      bottom: 0;
-      margin-top: calc(100vh - 70px - (20px + 70px) * 3 - 140px); }
-    #n-nav .n-container .n-nav-icons .n-nav-icon.active a {
-      border-color: #fff; }
-    #n-nav .n-container .n-nav-icons .n-nav-icon.active i {
-      color: #fff; }
-    #n-nav .n-container .n-nav-icons .fa-twitter {
-      padding: 0px 0px 0px 0px; }
-    #n-nav .n-container .n-nav-icons .fa-thumb-tack {
-      padding: 2px 2px 3px 2px; }
-    #n-nav .n-container .n-nav-icons .fa-street-view {
-      padding: 0px 0px 0px 0px; }
-    #n-nav .n-container .n-nav-icons .fa-sign-out {
-      padding: 0px 0px 0px 0px; }
-    #n-nav .n-container .n-nav-icons a {
-      color: #aaa;
-      padding: 20px;
-      border: 2px solid #aaa;
-      border-radius: 50px; }
-      #n-nav .n-container .n-nav-icons a i {
-        font-size: 20px;
-        margin-bottom: 70px; }
-      #n-nav .n-container .n-nav-icons a:hover {
-        color: #fff !important;
-        border-color: #fff !important;
-        -webkit-transition: 0.8s ease;
-        -moz-transition: 0.8s ease;
-        -ms-transition: 0.8s ease;
-        -o-transition: 0.8s ease;
-        transition: 0.8s ease; }
-        #n-nav .n-container .n-nav-icons a:hover i {
-          color: #fff;
-          -webkit-transform: scale(1.6, 1.6);
-          -moz-transform: scale(1.6, 1.6);
-          -ms-transition: scale(1.6, 1.6);
-          -o-transform: scale(1.6, 1.6);
-          transform: scale(1.6, 1.6);
-          -webkit-transition: 0.3s ease;
-          -moz-transition: 0.3s ease;
-          -ms-transition: 0.3s ease;
-          -o-transition: 0.3s ease;
-          transition: 0.3s ease; }
+  transition: all 0.4s;
+}
+/* line 612, ../sass/screen.scss */
+#n-nav .n-container.active {
+  width: 390px;
+}
+/* line 616, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons {
+  margin-top: 70px;
+  margin-left: 15px;
+}
+/* line 626, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-nav-text {
+  color: #fff;
+  width: 0;
+  height: 0;
+  opacity: 0.0;
+  -webkit-transition: opacity 0s ease-in;
+  -moz-transition: opacity 0s ease-in;
+  -ms-transition: opacity 0s ease-in;
+  -o-transition: opacity 0s ease-in;
+  transition: opacity 0s ease-in;
+}
+/* line 634, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-nav-text.active {
+  width: auto;
+  height: auto;
+  display: inline;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+  -ms-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+/* line 643, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-bottom-icon {
+  bottom: 0;
+  margin-top: calc(100vh - 70px - (20px + 70px) * 3 - 140px);
+}
+/* line 650, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-nav-icon.active a {
+  border-color: #fff;
+}
+/* line 653, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .n-nav-icon.active i {
+  color: #fff;
+}
+/* line 659, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .fa-twitter {
+  padding: 0px 0px 0px 0px;
+}
+/* line 662, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .fa-thumb-tack {
+  padding: 2px 2px 3px 2px;
+}
+/* line 665, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .fa-street-view {
+  padding: 0px 0px 0px 0px;
+}
+/* line 669, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons .fa-sign-out {
+  padding: 0px 0px 0px 0px;
+}
+/* line 674, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a {
+  color: #aaa;
+  padding: 20px;
+  border: 2px solid #aaa;
+  border-radius: 50px;
+}
+/* line 680, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a i {
+  font-size: 20px;
+  margin-bottom: 70px;
+}
+/* line 685, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a:hover {
+  color: #fff !important;
+  border-color: #fff !important;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+  -ms-transition: 0.8s ease;
+  -o-transition: 0.8s ease;
+  transition: 0.8s ease;
+}
+/* line 690, ../sass/screen.scss */
+#n-nav .n-container .n-nav-icons a:hover i {
+  color: #fff;
+  -webkit-transform: scale(1.6, 1.6);
+  -moz-transform: scale(1.6, 1.6);
+  -ms-transition: scale(1.6, 1.6);
+  -o-transform: scale(1.6, 1.6);
+  transform: scale(1.6, 1.6);
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+/* line 700, ../sass/screen.scss */
 #n-nav #n-hamburger-icon {
   width: 50px;
   height: 30px;
   position: relative;
   display: block;
-  margin: 20px auto 20px 20px; }
-  #n-nav #n-hamburger-icon .n-line {
-    display: block;
-    background: #ecf0f1;
-    width: 50px;
-    height: 2px;
-    position: absolute;
-    left: 0;
-    border-radius: 1px;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s; }
-    #n-nav #n-hamburger-icon .n-line.n-line-1 {
-      top: 0; }
-    #n-nav #n-hamburger-icon .n-line.n-line-2 {
-      top: 50%; }
-    #n-nav #n-hamburger-icon .n-line.n-line-3 {
-      top: 100%; }
-  #n-nav #n-hamburger-icon:hover .n-line-1, #n-nav #n-hamburger-icon:focus .n-line-1 {
-    -webkit-transform: translateY(-1px);
-    -moz-transform: translateY(-1px);
-    -ms-transition: translateY(-1px);
-    -o-transform: translateY(-1px);
-    transform: translateY(-1px); }
-  #n-nav #n-hamburger-icon:hover .n-line-3, #n-nav #n-hamburger-icon:focus .n-line-3 {
-    -webkit-transform: translateY(1px);
-    -moz-transform: translateY(1px);
-    -ms-transition: translateY(1px);
-    -o-transform: translateY(1px);
-    transform: translateY(1px); }
-  #n-nav #n-hamburger-icon.active .n-line-1 {
-    -webkit-transform: translateY(15px) translateX(0) rotate(-945deg);
-    -moz-transform: translateY(15px) translateX(0) rotate(-945deg);
-    -ms-transition: translateY(15px) translateX(0) rotate(-945deg);
-    -o-transform: translateY(15px) translateX(0) rotate(-945deg);
-    transform: translateY(15px) translateX(0) rotate(-945deg); }
-  #n-nav #n-hamburger-icon.active .n-line-2 {
-    opacity: 0; }
-  #n-nav #n-hamburger-icon.active .n-line-3 {
-    -webkit-transform: translateY(-15px) translateX(0) rotate(945deg);
-    -moz-transform: translateY(-15px) translateX(0) rotate(945deg);
-    -ms-transition: translateY(-15px) translateX(0) rotate(945deg);
-    -o-transform: translateY(-15px) translateX(0) rotate(945deg);
-    transform: translateY(-15px) translateX(0) rotate(945deg); }
+  margin: 20px auto 20px 20px;
+}
+/* line 717, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line {
+  display: block;
+  background: #ecf0f1;
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  border-radius: 1px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/* line 727, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line.n-line-1 {
+  top: 0;
+}
+/* line 731, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line.n-line-2 {
+  top: 50%;
+}
+/* line 735, ../sass/screen.scss */
+#n-nav #n-hamburger-icon .n-line.n-line-3 {
+  top: 100%;
+}
+/* line 741, ../sass/screen.scss */
+#n-nav #n-hamburger-icon:hover .n-line-1, #n-nav #n-hamburger-icon:focus .n-line-1 {
+  -webkit-transform: translateY(-1px);
+  -moz-transform: translateY(-1px);
+  -ms-transition: translateY(-1px);
+  -o-transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+/* line 744, ../sass/screen.scss */
+#n-nav #n-hamburger-icon:hover .n-line-3, #n-nav #n-hamburger-icon:focus .n-line-3 {
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -ms-transition: translateY(1px);
+  -o-transform: translateY(1px);
+  transform: translateY(1px);
+}
+/* line 750, ../sass/screen.scss */
+#n-nav #n-hamburger-icon.active .n-line-1 {
+  -webkit-transform: translateY(15px) translateX(0) rotate(-945deg);
+  -moz-transform: translateY(15px) translateX(0) rotate(-945deg);
+  -ms-transition: translateY(15px) translateX(0) rotate(-945deg);
+  -o-transform: translateY(15px) translateX(0) rotate(-945deg);
+  transform: translateY(15px) translateX(0) rotate(-945deg);
+}
+/* line 753, ../sass/screen.scss */
+#n-nav #n-hamburger-icon.active .n-line-2 {
+  opacity: 0;
+}
+/* line 756, ../sass/screen.scss */
+#n-nav #n-hamburger-icon.active .n-line-3 {
+  -webkit-transform: translateY(-15px) translateX(0) rotate(945deg);
+  -moz-transform: translateY(-15px) translateX(0) rotate(945deg);
+  -ms-transition: translateY(-15px) translateX(0) rotate(945deg);
+  -o-transform: translateY(-15px) translateX(0) rotate(945deg);
+  transform: translateY(-15px) translateX(0) rotate(945deg);
+}
