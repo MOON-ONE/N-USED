@@ -139,6 +139,12 @@ $container-transition-time: 0.4s;
 					cursor: pointer;
 					background-color: $bg-color;
 					color: $color;
+					transition: .1s linear color;
+				}
+
+				a:active {
+					background-color: $color;
+					color: $bg-color;	
 				}
 			}
 		}
