@@ -148,6 +148,7 @@ $container-transition-time: 0.4s;
 
 			.col-button {
 				text-align: center;
+				cursor: pointer;
 			}
 		}
 
@@ -760,7 +761,7 @@ $file-hover-icon-size: 5em;
 
 			.n-bottom-icon {
 				bottom: 0;
-				margin-top: calc(100vh - #{$icon-gap} - (#{$icon-size} + #{$icon-gap}) * 3 - 80px);
+				margin-top: calc(100vh - #{$icon-gap} - (#{$icon-size} + #{$icon-gap}) * 3 - 110px);
 			}
 
 			.n-nav-icon {

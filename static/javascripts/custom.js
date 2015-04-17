@@ -23,7 +23,7 @@ $(document).on("click", "#n-home .sort-button", function(){
 	if (moreOptionBar.css("display") == "none") {
 		moreOptionBar.show();
 		$(this).html('<i class="fa fa-chevron-up">');
-		updateTableContainerHeight(100 + moreOptionBar.height());
+		updateTableContainerHeight(235 + moreOptionBar.height());
 	} else {
 		moreOptionBar.hide();
 		$(this).html('<i class="fa fa-chevron-down">');
