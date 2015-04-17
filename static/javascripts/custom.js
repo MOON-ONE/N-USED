@@ -173,6 +173,7 @@ $(document).on("click", "div[id^='n-nav-']", function() {
 		// logout
 		currentUserID = "-1";
 		updateCurrentUser(currentUserID);
+		$('#n-nav-home').click();
 	} else {
 		var section = $(this).attr('id').substr(6);
 		$(".n-nav-icon").removeClass("active");
