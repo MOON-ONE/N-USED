@@ -107,7 +107,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         #n-home .n-container .n-more-option-bar .bar-inner-container .col-xs-6 input, #n-home .n-container .n-more-option-bar .bar-inner-container .col-xs-12 input {
           margin-right: 10px; }
     #n-home .n-container .n-more-option-bar .col-button {
-      text-align: center; }
+      text-align: center;
+      cursor: pointer; }
   #n-home .n-container .title-bar-item {
     border: solid 1px #ccc;
     padding: 6px 12px;
@@ -533,7 +534,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         transition: opacity 0.2s ease-in; }
     #n-nav .n-container .n-nav-icons .n-bottom-icon {
       bottom: 0;
-      margin-top: calc(100vh - 50px - (20px + 50px) * 3 - 80px); }
+      margin-top: calc(100vh - 50px - (20px + 50px) * 3 - 110px); }
     #n-nav .n-container .n-nav-icons .n-nav-icon {
       padding-left: 16px; }
       #n-nav .n-container .n-nav-icons .n-nav-icon a {

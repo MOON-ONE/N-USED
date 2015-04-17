@@ -28,7 +28,7 @@ app.controller('main', ['$scope', function($scope) {
         moduleCode: '',
         title: '',
         conditionRank: '',
-        price: "",
+        price: '',
         isSelected: '',
         $:''};
     
