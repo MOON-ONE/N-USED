@@ -51,14 +51,8 @@ app.controller('main', ['$scope', function($scope) {
         $scope.currentUserPastPostFilter = { sid: id };
         $scope.currentUserFavoriteFilter = function (book) {
             return favorites.filter(function (b) {
-                var bool = (b.uid === id) && (b.pid === book.pid);
-                if (bool) {
-                    console.log("True:      " + b.uid + " " + book.pid)
-                } else {
-                    console.log("False:     " + b.uid + " " + book.pid)
-                }
-                return bool;
-            });
+                return (b.uid === currentUserID) && (b.pid === book.pid);
+            }).length != 0;
         };
         $scope.$apply();
     }
