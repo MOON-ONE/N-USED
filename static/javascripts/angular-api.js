@@ -17,3 +17,7 @@ function getUser(userID) {
 		return user.id === (userID + "")
 	})[0]
 }
+
+function updateCurrentUser(currentUserID) {
+	angular.element("body").scope().updateUser(getUser(currentUserID))
+}
