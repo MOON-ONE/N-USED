@@ -18,9 +18,8 @@ app.directive('onFinishRender', function ($timeout) {
 app.controller('main', ['$scope', function($scope) {
     $scope.init = function() {
         $scope.books = books;
-        $scope.favourite = favourite;
-        $scope.historyPost = historyPost;
-        $scope.user = user;
+        $scope.favourites = favourites;
+        $scope.users = users;
     };
 
     $scope.filter = "$";
@@ -30,7 +29,8 @@ app.controller('main', ['$scope', function($scope) {
         conditionRank: '',
         price: '',
         isSelected: '',
-        $:''};
+        $:''
+    };
     
     $scope.changeFilterTo = function(pr) {
         $scope.filter = pr; 
@@ -51,6 +51,6 @@ app.controller('main', ['$scope', function($scope) {
                     viewDidLoad();
                 });
     
-    $scope.orderList = "moduleCode";
+    $scope.orderList = "postTime";
 }]);
 
