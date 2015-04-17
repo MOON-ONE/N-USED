@@ -815,7 +815,7 @@ $file-hover-icon-size: 5em;
 			}
 
 
-			.posts {
+			.posts, .stars {
 				display: none;
 
 				.search-bar {
@@ -839,11 +839,6 @@ $file-hover-icon-size: 5em;
 					width: 100%;
 				}
 			}
-
-			.stars {
-				display: none;
-			}
-
 
 			padding: 0 15px;
 
@@ -928,7 +923,7 @@ $file-hover-icon-size: 5em;
 					height: auto;
 					display: inline;
 					opacity: 1;
-					@include transition(opacity 0.3s ease-in);
+					@include transition(opacity 0.2s ease-in);
 				}
 			}
 
