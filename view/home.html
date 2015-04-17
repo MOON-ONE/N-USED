@@ -4,32 +4,59 @@
             <div class="col-xs-12 col-sm-3">
                 <span class="n-title">N-USED</span>
             </div>
-            <div class="col-xs-12 col-sm-9">
-                <div class="search-bar closed">
-                    <input type="text" ng-model="BookSearchQuery">
-                    <div class="toggle"></div>
+            <div class="col-xs-10 col-sm-8">
+                <div class="input-group search-bar">
+                    <input type="text" class="form-control" placeholder="Module Code  /  Key Words  /  Figures" ng-model="BookSearchQuery">
+                    <a class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-1" data-toggle="tooltip" data-placement="bottom" title="more options">
+                <a class="sort-button" id="basic-addon1"><i class="fa fa-chevron-down"></i></a>
+            </div>
+        </div>
+
+        <div class="n-more-option-bar">
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3 bar-inner-container">
+                <div class="row">
+                    <div class="col-xs-6 col-md-4">
+                        <div class="title-bar-item" data-toggle="tooltip" data-placement="bottom" title="only show selected (checked) items in the list">
+                            <input type="checkbox"> 
+                            <i class="fa fa-eye"></i> &nbsp&nbspShow Selected
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-button" data-toggle="tooltip" data-placement="bottom" title="Select All Items In Current List">
+                        <div class="title-bar-item">Select All</div>
+                    </div>
+                    <div class="col-xs-6 col-md-4 col-button" data-toggle="tooltip" data-placement="bottom" title="more explaination of the advanced search engine">
+                        <div class="title-bar-item">Help?</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Responsive table starts here -->
-        <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
-        <div class="table-responsive-vertical shadow-z-1">
+
+        <div class="table-responsive-vertical shadow-z-1 n-book-list-table">
             <!-- Table starts here -->
-            <table class="table table-hover table-mc-light-blue">
+            <table class="table table-hover table-mc-teal">
                 <thead>
                     <tr>
-                        <th>Module Code</th>
+                        <th>Module</th>
                         <th>Title</th>
                         <th>Condition</th>
                         <th>Price</th>
+                        <th>
+                            <a class="clear-selection-button" data-toggle="tooltip" data-placement="left" title="Clear All Selection"><i class="fa fa-minus-circle"></i></a>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
 	                <tr ng-repeat="book in books | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
-	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
-	                    <td data-title="Title">{{ book.title }}</td>
-	                    <td data-title="Condition">{{ book.condition.rank }}</td>
-	                    <td data-title="Price">{{ book.price }}</td>
+	                    <td class="col-mc" data-title="Module Code">{{ book.moduleCode }}</td>
+	                    <td class="col-title" data-title="Title">{{ book.title }}</td>
+	                    <td class="col-condition" data-title="Condition">{{ book.condition.rank + " / 10"}}</td>
+	                    <td class="col-price" data-title="Price">{{ "S$" + book.price }}</td>
+                        <td class="col-selection" data-title="Select">
+                            <input type="checkbox">
+                        </td>
 	                </tr>
                 </tbody>
             </table>

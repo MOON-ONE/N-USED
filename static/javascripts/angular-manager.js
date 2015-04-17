@@ -25,10 +25,14 @@ app.controller('main', ['$scope', function($scope) {
 
     
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
-                    $("#n-home .toggle").parent().toggleClass('closed');
-                    setTimeout(function(){ 
-    					$("#n-home .toggle").prev().focus();
-                    }, 1000);
+                    viewDidLoad();
+                    var table = $(".n-book-list-table table");
+                    $('[data-toggle="tooltip"]').tooltip()
+                    table.floatThead({
+                        scrollContainer: function($table){
+                            return $('.n-book-list-table');
+                        }
+                    });
                 });
     
     $scope.orderList = "moduleCode";
