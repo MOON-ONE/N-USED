@@ -117,8 +117,11 @@ $container-transition-time: 0.4s;
 
 
 	$title-bar-height: 70px;
+	$height: 40px;
+	$width: 70%;
 	$bg-color: #333;
 	$color: #eef2e7;
+
 	.n-container {
 		display: block;
 		color: black;
@@ -135,7 +138,7 @@ $container-transition-time: 0.4s;
 
 			.bar-inner-container {
 				padding-right: 0;
-				.col-xs-6 {
+				.col-xs-6, .col-xs-12 {
 					margin-bottom: 15px;
 					input {
 						margin-right: 10px;
@@ -155,13 +158,57 @@ $container-transition-time: 0.4s;
 			font-size: 14px;
 			border-radius: 4px;
 		}
+
+		.search-bar-addon {
+			height: $height;
+			background-color: $bg-color;
+			color: $color;
+
+			input {
+				margin: 0 !important;
+			}
+		}
+
+		.addon-fixed-width {
+			min-width: 90px;
+		}
 		
+
+		.search-bar {
+			height: $height;
+			background-color: $bg-color;
+			color: $color;
+			border-color: $color;
+			line-height: $height - 12px;
+			vertical-align: middle;
+
+
+			input {
+				height: $height;
+				background-color: $bg-color;
+				color: $color;
+			}
+
+			a {
+				cursor: pointer;
+				background-color: $bg-color;
+				color: $color;
+				transition:	 .1s linear color;
+			}
+
+			a:active {
+				background-color: $color;
+				color: $bg-color;	
+			}
+		}
+
 		.n-title-bar {
 			background-color: $bg-color;
 			height: $title-bar-height;
 			width: 100%;
 			margin: 0;
 			padding-left: 15px;
+			padding-top: calc((#{$title-bar-height} - #{$height})/2 + 2px);
 
 			.n-title {
 				display: block;
@@ -169,39 +216,10 @@ $container-transition-time: 0.4s;
 				padding-left: 20px;
 				font-size: 30px;
 				vertical-align: middle;
-				line-height: $title-bar-height;
+				line-height: $height/2 + 15;
 
 				@include xs {	
 					display: none;
-				}
-			}
-
-
-			$height: 40px;
-			$width: 70%;
-
-			.search-bar {
-				height: $height;
-				margin-top: calc((#{$title-bar-height} - #{$height})/2 + 2px);
-				background-color: $bg-color;
-				color: $color;
-				border-color: $color;
-				input {
-					height: $height;
-					background-color: $bg-color;
-					color: $color;
-				}
-
-				a {
-					cursor: pointer;
-					background-color: $bg-color;
-					color: $color;
-					transition:	 .1s linear color;
-				}
-
-				a:active {
-					background-color: $color;
-					color: $bg-color;	
 				}
 			}
 
@@ -211,7 +229,6 @@ $container-transition-time: 0.4s;
 				vertical-align: center;
 				padding: 8px 0;
 				height: $height;
-				margin-top: calc((#{$title-bar-height} - #{$height})/2 + 2px);
 				background-color: $bg-color;
 				color: $color;
 				border: solid 1px #ccc;
