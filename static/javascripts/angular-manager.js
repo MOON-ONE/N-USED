@@ -23,16 +23,32 @@ app.controller('main', ['$scope', function($scope) {
         $scope.user = user;
     };
 
+    $scope.filter = "$";
+    $scope.search = {
+        moduleCode: '',
+        title: '',
+        conditionRank: '',
+        price: '',
+        isSelected: '',
+        $:''};
     
+    $scope.changeFilterTo = function(pr) {
+        $scope.filter = pr; 
+    }
+
+    $scope.addBook = function(book) {
+        books.push(book);
+        $scope.updateBooks();
+    }
+
+    $scope.updateBooks = function() {
+        $scope.books = books;
+        $scope.$apply();
+    }
+
+
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
                     viewDidLoad();
-                    var table = $(".n-book-list-table table");
-                    $('[data-toggle="tooltip"]').tooltip()
-                    table.floatThead({
-                        scrollContainer: function($table){
-                            return $('.n-book-list-table');
-                        }
-                    });
                 });
     
     $scope.orderList = "moduleCode";

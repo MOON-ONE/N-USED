@@ -13,6 +13,7 @@ $("#n-account-wrapper").load("view/account.html", function () {
 });
 
 $('[data-toggle="tooltip"]').tooltip()
+
 // 总完
 
 
@@ -22,7 +23,7 @@ $(document).on("click", "#n-home .sort-button", function(){
 	if (moreOptionBar.css("display") == "none") {
 		moreOptionBar.show();
 		$(this).html('<i class="fa fa-chevron-up">');
-		updateTableContainerHeight(100 + moreOptionBar.height());
+		updateTableContainerHeight(235 + moreOptionBar.height());
 	} else {
 		moreOptionBar.hide();
 		$(this).html('<i class="fa fa-chevron-down">');
@@ -30,10 +31,45 @@ $(document).on("click", "#n-home .sort-button", function(){
 	}
 });
 
-$(document).on("click", "#n-home .clear-selection-button", function() {
+$(document).on("click", "#n-home .grand-checkbox", function() {
 	$("#n-home .col-selection input").each(function(index) {
-		$(this).attr('checked', false);
+		$(this).prop('checked', $("#n-home .grand-checkbox").prop('checked'));
+		var row = $(this).closest("tr");
+		var newValue = $(this).prop("checked");
+		var bookID = row.attr("book-id");
+		$.each(books, function() {
+		    if (this.id == bookID) {
+		        this.isSelected = newValue;
+		    }
+		});
 	})
+	updateBookList();
+})
+
+$(document).on("click", "#selected-only-button", function() {
+	
+	if ($(this).hasClass("highlight-button")) {
+		$(this).removeClass("highlight-button");
+		angular.element("body").scope().search.isSelected = ""
+	} else {
+		$(this).addClass("highlight-button");
+		angular.element("body").scope().search.isSelected = true	
+	}
+
+	angular.element("body").scope().$apply();
+	
+})
+
+$(document).on("click", ".col-selection input", function() {
+	var row = $(this).closest("tr");
+	var newValue = $(this).prop("checked");
+	var bookID = row.attr("book-id");
+	$.each(books, function() {
+	    if (this.id == bookID) {
+	        this.isSelected = newValue;
+	    }
+	});
+	updateBookList();
 })
 
 function updateTableContainerHeight(height) {
