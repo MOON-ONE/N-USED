@@ -31,9 +31,9 @@ $(document).on("click", "#n-home .sort-button", function(){
 	}
 });
 
-$(document).on("click", "#n-home .clear-selection-button", function() {
+$(document).on("click", "#n-home .grand-checkbox", function() {
 	$("#n-home .col-selection input").each(function(index) {
-		$(this).attr('checked', false);
+		$(this).prop('checked', $("#n-home .grand-checkbox").prop('checked'));
 	})
 })
 
