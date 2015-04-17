@@ -12,16 +12,8 @@ $("#n-post-wrapper").load("view/create-post.html", function () {
 // 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
 // });
 
-$('[data-toggle="tooltip"]').tooltip()
-
-currentUser = getUser(currentUserID);
-angular.element("body").scope().currentUser = currentUser;
-angular.element("body").scope().currentUserPastPostFilter = { sid: currentUserID };
-angular.element("body").scope().currentUserFavoriteFilter = function (book) {
-	return favorites.filter(function (b) {
-		return (b.uid === currentUserID) && (b.pid === book.pid);;
-	}).length != 0;
-};
+$('[data-toggle="tooltip"]').tooltip();
+updateCurrentUser(currentUserID);
 
 // 总完
 
@@ -170,15 +162,30 @@ $("#n-account tr").each(function(index) {
 
 
 
-
-
-
-
 }
 
 $(document).ready(viewDidLoad)
 
 // 雷狗
+
+$(document).on("click", "div[id^='n-nav-']", function() {
+	if ($(this).attr('id') == 'n-nav-logout') {
+		// logout
+		currentUserID = "-1";
+		updateCurrentUser(currentUserID);
+		$('#n-nav-home').click();
+	} else {
+		var section = $(this).attr('id').substr(6);
+		$(".n-nav-icon").removeClass("active");
+		$(this).addClass("active");
+		$(".n-main >div:visible").fadeOut(200, 'swing', function() {
+			$("#n-" + section + "-wrapper").fadeIn(200);
+		});
+		return false;
+	}
+});
+
+
 var textTimeout = 200;
 
 $(document).on("click", "#n-hamburger-icon", function() {
@@ -192,16 +199,5 @@ $(document).on("click", "#n-hamburger-icon", function() {
 });
 
 
-$(document).on("click", "div[id^='n-nav-']", function() {
-	var section = $(this).attr('id').substr(6);
-
-	$(".n-nav-icon").removeClass("active");
-	$(this).addClass("active");
-	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
-		$("#n-" + section + "-wrapper").fadeIn(200);
-	});
-
-	return false;
-});
 
 // 雷狗完

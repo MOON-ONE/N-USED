@@ -192,13 +192,22 @@ var favorites = [
     },
 ];
 
-var users = [{
-	id        : '0',
-	name      : 'Sun Jixuan',
-	handphone : '98264921',
-	email     : 'jixuan@gmail.com',
-	whatsapp  : 'NUS Eusoff block B room 104',
-}];
+var users = [
+	{
+		id        : '0',
+		name      : 'Sun Jixuan',
+		handphone : '98264921',
+		email     : 'jixuan@gmail.com',
+		whatsapp  : 'NUS Eusoff block B room 104',
+	},
+	{
+		id        : '1',
+		name      : 'Sun Jiba',
+		handphone : '98264922',
+		email     : 'jixuan@gmail.com',
+		whatsapp  : 'NUS Eusoff block B room 104',
+	},
+];
 
 var currentUserID = '0';
 var currentUser;
