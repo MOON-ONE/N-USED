@@ -36,7 +36,7 @@ var books = [
     'description': "Description 1",
     'price': 25,
     'sellId': "Uskdhiu63f",
-    'isSelected': true
+    'isSelected': false
 },
 {
     'id': '3',
@@ -62,7 +62,7 @@ var books = [
     'description': "Description 1",
     'price': 28,
     'sellId': "Uskdhiu63f",
-    'isSelected': true
+    'isSelected': false
 },
 {
     'id': '5',
@@ -101,7 +101,7 @@ var books = [
     'description': "Description 1",
     'price': 12,
     'sellId': "Uskdhiu63f",
-    'isSelected': true
+    'isSelected': false
 },
 {
     'id': '8',
@@ -140,7 +140,7 @@ var books = [
     'description': "Description 1",
     'price': 15,
     'sellId': "Uskdhiu63f",
-    'isSelected': true
+    'isSelected': false
 },
 {
     'id': '11',
