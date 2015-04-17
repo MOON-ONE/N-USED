@@ -9,7 +9,7 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 35,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : false,
 		postTime           : "2015/03/05"
 	}, 
@@ -23,7 +23,7 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 15,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : true,
 		postTime           : "2015/03/05"
 	}, 
@@ -37,7 +37,7 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 25,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : false,
 		postTime           : "2015/03/05"
 	}, 
@@ -51,7 +51,7 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 20,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : true,
 		postTime           : "2015/03/05"
 	}, 
@@ -65,7 +65,7 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 28,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : false,
 		postTime           : "2015/03/04"
 	}, 
@@ -79,7 +79,7 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 20,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : true,
 		postTime           : "2015/03/03"
 	}, 
@@ -169,9 +169,9 @@ var books = [
 	}
 ];
 
-var favourites = [{
-	uid : '0',
-	pid : '1'
+var favorites = [{
+    uid: '0',
+    pid: '1'
 }];
 
 var users = [{
