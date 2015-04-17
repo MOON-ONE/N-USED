@@ -796,10 +796,44 @@ $file-hover-icon-size: 5em;
 						height: $height;
 					}
 				}
+
+				.avatar-container {
+					height: $height * 3 + 30px;
+					@include xs {
+						height: 250px;
+					}
+					background: url("../images/gebilaowang.png");
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center center;
+					margin-top: 15px;
+					margin-bottom: 15px;
+					border-radius: 4px;
+
+					box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+				}
 			}
+
 
 			.posts {
 				display: none;
+
+				.search-bar {
+					margin-top: 35px;
+					margin-bottom: 15px;
+				}
+
+				.acc-col-post-date {
+					color: #aaa;
+				}
+
+				.acc-col-module-code {
+					font-weight: bold;
+				}
+
+				.acc-col-title {
+					font-weight: lighter;
+				}
 
 				button {
 					width: 100%;
@@ -839,19 +873,6 @@ $file-hover-icon-size: 5em;
 				}
 			}
 
-			.avatar-container {
-				height: $height * 3 + 30px;
-				@include xs {
-					height: 250px;
-				}
-				background: url("../images/gebilaowang.png");
-				background-size: cover;
-				background-repeat: no-repeat;
-				background-position: center center;
-				margin-top: 15px;
-				margin-bottom: 15px;
-				border-radius: 4px;
-			}
 
 			
 		}

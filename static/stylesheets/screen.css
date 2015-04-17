@@ -476,8 +476,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         width: 70px; }
       #n-account .n-container .content .profile .input-group .form-control {
         height: 40px; }
+    #n-account .n-container .content .profile .avatar-container {
+      height: 150px;
+      background: url("../images/gebilaowang.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+      @media only screen and (max-width: 767px) {
+        #n-account .n-container .content .profile .avatar-container {
+          height: 250px; } }
   #n-account .n-container .content .posts {
     display: none; }
+    #n-account .n-container .content .posts .search-bar {
+      margin-top: 35px;
+      margin-bottom: 15px; }
+    #n-account .n-container .content .posts .acc-col-post-date {
+      color: #aaa; }
+    #n-account .n-container .content .posts .acc-col-module-code {
+      font-weight: bold; }
+    #n-account .n-container .content .posts .acc-col-title {
+      font-weight: lighter; }
     #n-account .n-container .content .posts button {
       width: 100%; }
   #n-account .n-container .content .stars {
@@ -501,18 +523,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     #n-account .n-container .content h4 .selected {
       color: #333;
       font-weight: bold; }
-  #n-account .n-container .content .avatar-container {
-    height: 150px;
-    background: url("../images/gebilaowang.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border-radius: 4px; }
-    @media only screen and (max-width: 767px) {
-      #n-account .n-container .content .avatar-container {
-        height: 250px; } }
 
 #n-nav .n-container {
   height: 100vh;

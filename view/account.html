@@ -168,7 +168,7 @@
         	</div>
 
         	<div class="content-block posts">
-        	    <div class="row">
+        	    <div class="row search-bar">
 	        	    <div class="col-xs-12 col-sm-10">
 	        	    	<div class="input-group">
 							  	<span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"></i></span>
@@ -187,19 +187,17 @@
 		            <table class="table table-hover table-mc-teal table-bordered">
 		                <thead>
 		                    <tr>
+		                        <th><i class="fa fa-book"></i> &nbsp Module</th>
+		                        <th><i class="fa fa-bookmark"></i> &nbsp Title</th>
 		                        <th><i class="fa fa-calendar-o"></i> &nbsp Date</th>
-		                        <th>Module</th>
-		                        <th>Title</th>
-		                        <th>
-		                            <input class="grand-checkbox" type="checkbox">
-		                        </th>
+		                        <th><input class="grand-checkbox" type="checkbox"></th>
 		                    </tr>
 		                </thead>
 		                <tbody>
-			                <tr ng-repeat="book in books | filter: search| orderBy: orderList" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}">
-			                    <td class="acc-col-post-date" data-title="Module Code">{{ book.postTime }}</td>
+			                <tr ng-repeat="book in books | filter: search| filter: currentUserFileter | orderBy: orderList" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}">
 			                    <td class="acc-col-module-code" data-title="Title">{{ book.moduleCode }}</td>
 			                    <td class="acc-col-title" data-title="Condition">{{ book.title }}</td>
+			                    <td class="acc-col-post-date" data-title="Module Code">{{ book.postTime }}</td>
 		                        <td class="acc-col-selection" data-title="Select">
 		                            <input type="checkbox" ng-checked="book.isSelected" data-toggle="tooltip" data-delay="500" data-placement="left" title="You can check this box to narrow your search scope or hide unrelated items">
 		                        </td>
