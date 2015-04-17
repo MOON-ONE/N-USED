@@ -16,6 +16,7 @@ $('[data-toggle="tooltip"]').tooltip()
 
 currentUser = getUser(currentUserID);
 angular.element("body").scope().currentUser = currentUser;
+angular.element("body").scope().currentUserFileter = { sid: currentUserID }
 
 // 总完
 
