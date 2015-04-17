@@ -468,8 +468,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 0 15px; }
   #n-account .n-container .content .profile {
     display: block; }
+    #n-account .n-container .content .profile .input-group {
+      height: 40px;
+      width: 100%;
+      margin-top: 15px; }
+      #n-account .n-container .content .profile .input-group .input-group-addon {
+        width: 70px; }
+      #n-account .n-container .content .profile .input-group .form-control {
+        height: 40px; }
   #n-account .n-container .content .posts {
     display: none; }
+    #n-account .n-container .content .posts button {
+      width: 100%; }
   #n-account .n-container .content .stars {
     display: none; }
   #n-account .n-container .content h4 {
@@ -503,14 +513,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     @media only screen and (max-width: 767px) {
       #n-account .n-container .content .avatar-container {
         height: 250px; } }
-  #n-account .n-container .content .input-group {
-    height: 40px;
-    width: 100%;
-    margin-top: 15px; }
-    #n-account .n-container .content .input-group .input-group-addon {
-      width: 70px; }
-    #n-account .n-container .content .input-group .form-control {
-      height: 40px; }
 
 #n-nav .n-container {
   height: 100vh;

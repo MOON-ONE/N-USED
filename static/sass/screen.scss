@@ -784,10 +784,26 @@ $file-hover-icon-size: 5em;
 
 			.profile {
 				display: block;
+				.input-group {
+					height: $height;
+					width: 100%;
+					margin-top: 15px;
+					.input-group-addon {
+						width: 70px;
+					}
+
+					.form-control {
+						height: $height;
+					}
+				}
 			}
 
 			.posts {
 				display: none;
+
+				button {
+					width: 100%;
+				}
 			}
 
 			.stars {
@@ -837,18 +853,7 @@ $file-hover-icon-size: 5em;
 				border-radius: 4px;
 			}
 
-			.input-group {
-				height: $height;
-				width: 100%;
-				margin-top: 15px;
-				.input-group-addon {
-					width: 70px;
-				}
-
-				.form-control {
-					height: $height;
-				}
-			}
+			
 		}
 	}
 }
