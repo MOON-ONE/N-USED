@@ -46,11 +46,12 @@ app.controller('main', ['$scope', function($scope) {
     }
 
     $scope.updateUser = function(user) {
+        var id = user? user.id : -1;
         $scope.currentUser = user;
-        $scope.currentUserPastPostFilter = { sid: user.id };
-        angular.element("body").scope().currentUserFavoriteFilter = function (book) {
+        $scope.currentUserPastPostFilter = { sid: id };
+        $scope.currentUserFavoriteFilter = function (book) {
             return favorites.filter(function (b) {
-                var bool = (b.uid === user.id) && (b.pid === book.pid);
+                var bool = (b.uid === id) && (b.pid === book.pid);
                 if (bool) {
                     console.log("True:      " + b.uid + " " + book.pid)
                 } else {

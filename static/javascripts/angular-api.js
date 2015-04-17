@@ -13,10 +13,6 @@ function getBook(bookID) {
 }
 
 function getUser(userID) {
-	if (userID == -1) {
-		return null;
-	}
-
 	return users.filter(function (user) {
 		return user.id === (userID + "")
 	})[0]
