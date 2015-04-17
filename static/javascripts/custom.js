@@ -172,6 +172,10 @@ $(document).on("click", "#n-account .content h4 span", function() {
 
 
 
+}
+
+$(document).ready(viewDidLoad)
+
 // 雷狗
 var textTimeout = 200;
 
@@ -199,6 +203,3 @@ $(document).on("click", "div[id^='n-nav-']", function() {
 });
 
 // 雷狗完
-}
-
-$(document).ready(viewDidLoad)
