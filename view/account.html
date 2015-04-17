@@ -232,7 +232,7 @@
 		                    </tr>
 		                </thead>
 		                <tbody>
-			                <tr ng-repeat="book in books | filter: search| filter: currentUserPastPostFilter | orderBy: orderList" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}">
+			                <tr ng-repeat="book in books | filter: search| filter: currentUserFavoriteFilter | orderBy: orderList" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}">
 			                    <td class="acc-col-module-code" data-title="Module">{{ book.moduleCode }}</td>
 			                    <td class="acc-col-title" data-title="Title">{{ book.title }}</td>
 			                    <td class="acc-col-condition" data-title="Condition">{{ book.conditionRank + " / 10" }}</td>
