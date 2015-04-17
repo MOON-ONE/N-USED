@@ -158,6 +158,14 @@ $(document).on("click", "#n-account .content h4 span", function() {
 })
 
 
+$("#n-account tr").each(function(index) {
+	if ($(this).attr("is-sold") == "true") {
+		$(this).addClass("sold-entry-row");
+		$(this).children().addClass("sold-entry-row");
+	}
+})
+
+
 // 孙狗完
 
 
