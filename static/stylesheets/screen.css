@@ -208,7 +208,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: absolute;
   margin: 0;
   padding: 0 0 0 20px;
-  background: #34495E;
+  background: black;
   color: white;
   font-size: 25px;
   display: block; }
@@ -247,7 +247,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-bottom: 20px;
   color: #2C3E50; }
   .n-post .post-textbook-info .info-row {
-    color: #34495E;
+    color: black;
     margin-bottom: 15px;
     border-bottom: solid;
     border-width: 1px;
@@ -276,7 +276,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       -moz-border-radius: 30px;
       border-radius: 100px; }
   .n-post .post-contact-info .contact-row {
-    color: #34495E;
+    color: black;
     margin-bottom: 15px; }
     .n-post .post-contact-info .contact-row .contact-name-label {
       font-size: 25px;
@@ -301,7 +301,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-bottom: 20px;
   color: #2C3E50; }
   .create-post-textbook-info .create-info-row {
-    color: #34495E;
+    color: black;
     margin-bottom: 15px;
     border-bottom: solid;
     border-width: 1px;
