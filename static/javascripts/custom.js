@@ -14,7 +14,7 @@ $("#n-post-wrapper").load("view/create-post.html", function () {
 
 $('[data-toggle="tooltip"]').tooltip()
 
-// currentUser = getUser(currentUserID);
+currentUser = getUser(currentUserID);
 angular.element("body").scope().currentUser = currentUser;
 angular.element("body").scope().currentUserPastPostFilter = { sid: currentUserID };
 angular.element("body").scope().currentUserFavoriteFilter = function (book) {
