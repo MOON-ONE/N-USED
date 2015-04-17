@@ -16,6 +16,18 @@ $('[data-toggle="tooltip"]').tooltip()
 
 // currentUser = getUser(currentUserID);
 angular.element("body").scope().currentUser = currentUser;
+angular.element("body").scope().currentUserPastPostFilter = { sid: currentUserID };
+angular.element("body").scope().currentUserFavoriteFilter = function (book) {
+	return favorites.filter(function (b) {
+		var bool = (b.uid === currentUserID) && (b.pid === book.pid);
+		if (bool) {
+			console.log("True: 		" + b.uid + " " + book.pid)
+		} else {
+			console.log("False: 	" + b.uid + " " + book.pid)
+		}
+		return bool;
+	});
+};
 
 // 总完
 

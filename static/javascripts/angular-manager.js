@@ -18,7 +18,6 @@ app.directive('onFinishRender', function ($timeout) {
 app.controller('main', ['$scope', function($scope) {
     $scope.init = function() {
         $scope.books = books;
-        $scope.favourites = favourites;
         $scope.users = users;
     };
 
