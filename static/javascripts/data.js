@@ -27,7 +27,7 @@ var books = [
 		sid                : "1",
 		isSelected         : true,
 		postTime           : "2015/03/05",
-        isSold             : false
+        isSold             : true
 	}, 
 	{
 		pid                : '2',
@@ -177,7 +177,7 @@ var books = [
 		sid                : "0",
 		isSelected         : true,
 		postTime           : "2015/03/04",
-        isSold             : false
+        isSold             : true
 	}
 ];
 
