@@ -43,7 +43,7 @@
                         </div><!-- /input-group -->
                     </div>
                     <div class="col-xs-6 col-md-4 col-button" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="hide unselected items from the list">
-                        <div class="title-bar-item">Selected Only</div>
+                        <div id="selected-only-button" class="title-bar-item">Selected Only</div>
                     </div>
                     <div class="col-xs-6 col-md-4 col-button" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="star all the selected items">
                         <div class="title-bar-item">Star Selected</div>
@@ -76,7 +76,7 @@
 	                    <td class="col-condition" data-title="Condition">{{ book.conditionRank + " / 10"}}</td>
 	                    <td class="col-price" data-title="Price">{{ "S$" + book.price }}</td>
                         <td class="col-selection" data-title="Select">
-                            <input type="checkbox">
+                            <input type="checkbox" ng-checked="book.isSelected">
                         </td>
 	                </tr>
                 </tbody>

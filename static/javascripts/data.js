@@ -10,7 +10,7 @@ var books = [
     'description': "Description 1",
     'price': 35,
     'sellId': "Uskdhiu63f",
-    'isSelected': true
+    'isSelected': false
 },
 {
     'id': '1',
