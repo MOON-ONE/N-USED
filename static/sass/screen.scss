@@ -835,7 +835,18 @@ $file-hover-icon-size: 5em;
 					font-weight: lighter;
 				}
 
+				.btn-container {
+					padding-left: 0;
+					@include xs {
+						padding-left: 15px;
+						margin-bottom: 20px;
+					}
+				}
+
 				button {
+					@include xs {
+						margin-top: 15px;
+					}
 					width: 100%;
 				}
 			}
