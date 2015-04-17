@@ -36,6 +36,16 @@ app.controller('main', ['$scope', function($scope) {
         $scope.filter = pr; 
     }
 
+    $scope.addBook = function(book) {
+        books.push(book);
+        $scope.updateBooks();
+    }
+
+    $scope.updateBooks = function() {
+        $scope.books = books;
+        $scope.$apply();
+    }
+
 
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
                     viewDidLoad();
