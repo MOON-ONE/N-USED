@@ -181,10 +181,16 @@ var books = [
 	}
 ];
 
-var favorites = [{
-    uid: '0',
-    pid: '1'
-}];
+var favorites = [
+    {
+        uid: '0',
+        pid: '1'
+    },
+    {
+        uid: '0',
+        pid: '4'
+    },
+];
 
 var users = [{
 	id        : '0',
