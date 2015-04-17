@@ -151,28 +151,6 @@ $(document).on("click", "#n-account .content h4 span", function() {
 
 // 孙狗完
 
-// 雷狗
-
-$(document).on("click", "div[id^='n-nav-']", function() {
-	if ($(this).attr('id') == 'n-nav-logout') {
-		// logout
-		currentUserID = 1;
-		updateCurrentUser(currentUserID);
-	} else {
-
-		var section = $(this).attr('id').substr(6);
-
-		$(".n-nav-icon").removeClass("active");
-		$(this).addClass("active");
-		$(".n-main >div:visible").fadeOut(200, 'swing', function() {
-			$("#n-" + section + "-wrapper").fadeIn(200);
-		});
-
-		return false;
-	}
-});
-
-// 雷狗完
 
 
 }
@@ -180,6 +158,24 @@ $(document).on("click", "div[id^='n-nav-']", function() {
 $(document).ready(viewDidLoad)
 
 // 雷狗
+
+$(document).on("click", "div[id^='n-nav-']", function() {
+	if ($(this).attr('id') == 'n-nav-logout') {
+		// logout
+		currentUserID = "-1";
+		updateCurrentUser(currentUserID);
+	} else {
+		var section = $(this).attr('id').substr(6);
+		$(".n-nav-icon").removeClass("active");
+		$(this).addClass("active");
+		$(".n-main >div:visible").fadeOut(200, 'swing', function() {
+			$("#n-" + section + "-wrapper").fadeIn(200);
+		});
+		return false;
+	}
+});
+
+
 var textTimeout = 200;
 
 $(document).on("click", "#n-hamburger-icon", function() {
