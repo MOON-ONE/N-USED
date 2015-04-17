@@ -11,7 +11,8 @@ var books = [
 		price              : 35,
 		sid                : "1",
 		isSelected         : false,
-		postTime           : "2015/03/05"
+		postTime           : "2015/03/05",
+        isSold             : false
 	}, 
 	{
 		pid                : '1',
@@ -25,7 +26,8 @@ var books = [
 		price              : 15,
 		sid                : "1",
 		isSelected         : true,
-		postTime           : "2015/03/05"
+		postTime           : "2015/03/05",
+        isSold             : false
 	}, 
 	{
 		pid                : '2',
@@ -39,7 +41,8 @@ var books = [
 		price              : 25,
 		sid                : "1",
 		isSelected         : false,
-		postTime           : "2015/03/05"
+		postTime           : "2015/03/05",
+        isSold             : false
 	}, 
 	{
 		pid                : '3',
@@ -53,7 +56,8 @@ var books = [
 		price              : 20,
 		sid                : "1",
 		isSelected         : true,
-		postTime           : "2015/03/05"
+		postTime           : "2015/03/05",
+        isSold             : false
 	}, 
 	{
 		pid                : '4',
@@ -67,7 +71,8 @@ var books = [
 		price              : 28,
 		sid                : "1",
 		isSelected         : false,
-		postTime           : "2015/03/04"
+		postTime           : "2015/03/04",
+        isSold             : false
 	}, 
 	{
 		pid                : '5',
@@ -81,7 +86,8 @@ var books = [
 		price              : 20,
 		sid                : "1",
 		isSelected         : true,
-		postTime           : "2015/03/03"
+		postTime           : "2015/03/03",
+        isSold             : false
 	}, 
 	{
 		pid                : '6',
@@ -95,7 +101,8 @@ var books = [
 		price              : 25,
 		sid                : "0",
 		isSelected         : true,
-		postTime           : "2015/03/03"
+		postTime           : "2015/03/03",
+        isSold             : false
 	}, 
 	{
 		pid                : '7',
@@ -109,7 +116,8 @@ var books = [
 		price              : 12,
 		sid                : "0",
 		isSelected         : false,
-		postTime           : "2015/03/03"
+		postTime           : "2015/03/03",
+        isSold             : false
 	}, 
 	{
 		pid                : '8',
@@ -123,7 +131,8 @@ var books = [
 		price              : 20,
 		sid                : "0",
 		isSelected         : true,
-		postTime           : "2015/03/03"
+		postTime           : "2015/03/03",
+        isSold             : false
 	}, 
 	{
 		pid                : '9',
@@ -137,7 +146,8 @@ var books = [
 		price              : 10,
 		sid                : "0",
 		isSelected         : true,
-		postTime           : "2015/03/04"
+		postTime           : "2015/03/04",
+        isSold             : false
 	}, 
 	{
 		pid                : '10',
@@ -151,7 +161,8 @@ var books = [
 		price              : 15,
 		sid                : "0",
 		isSelected         : false,
-		postTime           : "2015/03/04"
+		postTime           : "2015/03/04",
+        isSold             : false
 	}, 
 	{
 		pid                : '11',
@@ -165,7 +176,8 @@ var books = [
 		price              : 15,
 		sid                : "0",
 		isSelected         : true,
-		postTime           : "2015/03/04"
+		postTime           : "2015/03/04",
+        isSold             : false
 	}
 ];
 
