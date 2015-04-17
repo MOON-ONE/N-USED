@@ -59,12 +59,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
-  margin-left: 90px;
+  margin-left: 70px;
   margin-right: 0;
   position: relative; }
   .n-main .n-container.active {
-    margin-left: 390px;
-    margin-right: -390px; }
+    margin-left: 200px;
+    margin-right: -200px; }
 .n-main section {
   overflow-x: hidden; }
 
@@ -488,25 +488,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 #n-nav .n-container {
   height: 100vh;
-  background: #000;
+  background: #222;
   top: 0;
   position: fixed;
-  width: 90px;
+  width: 70px;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s; }
   #n-nav .n-container.active {
-    width: 390px; }
+    width: 200px; }
   #n-nav .n-container .n-nav-icons {
-    margin-top: 70px;
-    margin-left: 15px; }
+    padding-top: 50px; }
     #n-nav .n-container .n-nav-icons .n-nav-text {
       color: #fff;
       width: 0;
       height: 0;
       opacity: 0.0;
+      margin-left: 20px;
       -webkit-transition: opacity 0s ease-in;
       -moz-transition: opacity 0s ease-in;
       -ms-transition: opacity 0s ease-in;
@@ -524,11 +524,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
         transition: opacity 0.2s ease-in; }
     #n-nav .n-container .n-nav-icons .n-bottom-icon {
       bottom: 0;
-      margin-top: calc(100vh - 70px - (20px + 70px) * 3 - 140px); }
-    #n-nav .n-container .n-nav-icons .n-nav-icon.active a {
-      border-color: #fff; }
-    #n-nav .n-container .n-nav-icons .n-nav-icon.active i {
-      color: #fff; }
+      margin-top: calc(100vh - 50px - (20px + 50px) * 3 - 80px); }
+    #n-nav .n-container .n-nav-icons .n-nav-icon {
+      padding-left: 16px; }
+      #n-nav .n-container .n-nav-icons .n-nav-icon a {
+        border: none; }
+      #n-nav .n-container .n-nav-icons .n-nav-icon.active i {
+        color: #fff; }
     #n-nav .n-container .n-nav-icons .fa-thumb-tack {
       padding: 2px 3px 3px 3px; }
     #n-nav .n-container .n-nav-icons .fa-street-view {
@@ -537,12 +539,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       padding: 0px 0px 0px 0px; }
     #n-nav .n-container .n-nav-icons a {
       color: #aaa;
-      padding: 20px;
+      padding: 8px;
       border: 2px solid #aaa;
       border-radius: 50px; }
       #n-nav .n-container .n-nav-icons a i {
         font-size: 20px;
-        margin-bottom: 70px; }
+        margin-bottom: 50px; }
       #n-nav .n-container .n-nav-icons a:hover {
         color: #fff !important;
         border-color: #fff !important;
@@ -564,15 +566,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
           -o-transition: 0.3s ease;
           transition: 0.3s ease; }
 #n-nav #n-hamburger-icon {
-  width: 50px;
-  height: 30px;
+  width: 28px;
+  height: 16.8px;
   position: relative;
   display: block;
-  margin: 20px auto 20px 20px; }
+  margin: 20px auto 20px 21px; }
   #n-nav #n-hamburger-icon .n-line {
     display: block;
     background: #ecf0f1;
-    width: 50px;
+    width: 28px;
     height: 2px;
     position: absolute;
     left: 0;
@@ -601,16 +603,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     -o-transform: translateY(1px);
     transform: translateY(1px); }
   #n-nav #n-hamburger-icon.active .n-line-1 {
-    -webkit-transform: translateY(15px) translateX(0) rotate(-945deg);
-    -moz-transform: translateY(15px) translateX(0) rotate(-945deg);
-    -ms-transition: translateY(15px) translateX(0) rotate(-945deg);
-    -o-transform: translateY(15px) translateX(0) rotate(-945deg);
-    transform: translateY(15px) translateX(0) rotate(-945deg); }
+    -webkit-transform: translateY(8.4px) translateX(0) rotate(-945deg);
+    -moz-transform: translateY(8.4px) translateX(0) rotate(-945deg);
+    -ms-transition: translateY(8.4px) translateX(0) rotate(-945deg);
+    -o-transform: translateY(8.4px) translateX(0) rotate(-945deg);
+    transform: translateY(8.4px) translateX(0) rotate(-945deg); }
   #n-nav #n-hamburger-icon.active .n-line-2 {
     opacity: 0; }
   #n-nav #n-hamburger-icon.active .n-line-3 {
-    -webkit-transform: translateY(-15px) translateX(0) rotate(945deg);
-    -moz-transform: translateY(-15px) translateX(0) rotate(945deg);
-    -ms-transition: translateY(-15px) translateX(0) rotate(945deg);
-    -o-transform: translateY(-15px) translateX(0) rotate(945deg);
-    transform: translateY(-15px) translateX(0) rotate(945deg); }
+    -webkit-transform: translateY(-8.4px) translateX(0) rotate(945deg);
+    -moz-transform: translateY(-8.4px) translateX(0) rotate(945deg);
+    -ms-transition: translateY(-8.4px) translateX(0) rotate(945deg);
+    -o-transform: translateY(-8.4px) translateX(0) rotate(945deg);
+    transform: translateY(-8.4px) translateX(0) rotate(945deg); }
