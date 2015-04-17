@@ -14,7 +14,7 @@ $("#n-post-wrapper").load("view/create-post.html", function () {
 
 $('[data-toggle="tooltip"]').tooltip()
 
-currentUser = getUser(currentUserID);
+// currentUser = getUser(currentUserID);
 angular.element("body").scope().currentUser = currentUser;
 
 // 总完
@@ -172,6 +172,7 @@ $(document).on("click", "#n-hamburger-icon", function() {
 	textTimeout = 200 - textTimeout;
 	return false;
 });
+
 
 $(document).on("click", "div[id^='n-nav-']", function() {
 	var section = $(this).attr('id').substr(6);
