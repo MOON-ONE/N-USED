@@ -8,17 +8,20 @@ $("#n-post-wrapper").load("view/create-post.html", function () {
 // $("#n-home-wrapper").load("view/home.html", function () {
 // 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
 // }); 
-$("#n-account-wrapper").load("view/account.html", function () {
-	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
-});
+// $("#n-account-wrapper").load("view/account.html", function () {
+// 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
+// });
 
 $('[data-toggle="tooltip"]').tooltip()
+
+currentUser = getUser(currentUserID);
+angular.element("body").scope().currentUser = currentUser;
 
 // 总完
 
 
 // 王狗
-$(document).on("click", "#n-home .sort-button", function(){
+$("#n-home .sort-button").click(function() {
 	var moreOptionBar = $("#n-home .n-more-option-bar");
 	if (moreOptionBar.css("display") == "none") {
 		moreOptionBar.show();
@@ -31,7 +34,7 @@ $(document).on("click", "#n-home .sort-button", function(){
 	}
 });
 
-$(document).on("click", "#n-home .grand-checkbox", function() {
+$("#n-home .grand-checkbox").click(function() {
 	$("#n-home .col-selection input").each(function(index) {
 		$(this).prop('checked', $("#n-home .grand-checkbox").prop('checked'));
 		var row = $(this).closest("tr");
@@ -46,7 +49,7 @@ $(document).on("click", "#n-home .grand-checkbox", function() {
 	updateBookList();
 })
 
-$(document).on("click", "#selected-only-button", function() {
+$("#selected-only-button").click(function() {
 	
 	if ($(this).hasClass("highlight-button")) {
 		$(this).removeClass("highlight-button");
@@ -60,12 +63,12 @@ $(document).on("click", "#selected-only-button", function() {
 	
 })
 
-$(document).on("click", ".col-selection input", function() {
+$("#n-home .col-selection input").click(function() {
 	var row = $(this).closest("tr");
 	var newValue = $(this).prop("checked");
 	var bookID = row.attr("book-id");
 	$.each(books, function() {
-	    if (this.id == bookID) {
+	    if (this.pid == bookID) {
 	        this.isSelected = newValue;
 	    }
 	});
@@ -113,30 +116,40 @@ $(document).on("click", ".like", function() {
 
 
 // 孙狗
-$(document).on("click",".n-account-nav a",function(e){
-    e.preventDefault();
-    $(".n-account-toggle").hide();
-    var toShow = $(this).attr('href');
-    $(toShow).show();
-});
+// $(document).on("click",".n-account-nav a",function(e){
+//     e.preventDefault();
+//     $(".n-account-toggle").hide();
+//     var toShow = $(this).attr('href');
+//     $(toShow).show();
+// });
 
-$(document).on("click",".n-account-edit-button", function(){
+// $(document).on("click",".n-account-edit-button", function(){
 
-            var $this = $(this);
-            var text = $this.text();
-            if(text=="Edit"){
-                $this.text("Cancel");
-            }
-                        else{
-                             $this.text("Edit");
-                        }
-            $(".account-label").toggle();
-        });
+//             var $this = $(this);
+//             var text = $this.text();
+//             if(text=="Edit"){
+//                 $this.text("Cancel");
+//             }
+//                         else{
+//                              $this.text("Edit");
+//                         }
+//             $(".account-label").toggle();
+//         });
 
-        $("input.account-label").change(function(){
-            $(this).prev().text($(this).text());
+//         $("input.account-label").change(function(){
+//             $(this).prev().text($(this).text());
 
-        });
+//         });
+
+
+$(document).on("click", "#n-account .content h4 span", function() {
+	$("#n-account .content h4 span").removeClass("selected");
+	$(this).addClass("selected")
+	var showContentID = $(this).attr("href");
+	$("#n-account .content .content-block").css("display", "none");
+	console.log("#n-account .content .content-block " + showContentID)
+	$("#n-account .content .content-block" + showContentID).css("display", "block");
+})
 
 
 // 孙狗完

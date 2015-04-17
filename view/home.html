@@ -70,7 +70,7 @@
                     </tr>
                 </thead>
                 <tbody>
-	                <tr ng-repeat="book in books | filter: search| orderBy: orderList" on-finish-render="ngRepeatFinished" book-id="{{ book.id }}">
+	                <tr ng-repeat="book in books | filter: search| orderBy: orderList" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}">
 	                    <td class="col-mc" data-title="Module Code">{{ book.moduleCode }}</td>
 	                    <td class="col-title" data-title="Title">{{ book.title }}</td>
 	                    <td class="col-condition" data-title="Condition">{{ book.conditionRank + " / 10"}}</td>

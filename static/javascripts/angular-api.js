@@ -11,3 +11,9 @@ function getBook(bookID) {
 		return book.id === (bookID + "")
 	})[0]
 }
+
+function getUser(userID) {
+	return users.filter(function (user) {
+		return user.id === (userID + "")
+	})[0]
+}

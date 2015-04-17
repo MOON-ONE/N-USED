@@ -606,112 +606,251 @@ $file-hover-icon-size: 5em;
 
 
 // 孙狗
-.n-account {
-	$n-account-nav-height: 80px;
-	$n-account-nav-color: #BDC3C7;
-	$n-account-text-color: #2C3E50;
+#n-account {
+	// $n-account-nav-height: 80px;
+	// $n-account-nav-color: #BDC3C7;
+	// $n-account-text-color: #2C3E50;
 
-	.n-account-nav{
-		width: 100%;
-		height: $n-account-nav-height;
-		line-height: $n-account-nav-height;
-		vertical-align: middle;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		text-align: left;
-		margin: 0;
-		padding: 0 0 0 20px;
-		background: rgba(189, 195, 199, 0);
-		color: white;
-		font-size: 20px;
-		.n-account-back-button {
-			text-decoration: none;
-			color: black;
-			margin-left: 0px;
-			float: left;
+	// .n-account-nav{
+	// 	width: 100%;
+	// 	height: $n-account-nav-height;
+	// 	line-height: $n-account-nav-height;
+	// 	vertical-align: middle;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	text-align: left;
+	// 	margin: 0;
+	// 	padding: 0 0 0 20px;
+	// 	background: rgba(189, 195, 199, 0);
+	// 	color: white;
+	// 	font-size: 20px;
+	// 	.n-account-back-button {
+	// 		text-decoration: none;
+	// 		color: black;
+	// 		margin-left: 0px;
+	// 		float: left;
 
-		}
-		a{
-			float: right;
-			font-size: 15px;
-			padding: 0 5px 0 5px;
-		}
+	// 	}
+	// 	a{
+	// 		float: right;
+	// 		font-size: 15px;
+	// 		padding: 0 5px 0 5px;
+	// 	}
 
+	// }
+	
+	// .account-pic-and-name {
+	// 	text-align: center;
+	
+	// 		.account-profile-pic{
+	// 			// margin:0 auto;
+	// 			font-size: 10em;
+	// 			height: 250px;
+	// 			width: 250px;
+	// 			line-height: 200px;
+	// 			border:solid 5px ;
+
+	// 			-moz-border-radius: 30px; /* or 50% */
+	// 			border-radius: 125px; /* or 50% */
+
+	// 			background-color: white;
+	// 			color: black;
+	// 			text-align: center;
+	// 		}
+
+	// 		.n-account-name{
+	// 			vertical-align: middle;
+	// 			position:relative;
+	// 			font-size: 40px;
+	// 			margin-top: 100px;
+	// 			margin-bottom:20px;
+	// 		}
+	// }	
+
+
+	// .n-account-profile-info {
+	// 	line-height: 30px;
+	// 	// vertical-align: middle;
+
+	// 	font-size: 20px;
+	// 	margin-top: 30px;
+	// 	margin-left: 13%;
+	// 	color: $n-account-text-color;
+	// 	.info-row {
+	// 		color: $n-account-nav-color;
+	// 		// margin-bottom: 15px;
+	// 		// border-bottom: solid;
+	// 		// border-width: 1px;
+	// 		margin-bottom: 12px;
+	// 		width: 90%;
+	// 		.account-label {
+	// 			color: $n-account-text-color;
+	// 			margin: 0 20px 0 0;
+	// 			float: left;
+	// 		}
+	// 		.account-label-title {
+	// 			color: $n-account-text-color;
+	// 			margin: 0 20px 0 0;
+	// 			float: left;
+	// 		}
+	// 		input {
+	// 			border-radius: 10px;
+	// 			height: 30px;
+	// 		}
+	// 	}
+	// }
+
+	// .n-account-edit-info{
+	// 	text-align: center;
+	// 		button{
+	// 			width: 100px;
+	// 			height: 50px;
+	// 			// border: none;
+	// 			margin-top: 20px;
+	// 		}
+	// }
+
+	.col-xs-0,
+	.col-xs-1,
+	.col-xs-2,
+	.col-xs-3,
+	.col-xs-4,
+	.col-xs-5,
+	.col-xs-6,
+	.col-xs-7,
+	.col-xs-8,
+	.col-xs-9,
+	.col-xs-10,
+	.col-xs-11,
+	.col-xs-12 {
 	}
-	
-	.account-pic-and-name {
-		text-align: center;
-	
-			.account-profile-pic{
-				// margin:0 auto;
-				font-size: 10em;
-				height: 250px;
-				width: 250px;
-				line-height: 200px;
-				border:solid 5px ;
 
-				-moz-border-radius: 30px; /* or 50% */
-				border-radius: 125px; /* or 50% */
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
 
-				background-color: white;
-				color: black;
-				text-align: center;
-			}
+	.n-container {
+		$title-bar-height: 70px;
+		$height: 40px;
+		$width: 70%;
+		$bg-color: #333;
+		$color: #eef2e7;
 
-			.n-account-name{
+		.n-title-bar {
+			background-color: $bg-color;
+			height: $title-bar-height;
+			width: 100%;
+			margin: 0;
+			padding-left: 15px;
+			padding-top: calc((#{$title-bar-height} - #{$height})/2 + 4px);
+
+			.n-title {
+				display: block;
+				color: white;
+				padding-right: 10px;
+				font-size: 30px;
 				vertical-align: middle;
-				position:relative;
-				font-size: 40px;
-				margin-top: 100px;
-				margin-bottom:20px;
+				line-height: $height/2 + 15;
 			}
-	}	
+
+			.sort-button {
+				display: block;
+				text-align: center;
+				vertical-align: center;
+				padding: 8px 0;
+				height: $height;
+				background-color: $bg-color;
+				color: $color;
+				border: solid 1px #ccc;
+				border-radius: 4px;
+				font-size: 20px;
+				transition:	 .1s linear color;
+			}
+
+			.sort-button:hover {
+				cursor: pointer;
+			}
+
+			.sort-button:active {
+				cursor: pointer;
+				background-color: $color;
+				color: $bg-color;
+			}
+		}
+
+		.content {
+
+			.profile {
+				display: block;
+			}
+
+			.posts {
+				display: none;
+			}
+
+			.stars {
+				display: none;
+			}
 
 
-	.n-account-profile-info {
-		line-height: 30px;
-		// vertical-align: middle;
+			padding: 0 15px;
 
-		font-size: 20px;
-		margin-top: 30px;
-		margin-left: 13%;
-		color: $n-account-text-color;
-		.info-row {
-			color: $n-account-nav-color;
-			// margin-bottom: 15px;
-			// border-bottom: solid;
-			// border-width: 1px;
-			margin-bottom: 12px;
-			width: 90%;
-			.account-label {
-				color: $n-account-text-color;
-				margin: 0 20px 0 0;
-				float: left;
+			h4 {
+				margin-right: 15px;
+				margin-left: 15px;
+				margin-top: 30px;
+				margin-bottom: 10px;
+				font-size: 20px;
+
+				@include xs {
+					font-size: 16px;
+				}
+
+				span {
+					margin-right: 20px;
+					@include xs {
+						margin-right: 15px;
+					}
+					color: #aaa;
+					cursor: pointer;
+				}
+
+				.selected {
+					color: $bg-color;
+					font-weight: bold;
+				}
 			}
-			.account-label-title {
-				color: $n-account-text-color;
-				margin: 0 20px 0 0;
-				float: left;
+
+			.avatar-container {
+				height: $height * 3 + 30px;
+				@include xs {
+					height: 250px;
+				}
+				background: url("../images/gebilaowang.png");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				border-radius: 4px;
 			}
-			input {
-				border-radius: 10px;
-				height: 30px;
+
+			.input-group {
+				height: $height;
+				width: 100%;
+				margin-top: 15px;
+				.input-group-addon {
+					width: 70px;
+				}
+
+				.form-control {
+					height: $height;
+				}
 			}
 		}
 	}
-
-	.n-account-edit-info{
-		text-align: center;
-			button{
-				width: 100px;
-				height: 50px;
-				// border: none;
-				margin-top: 20px;
-			}
-	}
-
-	
 }
 
 
