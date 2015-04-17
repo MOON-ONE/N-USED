@@ -1,3 +1,7 @@
+function updateBookList() {
+	angular.element("body").scope().updateBooks();
+}
+
 function addBook(book) {
 	angular.element("body").scope().addBook(book)
 }

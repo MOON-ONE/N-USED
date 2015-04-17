@@ -34,7 +34,42 @@ $(document).on("click", "#n-home .sort-button", function(){
 $(document).on("click", "#n-home .grand-checkbox", function() {
 	$("#n-home .col-selection input").each(function(index) {
 		$(this).prop('checked', $("#n-home .grand-checkbox").prop('checked'));
+		var row = $(this).closest("tr");
+		var newValue = $(this).prop("checked");
+		var bookID = row.attr("book-id");
+		$.each(books, function() {
+		    if (this.id == bookID) {
+		        this.isSelected = newValue;
+		    }
+		});
 	})
+	updateBookList();
+})
+
+$(document).on("click", "#selected-only-button", function() {
+	
+	if ($(this).hasClass("highlight-button")) {
+		$(this).removeClass("highlight-button");
+		angular.element("body").scope().search.isSelected = ""
+	} else {
+		$(this).addClass("highlight-button");
+		angular.element("body").scope().search.isSelected = true	
+	}
+
+	angular.element("body").scope().$apply();
+	
+})
+
+$(document).on("click", ".col-selection input", function() {
+	var row = $(this).closest("tr");
+	var newValue = $(this).prop("checked");
+	var bookID = row.attr("book-id");
+	$.each(books, function() {
+	    if (this.id == bookID) {
+	        this.isSelected = newValue;
+	    }
+	});
+	updateBookList();
 })
 
 function updateTableContainerHeight(height) {

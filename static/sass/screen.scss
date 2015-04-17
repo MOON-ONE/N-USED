@@ -128,6 +128,11 @@ $container-transition-time: 0.4s;
 		background-color: $bg-color;
 		height: 100vh;
 
+		.highlight-button {
+			color: $bg-color;
+			background-color: $color;
+		}
+
 		.n-more-option-bar {
 			color: $color;
 			margin-left: 0;
@@ -148,7 +153,10 @@ $container-transition-time: 0.4s;
 
 			.col-button {
 				text-align: center;
-				cursor: pointer;
+				.title-bar-item {
+					transition: 0.4s linear color;
+					cursor: pointer;
+				}
 			}
 		}
 
