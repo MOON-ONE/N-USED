@@ -500,8 +500,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       font-weight: bold; }
     #n-account .n-container .content .posts .acc-col-title, #n-account .n-container .content .stars .acc-col-title {
       font-weight: lighter; }
+    #n-account .n-container .content .posts .btn-container, #n-account .n-container .content .stars .btn-container {
+      padding-left: 0; }
+      @media only screen and (max-width: 767px) {
+        #n-account .n-container .content .posts .btn-container, #n-account .n-container .content .stars .btn-container {
+          padding-left: 15px;
+          margin-bottom: 20px; } }
     #n-account .n-container .content .posts button, #n-account .n-container .content .stars button {
       width: 100%; }
+      @media only screen and (max-width: 767px) {
+        #n-account .n-container .content .posts button, #n-account .n-container .content .stars button {
+          margin-top: 15px; } }
   #n-account .n-container .content h4 {
     margin-right: 15px;
     margin-left: 15px;
