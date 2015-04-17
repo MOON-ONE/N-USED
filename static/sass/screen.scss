@@ -902,7 +902,7 @@ $file-hover-icon-size: 5em;
 					height: auto;
 					display: inline;
 					opacity: 1;
-					@include transition(opacity 0.2s ease-in);
+					@include transition(opacity 0.3s ease-in);
 				}
 			}
 
