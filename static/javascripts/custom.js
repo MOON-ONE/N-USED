@@ -14,6 +14,7 @@ $("#n-post-wrapper").load("view/create-post.html", function () {
 
 $('[data-toggle="tooltip"]').tooltip();
 updateCurrentUser(currentUserID);
+
 // 总完
 
 
@@ -146,6 +147,14 @@ $(document).on("click", "#n-account .content h4 span", function() {
 	$("#n-account .content .content-block").css("display", "none");
 	console.log("#n-account .content .content-block " + showContentID)
 	$("#n-account .content .content-block" + showContentID).css("display", "block");
+})
+
+
+$("#n-account tr").each(function(index) {
+	if ($(this).attr("is-sold") == "true") {
+		$(this).addClass("sold-entry-row");
+		$(this).children().addClass("sold-entry-row");
+	}
 })
 
 
