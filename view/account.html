@@ -1,4 +1,4 @@
-<section id="n-account" class="n-account">
+<!--<section id="n-account" class="n-account">
 	<div class="n-container">
 
 	<div class="row n-account-nav">
@@ -21,7 +21,7 @@
   		<div class="col-md-10">
   			<div class="col-sm-1"></div>
     		<div class="col-sm-4">
-      			<img class="account-profile-pic" src="view/images/gebilaowang.png">
+      			<img class="account-profile-pic" src="static/images/gebilaowang.png">
       		</div>
       		<div class="col-sm-4" ng-repeat="user in user" on-finish-render="ngRepeatFinished">
       			<h1 class="n-account-name" data-title="name">{{ user.name }}</h1>
@@ -39,7 +39,7 @@
 						<label class="account-label-title">Contact:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="account-label" data-title="contact">{{ user.contact }}</label>
+						<label class="account-label" data-title="contact">{{ users.contact }}</label>
 						<input class="form-control post-input account-label" type="text" name="type" style="display:none"/>
 					</div>
 				</div>
@@ -48,7 +48,7 @@
 						<label class="account-label-title">Email:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="account-label" data-title="email">{{ user.email }}</label>
+						<label class="account-label" data-title="email">{{ users.email }}</label>
 						<input class="form-control post-input account-label" type="text" name="type" style="display:none"/>
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 						<label class="account-label-title">Address:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="account-label" data-title="address">{{ user.address }}</label>
+						<label class="account-label" data-title="address">{{ users.address }}</label>
 						<input class="form-control post-input account-label" type="text" name="type" style="display:none"/>
 					</div>
 				</div>
@@ -74,7 +74,7 @@
 	<div id="favourite" class="n-account-toggle" style="display:none">
 		
             <div class="table-responsive-vertical shadow-z-1">
-            <!-- Table starts here -->
+           
             <table class="table table-hover table-mc-light-blue">
                 <thead>
                     <tr>
@@ -99,7 +99,7 @@
 	<div id="history" class="n-account-toggle" style="display:none">
 		
             <div class="table-responsive-vertical shadow-z-1">
-            <!-- Table starts here -->
+            
             <table class="table table-hover table-mc-light-blue">
                 <thead>
                     <tr>
@@ -121,4 +121,81 @@
         </div>
 
 	</div>
+</section> -->
+
+<section id="n-account">
+    <div class="n-container">
+        <div class="row n-title-bar">
+            <div class="col-xs-3">
+                <span class="n-title"><i class="fa fa-chevron-left"></i></span>
+            </div>
+            <div class="col-xs-9">
+                <span class="n-title pull-right">ACCOUNT</span>
+            </div>
+        </div>	
+
+        <div class="content">
+        	<h4>
+        		<span href=".profile" class="selected">PROFILE</span>
+        		<span href=".posts">POSTS</span>
+        		<span href=".stars">STARS</span>
+        	</h4>
+			
+			<hr>
+			
+        	<div class="content-block profile">	
+	        	<div class="row">
+	        		<div class="col-xs-12 col-sm-3">
+	        			<div class="avatar-container"></div>
+	        		</div>
+	        		<div class="col-xs-12 col-sm-9">
+	        			<div class="input-group">
+						  	<span class="input-group-addon" id="sizing-addon2">Name</span>
+						  	<input type="text" class="form-control" placeholder="Full Name" aria-describedby="sizing-addon2" value="{{ currentUser.name }}">
+						</div>
+
+						<div class="input-group">
+						  	<span class="input-group-addon" id="sizing-addon2">Phone</span>
+						  	<input type="text" class="form-control" placeholder="Hand Phone" aria-describedby="sizing-addon2" value="{{ currentUser.handphone }}">
+						</div>
+
+						<div class="input-group">
+						  	<span class="input-group-addon" id="sizing-addon2">Email</span>
+						  	<input type="text" class="form-control" placeholder="Email" aria-describedby="sizing-addon2" value="{{ currentUser.email }}">
+						</div>
+	        		</div>
+        		</div>
+        	</div>
+
+        	<div class="content-block posts">
+        		<div class="table-responsive-vertical shadow-z-1">
+		            <table class="table table-hover table-mc-teal table-bordered">
+		                <thead>
+		                    <tr>
+		                        <th><i class="fa fa-calendar-o"></i> &nbsp Date</th>
+		                        <th>Module</th>
+		                        <th>Title</th>
+		                        <th>
+		                            <input class="grand-checkbox" type="checkbox">
+		                        </th>
+		                    </tr>
+		                </thead>
+		                <tbody>
+			                <tr ng-repeat="book in books | filter: search| orderBy: orderList" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}">
+			                    <td class="acc-col-post-date" data-title="Module Code">{{ book.postTime }}</td>
+			                    <td class="acc-col-module-code" data-title="Title">{{ book.moduleCode }}</td>
+			                    <td class="acc-col-title" data-title="Condition">{{ book.title }}</td>
+		                        <td class="acc-col-selection" data-title="Select">
+		                            <input type="checkbox" ng-checked="book.isSelected" data-toggle="tooltip" data-delay="500" data-placement="left" title="You can check this box to narrow your search scope or hide unrelated items">
+		                        </td>
+			                </tr>
+		                </tbody>
+		            </table>
+		        </div>
+        	</div>
+
+        	<div class="content-block stars">
+        	</div>
+        </div>
+    </div>
 </section>
