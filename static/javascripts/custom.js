@@ -161,12 +161,15 @@ $(document).on("click", "#n-account .content h4 span", function() {
 
 
 // 雷狗
+var textTimeout = 200;
+
 $(document).on("click", "#n-hamburger-icon", function() {
 	$(".n-container").toggleClass('active');
 	$(this).toggleClass('active');
 	setTimeout(function (){
 		$(".n-nav-text").toggleClass('active');
-	}, 200);
+	}, textTimeout);
+	textTimeout = 200 - textTimeout;
 	return false;
 });
 
@@ -181,13 +184,6 @@ $(document).on("click", "div[id^='n-nav-']", function() {
 
 	return false;
 });
-
-
-
-
-
-
-
 
 // 雷狗完
 }
