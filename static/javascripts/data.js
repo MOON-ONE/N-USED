@@ -1,5 +1,4 @@
-var books = [
-{
+var books = [{
     'id': '0',
     'moduleCode': 'MNO3303',
     'title': 'Organization Theory and Design An International Perspective',
@@ -11,8 +10,7 @@ var books = [
     'price': 35,
     'sellId': "Uskdhiu63f",
     'isSelected': false
-},
-{
+}, {
     'id': '1',
     'moduleCode': 'GEM2900',
     'title': 'Everyday probability and Statistics',
@@ -24,8 +22,7 @@ var books = [
     'price': 15,
     'sellId': "Uskdhiu63f",
     'isSelected': true
-},
-{
+}, {
     'id': '2',
     'moduleCode': 'CS3241',
     'title': 'Thomas\' Calculus',
@@ -37,8 +34,7 @@ var books = [
     'price': 25,
     'sellId': "Uskdhiu63f",
     'isSelected': false
-},
-{
+}, {
     'id': '3',
     'moduleCode': 'ST1131',
     'title': ' The Art And Science of Learing from Data',
@@ -50,8 +46,7 @@ var books = [
     'price': 20,
     'sellId': "Uskdhiu63f",
     'isSelected': true
-},
-{
+}, {
     'id': '4',
     'moduleCode': 'MA2108',
     'title': 'Introduction to real analysis',
@@ -63,8 +58,7 @@ var books = [
     'price': 28,
     'sellId': "Uskdhiu63f",
     'isSelected': false
-},
-{
+}, {
     'id': '5',
     'moduleCode': 'CS2105',
     'title': 'Computer Networking',
@@ -76,8 +70,7 @@ var books = [
     'price': 20,
     'sellId': "Uskdhiu63f",
     'isSelected': true
-},
-{
+}, {
     'id': '6',
     'moduleCode': 'LSM1301',
     'title': 'Biology',
@@ -89,8 +82,7 @@ var books = [
     'price': 25,
     'sellId': "Uskdhiu63f",
     'isSelected': true
-},
-{
+}, {
     'id': '7',
     'moduleCode': 'MA1100',
     'title': 'Mathematical Proofs - A Transition to Advanced Mathematics',
@@ -102,8 +94,7 @@ var books = [
     'price': 12,
     'sellId': "Uskdhiu63f",
     'isSelected': false
-},
-{
+}, {
     'id': '8',
     'moduleCode': 'CS2102',
     'title': 'Database Management Systems',
@@ -115,8 +106,7 @@ var books = [
     'price': 20,
     'sellId': "Uskdhiu63f",
     'isSelected': true
-},
-{
+}, {
     'id': '9',
     'moduleCode': 'CS2100',
     'title': 'Digital Logic Design',
@@ -128,8 +118,7 @@ var books = [
     'price': 10,
     'sellId': "Uskdhiu63f",
     'isSelected': true
-},
-{
+}, {
     'id': '10',
     'moduleCode': 'IS1103',
     'title': 'Ethics for the Information Age',
@@ -141,8 +130,7 @@ var books = [
     'price': 15,
     'sellId': "Uskdhiu63f",
     'isSelected': false
-},
-{
+}, {
     'id': '11',
     'moduleCode': 'IS2103',
     'title': 'Enterprise JavaBeans for Students',
@@ -156,53 +144,49 @@ var books = [
     'isSelected': true
 }];
 
-var favourite = [
-{
-    'moduleCode': 'CS2100',
-    'title': 'title 1',
-    'edition': 'edition 1',
-    'authors': 'author 1',
-    'condition': {
-        'rank': 10,
-        'checkList': [true, false, false, false, true, false]
-    },
+var favourite = [{
+    'id': '10',
+    'moduleCode': 'IS1103',
+    'title': 'Ethics for the Information Age',
+    'edition': '4th Edition',
+    'authors': 'Michael J. Quinn',
+    'conditionRank': 8,
+    'conditionCheckList': 4,
     'description': "Description 1",
-    'price': 20,
-    'sellId': "Uskdhiu63f"
-},
-{
-    'moduleCode': 'CS2102',
-    'title': 'title 1',
+    'price': 15,
+    'sellId': "Uskdhiu63f",
+    'isSelected': false
+}, {
+    'id': '11',
+    'moduleCode': 'IS2103',
+    'title': 'Enterprise JavaBeans for Students',
     'edition': 'edition 1',
-    'authors': 'author 1',
-    'condition': {
-        'rank': 10,
-        'checkList': [true, false, false, false, true, false]
-    },
+    'authors': 'Danny Poo',
+    'conditionRank': 8,
+    'conditionCheckList': 4,
     'description': "Description 1",
-    'price': 20,
-    'sellId': "Uskdhiu63f"
+    'price': 15,
+    'sellId': "Uskdhiu63f",
+    'isSelected': true
 }];
 
-var historyPost = [
-{
-    'moduleCode': 'CS2100',
-    'title': 'title 1',
+var historyPost = [{
+    'id': '11',
+    'moduleCode': 'IS2103',
+    'title': 'Enterprise JavaBeans for Students',
     'edition': 'edition 1',
-    'authors': 'author 1',
-    'condition': {
-        'rank': 10,
-        'checkList': [true, false, false, false, true, false]
-    },
+    'authors': 'Danny Poo',
+    'conditionRank': 8,
+    'conditionCheckList': 4,
     'description': "Description 1",
-    'price': 20,
-    'sellId': "Uskdhiu63f"
+    'price': 15,
+    'sellId': "Uskdhiu63f",
+    'isSelected': true
 }];
 
-var user = [
-{
-    'name': 'Wang Jingxi',
+var user = [{
+    'name': 'Sun Jixuan',
     'contact': '98264921',
-    'email': 'jingxi@gmail.com',
-    'address': 'NUS PGP block A room 204',
+    'email': 'jixuan@gmail.com',
+    'address': 'NUS Eusoff block B room 104',
 }];
