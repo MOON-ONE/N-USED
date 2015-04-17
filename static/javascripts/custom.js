@@ -13,6 +13,7 @@ $("#n-account-wrapper").load("view/account.html", function () {
 });
 
 $('[data-toggle="tooltip"]').tooltip()
+
 // 总完
 
 
