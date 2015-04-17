@@ -156,7 +156,7 @@ var books = [{
     postTime: "2015/03/04"
 }];
 
-var favourites = [{
+var favorites = [{
     uid: '0',
     pid: '1'
 }];
