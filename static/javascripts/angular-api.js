@@ -7,7 +7,7 @@ function updateBookList(delay) {
 }
 
 function addBook(book) {
-	angular.element("body").scope().addBook(book)
+	angular.element("body").scope().addBook(book);
 }
 
 function getBook(bookID) {
