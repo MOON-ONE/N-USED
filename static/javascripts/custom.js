@@ -112,7 +112,6 @@ $(document).on("click", ".like", function() {
 
 $(".book-item").click(function() {
 	var bid = $(this).attr("book-id");
-	console.log(bid);
 	var book = getBook(bid);
 	return renderViewPostPage(book);
 })

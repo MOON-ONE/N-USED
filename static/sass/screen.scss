@@ -323,7 +323,7 @@ $container-transition-time: 0.4s;
 // 林狗
 $n-post-nav-height: 70px;
 $n-post-nav-color: black;
-$n-post-text-color: #2C3E50;
+$n-post-text-color: black;
 .n-post {
 	.n-post-nav {
 		width: 100%;
@@ -346,7 +346,7 @@ $n-post-text-color: #2C3E50;
 		}
 		.post-module-code {
 			font-size: 35px;
-			margin-top: 5px;
+			margin-top: 2px;
 			float: left;
 		}
 		.post-create {
@@ -358,7 +358,7 @@ $n-post-text-color: #2C3E50;
 			text-decoration: none;
 		}
 		.n-post-like {
-			margin-top: 0px;
+			margin-top: 2px;
 			margin-left: 15px;
 			float: left;
 			font-size: 30px;
@@ -416,7 +416,7 @@ $n-post-text-color: #2C3E50;
 		}
 		.contact-row {
 			color: $n-post-nav-color;
-			margin-bottom: 15px;
+			margin-bottom: 20px;
 			.contact-name-label {
 				font-size: 25px;
 				color: $n-post-text-color;
@@ -432,7 +432,7 @@ $n-post-text-color: #2C3E50;
 		margin-left: 50px;
 		.post-image {
 			height: 150px;
-			margin-right: 20px;
+			margin-right: 26px;
 			margin-bottom: 20px;
 		}
 	}
