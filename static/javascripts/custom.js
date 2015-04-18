@@ -227,19 +227,6 @@ $(document).on("click", "#n-hamburger-icon", function() {
 
 
 //Home
-$(document).on("click", ".book-item .navigation", function() {
-	var bid = $(this).attr("book-id");
-	var book = getBook(bid);
-	return renderPostPage(book);
-})
-
-function renderPostPage(book) {
-	updateCurrentBook(book);
-	$("#n-home-wrapper").load("view/post.html", function () {
-	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
-	});
-}
-
 
 $(document).on("click", ".book-item .check", function() {
 	var checkbox = $(this).find("input");
