@@ -69,6 +69,12 @@
 	background-color: #eef2e7;
 }
 
+.n-container {
+	@include xs {
+		margin-left: 0 !important;
+	}
+}
+
 $nav-width: 70px;
 $nav-active-width: 200px;
 $container-transition-time: 0.4s;
@@ -809,6 +815,7 @@ $container-transition-time: 0.4s;
 			padding-top: calc((#{$title-bar-height} - #{$height})/2 + 4px);
 
 			.n-title {
+				margin-top: 5px;
 				display: block;
 				color: white;
 				padding-right: 10px;
