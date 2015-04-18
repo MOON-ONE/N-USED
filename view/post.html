@@ -1,107 +1,173 @@
 <section class="n-post" id="n-post">
 	<div class="n-container">
-		<div class="n-post-nav">
-			<a href="#" class="post-back-button">
-				<i class="fa fa-angle-left fa-2x" style="padding-top: 10px;"></i>
-			</a>
-			<label class="post-module-code">Sell</label>
-			<a href="#" class="post-create">Create</a>
-		</div>
-		<div class="row n-content-row">
-			<div class="create-post-textbook-info col-md-7">
-				<div class="row create-info-row">
-					<div class="col-md-3">
-						<label class="post-label">Code*:</label>
-					</div>
-					<div class="col-md-9">
-						<input class="form-control post-input" id="post-code" placeholder="Module Code">
-					</div>
-				</div>
-				<div class="row create-info-row">
-					<div class="col-md-3">
-						<label class="post-label">Title*:</label>
-					</div>
-					<div class="col-md-9">
-						<input class="form-control post-input" id="post-title" placeholder="Book Title">
-					</div>
-				</div>
-				<div class="row create-info-row">
-					<div class="col-md-3">
-						<label class="post-label">Description:</label>
-					</div>
-					<div class="col-md-9">
-						<input class="form-control post-input" id="post-description" placeholder="Description">
-					</div>
-				</div>
-				<div class="row create-info-row">
-					<div class="col-md-3">
-						<label class="post-label">Price*:</label>
-					</div>
-					<div class="col-md-9">
-						<input class="form-control post-input post-input-short"placeholder="Price" id="post-price">
-						<label class="post-label-right">SGD</label>
-					</div>
-				</div>
-				<div class="row create-info-row">
-					<div class="col-md-3">
-						<label class="post-label">Edition:</label>
-					</div>
-					<div class="col-md-9">
-						<input class="form-control post-input" id="post-edition" placeholder="Edition">
-					</div>
-				</div>
-				<div class="row create-info-row">
-					<div class="col-md-3">
-						<label class="post-label">Authors:</label>
-					</div>
-					<div class="col-md-9">
-						<input class="form-control post-input" id="post-authors" placeholder="Authors">
-					</div>
-				</div>
-				<div class="row create-info-row">
-					<div class="col-md-3">
-						<label class="post-label">Condition:</label>
-					</div>
-					<div class="col-md-9">
-						<div>
-							<input class="form-control post-input post-input-short"placeholder="Condition rank from 1 to 10" id="post-condition">
-							<label class="post-label-right">/ 10</label>
-						</div>
-						<div>
-							<input type="checkbox" class="condition-check" id="post-cond-check-1">
-							<label class="create-post-condition-label">Edges are not curved</label></input>
-						</div>
-						<div>
-							<input type="checkbox" class="condition-check" id="post-cond-check-2">
-							<label class="create-post-condition-label">Not containing any notes</label></input>
-						</div>
-						<div>
-							<input type="checkbox" class="condition-check" id="post-cond-check-3">
-							<label class="create-post-condition-label">Purchased within one year</label></input>
-						</div>
+		<div class="row n-title-bar">
+            <div class="col-xs-offset-3 col-xs-9">
+                <span class="n-title pull-right">POST</span>
+            </div>
+        </div>
+		<div class="content">
+
+			<h4>Please fill the form</h4>
+			<hr>
+
+			<div class="row create-info-row">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<span class="input-group-addon">Module *</span>
+						<input class="form-control" placeholder="Module Code" id="post-code">
 					</div>
 				</div>
 			</div>
-			<div class="create-post-image-section col-md-4">
-				<a class="fancybox col-md-6" rel="group" href="static/images/gebilaowang.png">
-					<img class="post-image" src="static/images/gebilaowang.png">
-				</a>
-				<a class="fancybox col-md-6" rel="group" href="static/images/gebilaowang.png">
-					<img class="post-image" src="static/images/gebilaowang.png">
-				</a>
-				<a class="fancybox col-md-6" rel="group" href="static/images/gebilaowang.png">
-					<img class="post-image" src="static/images/gebilaowang.png">
-				</a>
-				<a class="fancybox col-md-6" rel="group" href="static/images/gebilaowang.png">
-					<img class="post-image" src="static/images/gebilaowang.png">
-				</a>
-				<a class="fancybox col-md-6" rel="group" href="static/images/gebilaowang.png">
-					<img class="post-image" src="static/images/gebilaowang.png">
-				</a>
-				<div class="col-md-6" rel="group" data-toggle="modal" data-target="#avatar-modal">
-	                <img class="post-image" src="static/images/gebilaowang.png">
-	            </div>
+			<div class="row create-info-row">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<span class="input-group-addon">Title *</span>
+						<input class="form-control" placeholder="Textbook Title" id="post-title">
+					</div>
+				</div>
 			</div>
+			<div class="row create-info-row">
+				<div class="col-xs-12 col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">Condition *</span>
+						<input class="form-control" placeholder="from 1 to 10" id="post-condition">
+						<label class="input-group-addon free">/ 10</label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon free">
+							<input type="checkbox" id="post-cond-check-1">
+						</span>
+						<input class="form-control" value="edges are not curved" disabled>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-sm-offset-6">
+					<div class="input-group">
+						<span class="input-group-addon free">
+							<input type="checkbox" id="post-cond-check-2">
+						</span>
+						<input class="form-control" value="not containing any notes" disabled>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-sm-offset-6">
+					<div class="input-group">
+						<span class="input-group-addon free">
+							<input type="checkbox" id="post-cond-check-3">
+						</span>
+						<input class="form-control" value="purchased within one year" disabled>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-sm-offset-6">
+					<div class="input-group">
+						<span class="input-group-addon free">
+							<input type="checkbox" id="condition-edge-check">
+						</span>
+						<input class="form-control" value="wrapped" disabled>
+					</div>
+				</div>
+			</div>
+
+			<div class="row create-info-row hidden">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<span class="input-group-addon">Edition</span>
+						<input class="form-control"placeholder="Edition" id="post-edition">
+					</div>
+				</div>
+			</div>
+			<div class="row create-info-row hidden">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<span class="input-group-addon">Authors</span>
+						<input class="form-control" placeholder="Authors" id="post-authors">
+					</div>
+				</div>
+			</div>
+			<div class="row create-info-row hidden">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<span class="input-group-addon">Publisher</span>
+						<input class="form-control" placeholder="Publisher">
+					</div>
+				</div>
+			</div>
+
+			<div class="row button-row">
+				<div class="col-xs-6 col-sm-3">
+					<div class="input-group">
+						<button class="btn btn-info" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="publish the post">+ Edition</i></button>
+					</div>
+				</div>
+
+				<div class="col-xs-6 col-sm-3">
+					<div class="input-group">
+						<button class="btn btn-info" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="publish the post">+ Authors</i></button>
+					</div>
+				</div>
+
+				<div class="col-xs-6 col-sm-3">
+					<div class="input-group">
+						<button class="btn btn-info" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="publish the post">+ Publisher</i></button>
+					</div>
+				</div>
+
+				<div class="col-xs-6 col-sm-3">
+					<div class="input-group">
+						<button class="btn btn-info" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="publish the post">+ Picture</i></button>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="row create-info-row">
+				<div class="col-xs-12 col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">Price *</span>
+						<input class="form-control" placeholder="Price" id="post-price">
+						<span class="input-group-addon free">SGD</span>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<textarea class="form-control" rows="4" placeholder="Please enter any additional notes here."></textarea>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="row create-info-row">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<span class="input-group-addon">Name *</span>
+						<input class="form-control" placeholder="Full Name" value="{{ currentUser.name }}">
+					</div>
+				</div>
+			</div>
+			<div class="row create-info-row">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<span class="input-group-addon">Phone *</span>
+						<input class="form-control" placeholder="Hand Phone Number" value="{{ currentUser.handphone }}">
+					</div>
+			</div>
+			<div class="row create-info-row">
+				<div class="col-xs-12">
+					<div class="input-group">
+						<span class="input-group-addon">Email *</span>
+						<input class="form-control" placeholder="Email Address" value="{{ currentUser.email }}">
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="row tool-bar">
+				<div class="col-xs-12 col-sm-2 col-sm-offset-10">
+					<button class="btn btn-success" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="publish the post">Post</i></button>
+				</div>
+			</div>
+
 			<div class="modal fade" id="avatar-modal">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
@@ -132,7 +198,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+		</div>
+		
 		</div>
 	</div>
 </section>
