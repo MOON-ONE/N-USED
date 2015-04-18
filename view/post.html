@@ -5,13 +5,6 @@
                 <span class="n-title pull-right">POST</span>
             </div>
         </div>
-		<!-- <div class="n-post-nav">
-			<a href="#" class="post-back-button">
-				<i class="fa fa-angle-left fa-2x" style="padding-top: 10px;"></i>
-			</a>
-			<label class="post-module-code">Sell</label>
-			<a href="#" class="post-create">Create</a>
-		</div> -->
 		<div class="content">
 
 			<h4>Please fill the form</h4>
@@ -37,14 +30,14 @@
 				<div class="col-xs-12 col-sm-6">
 					<div class="input-group">
 						<span class="input-group-addon">Condition *</span>
-						<input class="form-control" placeholder="from 1 to 10">
+						<input class="form-control" placeholder="from 1 to 10" id="post-condition">
 						<label class="input-group-addon free">/ 10</label>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-6">
 					<div class="input-group">
 						<span class="input-group-addon free">
-							<input type="checkbox" id="condition-edge-check">
+							<input type="checkbox" id="post-cond-check-1">
 						</span>
 						<input class="form-control" value="edges are not curved" disabled>
 					</div>
@@ -52,7 +45,7 @@
 				<div class="col-xs-12 col-sm-6 col-sm-offset-6">
 					<div class="input-group">
 						<span class="input-group-addon free">
-							<input type="checkbox" id="condition-edge-check">
+							<input type="checkbox" id="post-cond-check-2">
 						</span>
 						<input class="form-control" value="not containing any notes" disabled>
 					</div>
@@ -60,7 +53,7 @@
 				<div class="col-xs-12 col-sm-6 col-sm-offset-6">
 					<div class="input-group">
 						<span class="input-group-addon free">
-							<input type="checkbox" id="condition-edge-check">
+							<input type="checkbox" id="post-cond-check-3">
 						</span>
 						<input class="form-control" value="purchased within one year" disabled>
 					</div>
@@ -68,7 +61,7 @@
 				<div class="col-xs-12 col-sm-6 col-sm-offset-6">
 					<div class="input-group">
 						<span class="input-group-addon free">
-							<input type="checkbox" id="condition-edge-check">
+							<input type="checkbox" id="post-cond-check-4">
 						</span>
 						<input class="form-control" value="wrapped" disabled>
 					</div>
@@ -157,7 +150,6 @@
 						<span class="input-group-addon">Phone *</span>
 						<input class="form-control" placeholder="Hand Phone Number" value="{{ currentUser.handphone }}">
 					</div>
-				</div>
 			</div>
 			<div class="row create-info-row">
 				<div class="col-xs-12">
@@ -172,7 +164,7 @@
 
 			<div class="row tool-bar">
 				<div class="col-xs-12 col-sm-2 col-sm-offset-10">
-					<button class="btn btn-success" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="publish the post">Post</i></button>
+					<button class="btn btn-success post-create" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="publish the post">Post</i></button>
 				</div>
 			</div>
 
