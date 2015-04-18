@@ -64,6 +64,7 @@
                         <th>Title</th>
                         <th>Condition</th>
                         <th>Price</th>
+                        <th>Post Date</th>
                         <th>
                             <input class="grand-checkbox" type="checkbox">
                         </th>
@@ -71,11 +72,12 @@
                 </thead>
                 <tbody>
 	                <tr ng-repeat="book in books | filter: search| orderBy: orderList" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" class="book-item">
-	                    <td class="col-mc" data-title="Module Code">{{ book.moduleCode }}</td>
-	                    <td class="col-title" data-title="Title">{{ book.title }}</td>
-	                    <td class="col-condition" data-title="Condition">{{ book.conditionRank + " / 10"}}</td>
-	                    <td class="col-price" data-title="Price">{{ "S$" + book.price }}</td>
-                        <td class="col-selection" data-title="Select">
+    	                    <td class="col-mc navigation" data-title="Module Code">{{ book.moduleCode }}</td>
+    	                    <td class="col-title navigation" data-title="Title">{{ book.title }}</td>
+    	                    <td class="col-condition navigation" data-title="Condition">{{ book.conditionRank + " / 10"}}</td>
+    	                    <td class="col-price navigation" data-title="Price">{{ "S$" + book.price }}</td>
+                            <td class="col-date navigation" data-title="Post Date">{{ book.postTime }}</td>
+                        <td class="col-selection check" data-title="Select">
                             <input type="checkbox" ng-checked="book.isSelected" data-toggle="tooltip" data-delay="500" data-placement="left" title="You can check this box to narrow your search scope or hide unrelated items">
                         </td>
 	                </tr>
