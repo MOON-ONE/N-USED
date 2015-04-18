@@ -85,6 +85,9 @@ table.floatThead({
     }
 });
 
+
+
+
 // 王狗完
 
 
@@ -104,25 +107,11 @@ $(document).on("click", ".like", function() {
 	}
 })
 
-$(".book-item").click(function() {
-	var bid = $(this).attr("book-id");
-	var book = getBook(bid);
-	return renderPostPage(book);
-})
-
 $(document).on("click", ".post-back-button", function() {
 	$("#n-home-wrapper").load("view/home.html", function () {
 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
 	});
 })
-
-function renderPostPage(book) {
-	updateCurrentBook(book);
-	$("#n-home-wrapper").load("view/post.html", function () {
-	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
-	});
-}
-
 
 // 林狗完
 
@@ -219,3 +208,35 @@ $(document).on("click", "#n-hamburger-icon", function() {
 
 
 // 雷狗完
+
+
+//Home
+$(document).on("click", ".book-item .navigation", function() {
+	var bid = $(this).attr("book-id");
+	var book = getBook(bid);
+	return renderPostPage(book);
+})
+
+function renderPostPage(book) {
+	updateCurrentBook(book);
+	$("#n-home-wrapper").load("view/post.html", function () {
+	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
+	});
+}
+
+
+$(document).on("click", ".book-item .check", function() {
+	var checkbox = $(this).find("input");
+	checkbox.prop("checked", !checkbox.prop("checked"))
+	var newValue = checkbox.prop("checked");
+	var row = $(this).closest("tr");
+	var bookID = row.attr("book-id");
+	$.each(books, function() {
+	    if (this.pid == bookID) {
+	        this.isSelected = newValue;
+	    }
+	});
+	updateBookList(1000);
+})
+
+//End of Home
