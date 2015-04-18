@@ -181,7 +181,6 @@ $("#n-account tr").each(function(index) {
 	}
 })
 
-
 // 孙狗完
 
 
@@ -244,3 +243,29 @@ $(document).on("click", ".book-item .check", function() {
 })
 
 //End of Home
+
+//Account
+
+$(document).on("click", "#n-account .stars .btn-danger", function() {
+	var res = confirm("This action is not recoverable! Do you still want to continue?");
+	if (res == true) {
+	    removeFavorates(getSelectedFavorite());
+	}
+})
+
+function getSelectedFavorite() {
+	var selectedItems = []
+	$("#n-account .stars .acc-col-selection input").each(function(index) {
+		if ($(this).prop("checked")) {
+			var thisFavoriteObject = {
+				uid: currentUserID,
+				pid: $(this).closest("tr").attr("book-id")
+			}
+			selectedItems.push(thisFavoriteObject);
+		}
+	})
+	return selectedItems;
+}
+
+
+//End of Account
