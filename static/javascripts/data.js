@@ -47,7 +47,7 @@ var books = [
 	{
 		pid                : '3',
 		moduleCode         : 'ST1131',
-		title              : ' The Art And Science of Learing from Data',
+		title              : 'The Art And Science of Learing from Data',
 		edition            : '3rd Edition',
 		authors            : 'Agresti Franklin',
 		conditionRank      : 9.5,
@@ -190,6 +190,10 @@ var favorites = [
         uid: '0',
         pid: '4'
     },
+    {
+        uid: '0',
+        pid: '7'
+    }
 ];
 
 var users = [
