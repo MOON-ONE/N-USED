@@ -198,7 +198,7 @@
 		                    </tr>
 		                </thead>
 		                <tbody>
-			                <tr ng-repeat="book in books | filter: search| filter: currentUserPastPostFilter | orderBy: orderKey" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}">
+			                <tr ng-repeat="book in books | filter: search| filter: currentUserPastPostFilter | orderBy: orderKeyArray" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}">
 			                    <td class="acc-col-module-code" data-title="Title">{{ book.moduleCode }}</td>
 			                    <td class="acc-col-title" data-title="Condition">{{ book.title }}</td>
 			                    <td class="acc-col-post-date" data-title="Module Code">{{ book.postTime }}</td>
@@ -236,7 +236,7 @@
 		                    </tr>
 		                </thead>
 		                <tbody>
-			                <tr ng-repeat="book in books | filter: search | filter: currentUserFavoriteFilter | orderBy: orderKey" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}"	>
+			                <tr ng-repeat="book in books | filter: search | filter: currentUserFavoriteFilter | orderBy: orderKeyArray" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}"	>
 			                    <td class="acc-col-module-code" data-title="Module">{{ book.moduleCode }}</td>
 			                    <td class="acc-col-title" data-title="Title">{{ book.title }}</td>
 			                    <td class="acc-col-condition" data-title="Condition">{{ book.conditionRank + " / 10" }}</td>

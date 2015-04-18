@@ -42,6 +42,16 @@ app.controller('main', ['$scope', function($scope) {
         } else {
             $scope.orderKey = order;
         }
+
+        if ($scope.orderKeyArray[1] === order) {
+            if ($scope.orderKeyArray[1].substring(0, 1) === "-") {
+                $scope.orderKeyArray[1] = order;
+            } else {
+                $scope.orderKeyArray[1] = "-" + order;
+            }
+        } else {
+            $scope.orderKeyArray[1] = order;
+        }
     }
 
 
@@ -83,5 +93,6 @@ app.controller('main', ['$scope', function($scope) {
                 });
     
     $scope.orderKey = "-postTime";
+    $scope.orderKeyArray = ["isSold", "-postTime"];
 }]);
 
