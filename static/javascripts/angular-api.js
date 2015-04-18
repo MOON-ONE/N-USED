@@ -33,3 +33,7 @@ function updateCurrentBook(book) {
 function getBookSeller(bookID) {
 	return getUser(getBook(bookID).sid);
 }
+
+function updateCurrentSeller(seller) {
+	angular.element("body").scope().updateCurrentSeller(seller);
+}
