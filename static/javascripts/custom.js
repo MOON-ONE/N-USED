@@ -116,6 +116,7 @@ $(".book-item .navigation").click(function() {
 })
 
 $(document).on("click", ".post-back-button", function() {
+	$("#n-view-post-wrapper").hide();
 	$("#n-home-wrapper").fadeIn(200);
 })
 
@@ -181,13 +182,13 @@ function isInvalidPost(){
 }
 
 function clearPostInput() {
-	$("#post-code").val() = "";
-	$("#post-title").val() = "";
-	$("#post-description").val() = "";
-	$("#post-price").val() = "";
-	$("#post-edition").val() = "";
-	$("#post-authors").val() = "";
-	$("#post-condition").val() = "";
+	$("#post-code").val("");
+	$("#post-title").val("");
+	$("#post-description").val("");
+	$("#post-price").val("");
+	$("#post-edition").val("");
+	$("#post-authors").val("");
+	$("#post-condition").val("");
 	$("#post-cond-check-1").is(':checked') = false;
 	$("#post-cond-check-2").is(':checked') = false;
 	$("#post-cond-check-3").is(':checked') = false;
