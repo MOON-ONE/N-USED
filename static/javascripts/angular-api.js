@@ -11,7 +11,9 @@ function addBook(book) {
 }
 
 function getBook(bookID) {
+	console.log(bookID);
 	return books.filter(function (book) {
+		// console.log(book.pid);
 		return book.pid === (bookID + "");
 	})[0];
 }

@@ -110,14 +110,19 @@ $(".like").click(function() {
 	}
 })
 
-$(".book-item .navigation").click(function() {
+// $(".book-item .navigation").click(function() {
+// 	var bid = $(this).parents().attr("book-id");
+// 	return renderViewPostPage(bid);
+// })
+
+$(document).on("click", ".book-item .navigation", function() {
 	var bid = $(this).parents().attr("book-id");
 	return renderViewPostPage(bid);
 })
 
 $(document).on("click", ".post-back-button", function() {
 	$("#n-view-post-wrapper").hide();
-	$("#n-post-wrapper").hide();
+	$("#n-gpost-wrapper").hide();
 	$("#n-home-wrapper").fadeIn(200);
 })
 
@@ -131,14 +136,14 @@ $(".post-create").click(function() {
 		var edition = $("#post-edition").val();
 		var authors = $("#post-authors").val();
 		var condition = $("#post-condition").val();
-		var check1 = $("#post-cond-check-1").is(':checked') ? 1 : 0;
-		var check2 = $("#post-cond-check-2").is(':checked') ? 1 : 0;
-		var check3 = $("#post-cond-check-3").is(':checked') ? 1 : 0;
+		var check1 = $("#post-cond-check-1").is(':checked') == true ? 1 : 0;
+		var check2 = $("#post-cond-check-2").is(':checked') == true ? 1 : 0;
+		var check3 = $("#post-cond-check-3").is(':checked') == true ? 1 : 0;
 		var check = check1.toString() + check2.toString() + check3.toString();
 		var check_binary = parseInt(check, 2);
 		var date = new Date();
-	    var day = date.getDate() < 10 ? "0" + day : day;
-	    var month = date.getMonth() < 10 ? "0" + month : month;
+	    var day = parseInt(date.getDate()) < 10 ? "0" + date.getDate() : date.getDate();
+	    var month = parseInt(date.getMonth()) < 10 ? "0" + date.getMonth() : date.getMonth();
 	    var year = date.getFullYear();
 	    var post_date = year + "/" + month + "/" + day;
 		var book = {
@@ -156,10 +161,9 @@ $(".post-create").click(function() {
 			postTime           : post_date,
 	        isSold             : false
 		};
-		console.log(book);
 		addBook(book);
 		clearPostInput();
-		$("#n-view-post-wrapper").hide();
+		$("#n-post-wrapper").hide();
 		$("#n-home-wrapper").fadeIn(200);
 	} else {
 		alert("incomplete post info");
@@ -191,9 +195,9 @@ function clearPostInput() {
 	$("#post-edition").val("");
 	$("#post-authors").val("");
 	$("#post-condition").val("");
-	$("#post-cond-check-1").is(':checked') = false;
-	$("#post-cond-check-2").is(':checked') = false;
-	$("#post-cond-check-3").is(':checked') = false;
+	$("#post-cond-check-1").prop('checked', false);
+	$("#post-cond-check-2").prop('checked', false);
+	$("#post-cond-check-3").prop('checked', false);
 }
 
 // 林狗完
