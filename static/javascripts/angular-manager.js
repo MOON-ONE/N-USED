@@ -31,9 +31,19 @@ app.controller('main', ['$scope', function($scope) {
         $:''
     };
     
-    $scope.changeFilterTo = function(pr) {
-        $scope.filter = pr; 
+    
+    $scope.setOrder = function (order) {
+        if ($scope.orderKey === order) {
+            if ($scope.orderKey.substring(0, 1) === "-") {
+                $scope.orderKey = order;
+            } else {
+                $scope.orderKey = "-" + order;
+            }
+        } else {
+            $scope.orderKey = order;
+        }
     }
+
 
     $scope.addBook = function(book) {
         books.push(book);
@@ -67,6 +77,6 @@ app.controller('main', ['$scope', function($scope) {
                     viewDidLoad();
                 });
     
-    $scope.orderList = "postTime";
+    $scope.orderKey = "-postTime";
 }]);
 

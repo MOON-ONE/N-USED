@@ -47,7 +47,7 @@ var books = [
 	{
 		pid                : '3',
 		moduleCode         : 'ST1131',
-		title              : ' The Art And Science of Learing from Data',
+		title              : 'The Art And Science of Learing from Data',
 		edition            : '3rd Edition',
 		authors            : 'Agresti Franklin',
 		conditionRank      : 9.5,
