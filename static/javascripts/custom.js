@@ -117,6 +117,7 @@ $(".book-item .navigation").click(function() {
 
 $(document).on("click", ".post-back-button", function() {
 	$("#n-view-post-wrapper").hide();
+	$("#n-post-wrapper").hide();
 	$("#n-home-wrapper").fadeIn(200);
 })
 
@@ -158,6 +159,7 @@ $(".post-create").click(function() {
 		console.log(book);
 		addBook(book);
 		clearPostInput();
+		$("#n-view-post-wrapper").hide();
 		$("#n-home-wrapper").fadeIn(200);
 	} else {
 		alert("incomplete post info");
