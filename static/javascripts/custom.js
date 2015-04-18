@@ -2,10 +2,18 @@ function viewDidLoad() {
 
 
 // 总
-
-$("#n-post-wrapper").load("view/post.html", function () {
+// $("#n-view-post-wrapper").load("view/view-post.html", function () {
 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
-});
+// });
+// $("#n-post-wrapper").load("view/post.html", function () {
+	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
+// });
+// $("#n-home-wrapper").load("view/home.html", function () {
+// 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
+// }); 
+// $("#n-account-wrapper").load("view/account.html", function () {
+// 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
+// });
 
 $('[data-toggle="tooltip"]').tooltip();
 updateCurrentUser(currentUserID);
@@ -94,11 +102,11 @@ table.floatThead({
 $(".fancybox").fancybox();
 $(document).on("click", ".like", function() {
 	if ($(this).hasClass("on")) {
-		$(this).removeClass("on");
-		$(this).addClass("off");
+		$(this).removeClass("on").addClass("off");
+	} else if ($(this).hasClass("off")){
+		$(this).removeClass("off").addClass("on");
 	} else {
-		$(this).removeClass("off");
-		$(this).addClass("on");
+
 	}
 })
 
