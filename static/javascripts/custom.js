@@ -100,7 +100,7 @@ table.floatThead({
 
 // 林狗
 $(".fancybox").fancybox();
-$(document).on("click", ".like", function() {
+$(".like").click(function() {
 	if ($(this).hasClass("on")) {
 		$(this).removeClass("on").addClass("off");
 	} else if ($(this).hasClass("off")){
@@ -111,10 +111,8 @@ $(document).on("click", ".like", function() {
 })
 
 $(".book-item .navigation").click(function() {
-	var bid = $(this).attr("book-id");
-	console.log(bid);
-	var book = getBook(bid);
-	return renderViewPostPage(book);
+	var bid = $(this).parents().attr("book-id");
+	return renderViewPostPage(bid);
 })
 
 $(document).on("click", ".post-back-button", function() {
@@ -122,8 +120,11 @@ $(document).on("click", ".post-back-button", function() {
 })
 
 
-function renderViewPostPage(book) {
+function renderViewPostPage(bid) {
+	var book = getBook(bid);
 	updateCurrentBook(book);
+	var seller = getBookSeller(bid);
+	updateCurrentSeller(seller);
 	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
 		$("#n-view-post-wrapper").fadeIn(200);
 	});
