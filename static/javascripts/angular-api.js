@@ -1,5 +1,9 @@
-function updateBookList() {
-	angular.element("body").scope().updateBooks();
+function updateBookList(delay) {
+	delay = typeof delay !== 'undefined' ? delay : 0;
+
+	setTimeout(function(){
+		angular.element("body").scope().updateBooks();
+	}, delay)
 }
 
 function addBook(book) {
