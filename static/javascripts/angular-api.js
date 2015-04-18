@@ -37,3 +37,28 @@ function getBookSeller(bookID) {
 function updateCurrentSeller(seller) {
 	angular.element("body").scope().updateCurrentSeller(seller);
 }
+
+function removeFavorates(itemsToRemove) {
+	favorites = favorites.filter(function(itemInFavorite) {
+		return !containsObject(itemsToRemove, itemInFavorite);
+	})
+	angular.element("body").scope().$apply()
+}
+
+
+
+
+
+//Helper Functions
+
+function containsObject(array, object) {
+	for (var i = 0; i < array.length; i++) {
+		if (JSON.stringify(array[i]) === JSON.stringify(object)) {
+			return true;
+		}
+	}
+	return false;
+}
+
+
+

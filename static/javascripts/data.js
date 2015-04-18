@@ -190,6 +190,10 @@ var favorites = [
         uid: '0',
         pid: '4'
     },
+    {
+        uid: '0',
+        pid: '7'
+    }
 ];
 
 var users = [
