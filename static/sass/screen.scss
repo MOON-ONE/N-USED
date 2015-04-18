@@ -234,6 +234,7 @@ $container-transition-time: 0.4s;
 			padding-top: calc((#{$title-bar-height} - #{$height})/2 + 2px);
 
 			.n-title {
+				margin-top: 2px;
 				display: block;
 				color: white;
 				padding-left: 20px;
@@ -720,8 +721,15 @@ $container-transition-time: 0.4s;
 			overflow-x: none;
 			padding-left: 15px;
 			padding-right: 15px;
+			
 			.input-group-addon:not(.free) {
 				min-width: 100px;
+			}
+
+			@include xs {
+				.input-group-addon:not(.free) {
+					min-width: 0px;
+				}
 			}
 
 			.hidden {
@@ -973,6 +981,9 @@ $container-transition-time: 0.4s;
 
 // 雷狗
 #n-nav {
+	@include xs {
+		display: none;
+	}
 	.n-container {
 		height: 100vh;
 		background: #222;

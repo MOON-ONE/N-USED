@@ -164,6 +164,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 15px;
     padding-top: calc((70px - 40px)/2 + 2px); }
     #n-home .n-container .n-title-bar .n-title {
+      margin-top: 2px;
       display: block;
       color: white;
       padding-left: 20px;
@@ -290,6 +291,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-right: 15px; }
   #n-post .n-container .content .input-group-addon:not(.free) {
     min-width: 100px; }
+  @media only screen and (max-width: 767px) {
+    #n-post .n-container .content .input-group-addon:not(.free) {
+      min-width: 0px; } }
   #n-post .n-container .content .hidden {
     display: none; }
   #n-post .n-container .content .input-group {
@@ -423,6 +427,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       color: #333;
       font-weight: bold; }
 
+@media only screen and (max-width: 767px) {
+  #n-nav {
+    display: none; } }
 #n-nav .n-container {
   height: 100vh;
   background: #222;
