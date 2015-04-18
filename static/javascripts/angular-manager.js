@@ -45,6 +45,11 @@ app.controller('main', ['$scope', function($scope) {
         $scope.$apply();
     }
 
+    $scope.updateCurrentBook = function(book) {
+        $scope.currentBook = book;
+        $scope.$apply();
+    }
+
     $scope.updateUser = function(user) {
         var id = user? user.id : -1;
         $scope.currentUser = user;

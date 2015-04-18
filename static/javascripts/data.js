@@ -211,3 +211,4 @@ var users = [
 
 var currentUserID = '0';
 var currentUser;
+var currentBook;
