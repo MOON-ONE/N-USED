@@ -187,6 +187,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     overflow-y: scroll;
     background-color: white;
     cursor: pointer; }
+    #n-home .n-container .n-book-list-table .col-mc {
+      font-weight: bold; }
+    #n-home .n-container .n-book-list-table .col-title {
+      font-weight: lighter; }
+    #n-home .n-container .n-book-list-table .col-date {
+      color: #aaa; }
+    #n-home .n-container .n-book-list-table .col-selection:hover {
+      background-color: #eef2e7; }
   #n-home .n-container .clear-selection-button {
     color: #ec2e38;
     cursor: pointer;

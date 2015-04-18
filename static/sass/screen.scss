@@ -262,6 +262,25 @@ $container-transition-time: 0.4s;
 			overflow-y: scroll;
 			background-color: white;
 			cursor: pointer;
+
+			.col-mc{
+				font-weight: bold;
+			}
+
+			.col-title {
+				font-weight: lighter;
+			}
+
+			.col-date {
+				color: #aaa;
+			}
+
+			.col-selection {
+			}
+
+			.col-selection:hover {
+				background-color: $color;
+			}
 		}
 
 		.clear-selection-button {
