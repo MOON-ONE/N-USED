@@ -169,7 +169,6 @@ $(document).on("click", "#n-account .content h4 span", function() {
 	$(this).addClass("selected")
 	var showContentID = $(this).attr("href");
 	$("#n-account .content .content-block").css("display", "none");
-	console.log("#n-account .content .content-block " + showContentID)
 	$("#n-account .content .content-block" + showContentID).css("display", "block");
 })
 
