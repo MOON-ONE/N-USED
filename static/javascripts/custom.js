@@ -104,6 +104,24 @@ $(document).on("click", ".like", function() {
 	}
 })
 
+$(".book-item").click(function() {
+	var bid = $(this).attr("book-id");
+	var book = getBook(bid);
+	return renderPostPage(book);
+})
+
+$(document).on("click", ".post-back-button", function() {
+	$("#n-home-wrapper").load("view/home.html", function () {
+	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
+	});
+})
+
+function renderPostPage(book) {
+	updateCurrentBook(book);
+	$("#n-home-wrapper").load("view/post.html", function () {
+	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
+	});
+}
 
 
 // 林狗完
