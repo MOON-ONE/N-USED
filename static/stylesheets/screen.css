@@ -58,6 +58,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .n-cursor-pointer:hover {
   background-color: #eef2e7; }
 
+@media only screen and (max-width: 767px) {
+  .n-container {
+    margin-left: 0 !important; } }
+
 .n-main .n-container {
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -324,6 +328,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-left: 15px;
   padding-top: calc((70px - 40px)/2 + 4px); }
   #n-account .n-container .n-title-bar .n-title {
+    margin-top: 5px;
     display: block;
     color: white;
     padding-right: 10px;
