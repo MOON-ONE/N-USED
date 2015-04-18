@@ -116,9 +116,55 @@ $(".book-item .navigation").click(function() {
 })
 
 $(document).on("click", ".post-back-button", function() {
+	$("#n-view-post-wrapper").hide();
+	$("#n-post-wrapper").hide();
 	$("#n-home-wrapper").fadeIn(200);
 })
 
+$(".post-create").click(function() {
+	if (isInvalidPost()) {
+		var pid = Math.random().toString(36).substring(7);
+		var code = $("#post-code").val();
+		var title = $("#post-title").val();
+		var description = $("#post-description").val();
+		var price = $("#post-price").val();
+		var edition = $("#post-edition").val();
+		var authors = $("#post-authors").val();
+		var condition = $("#post-condition").val();
+		var check1 = $("#post-cond-check-1").is(':checked') ? 1 : 0;
+		var check2 = $("#post-cond-check-2").is(':checked') ? 1 : 0;
+		var check3 = $("#post-cond-check-3").is(':checked') ? 1 : 0;
+		var check = check1.toString() + check2.toString() + check3.toString();
+		var check_binary = parseInt(check, 2);
+		var date = new Date();
+	    var day = date.getDate() < 10 ? "0" + day : day;
+	    var month = date.getMonth() < 10 ? "0" + month : month;
+	    var year = date.getFullYear();
+	    var post_date = year + "/" + month + "/" + day;
+		var book = {
+			pid                : pid,
+			moduleCode         : code,
+			title              : title,
+			edition            : edition,
+			authors            : authors,
+			conditionRank      : condition,
+			conditionCheckList : check_binary,
+			description        : description,
+			price              : price,
+			sid                : currentUserID,
+			isSelected         : false,
+			postTime           : post_date,
+	        isSold             : false
+		};
+		console.log(book);
+		addBook(book);
+		clearPostInput();
+		$("#n-view-post-wrapper").hide();
+		$("#n-home-wrapper").fadeIn(200);
+	} else {
+		alert("incomplete post info");
+	}
+})
 
 function renderViewPostPage(bid) {
 	var book = getBook(bid);
@@ -128,6 +174,26 @@ function renderViewPostPage(bid) {
 	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
 		$("#n-view-post-wrapper").fadeIn(200);
 	});
+}
+
+function isInvalidPost(){
+	var code = $("#post-code").val();
+	var title = $("#post-title").val();
+	var price = $("#post-price").val();
+	return (code != "" && title != "" && price != "");
+}
+
+function clearPostInput() {
+	$("#post-code").val("");
+	$("#post-title").val("");
+	$("#post-description").val("");
+	$("#post-price").val("");
+	$("#post-edition").val("");
+	$("#post-authors").val("");
+	$("#post-condition").val("");
+	$("#post-cond-check-1").is(':checked') = false;
+	$("#post-cond-check-2").is(':checked') = false;
+	$("#post-cond-check-3").is(':checked') = false;
 }
 
 // 林狗完
