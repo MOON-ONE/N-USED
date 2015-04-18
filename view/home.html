@@ -60,18 +60,18 @@
             <table class="table table-hover table-mc-teal table-bordered">
                 <thead>
                     <tr>
-                        <th>Module</th>
-                        <th>Title</th>
-                        <th>Condition</th>
-                        <th>Price</th>
-                        <th>Post Date</th>
-                        <th>
+                        <th ng-click="setOrder('moduleCode')" class="n-cursor-pointer">Module</th>
+                        <th ng-click="setOrder('title')" class="n-cursor-pointer">Title</th>
+                        <th ng-click="setOrder('conditionRank')" class="n-cursor-pointer">Condition</th>
+                        <th ng-click="setOrder('price')" class="n-cursor-pointer">Price</th>
+                        <th ng-click="setOrder('postTime')" class="n-cursor-pointer">Post Date</th>
+                        <th class="n-cursor-pointer">
                             <input class="grand-checkbox" type="checkbox">
                         </th>
                     </tr>
                 </thead>
                 <tbody>
-	                <tr ng-repeat="book in books | filter: search| orderBy: orderList" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" class="book-item">
+	                <tr ng-repeat="book in books | filter: search| orderBy: orderKey" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" class="book-item">
     	                    <td class="col-mc navigation" data-title="Module Code">{{ book.moduleCode }}</td>
     	                    <td class="col-title navigation" data-title="Title">{{ book.title }}</td>
     	                    <td class="col-condition navigation" data-title="Condition">{{ book.conditionRank + " / 10"}}</td>
