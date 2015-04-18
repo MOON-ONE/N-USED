@@ -2,7 +2,10 @@ function viewDidLoad() {
 
 
 // 总
-$("#n-post-wrapper").load("view/create-post.html", function () {
+$("#n-view-post-wrapper").load("view/view-post.html", function () {
+	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
+});
+$("#n-post-wrapper").load("view/post.html", function () {
 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
 });
 // $("#n-home-wrapper").load("view/home.html", function () {
@@ -106,20 +109,19 @@ $(document).on("click", ".like", function() {
 
 $(".book-item").click(function() {
 	var bid = $(this).attr("book-id");
+	console.log(bid);
 	var book = getBook(bid);
-	return renderPostPage(book);
+	return renderViewPostPage(book);
 })
 
 $(document).on("click", ".post-back-button", function() {
-	$("#n-home-wrapper").load("view/home.html", function () {
-	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
-	});
+	$("#n-home-wrapper").fadeIn(200);
 })
 
-function renderPostPage(book) {
+function renderViewPostPage(book) {
 	updateCurrentBook(book);
-	$("#n-home-wrapper").load("view/post.html", function () {
-	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
+	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
+		$("#n-view-post-wrapper").fadeIn(200);
 	});
 }
 
