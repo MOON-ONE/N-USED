@@ -818,6 +818,11 @@ $file-hover-icon-size: 5em;
 			.posts, .stars {
 				display: none;
 
+				.sold-entry-row {
+					background-color: #eee !important;
+					color: #ccc !important;
+				}
+
 				.search-bar {
 					margin-top: 35px;
 					margin-bottom: 15px;

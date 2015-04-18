@@ -45,6 +45,23 @@ app.controller('main', ['$scope', function($scope) {
         $scope.$apply();
     }
 
+    $scope.updateCurrentBook = function(book) {
+        $scope.currentBook = book;
+        $scope.$apply();
+    }
+
+    $scope.updateUser = function(user) {
+        var id = user? user.id : -1;
+        $scope.currentUser = user;
+        $scope.currentUserPastPostFilter = { sid: id };
+        $scope.currentUserFavoriteFilter = function (book) {
+            return favorites.filter(function (b) {
+                return (b.uid === currentUserID) && (b.pid === book.pid);
+            }).length != 0;
+        };
+        $scope.$apply();
+    }
+
 
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
                     viewDidLoad();

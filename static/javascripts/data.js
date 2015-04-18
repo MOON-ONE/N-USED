@@ -9,9 +9,10 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 35,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : false,
-		postTime           : "2015/03/05"
+		postTime           : "2015/03/05",
+        isSold             : false
 	}, 
 	{
 		pid                : '1',
@@ -23,9 +24,10 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 15,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : true,
-		postTime           : "2015/03/05"
+		postTime           : "2015/03/05",
+        isSold             : true
 	}, 
 	{
 		pid                : '2',
@@ -37,9 +39,10 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 25,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : false,
-		postTime           : "2015/03/05"
+		postTime           : "2015/03/05",
+        isSold             : false
 	}, 
 	{
 		pid                : '3',
@@ -51,9 +54,10 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 20,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : true,
-		postTime           : "2015/03/05"
+		postTime           : "2015/03/05",
+        isSold             : false
 	}, 
 	{
 		pid                : '4',
@@ -65,9 +69,10 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 28,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : false,
-		postTime           : "2015/03/04"
+		postTime           : "2015/03/04",
+        isSold             : false
 	}, 
 	{
 		pid                : '5',
@@ -79,9 +84,10 @@ var books = [
 		conditionCheckList : 4,
 		description        : "Description 1",
 		price              : 20,
-		sid                : "0",
+		sid                : "1",
 		isSelected         : true,
-		postTime           : "2015/03/03"
+		postTime           : "2015/03/03",
+        isSold             : false
 	}, 
 	{
 		pid                : '6',
@@ -95,7 +101,8 @@ var books = [
 		price              : 25,
 		sid                : "0",
 		isSelected         : true,
-		postTime           : "2015/03/03"
+		postTime           : "2015/03/03",
+        isSold             : false
 	}, 
 	{
 		pid                : '7',
@@ -109,7 +116,8 @@ var books = [
 		price              : 12,
 		sid                : "0",
 		isSelected         : false,
-		postTime           : "2015/03/03"
+		postTime           : "2015/03/03",
+        isSold             : false
 	}, 
 	{
 		pid                : '8',
@@ -123,7 +131,8 @@ var books = [
 		price              : 20,
 		sid                : "0",
 		isSelected         : true,
-		postTime           : "2015/03/03"
+		postTime           : "2015/03/03",
+        isSold             : false
 	}, 
 	{
 		pid                : '9',
@@ -137,7 +146,8 @@ var books = [
 		price              : 10,
 		sid                : "0",
 		isSelected         : true,
-		postTime           : "2015/03/04"
+		postTime           : "2015/03/04",
+        isSold             : false
 	}, 
 	{
 		pid                : '10',
@@ -151,7 +161,8 @@ var books = [
 		price              : 15,
 		sid                : "0",
 		isSelected         : false,
-		postTime           : "2015/03/04"
+		postTime           : "2015/03/04",
+        isSold             : false
 	}, 
 	{
 		pid                : '11',
@@ -165,22 +176,39 @@ var books = [
 		price              : 15,
 		sid                : "0",
 		isSelected         : true,
-		postTime           : "2015/03/04"
+		postTime           : "2015/03/04",
+        isSold             : true
 	}
 ];
 
-var favourites = [{
-	uid : '0',
-	pid : '1'
-}];
+var favorites = [
+    {
+        uid: '0',
+        pid: '1'
+    },
+    {
+        uid: '0',
+        pid: '4'
+    },
+];
 
-var users = [{
-	id        : '0',
-	name      : 'Sun Jixuan',
-	handphone : '98264921',
-	email     : 'jixuan@gmail.com',
-	whatsapp  : 'NUS Eusoff block B room 104',
-}];
+var users = [
+	{
+		id        : '0',
+		name      : 'Sun Jixuan',
+		handphone : '98264921',
+		email     : 'jixuan@gmail.com',
+		whatsapp  : 'NUS Eusoff block B room 104',
+	},
+	{
+		id        : '1',
+		name      : 'Sun Jiba',
+		handphone : '98264922',
+		email     : 'jixuan@gmail.com',
+		whatsapp  : 'NUS Eusoff block B room 104',
+	},
+];
 
 var currentUserID = '0';
 var currentUser;
+var currentBook;
