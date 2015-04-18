@@ -61,6 +61,14 @@
 	filter: $filter;
 }
 
+.n-cursor-pointer {
+	cursor: pointer;
+}
+
+.n-cursor-pointer:hover {
+	background-color: #eef2e7;
+}
+
 $nav-width: 70px;
 $nav-active-width: 200px;
 $container-transition-time: 0.4s;
