@@ -139,7 +139,8 @@ $(".post-create").click(function() {
 		var check1 = $("#post-cond-check-1").is(':checked') == true ? 1 : 0;
 		var check2 = $("#post-cond-check-2").is(':checked') == true ? 1 : 0;
 		var check3 = $("#post-cond-check-3").is(':checked') == true ? 1 : 0;
-		var check = check1.toString() + check2.toString() + check3.toString();
+		var check4 = $("#post-cond-check-4").is(':checked') == true ? 1 : 0;
+		var check = check1.toString() + check2.toString() + check3.toString() + check4.toString();
 		var check_binary = parseInt(check, 2);
 		var date = new Date();
 	    var day = parseInt(date.getDate()) < 10 ? "0" + date.getDate() : date.getDate();
@@ -198,6 +199,7 @@ function clearPostInput() {
 	$("#post-cond-check-1").prop('checked', false);
 	$("#post-cond-check-2").prop('checked', false);
 	$("#post-cond-check-3").prop('checked', false);
+	$("#post-cond-check-4").prop('checked', false);
 }
 
 // 林狗完
