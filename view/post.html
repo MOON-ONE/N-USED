@@ -11,26 +11,26 @@
 			<div class="create-post-textbook-info col-md-7">
 				<div class="row create-info-row">
 					<div class="col-md-3">
-						<label class="post-label">Title:</label>
-					</div>
-					<div class="col-md-9">
-						<input class="form-control post-input" placeholder="Textbook Title">
-					</div>
-				</div>
-				<div class="row create-info-row">
-					<div class="col-md-3">
 						<label class="post-label">Code:</label>
 					</div>
 					<div class="col-md-9">
-						<input class="form-control post-input" placeholder="Module Code">
+						<input class="form-control post-input" id="post-code" placeholder="Module Code">
 					</div>
 				</div>
 				<div class="row create-info-row">
 					<div class="col-md-3">
-						<label class="post-label">Publication:</label>
+						<label class="post-label">Title:</label>
 					</div>
 					<div class="col-md-9">
-						<input class="form-control post-input" placeholder="Publication">
+						<input class="form-control post-input" id="post-title" placeholder="Book Title">
+					</div>
+				</div>
+				<div class="row create-info-row">
+					<div class="col-md-3">
+						<label class="post-label">Description:</label>
+					</div>
+					<div class="col-md-9">
+						<input class="form-control post-input" id="post-description" placeholder="Description">
 					</div>
 				</div>
 				<div class="row create-info-row">
@@ -38,7 +38,7 @@
 						<label class="post-label">Price:</label>
 					</div>
 					<div class="col-md-9">
-						<input class="form-control post-input post-input-short"placeholder="Price">
+						<input class="form-control post-input post-input-short"placeholder="Price" id="post-price">
 						<label class="post-label-right">SGD</label>
 					</div>
 				</div>
@@ -47,7 +47,7 @@
 						<label class="post-label">Edition:</label>
 					</div>
 					<div class="col-md-9">
-						<input class="form-control post-input"placeholder="Edition">
+						<input class="form-control post-input" id="post-edition" placeholder="Edition">
 					</div>
 				</div>
 				<div class="row create-info-row">
@@ -55,7 +55,7 @@
 						<label class="post-label">Authors:</label>
 					</div>
 					<div class="col-md-9">
-						<input class="form-control post-input" placeholder="Authors">
+						<input class="form-control post-input" id="post-authors" placeholder="Authors">
 					</div>
 				</div>
 				<div class="row create-info-row">
@@ -64,20 +64,20 @@
 					</div>
 					<div class="col-md-9">
 						<div>
-							<input class="form-control post-input post-input-short"placeholder="Condition rank from 1 to 10">
+							<input class="form-control post-input post-input-short"placeholder="Condition rank from 1 to 10" id="post-condition">
 							<label class="post-label-right">/ 10</label>
 						</div>
 						<div>
-							<input type="checkbox" class="condition-check" id="condition-edge-check"></input>
-							<label class="create-post-condition-label">Edges are not curved</label>
+							<input type="checkbox" class="condition-check" id="condition-edge-check" id="post-cond-check-1">
+							<label class="create-post-condition-label">Edges are not curved</label></input>
 						</div>
 						<div>
-							<input type="checkbox" class="condition-check" id="condition-edge-check"></input>
-							<label class="create-post-condition-label">Not containing any notes</label>
+							<input type="checkbox" class="condition-check" id="condition-edge-check" id="post-cond-check-2">
+							<label class="create-post-condition-label">Not containing any notes</label></input>
 						</div>
 						<div>
-							<input type="checkbox" class="condition-check" id="condition-edge-check"></input>
-							<label class="create-post-condition-label">Purchased within one year</label>
+							<input type="checkbox" class="condition-check" id="condition-edge-check" id="post-cond-check-3">
+							<label class="create-post-condition-label">Purchased within one year</label></input>
 						</div>
 					</div>
 				</div>
