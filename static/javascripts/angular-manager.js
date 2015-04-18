@@ -50,6 +50,11 @@ app.controller('main', ['$scope', function($scope) {
         $scope.$apply();
     }
 
+    $scope.updateCurrentSeller = function(seller) {
+        $scope.currentSeller = seller;
+        $scope.$apply();
+    }
+
     $scope.updateUser = function(user) {
         var id = user? user.id : -1;
         $scope.currentUser = user;
