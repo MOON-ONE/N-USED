@@ -7,13 +7,14 @@
 				</span>
 			</div>
             <div class="col-xs-9">
-                <span class="n-title pull-right">Module Details</span>
+                <span class="n-title pull-right">Details</span>
             </div>
         </div>
 
         <div class="content">
         	<h4>
-        		{{ currentBook.moduleCode }}
+        		{{ currentBook.moduleCode }}  &nbsp&nbsp-&nbsp&nbsp  {{ "S$" + currentBook.price }}
+        		&nbsp&nbsp&nbsp
         		<span class="n-post-like">
 					<i class="fa fa-star like off"></i>
 				</span>
@@ -27,7 +28,7 @@
 			                </thead>
 			                <tbody>
 				                <tr>
-		    	                    <td data-title="Module Code">{{ currentBook.moduleCode }}</td>
+		    	                    <td data-title="Module">{{ currentBook.moduleCode }}</td>
 		    	                    <td data-title="Title">{{ currentBook.title }}</td>
 		    	                    <td data-title="Edition">{{ currentBook.edition }}</td>
 		    	                    <td data-title="Author">{{ currentBook.authors }}</td>

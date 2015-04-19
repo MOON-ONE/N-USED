@@ -349,6 +349,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-weight: bold; }
 
 #n-view-post .content {
+  height: calc(100vh - 70px) !important;
   /* animation */
   /* Make sure z-index is higher on hover */
   /* Ensure that hover image overlapped the others */
