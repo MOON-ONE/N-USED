@@ -782,6 +782,14 @@ $container-transition-time: 0.4s;
 
 #n-view-post {
 	.content {
+		$title-bar-height: 70px;
+		$height: 40px;
+		$width: 70%;
+		$bg-color: #333;
+		$color: #eef2e7;
+
+		height: calc(100vh - #{$title-bar-height}) !important;
+
 		table {
 			width: 100%;
 		}
