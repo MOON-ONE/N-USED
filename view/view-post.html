@@ -29,6 +29,8 @@
 				                <tr>
 		    	                    <td data-title="Module Code">{{ currentBook.moduleCode }}</td>
 		    	                    <td data-title="Title">{{ currentBook.title }}</td>
+		    	                    <td data-title="Edition">{{ currentBook.edition }}</td>
+		    	                    <td data-title="Author">{{ currentBook.authors }}</td>
 		    	                    <td data-title="Condition">{{ currentBook.conditionRank + " / 10"}}</td>
 				                </tr>
 				                <tr>
@@ -64,9 +66,13 @@
 		    	                    	<input type="checkbox" id="post-cond-check-4" disabled>
 		    	                    </td>
 				                </tr>
+				                <tr>
+		    	                    <td data-title="Remark"><br><br><br><br><br><br><br><br></td>
+				                </tr>
 			                </tbody>
 			            </table>
 		            </div>
+
 		            <div class="gallery">
 						<ul>
 							<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/9.png"></li>
