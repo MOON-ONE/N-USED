@@ -429,6 +429,15 @@ $container-transition-time: 0.4s;
 			}
 		}
 
+		hr {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+
+		.required-mark {
+			color: #d9534f;
+		}
+
 		.tool-bar {
 			.row {
 				margin-top: 20px;
@@ -449,12 +458,8 @@ $container-transition-time: 0.4s;
 
 			@include xs {
 				.input-group-addon:not(.free) {
-					min-width: 0px;
+					// min-width: 0px;
 				}
-			}
-
-			.hidden {
-				display: none;
 			}
 
 			.input-group {
@@ -651,7 +656,6 @@ $container-transition-time: 0.4s;
 		}
 
 		.content {
-
 			.profile {
 				display: block;
 				.input-group {
@@ -1025,22 +1029,6 @@ $container-transition-time: 0.4s;
 					.form-control {
 						height: $height;
 					}
-				}
-
-				.avatar-container {
-					height: $height * 3 + 30px;
-					@include xs {
-						height: 250px;
-					}
-					background: url("../images/gebilaowang.png");
-					background-size: cover;
-					background-repeat: no-repeat;
-					background-position: center center;
-					margin-top: 15px;
-					margin-bottom: 15px;
-					border-radius: 4px;
-
-					box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 				}
 			}
 
