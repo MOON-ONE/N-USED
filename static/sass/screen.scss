@@ -278,6 +278,10 @@ $container-transition-time: 0.4s;
 			background-color: white;
 			cursor: pointer;
 
+			&:hover {
+				cursor: pointer;
+			}
+
 			.col-mc{
 				font-weight: bold;
 			}
