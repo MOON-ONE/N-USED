@@ -1,117 +1,92 @@
-<section class="n-post" id="n-view-post">
+<section id="n-view-post">
 	<div class="n-container">
-		<div class="n-post-nav">
-			<a href="#" class="post-back-button">
-				<i class="fa fa-angle-left fa-2x" style="padding-top: 10px;"></i>
-			</a>
-			<label class="post-module-code">{{ currentBook.moduleCode }}</label>
-			<span class="n-post-like">
-				<i class="fa fa-star like off"></i>
-			</span>
-		</div>
-		<div class="row n-content-row">
-			//textbook info section
-			<div class="post-textbook-info col-md-8">
-				<div class="row info-row">
-					<div class="col-md-3">
-						<label class="post-label">Title:</label>
-					</div>
-					<div class="col-md-9">
-						<label class="post-label">{{ currentBook.title }}</label>
-					</div>
-				</div>
-				<div class="row info-row">
-					<div class="col-md-3">
-						<label class="post-label">Description:</label>
-					</div>
-					<div class="col-md-9">
-						<label class="post-label">{{ currentBook.description }}</label>
-					</div>
-				</div>
-				<div class="row info-row">
-					<div class="col-md-3">
-						<label class="post-label">Price:</label>
-					</div>
-					<div class="col-md-9">
-						<label class="post-label">{{ currentBook.price }}</label>
-					</div>
-				</div>
-				<div class="row info-row">
-					<div class="col-md-3">
-						<label class="post-label">Edition:</label>
-					</div>
-					<div class="col-md-9">
-						<label class="post-label">{{ currentBook.edition }}</label>
-					</div>
-				</div>
-				<div class="row info-row">
-					<div class="col-md-3">
-						<label class="post-label">Author:</label>
-					</div>
-					<div class="col-md-9">
-						<label class="post-label">{{ currentBook.authors }}</label>
-					</div>
-				</div>
-				<div class="row info-row">
-					<div class="col-md-3">
-						<label class="post-label">Condition:</label>
-					</div>
-					<div class="col-md-9">
-						<label class="post-label">{{ currentBook.conditionRank }} / 10</label>
-						<label class="post-condition-label">Edges are not curved</label>
-						<label class="post-condition-label">Not containing any notes</label>
-						<label class="post-condition-label">Purchased within one year</label>
-					</div>
-				</div>
+		<div class="row n-title-bar">
+			<div class="col-xs-3">
+				<span class="post-back-button">
+					<strong><i class="fa fa-angle-left fa-2x"></i></strong>
+				</span>
 			</div>
-			//contact info section
-			<div class="post-contact-info col-md-3">
-				<div class="post-contact-avatar">
-					<img class="account-profile-pic" src="static/images/gebilaowang.png">
-				</div>
-				<div class="row contact-row">
-					<div class="col-md-12">
-						<label class="contact-name-label">{{ currentSeller.name }}</label>
+            <div class="col-xs-9">
+                <span class="n-title pull-right">Details</span>
+            </div>
+        </div>
+
+        <div class="content">
+        	<h4>
+        		{{ currentBook.moduleCode }}  &nbsp&nbsp-&nbsp&nbsp  {{ "S$" + currentBook.price }}
+        		&nbsp&nbsp&nbsp
+        		<span class="n-post-like">
+					<i class="fa fa-star like off"></i>
+				</span>
+        	</h4>
+        	<hr>
+        	<div class="row">
+        		<div class="col-xs-12 col-sm-7">
+	        		<div class="table-nr-responsive-vertical table-nr-striped shadow-z-1">
+			            <table class="table-nr table-nr-hover table-nr-mc-teal table-nr-bordered">
+			                <thead>
+			                </thead>
+			                <tbody>
+				                <tr>
+		    	                    <td data-title="Module">{{ currentBook.moduleCode }}</td>
+		    	                    <td data-title="Title">{{ currentBook.title }}</td>
+		    	                    <td data-title="Edition">{{ currentBook.edition }}</td>
+		    	                    <td data-title="Author">{{ currentBook.authors }}</td>
+		    	                    <td data-title="Condition">{{ currentBook.conditionRank + " / 10"}}</td>
+				                </tr>
+				                <tr>
+		    	                    <td data-title="Price">{{ "S$" + currentBook.price }}</td>
+		                            <td data-title="Post Date">{{ currentBook.postTime }}</td>
+				                </tr>
+				                <tr>
+		    	                    <td data-title="Seller">{{ currentSeller.name }}</td>
+		                            <td data-title="Phone">{{ currentSeller.handphone }}</td>
+		                            <td data-title="Email">{{ currentSeller.email }}</td>
+				                </tr>
+			                </tbody>
+			            </table>
+			        </div>
+        		</div>
+        		<div class="col-xs-12 col-sm-5">
+	        		<div class="table-nr-responsive-vertical table-nr-striped shadow-z-1">
+	    				<table class="table-nr table-nr-hover table-nr-mc-teal table-nr-bordered">
+			                <thead>
+			                </thead>
+			                <tbody>
+				                <tr>
+		    	                    <td data-title="edges are not curved">
+		    	                    	<input type="checkbox" id="post-cond-check-1" checked=true disabled>
+		    	                    </td>
+		    	                    <td data-title="not containing any notes">
+		    	                    	<input type="checkbox" id="post-cond-check-2" checked=true disabled>
+		    	                    </td>
+		    	                    <td data-title="purchased within one year">
+		    	                    	<input type="checkbox" id="post-cond-check-3" checked=true disabled>
+		    	                    </td>
+		    	                    <td data-title="wrapped">
+		    	                    	<input type="checkbox" id="post-cond-check-4" disabled>
+		    	                    </td>
+				                </tr>
+				                <tr>
+		    	                    <td data-title="Remark"><br><br><br><br><br><br><br><br></td>
+				                </tr>
+			                </tbody>
+			            </table>
+		            </div>
+
+		            <div class="gallery">
+						<ul>
+							<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/9.png"></li>
+							<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/2.png"></li>
+							<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/3.png"></li>
+							<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/1.png"></li>
+							<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/4.png"></li>
+							<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/5.png"></li>
+						</ul>
 					</div>
-				</div>
-				<div class="row contact-row">
-					<div class="col-md-12">
-						<label class="contact-label">{{ currentSeller.handphone }}</label>
-					</div>
-				</div>
-				<div class="row contact-row">
-					<div class="col-md-12">
-						<label class="contact-label">{{ currentSeller.email }}</label>
-					</div>
-				</div>
-				<div class="row contact-row">
-					<div class="col-md-12">
-						<label class="contact-label">{{ currentSeller.whatsapp }}</label>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="post-image-section col-md-12">
-					<a class="fancybox" rel="group" href="static/images/gebilaowang.png">
-						<img class="post-image" src="static/images/gebilaowang.png">
-					</a>
-					<a class="fancybox" rel="group" href="static/images/gebilaowang.png">
-						<img class="post-image" src="static/images/gebilaowang.png">
-					</a>
-					<a class="fancybox" rel="group" href="static/images/gebilaowang.png">
-						<img class="post-image" src="static/images/gebilaowang.png">
-					</a>
-					<a class="fancybox" rel="group" href="static/images/gebilaowang.png">
-						<img class="post-image" src="static/images/gebilaowang.png">
-					</a>
-					<a class="fancybox" rel="group" href="static/images/gebilaowang.png">
-						<img class="post-image" src="static/images/gebilaowang.png">
-					</a>
-					<a class="fancybox" rel="group" href="static/images/gebilaowang.png">
-						<img class="post-image" src="static/images/gebilaowang.png">
-					</a>
-				</div>
-			</div>
-		</div>
+        		</div>
+        	</div>
+        </div>
+		
 	</div>
 </section>
