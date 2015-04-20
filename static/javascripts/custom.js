@@ -47,16 +47,7 @@ function viewDidLoad() {
 			return $('.n-book-list-table');
 		}
 	});
-
-
-
-
 	// 王狗完
-
-
-
-
-
 
 	// 林狗
 	$(".fancybox").fancybox();
@@ -68,23 +59,18 @@ function viewDidLoad() {
 		} else {
 
 		}
-	})
-
-	// $(".book-item .navigation").click(function() {
-	// 	var bid = $(this).parents().attr("book-id");
-	// 	return renderViewPostPage(bid);
-	// })
+	});
 
 	$(document).on("click", ".book-item .navigation", function() {
 		var bid = $(this).parents().attr("book-id");
 		return renderViewPostPage(bid);
-	})
+	});
 
 	$(document).on("click", ".post-back-button", function() {
 		$("#n-view-post-wrapper").hide();
 		$("#n-gpost-wrapper").hide();
 		$("#n-home-wrapper").fadeIn(200);
-	})
+	});
 
 	$(".post-create").click(function() {
 		if (isInvalidPost()) {
@@ -165,37 +151,7 @@ function viewDidLoad() {
 	// 林狗完
 
 
-
-
-
-
 	// 孙狗
-	// $(document).on("click",".n-account-nav a",function(e){
-	//	 e.preventDefault();
-	//	 $(".n-account-toggle").hide();
-	//	 var toShow = $(this).attr('href');
-	//	 $(toShow).show();
-	// });
-
-	// $(document).on("click",".n-account-edit-button", function(){
-
-	//			 var $this = $(this);
-	//			 var text = $this.text();
-	//			 if(text=="Edit"){
-	//				 $this.text("Cancel");
-	//			 }
-	//						 else{
-	//							  $this.text("Edit");
-	//						 }
-	//			 $(".account-label").toggle();
-	//		 });
-
-	//		 $("input.account-label").change(function(){
-	//			 $(this).prev().text($(this).text());
-
-	//		 });
-
-
 	$(document).on("click", "#n-account .content h4 span", function() {
 		$("#n-account .content h4 span").removeClass("selected");
 		$(this).addClass("selected")
@@ -213,8 +169,6 @@ function viewDidLoad() {
 	})
 
 	// 孙狗完
-
-
 
 }
 
@@ -282,17 +236,21 @@ function updateGrandCheckbox() {
 
 $(document).on("click", "#n-home .grand-checkbox", function() {
 	$("#n-home .col-selection input").each(function(index) {
-		$(this).prop('checked', $("#n-home .grand-checkbox").prop('checked'));
-		var row = $(this).closest("tr");
-		var newValue = $(this).prop("checked");
-		var bookID = row.attr("book-id");
-		$.each(books, function() {
-			if (this.id == bookID) {
-				this.isSelected = newValue;
-			}
-		});
-	})
+		if ($(this).prop('checked') != $("#n-home .grand-checkbox").prop('checked')) {
+			var checkbox = $(this);
+			checkbox.prop("checked", !checkbox.prop("checked"));
+			var newValue = checkbox.prop("checked");
+			var row = $(this).closest("tr");
+			var bookID = row.attr("book-id");
+			$.each(books, function() {
+				if (this.pid == bookID) {
+					this.isSelected = newValue;
+				}
+			});
+		}
+	});
 	updateBookList();
+	console.log(books);
 })
 
 $(document).on("click", ".book-item .check", function() {
