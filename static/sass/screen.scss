@@ -434,6 +434,10 @@ $container-transition-time: 0.4s;
 			margin-bottom: 40px;
 		}
 
+		textarea {
+			resize: vertical;
+		}
+
 		.required-mark {
 			color: #d9534f;
 		}
