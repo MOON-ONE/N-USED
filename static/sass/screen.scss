@@ -276,13 +276,20 @@ $container-transition-time: 0.4s;
 			height: calc(100vh - 70px);
 			overflow-y: scroll;
 			background-color: white;
-			cursor: pointer;
-
-			&:hover {
+			
+			.navigation {
 				cursor: pointer;
 			}
 
-			.col-mc{
+			.check {
+				cursor: pointer;
+			}
+
+			input[type='checkbox'] {
+				cursor: pointer;
+			}
+
+			.col-mc {
 				font-weight: bold;
 			}
 
@@ -297,9 +304,9 @@ $container-transition-time: 0.4s;
 			.col-selection {
 			}
 
-			.col-selection:hover {
-				background-color: $color;
-			}
+			// .col-selection:hover {
+			// 	background-color: $color;
+			// }
 		}
 
 		.clear-selection-button {
