@@ -229,7 +229,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 #n-post .col-xs-9,
 #n-post .col-xs-10,
 #n-post .col-xs-11,
-#n-post .col-xs-12 {
+#n-post .col-xs-12, #n-view-post .col-xs-0,
+#n-view-post .col-xs-1,
+#n-view-post .col-xs-2,
+#n-view-post .col-xs-3,
+#n-view-post .col-xs-4,
+#n-view-post .col-xs-5,
+#n-view-post .col-xs-6,
+#n-view-post .col-xs-7,
+#n-view-post .col-xs-8,
+#n-view-post .col-xs-9,
+#n-view-post .col-xs-10,
+#n-view-post .col-xs-11,
+#n-view-post .col-xs-12 {
   margin-top: 5px; }
   #n-post .col-xs-0 button,
   #n-post .col-xs-1 button,
@@ -243,27 +255,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #n-post .col-xs-9 button,
   #n-post .col-xs-10 button,
   #n-post .col-xs-11 button,
-  #n-post .col-xs-12 button {
+  #n-post .col-xs-12 button, #n-view-post .col-xs-0 button,
+  #n-view-post .col-xs-1 button,
+  #n-view-post .col-xs-2 button,
+  #n-view-post .col-xs-3 button,
+  #n-view-post .col-xs-4 button,
+  #n-view-post .col-xs-5 button,
+  #n-view-post .col-xs-6 button,
+  #n-view-post .col-xs-7 button,
+  #n-view-post .col-xs-8 button,
+  #n-view-post .col-xs-9 button,
+  #n-view-post .col-xs-10 button,
+  #n-view-post .col-xs-11 button,
+  #n-view-post .col-xs-12 button {
     width: 100%; }
-#n-post .row {
+#n-post .row, #n-view-post .row {
   margin-left: 0;
   margin-right: 0;
   margin-top: 15px; }
-#n-post .n-container .n-title-bar {
+#n-post .n-container .n-title-bar, #n-view-post .n-container .n-title-bar {
   background-color: #333;
   height: 70px;
   width: 100%;
   margin: 0;
   padding-left: 15px;
   padding-top: calc((70px - 40px)/2 + 4px); }
-  #n-post .n-container .n-title-bar .n-title {
+  #n-post .n-container .n-title-bar .post-back-button, #n-view-post .n-container .n-title-bar .post-back-button {
+    color: #eef2e7;
+    cursor: pointer; }
+  #n-post .n-container .n-title-bar .n-title, #n-view-post .n-container .n-title-bar .n-title {
     display: block;
-    color: white;
+    color: #eef2e7;
     padding-right: 10px;
     font-size: 30px;
     vertical-align: middle;
     line-height: 35px; }
-  #n-post .n-container .n-title-bar .sort-button {
+  #n-post .n-container .n-title-bar .sort-button, #n-view-post .n-container .n-title-bar .sort-button {
     display: block;
     text-align: center;
     vertical-align: center;
@@ -275,51 +302,96 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     border-radius: 4px;
     font-size: 20px;
     transition: .1s linear color; }
-  #n-post .n-container .n-title-bar .sort-button:hover {
+  #n-post .n-container .n-title-bar .sort-button:hover, #n-view-post .n-container .n-title-bar .sort-button:hover {
     cursor: pointer; }
-  #n-post .n-container .n-title-bar .sort-button:active {
+  #n-post .n-container .n-title-bar .sort-button:active, #n-view-post .n-container .n-title-bar .sort-button:active {
     cursor: pointer;
     background-color: #eef2e7;
     color: #333; }
-#n-post .n-container .tool-bar .row {
+#n-post .n-container .tool-bar .row, #n-view-post .n-container .tool-bar .row {
   margin-top: 20px; }
-#n-post .n-container .content {
+#n-post .n-container .content, #n-view-post .n-container .content {
   height: calc(100vh - 70px - 30px);
   overflow-y: scroll;
   overflow-x: none;
   padding-left: 15px;
   padding-right: 15px; }
-  #n-post .n-container .content .input-group-addon:not(.free) {
+  #n-post .n-container .content .input-group-addon:not(.free), #n-view-post .n-container .content .input-group-addon:not(.free) {
     min-width: 100px; }
   @media only screen and (max-width: 767px) {
-    #n-post .n-container .content .input-group-addon:not(.free) {
+    #n-post .n-container .content .input-group-addon:not(.free), #n-view-post .n-container .content .input-group-addon:not(.free) {
       min-width: 0px; } }
-  #n-post .n-container .content .hidden {
+  #n-post .n-container .content .hidden, #n-view-post .n-container .content .hidden {
     display: none; }
-  #n-post .n-container .content .input-group {
+  #n-post .n-container .content .input-group, #n-view-post .n-container .content .input-group {
     height: 40px;
     width: 100%; }
-    #n-post .n-container .content .input-group .form-control {
+    #n-post .n-container .content .input-group .form-control, #n-view-post .n-container .content .input-group .form-control {
       height: 40px; }
-#n-post .n-container h4 {
+#n-post .n-container h4, #n-view-post .n-container h4 {
   margin-right: 15px;
   margin-left: 15px;
   margin-top: 30px;
   margin-bottom: 10px;
   font-size: 20px; }
   @media only screen and (max-width: 767px) {
-    #n-post .n-container h4 {
+    #n-post .n-container h4, #n-view-post .n-container h4 {
       font-size: 16px; } }
-  #n-post .n-container h4 span {
+  #n-post .n-container h4 span, #n-view-post .n-container h4 span {
     margin-right: 20px;
     color: #aaa;
     cursor: pointer; }
     @media only screen and (max-width: 767px) {
-      #n-post .n-container h4 span {
+      #n-post .n-container h4 span, #n-view-post .n-container h4 span {
         margin-right: 15px; } }
-  #n-post .n-container h4 .selected {
+  #n-post .n-container h4 .selected, #n-view-post .n-container h4 .selected {
     color: #333;
     font-weight: bold; }
+
+#n-view-post .content {
+  height: calc(100vh - 70px) !important;
+  /* animation */
+  /* Make sure z-index is higher on hover */
+  /* Ensure that hover image overlapped the others */
+  /* Image is position nicely under li */ }
+  #n-view-post .content table {
+    width: 100%; }
+  #n-view-post .content div.gallery {
+    margin-top: 10px;
+    width: 100%; }
+  #n-view-post .content div.gallery ul {
+    list-style-type: none; }
+  #n-view-post .content div.gallery ul li, #n-view-post .content div.gallery li img {
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out; }
+  #n-view-post .content div.gallery ul li {
+    position: relative;
+    float: left;
+    width: 95px;
+    height: 95px;
+    margin: 5px;
+    padding: 5px;
+    z-index: 0; }
+  #n-view-post .content div.gallery ul li:hover {
+    z-index: 5; }
+  #n-view-post .content div.gallery ul li img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #dddddd;
+    padding: 5px;
+    width: 95px;
+    height: 95px;
+    background: #f0f0f0; }
+  #n-view-post .content div.gallery ul li img:hover {
+    width: 200px;
+    height: 200px;
+    margin-top: -130px;
+    margin-left: -130px;
+    top: 65%;
+    left: 65%; }
 
 #n-account .row {
   margin-left: 0;
