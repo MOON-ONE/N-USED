@@ -1,13 +1,17 @@
+$(document).ready(function() {
+	updateCurrentUser(currentUserID);
+	updateGrandCheckbox();
+	viewDidLoad();
+});
+
 function viewDidLoad() {
 
 	$('[data-toggle="tooltip"]').tooltip();
-	updateCurrentUser(currentUserID);
 
 	// 总完
 
 
 	// 王狗
-	updateGrandCheckbox();
 
 	$("#n-home .sort-button").click(function() {
 		var moreOptionBar = $("#n-home .n-more-option-bar");
@@ -35,11 +39,6 @@ function viewDidLoad() {
 		angular.element("body").scope().$apply();
 		
 	})
-
-	function updateTableContainerHeight(height) {
-		var windowHeight = $(window).height();
-		var tableContainer = $(".n-book-list-table").css("height", (windowHeight - height) + "px");
-	}
 
 	var table = $(".n-book-list-table table");
 	table.floatThead({
@@ -70,83 +69,7 @@ function viewDidLoad() {
 		$("#n-view-post-wrapper").hide();
 		$("#n-gpost-wrapper").hide();
 		$("#n-home-wrapper").fadeIn(200);
-	});
-
-	$(".post-create").click(function() {
-		if (isInvalidPost()) {
-			var pid = Math.random().toString(36).substring(7);
-			var code = $("#post-code").val();
-			var title = $("#post-title").val();
-			var description = $("#post-description").val();
-			var price = $("#post-price").val();
-			var edition = $("#post-edition").val();
-			var authors = $("#post-authors").val();
-			var condition = $("#post-condition").val();
-			var check1 = $("#post-cond-check-1").is(':checked') == true ? 1 : 0;
-			var check2 = $("#post-cond-check-2").is(':checked') == true ? 1 : 0;
-			var check3 = $("#post-cond-check-3").is(':checked') == true ? 1 : 0;
-			var check4 = $("#post-cond-check-4").is(':checked') == true ? 1 : 0;
-			var check = check1.toString() + check2.toString() + check3.toString() + check4.toString();
-			var check_binary = parseInt(check, 2);
-			var date = new Date();
-			var day = parseInt(date.getDate()) < 10 ? "0" + date.getDate() : date.getDate();
-			var month = parseInt(date.getMonth()) < 10 ? "0" + date.getMonth() : date.getMonth();
-			var year = date.getFullYear();
-			var post_date = year + "/" + month + "/" + day;
-			var book = {
-				pid				: pid,
-				moduleCode		 : code,
-				title			  : title,
-				edition			: edition,
-				authors			: authors,
-				conditionRank	  : condition,
-				conditionCheckList : check_binary,
-				description		: description,
-				price			  : price,
-				sid				: currentUserID,
-				isSelected		 : false,
-				postTime		   : post_date,
-				isSold			 : false
-			};
-			addBook(book);
-			clearPostInput();
-			$("#n-post-wrapper").hide();
-			$("#n-home-wrapper").fadeIn(200);
-		} else {
-			alert("incomplete post info");
-		}
-	})
-
-	function renderViewPostPage(bid) {
-		var book = getBook(bid);
-		updateCurrentBook(book);
-		var seller = getBookSeller(bid);
-		updateCurrentSeller(seller);
-		$(".n-main >div:visible").fadeOut(200, 'swing', function() {
-			$("#n-view-post-wrapper").fadeIn(200);
-		});
-	}
-
-	function isInvalidPost(){
-		var code = $("#post-code").val();
-		var title = $("#post-title").val();
-		var price = $("#post-price").val();
-		return (code != "" && title != "" && price != "");
-	}
-
-	function clearPostInput() {
-		$("#post-code").val("");
-		$("#post-title").val("");
-		$("#post-description").val("");
-		$("#post-price").val("");
-		$("#post-edition").val("");
-		$("#post-authors").val("");
-		$("#post-condition").val("");
-		$("#post-cond-check-1").prop('checked', false);
-		$("#post-cond-check-2").prop('checked', false);
-		$("#post-cond-check-3").prop('checked', false);
-		$("#post-cond-check-4").prop('checked', false);
-	}
+	});	
 
 	// 林狗完
 
@@ -171,8 +94,6 @@ function viewDidLoad() {
 	// 孙狗完
 
 }
-
-$(document).ready(viewDidLoad)
 
 // 雷狗
 
@@ -217,6 +138,11 @@ $(document).on("click", "#n-hamburger-icon", function() {
 
 
 //Home
+function updateTableContainerHeight(height) {
+	var windowHeight = $(window).height();
+	var tableContainer = $(".n-book-list-table").css("height", (windowHeight - height) + "px");
+}
+
 function updateGrandCheckbox() {
 	// only works for home page, might need generalization?
 	if ($("#n-home-wrapper").css("display") != "none") {
@@ -313,6 +239,85 @@ function getSelectedFavorite() {
 
 
 //End of Account
+
+// Post
+function renderViewPostPage(bid) {
+	var book = getBook(bid);
+	updateCurrentBook(book);
+	var seller = getBookSeller(bid);
+	updateCurrentSeller(seller);
+	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
+		$("#n-view-post-wrapper").fadeIn(200);
+	});
+}
+
+function isValidPost(){
+	var code = $("#post-code").val();
+	var title = $("#post-title").val();
+	var price = $("#post-price").val();
+	return (code != "" && title != "" && price != "");
+}
+
+function clearPostInput() {
+	$("#post-code").val("");
+	$("#post-title").val("");
+	$("#post-description").val("");
+	$("#post-price").val("");
+	$("#post-edition").val("");
+	$("#post-authors").val("");
+	$("#post-condition").val("");
+	$("#post-cond-check-1").prop('checked', false);
+	$("#post-cond-check-2").prop('checked', false);
+	$("#post-cond-check-3").prop('checked', false);
+	$("#post-cond-check-4").prop('checked', false);
+}
+
+$(document).on("click", ".post-create", function() {
+	if (isValidPost()) {
+		var pid = Math.random().toString(36).substring(7);
+		var code = $("#post-code").val();
+		var title = $("#post-title").val();
+		var description = $("#post-description").val();
+		var price = $("#post-price").val();
+		var edition = $("#post-edition").val();
+		var authors = $("#post-authors").val();
+		var condition = $("#post-condition").val();
+		var check1 = $("#post-cond-check-1").is(':checked') == true ? 1 : 0;
+		var check2 = $("#post-cond-check-2").is(':checked') == true ? 1 : 0;
+		var check3 = $("#post-cond-check-3").is(':checked') == true ? 1 : 0;
+		var check4 = $("#post-cond-check-4").is(':checked') == true ? 1 : 0;
+		var check = check1.toString() + check2.toString() + check3.toString() + check4.toString();
+		var check_binary = parseInt(check, 2);
+		var date = new Date();
+		var day = parseInt(date.getDate()) < 10 ? "0" + date.getDate() : date.getDate();
+		var month = parseInt(date.getMonth()) < 9 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
+		var year = date.getFullYear();
+		var post_date = year + "/" + month + "/" + day;
+		var book = {
+			pid                : pid,
+			moduleCode         : code.toUpperCase(),
+			title              : title,
+			edition            : edition,
+			authors            : authors,
+			conditionRank      : condition,
+			conditionCheckList : check_binary,
+			description        : description,
+			price              : price,
+			sid                : currentUserID,
+			isSelected         : false,
+			postTime           : post_date,
+			isSold             : false
+		};
+		addBook(book);
+		clearPostInput();
+		$("#n-post-wrapper").hide();
+		$("#n-home-wrapper").fadeIn(200);
+	} else {
+		alert("incomplete post info");
+		return false;
+	}
+});
+// End of Post
 
 // Login
 function resetLoginButton() {
