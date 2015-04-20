@@ -2,12 +2,12 @@ function viewDidLoad() {
 
 
 // 总
-$("#n-view-post-wrapper").load("view/view-post.html", function () {
+// $("#n-view-post-wrapper").load("view/view-post.html", function () {
 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
-});
-$("#n-post-wrapper").load("view/post.html", function () {
+// });
+// $("#n-post-wrapper").load("view/post.html", function () {
 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
-});
+// });
 // $("#n-home-wrapper").load("view/home.html", function () {
 // 	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
 // }); 
@@ -100,33 +100,106 @@ table.floatThead({
 
 // 林狗
 $(".fancybox").fancybox();
-$(document).on("click", ".like", function() {
+$(".like").click(function() {
 	if ($(this).hasClass("on")) {
-		$(this).removeClass("on");
-		$(this).addClass("off");
+		$(this).removeClass("on").addClass("off");
+	} else if ($(this).hasClass("off")){
+		$(this).removeClass("off").addClass("on");
 	} else {
-		$(this).removeClass("off");
-		$(this).addClass("on");
+
 	}
 })
 
-$(".book-item").click(function() {
-	var bid = $(this).attr("book-id");
-	console.log(bid);
-	var book = getBook(bid);
-	return renderViewPostPage(book);
+// $(".book-item .navigation").click(function() {
+// 	var bid = $(this).parents().attr("book-id");
+// 	return renderViewPostPage(bid);
+// })
+
+$(document).on("click", ".book-item .navigation", function() {
+	var bid = $(this).parents().attr("book-id");
+	return renderViewPostPage(bid);
 })
 
 $(document).on("click", ".post-back-button", function() {
+	$("#n-view-post-wrapper").hide();
+	$("#n-gpost-wrapper").hide();
 	$("#n-home-wrapper").fadeIn(200);
 })
 
+$(".post-create").click(function() {
+	if (isInvalidPost()) {
+		var pid = Math.random().toString(36).substring(7);
+		var code = $("#post-code").val();
+		var title = $("#post-title").val();
+		var description = $("#post-description").val();
+		var price = $("#post-price").val();
+		var edition = $("#post-edition").val();
+		var authors = $("#post-authors").val();
+		var condition = $("#post-condition").val();
+		var check1 = $("#post-cond-check-1").is(':checked') == true ? 1 : 0;
+		var check2 = $("#post-cond-check-2").is(':checked') == true ? 1 : 0;
+		var check3 = $("#post-cond-check-3").is(':checked') == true ? 1 : 0;
+		var check4 = $("#post-cond-check-4").is(':checked') == true ? 1 : 0;
+		var check = check1.toString() + check2.toString() + check3.toString() + check4.toString();
+		var check_binary = parseInt(check, 2);
+		var date = new Date();
+	    var day = parseInt(date.getDate()) < 10 ? "0" + date.getDate() : date.getDate();
+	    var month = parseInt(date.getMonth()) < 10 ? "0" + date.getMonth() : date.getMonth();
+	    var year = date.getFullYear();
+	    var post_date = year + "/" + month + "/" + day;
+		var book = {
+			pid                : pid,
+			moduleCode         : code,
+			title              : title,
+			edition            : edition,
+			authors            : authors,
+			conditionRank      : condition,
+			conditionCheckList : check_binary,
+			description        : description,
+			price              : price,
+			sid                : currentUserID,
+			isSelected         : false,
+			postTime           : post_date,
+	        isSold             : false
+		};
+		addBook(book);
+		clearPostInput();
+		$("#n-post-wrapper").hide();
+		$("#n-home-wrapper").fadeIn(200);
+	} else {
+		alert("incomplete post info");
+	}
+})
 
-function renderViewPostPage(book) {
+function renderViewPostPage(bid) {
+	var book = getBook(bid);
 	updateCurrentBook(book);
+	var seller = getBookSeller(bid);
+	updateCurrentSeller(seller);
 	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
 		$("#n-view-post-wrapper").fadeIn(200);
 	});
+}
+
+function isInvalidPost(){
+	var code = $("#post-code").val();
+	var title = $("#post-title").val();
+	var price = $("#post-price").val();
+	return (code != "" && title != "" && price != "");
+}
+
+function clearPostInput() {
+	$("#post-code").val("");
+	$("#post-title").val("");
+	$("#post-description").val("");
+	$("#post-price").val("");
+	$("#post-edition").val("");
+	$("#post-authors").val("");
+	$("#post-condition").val("");
+	$("#post-cond-check-1").prop('checked', false);
+	$("#post-cond-check-2").prop('checked', false);
+	$("#post-cond-check-3").prop('checked', false);
+	$("#post-cond-check-4").prop('checked', false);
 }
 
 // 林狗完
@@ -168,7 +241,6 @@ $(document).on("click", "#n-account .content h4 span", function() {
 	$(this).addClass("selected")
 	var showContentID = $(this).attr("href");
 	$("#n-account .content .content-block").css("display", "none");
-	console.log("#n-account .content .content-block " + showContentID)
 	$("#n-account .content .content-block" + showContentID).css("display", "block");
 })
 
@@ -179,7 +251,6 @@ $("#n-account tr").each(function(index) {
 		$(this).children().addClass("sold-entry-row");
 	}
 })
-
 
 // 孙狗完
 
@@ -203,6 +274,7 @@ $(document).on("click", "div[id^='n-nav-']", function() {
 		$(this).addClass("active");
 		$(".n-main >div:visible").fadeOut(200, 'swing', function() {
 			$("#n-" + section + "-wrapper").fadeIn(200);
+			$(window).resize();
 		});
 		return false;
 	}
@@ -227,19 +299,6 @@ $(document).on("click", "#n-hamburger-icon", function() {
 
 
 //Home
-$(document).on("click", ".book-item .navigation", function() {
-	var bid = $(this).attr("book-id");
-	var book = getBook(bid);
-	return renderPostPage(book);
-})
-
-function renderPostPage(book) {
-	updateCurrentBook(book);
-	$("#n-home-wrapper").load("view/post.html", function () {
-	// $('.n-main .n-container').css('margin-left', $('#n-nav .n-container').css('width'));
-	});
-}
-
 
 $(document).on("click", ".book-item .check", function() {
 	var checkbox = $(this).find("input");
@@ -256,3 +315,29 @@ $(document).on("click", ".book-item .check", function() {
 })
 
 //End of Home
+
+//Account
+
+$(document).on("click", "#n-account .stars .btn-danger", function() {
+	var res = confirm("This action is not recoverable! Do you still want to continue?");
+	if (res == true) {
+	    removeFavorates(getSelectedFavorite());
+	}
+})
+
+function getSelectedFavorite() {
+	var selectedItems = []
+	$("#n-account .stars .acc-col-selection input").each(function(index) {
+		if ($(this).prop("checked")) {
+			var thisFavoriteObject = {
+				uid: currentUserID,
+				pid: $(this).closest("tr").attr("book-id")
+			}
+			selectedItems.push(thisFavoriteObject);
+		}
+	})
+	return selectedItems;
+}
+
+
+//End of Account

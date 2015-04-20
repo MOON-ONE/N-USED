@@ -1,4 +1,4 @@
-<section class="n-post" id="n-post">
+<section class="n-post" id="n-view-post">
 	<div class="n-container">
 		<div class="n-post-nav">
 			<a href="#" class="post-back-button">
@@ -11,21 +11,21 @@
 		</div>
 		<div class="row n-content-row">
 			//textbook info section
-			<div class="post-textbook-info col-md-7">
+			<div class="post-textbook-info col-md-8">
 				<div class="row info-row">
 					<div class="col-md-3">
 						<label class="post-label">Title:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="post-label">CS3240 interactive design textbook</label>
+						<label class="post-label">{{ currentBook.title }}</label>
 					</div>
 				</div>
 				<div class="row info-row">
 					<div class="col-md-3">
-						<label class="post-label">Publication:</label>
+						<label class="post-label">Description:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="post-label">CS3240 interactive design textbook</label>
+						<label class="post-label">{{ currentBook.description }}</label>
 					</div>
 				</div>
 				<div class="row info-row">
@@ -33,7 +33,7 @@
 						<label class="post-label">Price:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="post-label">7 SGD</label>
+						<label class="post-label">{{ currentBook.price }}</label>
 					</div>
 				</div>
 				<div class="row info-row">
@@ -41,7 +41,7 @@
 						<label class="post-label">Edition:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="post-label">the 7th edition</label>
+						<label class="post-label">{{ currentBook.edition }}</label>
 					</div>
 				</div>
 				<div class="row info-row">
@@ -49,7 +49,7 @@
 						<label class="post-label">Author:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="post-label">Bimlesh Wadhwa</label>
+						<label class="post-label">{{ currentBook.authors }}</label>
 					</div>
 				</div>
 				<div class="row info-row">
@@ -57,7 +57,7 @@
 						<label class="post-label">Condition:</label>
 					</div>
 					<div class="col-md-9">
-						<label class="post-label">8 / 10</label>
+						<label class="post-label">{{ currentBook.conditionRank }} / 10</label>
 						<label class="post-condition-label">Edges are not curved</label>
 						<label class="post-condition-label">Not containing any notes</label>
 						<label class="post-condition-label">Purchased within one year</label>
@@ -71,22 +71,22 @@
 				</div>
 				<div class="row contact-row">
 					<div class="col-md-12">
-						<label class="contact-name-label">{{ currentUser.name }}</label>
+						<label class="contact-name-label">{{ currentSeller.name }}</label>
 					</div>
 				</div>
 				<div class="row contact-row">
 					<div class="col-md-12">
-						<label class="contact-label">{{ currentUser.handphone }}</label>
+						<label class="contact-label">{{ currentSeller.handphone }}</label>
 					</div>
 				</div>
 				<div class="row contact-row">
 					<div class="col-md-12">
-						<label class="contact-label">{{ currentUser.email }}</label>
+						<label class="contact-label">{{ currentSeller.email }}</label>
 					</div>
 				</div>
 				<div class="row contact-row">
 					<div class="col-md-12">
-						<label class="contact-label">NUS PGP block A room 204</label>
+						<label class="contact-label">{{ currentSeller.whatsapp }}</label>
 					</div>
 				</div>
 			</div>

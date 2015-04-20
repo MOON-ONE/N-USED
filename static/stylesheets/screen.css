@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -52,6 +51,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 *:not(i) {
   font-family: 'lato' !important; }
+
+.n-cursor-pointer {
+  cursor: pointer; }
+
+.n-cursor-pointer:hover {
+  background-color: #eef2e7; }
+
+@media only screen and (max-width: 767px) {
+  .n-container {
+    margin-left: 0 !important; } }
 
 .n-main .n-container {
   -webkit-transition: all 0.4s;
@@ -155,6 +164,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     padding-left: 15px;
     padding-top: calc((70px - 40px)/2 + 2px); }
     #n-home .n-container .n-title-bar .n-title {
+      margin-top: 2px;
       display: block;
       color: white;
       padding-left: 20px;
@@ -207,236 +217,110 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     #n-home .n-container thead {
       display: none; } }
 
-.n-post .n-post-nav {
-  width: 100%;
+#n-post .col-xs-0,
+#n-post .col-xs-1,
+#n-post .col-xs-2,
+#n-post .col-xs-3,
+#n-post .col-xs-4,
+#n-post .col-xs-5,
+#n-post .col-xs-6,
+#n-post .col-xs-7,
+#n-post .col-xs-8,
+#n-post .col-xs-9,
+#n-post .col-xs-10,
+#n-post .col-xs-11,
+#n-post .col-xs-12 {
+  margin-top: 5px; }
+  #n-post .col-xs-0 button,
+  #n-post .col-xs-1 button,
+  #n-post .col-xs-2 button,
+  #n-post .col-xs-3 button,
+  #n-post .col-xs-4 button,
+  #n-post .col-xs-5 button,
+  #n-post .col-xs-6 button,
+  #n-post .col-xs-7 button,
+  #n-post .col-xs-8 button,
+  #n-post .col-xs-9 button,
+  #n-post .col-xs-10 button,
+  #n-post .col-xs-11 button,
+  #n-post .col-xs-12 button {
+    width: 100%; }
+#n-post .row {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 15px; }
+#n-post .n-container .n-title-bar {
+  background-color: #333;
   height: 70px;
-  line-height: 70px;
-  vertical-align: middle;
-  text-align: left;
-  position: absolute;
+  width: 100%;
   margin: 0;
-  padding: 0 0 0 20px;
-  background: black;
-  color: white;
-  font-size: 25px;
-  display: block; }
-  .n-post .n-post-nav .post-back-button {
-    text-decoration: none;
+  padding-left: 15px;
+  padding-top: calc((70px - 40px)/2 + 4px); }
+  #n-post .n-container .n-title-bar .n-title {
+    display: block;
     color: white;
-    margin-right: 20px;
-    float: left; }
-  .n-post .n-post-nav .post-module-code {
-    font-size: 35px;
-    margin-top: 5px;
-    float: left; }
-  .n-post .n-post-nav .post-create {
-    font-size: 35px;
-    float: right;
-    margin-top: 5px;
-    margin-right: 40px;
-    color: #2ECC71;
-    text-decoration: none; }
-  .n-post .n-post-nav .n-post-like {
-    margin-top: 0px;
-    margin-left: 15px;
-    float: left;
+    padding-right: 10px;
     font-size: 30px;
+    vertical-align: middle;
+    line-height: 35px; }
+  #n-post .n-container .n-title-bar .sort-button {
+    display: block;
+    text-align: center;
+    vertical-align: center;
+    padding: 8px 0;
+    height: 40px;
+    background-color: #333;
+    color: #eef2e7;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    transition: .1s linear color; }
+  #n-post .n-container .n-title-bar .sort-button:hover {
     cursor: pointer; }
-  .n-post .n-post-nav .on {
-    color: gold; }
-  .n-post .n-post-nav .off {
-    color: grey; }
-.n-post .post-textbook-info {
-  line-height: 30px;
-  vertical-align: middle;
-  font-size: 20px;
-  margin-top: 120px;
-  margin-left: 50px;
-  margin-bottom: 20px;
-  color: #2C3E50; }
-  .n-post .post-textbook-info .info-row {
-    color: black;
-    margin-bottom: 15px;
-    border-bottom: solid;
-    border-width: 1px;
-    width: 90%; }
-    .n-post .post-textbook-info .info-row .post-label {
-      color: #2C3E50;
-      margin: 0 20px 0 0;
-      float: left; }
-    .n-post .post-textbook-info .info-row .post-condition-label {
-      color: #2C3E50;
-      margin: 0 20px 0 0;
-      float: left;
-      font-size: 15px;
-      width: 100%; }
-.n-post .post-contact-info {
-  text-align: center;
-  margin-top: 110px;
-  color: #2C3E50;
-  margin-bottom: 20px; }
-  .n-post .post-contact-info .post-contact-avatar {
-    margin-bottom: 40px; }
-    .n-post .post-contact-info .post-contact-avatar .account-profile-pic {
-      height: 150px;
-      width: 150px;
-      border: solid 5px;
-      -moz-border-radius: 30px;
-      border-radius: 100px; }
-  .n-post .post-contact-info .contact-row {
-    color: black;
-    margin-bottom: 15px; }
-    .n-post .post-contact-info .contact-row .contact-name-label {
-      font-size: 25px;
-      color: #2C3E50; }
-    .n-post .post-contact-info .contact-row .contact-label {
-      font-size: 20px;
-      color: #2C3E50; }
-.n-post .post-image-section {
-  margin-top: 10px;
-  margin-left: 50px; }
-  .n-post .post-image-section .post-image {
-    height: 150px;
-    margin-right: 20px;
-    margin-bottom: 20px; }
-
-.create-post-textbook-info {
-  line-height: 30px;
-  vertical-align: middle;
-  font-size: 20px;
-  margin-top: 110px;
-  margin-left: 50px;
-  margin-bottom: 20px;
-  color: #2C3E50; }
-  .create-post-textbook-info .create-info-row {
-    color: black;
-    margin-bottom: 15px;
-    border-bottom: solid;
-    border-width: 1px;
-    width: 90%; }
-    .create-post-textbook-info .create-info-row .post-label {
-      color: #2C3E50;
-      float: left;
-      margin-top: 7px; }
-    .create-post-textbook-info .create-info-row .post-label-right {
-      color: #2C3E50;
-      margin-top: 0px; }
-    .create-post-textbook-info .create-info-row .create-post-condition-label {
-      color: #2C3E50;
-      display: inline;
-      font-size: 15px;
-      width: 100%; }
-    .create-post-textbook-info .create-info-row .post-input {
-      width: 90%;
-      margin-bottom: 10px; }
-    .create-post-textbook-info .create-info-row .post-input-short {
-      width: 70%;
-      display: inline;
-      margin-right: 20px; }
-    .create-post-textbook-info .create-info-row .condition-check {
-      float: left;
-      margin-right: 10px;
-      margin-top: 10px; }
-
-.create-post-image-section {
-  margin-top: 110px; }
-  .create-post-image-section .post-image {
-    height: 150px;
-    margin-right: 20px;
-    margin-bottom: 20px; }
-
-#progressbar {
-  display: none;
-  margin-top: 10px;
-  margin-bottom: 0; }
-
-.bg-image {
-  background-position: top center;
-  background-size: cover; }
-  .bg-image.aspect-square:before {
-    content: "";
-    display: block;
-    padding-top: 100%; }
-
-.image-select {
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  width: 100%; }
-  .image-select input[type="file"] {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    bottom: 0;
-    top: 0;
-    position: initial;
+  #n-post .n-container .n-title-bar .sort-button:active {
     cursor: pointer;
-    display: block;
-    opacity: 0;
-    z-index: 15; }
-  .image-select__message:after {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background-color: black(0.75);
-    bottom: 0;
-    color: #fff;
-    content: "Browse for file...";
-    display: block;
-    font-weight: bold;
-    height: 3em;
-    line-height: 3em;
-    opacity: 0;
-    padding: 0 1em;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform: translateY(100%);
-    text-shadow: 0 1px 1px black(0.3);
-    z-index: 5; }
-    .image-select:hover .image-select__message:after {
-      opacity: 1;
-      transform: translateY(0); }
-  .image-select__icon {
-    bottom: .25em;
-    color: #fff;
-    position: absolute;
-    right: .5em;
-    text-shadow: 0 1px 1px black(0.3);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 10; }
-    .image-select:hover .image-select__icon {
-      transform: scale(0.8, 0.8); }
+    background-color: #eef2e7;
+    color: #333; }
+#n-post .n-container .tool-bar .row {
+  margin-top: 20px; }
+#n-post .n-container .content {
+  height: calc(100vh - 70px - 30px);
+  overflow-y: scroll;
+  overflow-x: none;
+  padding-left: 15px;
+  padding-right: 15px; }
+  #n-post .n-container .content .input-group-addon:not(.free) {
+    min-width: 100px; }
+  @media only screen and (max-width: 767px) {
+    #n-post .n-container .content .input-group-addon:not(.free) {
+      min-width: 0px; } }
+  #n-post .n-container .content .hidden {
+    display: none; }
+  #n-post .n-container .content .input-group {
+    height: 40px;
+    width: 100%; }
+    #n-post .n-container .content .input-group .form-control {
+      height: 40px; }
+#n-post .n-container h4 {
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 20px; }
+  @media only screen and (max-width: 767px) {
+    #n-post .n-container h4 {
+      font-size: 16px; } }
+  #n-post .n-container h4 span {
+    margin-right: 20px;
+    color: #aaa;
+    cursor: pointer; }
+    @media only screen and (max-width: 767px) {
+      #n-post .n-container h4 span {
+        margin-right: 15px; } }
+  #n-post .n-container h4 .selected {
+    color: #333;
+    font-weight: bold; }
 
-.file-hover {
-  position: relative; }
-  .file-hover:before {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    bottom: 0;
-    top: 0;
-    background-color: black(0.5);
-    content: "";
-    display: block;
-    z-index: 30; }
-  .file-hover:after {
-    font-family: FontAwesome;
-    animation: 1.5s bounce infinite;
-    color: #fff;
-    content: "";
-    font-size: 5em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -0.5em 0 0 -0.5em;
-    z-index: 35; }
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0); }
-  50% {
-    transform: translateY(25%); }
-  100% {
-    transform: translateY(0); } }
 #n-account .row {
   margin-left: 0;
   margin-right: 0; }
@@ -448,6 +332,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-left: 15px;
   padding-top: calc((70px - 40px)/2 + 4px); }
   #n-account .n-container .n-title-bar .n-title {
+    margin-top: 5px;
     display: block;
     color: white;
     padding-right: 10px;
@@ -542,6 +427,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       color: #333;
       font-weight: bold; }
 
+@media only screen and (max-width: 767px) {
+  #n-nav {
+    display: none; } }
 #n-nav .n-container {
   height: 100vh;
   background: #222;

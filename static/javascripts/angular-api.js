@@ -7,11 +7,13 @@ function updateBookList(delay) {
 }
 
 function addBook(book) {
-	angular.element("body").scope().addBook(book)
+	angular.element("body").scope().addBook(book);
 }
 
 function getBook(bookID) {
+	console.log(bookID);
 	return books.filter(function (book) {
+		// console.log(book.pid);
 		return book.pid === (bookID + "");
 	})[0];
 }
@@ -29,3 +31,36 @@ function updateCurrentUser(currentUserID) {
 function updateCurrentBook(book) {
 	angular.element("body").scope().updateCurrentBook(book);
 }
+
+function getBookSeller(bookID) {
+	return getUser(getBook(bookID).sid);
+}
+
+function updateCurrentSeller(seller) {
+	angular.element("body").scope().updateCurrentSeller(seller);
+}
+
+function removeFavorates(itemsToRemove) {
+	favorites = favorites.filter(function(itemInFavorite) {
+		return !containsObject(itemsToRemove, itemInFavorite);
+	})
+	angular.element("body").scope().$apply()
+}
+
+
+
+
+
+//Helper Functions
+
+function containsObject(array, object) {
+	for (var i = 0; i < array.length; i++) {
+		if (JSON.stringify(array[i]) === JSON.stringify(object)) {
+			return true;
+		}
+	}
+	return false;
+}
+
+
+

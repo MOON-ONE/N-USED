@@ -85,7 +85,7 @@
                     </tr>
                 </thead>
                 <tbody>
-	                <tr ng-repeat="book in favourite | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
+	                <tr ng-repeat="book in favourite | filter: BookSearchQuery | orderBy: orderKey" on-finish-render="ngRepeatFinished">
 	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
 	                    <td data-title="Title">{{ book.title }}</td>
 	                    <td data-title="Condition">{{ book.condition.rank }}</td>
@@ -110,7 +110,7 @@
                     </tr>
                 </thead>
                 <tbody>
-	                <tr ng-repeat="book in historyPost | filter: BookSearchQuery | orderBy: orderList" on-finish-render="ngRepeatFinished">
+	                <tr ng-repeat="book in historyPost | filter: BookSearchQuery | orderBy: orderKey" on-finish-render="ngRepeatFinished">
 	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
 	                    <td data-title="Title">{{ book.title }}</td>
 	                    <td data-title="Condition">{{ book.condition.rank }}</td>
@@ -125,10 +125,7 @@
 <section id="n-account">
     <div class="n-container">
         <div class="row n-title-bar">
-            <div class="col-xs-3">
-                <span class="n-title"><i class="fa fa-chevron-left"></i></span>
-            </div>
-            <div class="col-xs-9">
+            <div class="col-xs-offset-3 col-xs-9">
                 <span class="n-title pull-right">ACCOUNT</span>
             </div>
         </div>	
@@ -189,14 +186,16 @@
 		            <table class="table table-hover table-mc-teal table-bordered">
 		                <thead>
 		                    <tr>
-		                        <th>Module</th>
-		                        <th>Title</th>
-		                        <th>Date</th>
-		                        <th><input class="grand-checkbox" type="checkbox"></th>
+		                        <th ng-click="setOrder('moduleCode')" class="n-cursor-pointer">Module</th>
+		                        <th ng-click="setOrder('title')" class="n-cursor-pointer">Title</th>
+		                        <th ng-click="setOrder('postTime')" class="n-cursor-pointer">Post Date</th>
+		                        <th class="n-cursor-pointer">
+		                        	<input class="grand-checkbox" type="checkbox" class="n-cursor-pointer">
+		                        </th>
 		                    </tr>
 		                </thead>
 		                <tbody>
-			                <tr ng-repeat="book in books | filter: search| filter: currentUserPastPostFilter | orderBy: orderList" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}">
+			                <tr ng-repeat="book in books | filter: search| filter: currentUserPastPostFilter | orderBy: orderKeyArray" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}">
 			                    <td class="acc-col-module-code" data-title="Title">{{ book.moduleCode }}</td>
 			                    <td class="acc-col-title" data-title="Condition">{{ book.title }}</td>
 			                    <td class="acc-col-post-date" data-title="Module Code">{{ book.postTime }}</td>
@@ -225,16 +224,16 @@
 		            <table class="table table-hover table-mc-teal table-bordered">
 		                <thead>
 		                    <tr>
-		                        <th>Module</th>
-		                        <th>Title</th>
-		                        <th>Condition</th>
-		                        <th>Price</th>
-		                        <th>Date Post</th>
-		                        <th><input class="grand-checkbox" type="checkbox"></th>
+		                        <th ng-click="setOrder('moduleCode')" class="n-cursor-pointer">Module</th>
+		                        <th ng-click="setOrder('title')" class="n-cursor-pointer">Title</th>
+		                        <th ng-click="setOrder('conditionRank')" class="n-cursor-pointer">Condition</th>
+		                        <th ng-click="setOrder('price')" class="n-cursor-pointer">Price</th>
+		                        <th ng-click="setOrder('postTime')" class="n-cursor-pointer">Date Post</th>
+		                        <th class="n-cursor-pointer"><input class="grand-checkbox" type="checkbox"></th>
 		                    </tr>
 		                </thead>
 		                <tbody>
-			                <tr ng-repeat="book in books | filter: search| filter: currentUserFavoriteFilter | orderBy: orderList" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}"	>
+			                <tr ng-repeat="book in books | filter: search | filter: currentUserFavoriteFilter | orderBy: orderKeyArray" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}"	>
 			                    <td class="acc-col-module-code" data-title="Module">{{ book.moduleCode }}</td>
 			                    <td class="acc-col-title" data-title="Title">{{ book.title }}</td>
 			                    <td class="acc-col-condition" data-title="Condition">{{ book.conditionRank + " / 10" }}</td>
