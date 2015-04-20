@@ -207,10 +207,10 @@ var users = [
 	},
 	{
 		id        : '1',
-		name      : 'Sun Jiba',
-		handphone : '98264922',
-		email     : 'jiba@gmail.com',
-		whatsapp  : 'NUS Eusoff block B room 104',
+		name      : 'Xiao Shitou',
+		handphone : '90001000',
+		email     : 'shicw@gmail.com',
+		whatsapp  : 'Chenwei',
 		password  : 'password'
 	},
 ];
