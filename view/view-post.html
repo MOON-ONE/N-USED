@@ -6,75 +6,75 @@
 					<strong><i class="fa fa-angle-left fa-2x"></i></strong>
 				</span>
 			</div>
-            <div class="col-xs-9">
-                <span class="n-title pull-right">DETAILS</span>
-            </div>
-        </div>
+			<div class="col-xs-9">
+				<span class="n-title pull-right">DETAILS</span>
+			</div>
+		</div>
 
-        <div class="content">
-        	<h4>
-        		{{ currentBook.moduleCode }}  &nbsp&nbsp-&nbsp&nbsp  {{ "S$" + currentBook.price }}
-        		&nbsp&nbsp&nbsp
-        		<span class="n-post-like">
+		<div class="content">
+			<h4>
+				{{ currentBook.moduleCode }}  &nbsp&nbsp-&nbsp&nbsp  {{ "S$" + currentBook.price }}
+				&nbsp&nbsp&nbsp
+				<span class="n-post-like">
 					<i class="fa fa-star like off"></i>
 				</span>
-        	</h4>
-        	<hr>
-        	<div class="row">
-        		<div class="col-xs-12 col-sm-7">
-	        		<div class="table-nr-responsive-vertical table-nr-striped shadow-z-1">
-			            <table class="table-nr table-nr-hover table-nr-mc-teal table-nr-bordered">
-			                <thead>
-			                </thead>
-			                <tbody>
-				                <tr>
-		    	                    <td data-title="Module">{{ currentBook.moduleCode }}</td>
-		    	                    <td data-title="Title">{{ currentBook.title }}</td>
-		    	                    <td data-title="Edition">{{ currentBook.edition }}</td>
-		    	                    <td data-title="Author">{{ currentBook.authors }}</td>
-		    	                    <td data-title="Condition">{{ currentBook.conditionRank + " / 10"}}</td>
-				                </tr>
-				                <tr>
-		    	                    <td data-title="Price">{{ "S$" + currentBook.price }}</td>
-		                            <td data-title="Post Date">{{ currentBook.postTime }}</td>
-				                </tr>
-				                <tr>
-		    	                    <td data-title="Seller">{{ currentSeller.name }}</td>
-		                            <td data-title="Phone">{{ currentSeller.handphone }}</td>
-		                            <td data-title="Email">{{ currentSeller.email }}</td>
-				                </tr>
-			                </tbody>
-			            </table>
-			        </div>
-        		</div>
-        		<div class="col-xs-12 col-sm-5">
-	        		<div class="table-nr-responsive-vertical table-nr-striped shadow-z-1">
-	    				<table class="table-nr table-nr-hover table-nr-mc-teal table-nr-bordered">
-			                <thead>
-			                </thead>
-			                <tbody>
-				                <tr>
-		    	                    <td data-title="edges are not curved">
-		    	                    	<input type="checkbox" id="post-cond-check-1" checked=true disabled>
-		    	                    </td>
-		    	                    <td data-title="not containing any notes">
-		    	                    	<input type="checkbox" id="post-cond-check-2" checked=true disabled>
-		    	                    </td>
-		    	                    <td data-title="purchased within one year">
-		    	                    	<input type="checkbox" id="post-cond-check-3" checked=true disabled>
-		    	                    </td>
-		    	                    <td data-title="wrapped">
-		    	                    	<input type="checkbox" id="post-cond-check-4" disabled>
-		    	                    </td>
-				                </tr>
-				                <tr>
-		    	                    <td data-title="Remark"><br><br><br><br><br><br><br><br></td>
-				                </tr>
-			                </tbody>
-			            </table>
-		            </div>
+			</h4>
+			<hr>
+			<div class="row">
+				<div class="col-xs-12 col-sm-7">
+					<div class="table-nr-responsive-vertical table-nr-striped shadow-z-1">
+						<table class="table-nr table-nr-hover table-nr-mc-teal table-nr-bordered">
+							<thead>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-title="Module">{{ currentBook.moduleCode }}</td>
+									<td data-title="Title">{{ currentBook.title }}</td>
+									<td data-title="Edition">{{ currentBook.edition }}</td>
+									<td data-title="Author">{{ currentBook.authors }}</td>
+									<td data-title="Condition">{{ currentBook.conditionRank + " / 10"}}</td>
+								</tr>
+								<tr>
+									<td data-title="Price">{{ "S$" + currentBook.price }}</td>
+									<td data-title="Post Date">{{ currentBook.postTime }}</td>
+								</tr>
+								<tr>
+									<td data-title="Seller">{{ currentSeller.name }}</td>
+									<td data-title="Phone">{{ currentSeller.handphone }}</td>
+									<td data-title="Email">{{ currentSeller.email }}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-5">
+					<div class="table-nr-responsive-vertical table-nr-striped shadow-z-1">
+						<table class="table-nr table-nr-hover table-nr-mc-teal table-nr-bordered">
+							<thead>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-title="edges are not curved">
+										<input type="checkbox" id="post-cond-check-1" checked=true disabled>
+									</td>
+									<td data-title="not containing any notes">
+										<input type="checkbox" id="post-cond-check-2" checked=true disabled>
+									</td>
+									<td data-title="purchased within one year">
+										<input type="checkbox" id="post-cond-check-3" checked=true disabled>
+									</td>
+									<td data-title="wrapped">
+										<input type="checkbox" id="post-cond-check-4" disabled>
+									</td>
+								</tr>
+								<tr>
+									<td data-title="Remark"><br><br><br><br><br><br><br><br></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 
-		            <div class="gallery">
+					<div class="gallery">
 						<ul>
 							<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/9.png"></li>
 							<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/2.png"></li>
@@ -84,9 +84,9 @@
 							<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/5.png"></li>
 						</ul>
 					</div>
-        		</div>
-        	</div>
-        </div>
+				</div>
+			</div>
+		</div>
 		
 	</div>
 </section>
