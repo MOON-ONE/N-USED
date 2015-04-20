@@ -516,9 +516,9 @@ $container-transition-time: 0.4s;
 // }
 
 // #progressbar {
-//     display: none;
-//     margin-top: 10px;
-//     margin-bottom: 0;
+//	 display: none;
+//	 margin-top: 10px;
+//	 margin-bottom: 0;
 // }
 
 // .bg-image {
@@ -526,11 +526,11 @@ $container-transition-time: 0.4s;
 //   background-size: cover;
   
 //   &.aspect-square {
-//     &:before {
-//       content: "";
-//       display: block;
-//       padding-top: 100%;
-//     }
+//	 &:before {
+//	   content: "";
+//	   display: block;
+//	   padding-top: 100%;
+//	 }
 //   }
 // }
 
@@ -546,7 +546,7 @@ $container-transition-time: 0.4s;
 // }
 
 // @mixin FontAwesome {
-//     font-family: FontAwesome;
+//	 font-family: FontAwesome;
 // }
 
 // $upload-text-color: #fff;
@@ -559,52 +559,52 @@ $container-transition-time: 0.4s;
 //   width: $upload-size;
   
 //   input[type="file"] {
-//     @include cover-horizontal;
-//     @include cover-vertical;
-//     position: initial;
-//     cursor: pointer;
-//     display: block;
-//     opacity: 0;
-//     z-index: 15;
+//	 @include cover-horizontal;
+//	 @include cover-vertical;
+//	 position: initial;
+//	 cursor: pointer;
+//	 display: block;
+//	 opacity: 0;
+//	 z-index: 15;
 //   }
   
 //   &__message:after {
-//     @include cover-horizontal;
-//     background-color: black(0.75);
-//     bottom: 0;
-//     color: $upload-text-color;
-//     content: "Browse for file...";
-//     display: block;
-//     font-weight: bold;
-//     height: 3em;
-//     line-height: 3em;
-//     opacity: 0;
-//     padding: 0 1em;
-//     transition: transform $global-delay ease,
-//                 opacity $global-delay ease;
-//     transform: translateY(100%);
-//     text-shadow: 0 1px 1px black(0.3);
-//     z-index: 5;
-    
-//     .image-select:hover & {
-//       opacity: 1;
-//       transform: translateY(0);
-//     }
+//	 @include cover-horizontal;
+//	 background-color: black(0.75);
+//	 bottom: 0;
+//	 color: $upload-text-color;
+//	 content: "Browse for file...";
+//	 display: block;
+//	 font-weight: bold;
+//	 height: 3em;
+//	 line-height: 3em;
+//	 opacity: 0;
+//	 padding: 0 1em;
+//	 transition: transform $global-delay ease,
+//				 opacity $global-delay ease;
+//	 transform: translateY(100%);
+//	 text-shadow: 0 1px 1px black(0.3);
+//	 z-index: 5;
+	
+//	 .image-select:hover & {
+//	   opacity: 1;
+//	   transform: translateY(0);
+//	 }
 //   }
   
 //   &__icon {
-//     bottom: .25em;
-//     color: $upload-text-color;
-//     position: absolute;
-//     right: .5em;
-//     text-shadow: 0 1px 1px black(0.3);
-//     transition: transform $global-delay ease,
-//                 opacity $global-delay ease;
-//     z-index: 10;
-    
-//     .image-select:hover & {
-//       transform: scale(0.8,0.8);
-//     }
+//	 bottom: .25em;
+//	 color: $upload-text-color;
+//	 position: absolute;
+//	 right: .5em;
+//	 text-shadow: 0 1px 1px black(0.3);
+//	 transition: transform $global-delay ease,
+//				 opacity $global-delay ease;
+//	 z-index: 10;
+	
+//	 .image-select:hover & {
+//	   transform: scale(0.8,0.8);
+//	 }
 //   }
 // }
 // $file-hover-bg-color: black(0.5);
@@ -615,25 +615,25 @@ $container-transition-time: 0.4s;
 //   position: relative;
   
 //   &:before {
-//     @include cover-horizontal;
-//     @include cover-vertical;
-//     background-color: $file-hover-bg-color;
-//     content: "";
-//     display: block;
-//     z-index: 30;
+//	 @include cover-horizontal;
+//	 @include cover-vertical;
+//	 background-color: $file-hover-bg-color;
+//	 content: "";
+//	 display: block;
+//	 z-index: 30;
 //   }
   
 //   &:after {
-//     @include FontAwesome;
-//     animation: 1.5s bounce infinite;
-//     color: $file-hover-icon-color;
-//     content: $file-hover-icon;
-//     font-size: $file-hover-icon-size;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     margin: -0.5em 0 0 -0.5em;
-//     z-index: 35;
+//	 @include FontAwesome;
+//	 animation: 1.5s bounce infinite;
+//	 color: $file-hover-icon-color;
+//	 content: $file-hover-icon;
+//	 font-size: $file-hover-icon-size;
+//	 position: absolute;
+//	 top: 50%;
+//	 left: 50%;
+//	 margin: -0.5em 0 0 -0.5em;
+//	 z-index: 35;
 //   }
 // }
 // @keyframes bounce {
