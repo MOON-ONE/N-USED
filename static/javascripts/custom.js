@@ -7,6 +7,8 @@ function viewDidLoad() {
 
 
 	// 王狗
+	updateGrandCheckbox();
+
 	$("#n-home .sort-button").click(function() {
 		var moreOptionBar = $("#n-home .n-more-option-bar");
 		if (moreOptionBar.css("display") == "none") {
@@ -19,21 +21,6 @@ function viewDidLoad() {
 			updateTableContainerHeight(70);
 		}
 	});
-
-	$("#n-home .grand-checkbox").click(function() {
-		$("#n-home .col-selection input").each(function(index) {
-			$(this).prop('checked', $("#n-home .grand-checkbox").prop('checked'));
-			var row = $(this).closest("tr");
-			var newValue = $(this).prop("checked");
-			var bookID = row.attr("book-id");
-			$.each(books, function() {
-				if (this.id == bookID) {
-					this.isSelected = newValue;
-				}
-			});
-		})
-		updateBookList();
-	})
 
 	$("#selected-only-button").click(function() {
 		
@@ -272,6 +259,41 @@ $(document).on("click", "#n-hamburger-icon", function() {
 
 
 //Home
+function updateGrandCheckbox() {
+	// only works for home page, might need generalization?
+	if ($("#n-home-wrapper").css("display") != "none") {
+		var checked = 0;
+		var unchecked = 0;
+		$("#n-home .col-selection input").each(function(index) {
+			$(this).prop('checked') ? checked ++ : unchecked ++;
+		});
+
+		if (checked == 0) {
+			$('.grand-checkbox').prop('checked', false);
+			$('.grand-checkbox').prop('indeterminate', false);
+		} else if (unchecked == 0) {
+			$('.grand-checkbox').prop('checked', true);
+			$('.grand-checkbox').prop('indeterminate', false);
+		} else {
+			$('.grand-checkbox').prop('indeterminate', true);
+		}
+	}
+}
+
+$(document).on("click", "#n-home .grand-checkbox", function() {
+	$("#n-home .col-selection input").each(function(index) {
+		$(this).prop('checked', $("#n-home .grand-checkbox").prop('checked'));
+		var row = $(this).closest("tr");
+		var newValue = $(this).prop("checked");
+		var bookID = row.attr("book-id");
+		$.each(books, function() {
+			if (this.id == bookID) {
+				this.isSelected = newValue;
+			}
+		});
+	})
+	updateBookList();
+})
 
 $(document).on("click", ".book-item .check", function() {
 	var checkbox = $(this).find("input");
@@ -284,7 +306,8 @@ $(document).on("click", ".book-item .check", function() {
 			this.isSelected = newValue;
 		}
 	});
-	updateBookList();
+	updateGrandCheckbox();
+	updateBookList(1000);
 });
 
 $(document).on("click", "#n-home .col-selection input", function() {
@@ -296,6 +319,7 @@ $(document).on("click", "#n-home .col-selection input", function() {
 			this.isSelected = newValue;
 		}
 	});
+	updateGrandCheckbox();
 	updateBookList();
 	return false;
 });
