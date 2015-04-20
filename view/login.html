@@ -7,25 +7,23 @@
 		</div>	
 
 		<div class="content">
-			<hr>
-			
 			<div class="content-block login">	
 				<div class="row">
-					<div class="col-sm-12 col-md-8 col-md-offset-2">
-						<div class="input-group">
-						  	<span class="input-group-addon" id="sizing-addon2">Name</span>
-						  	<input type="text" class="form-control" placeholder="Full Name" aria-describedby="sizing-addon2" value="{{ currentUser.name }}">
-						</div>
-
-						<div class="input-group">
-						  	<span class="input-group-addon" id="sizing-addon2">Phone</span>
-						  	<input type="text" class="form-control" placeholder="Hand Phone" aria-describedby="sizing-addon2" value="{{ currentUser.handphone }}">
-						</div>
-
+					<div class="login-col">
 						<div class="input-group">
 						  	<span class="input-group-addon" id="sizing-addon2">Email</span>
-						  	<input type="text" class="form-control" placeholder="Email" aria-describedby="sizing-addon2" value="{{ currentUser.email }}">
+						  	<input type="text" class="form-control" placeholder="Email" aria-describedby="sizing-addon2">
 						</div>
+
+						<div class="input-group">
+						  	<span class="input-group-addon" id="sizing-addon2">Password</span>
+						  	<input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="login-col">
+						<button class="btn btn-success"><i class="fa fa-check"></i></button>
 					</div>
 				</div>
 			</div>
