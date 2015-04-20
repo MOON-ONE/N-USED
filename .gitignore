@@ -11,3 +11,5 @@ static/javascripts/min/custom-min.js
 static/javascripts/min/angular-manager-min.js
 
 static/javascripts/min/data-min.js
+
+view/nav.html
