@@ -330,6 +330,8 @@ $(document).on("click", "#n-login-btn", function() {
 	if (user.length > 0) {
 		currentUserID = user[0].id;
 		updateCurrentUser(currentUserID);
+		$('#n-login-email').val('');
+		$('#n-login-password').val('');
 		$('#n-nav-home').click();
 	} else {
 		$('#n-login-btn').addClass('btn-danger');
