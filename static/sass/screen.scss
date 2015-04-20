@@ -347,302 +347,6 @@ $container-transition-time: 0.4s;
 
 
 // 林狗
-// $n-post-nav-height: 70px;
-// $n-post-nav-color: black;
-// $n-post-text-color: black;
-// .n-post {
-// 	.n-post-nav {
-// 		width: 100%;
-// 		height: $n-post-nav-height;
-// 		line-height: $n-post-nav-height;
-// 		vertical-align: middle;
-// 		text-align: left;
-// 		position: absolute;
-// 		margin: 0;
-// 		padding: 0 0 0 20px;
-// 		background: $n-post-nav-color;
-// 		color: white;
-// 		font-size: 25px;
-// 		display: block;
-// 		.post-back-button {
-// 			text-decoration: none;
-// 			color: white;
-// 			margin-right: 20px;
-// 			float: left;
-// 		}
-// 		.post-module-code {
-// 			font-size: 35px;
-// 			margin-top: 2px;
-// 			float: left;
-// 		}
-// 		.post-create {
-// 			font-size: 35px;
-// 			float: right;
-// 			margin-top: 5px;
-// 			margin-right: 40px;
-// 			color: #2ECC71;
-// 			text-decoration: none;
-// 		}
-// 		.n-post-like {
-// 			margin-top: 2px;
-// 			margin-left: 15px;
-// 			float: left;
-// 			font-size: 30px;
-// 			cursor: pointer;
-// 		}
-// 		.on {
-// 			color: gold;
-// 		}
-// 		.off {
-// 			color: grey;
-// 		}
-// 	}
-// 	.post-textbook-info {
-// 		line-height: 30px;
-// 		vertical-align: middle;
-// 		font-size: 20px;
-// 		margin-top: 120px;
-// 		margin-left: 50px;
-// 		margin-bottom: 20px;
-// 		color: $n-post-text-color;
-// 		.info-row {
-// 			color: $n-post-nav-color;
-// 			margin-bottom: 15px;
-// 			border-bottom: solid;
-// 			border-width: 1px;
-// 			width: 90%;
-// 			.post-label {
-// 				color: $n-post-text-color;
-// 				margin: 0 20px 0 0;
-// 				float: left;
-// 			}
-// 			.post-condition-label {
-// 				color: $n-post-text-color;
-// 				margin: 0 20px 0 0;
-// 				float: left;
-// 				font-size: 15px;
-// 				width: 100%;
-// 			}
-// 		}
-// 	}
-// 	.post-contact-info {
-// 		text-align: center;
-// 		margin-top: 110px;
-// 		color: $n-post-text-color;
-// 		margin-bottom: 20px;
-// 		.post-contact-avatar {
-// 			margin-bottom: 40px;
-// 			.account-profile-pic {
-// 				height: 150px;
-// 				width: 150px;
-// 				border:solid 5px ;
-// 				-moz-border-radius: 30px;
-// 				border-radius: 100px;
-// 			}
-// 		}
-// 		.contact-row {
-// 			color: $n-post-nav-color;
-// 			margin-bottom: 20px;
-// 			.contact-name-label {
-// 				font-size: 25px;
-// 				color: $n-post-text-color;
-// 			}
-// 			.contact-label {
-// 				font-size: 20px;
-// 				color: $n-post-text-color;
-// 			}
-// 		}
-// 	}
-// 	.post-image-section {
-// 		margin-top: 10px;
-// 		margin-left: 50px;
-// 		.post-image {
-// 			height: 150px;
-// 			margin-right: 30px;
-// 			margin-bottom: 20px;
-// 		}
-// 	}
-// }
-// .create-post-textbook-info {
-// 	line-height: 30px;
-// 	vertical-align: middle;
-// 	font-size: 20px;
-// 	margin-top: 110px;
-// 	margin-left: 50px;
-// 	margin-bottom: 20px;
-// 	color: $n-post-text-color;
-// 	.create-info-row {
-// 		color: $n-post-nav-color;
-// 		margin-bottom: 15px;
-// 		width: 90%;
-// 		.post-label {
-// 			color: $n-post-text-color;
-// 			float: left;
-// 			margin-top: 7px;
-// 		}
-// 		.post-label-right {
-// 			color: $n-post-text-color;
-// 			margin-top: 0px;
-// 		}
-// 		.create-post-condition-label {
-// 			color: $n-post-text-color;
-// 			display: inline;
-// 			font-size: 15px;
-// 			width: 100%;
-// 		}
-// 		.post-input {
-// 			width: 90%;
-// 			margin-bottom: 10px;
-// 		}
-// 		.post-input-short {
-// 			width: 70%;
-// 			display: inline;
-// 			margin-right: 20px;
-// 		}
-// 		.condition-check {
-// 			float: left;
-// 			margin-right: 10px;
-// 			margin-top: 10px;
-// 		}
-// 	}
-// }
-// .create-post-image-section {
-// 	margin-top: 110px;
-// 	.post-image {
-// 		height: 150px;
-// 		margin-right: 20px;
-// 		margin-bottom: 20px;
-// 	}
-// }
-
-// #progressbar {
-//	 display: none;
-//	 margin-top: 10px;
-//	 margin-bottom: 0;
-// }
-
-// .bg-image {
-//   background-position: top center;
-//   background-size: cover;
-  
-//   &.aspect-square {
-//	 &:before {
-//	   content: "";
-//	   display: block;
-//	   padding-top: 100%;
-//	 }
-//   }
-// }
-
-// @mixin cover-horizontal {
-//   position: absolute;
-//   left: 0;
-//   width: 100%;
-// }
-
-// @mixin cover-vertical {
-//   bottom: 0;
-//   top: 0;
-// }
-
-// @mixin FontAwesome {
-//	 font-family: FontAwesome;
-// }
-
-// $upload-text-color: #fff;
-// $upload-size: 100%;
-// $global-delay: .3s;
-// .image-select {
-//   margin: 0 auto;
-//   position: relative;
-//   overflow: hidden;
-//   width: $upload-size;
-  
-//   input[type="file"] {
-//	 @include cover-horizontal;
-//	 @include cover-vertical;
-//	 position: initial;
-//	 cursor: pointer;
-//	 display: block;
-//	 opacity: 0;
-//	 z-index: 15;
-//   }
-  
-//   &__message:after {
-//	 @include cover-horizontal;
-//	 background-color: black(0.75);
-//	 bottom: 0;
-//	 color: $upload-text-color;
-//	 content: "Browse for file...";
-//	 display: block;
-//	 font-weight: bold;
-//	 height: 3em;
-//	 line-height: 3em;
-//	 opacity: 0;
-//	 padding: 0 1em;
-//	 transition: transform $global-delay ease,
-//				 opacity $global-delay ease;
-//	 transform: translateY(100%);
-//	 text-shadow: 0 1px 1px black(0.3);
-//	 z-index: 5;
-	
-//	 .image-select:hover & {
-//	   opacity: 1;
-//	   transform: translateY(0);
-//	 }
-//   }
-  
-//   &__icon {
-//	 bottom: .25em;
-//	 color: $upload-text-color;
-//	 position: absolute;
-//	 right: .5em;
-//	 text-shadow: 0 1px 1px black(0.3);
-//	 transition: transform $global-delay ease,
-//				 opacity $global-delay ease;
-//	 z-index: 10;
-	
-//	 .image-select:hover & {
-//	   transform: scale(0.8,0.8);
-//	 }
-//   }
-// }
-// $file-hover-bg-color: black(0.5);
-// $file-hover-icon-color: #fff;
-// $file-hover-icon: "\f0ee";
-// $file-hover-icon-size: 5em;
-// .file-hover {
-//   position: relative;
-  
-//   &:before {
-//	 @include cover-horizontal;
-//	 @include cover-vertical;
-//	 background-color: $file-hover-bg-color;
-//	 content: "";
-//	 display: block;
-//	 z-index: 30;
-//   }
-  
-//   &:after {
-//	 @include FontAwesome;
-//	 animation: 1.5s bounce infinite;
-//	 color: $file-hover-icon-color;
-//	 content: $file-hover-icon;
-//	 font-size: $file-hover-icon-size;
-//	 position: absolute;
-//	 top: 50%;
-//	 left: 50%;
-//	 margin: -0.5em 0 0 -0.5em;
-//	 z-index: 35;
-//   }
-// }
-// @keyframes bounce {
-//   0% { transform: translateY(0) }
-//   50% { transform: translateY(25%) }
-//   100% { transform: translateY(0) }
-// }
-
-
 #n-post, #n-view-post {
 
 	.col-xs-0,
@@ -1258,6 +962,28 @@ $container-transition-time: 0.4s;
 		margin-right: 0;
 	}
 
+	.login {
+		margin-top: 200px;
+	}
+
+	.login-col {
+		$width : 500px;
+		$padding : 20px;
+		padding: $padding;
+		width: $width;
+		text-align: center;
+		margin-left: calc((100% - #{$width}) / 2);
+
+		@media only screen and (max-width: $width + 2 * $padding) {
+			width: 100%;
+			margin-left: auto;
+		}
+
+		.btn {
+			width: 100%;
+		}
+	}
+
 	.n-container {
 		$title-bar-height: 70px;
 		$height: 40px;
@@ -1293,7 +1019,7 @@ $container-transition-time: 0.4s;
 					width: 100%;
 					margin-top: 15px;
 					.input-group-addon {
-						width: 70px;
+						width: 120px;
 					}
 
 					.form-control {
@@ -1347,8 +1073,6 @@ $container-transition-time: 0.4s;
 					font-weight: bold;
 				}
 			}
-
-
 			
 		}
 	}
