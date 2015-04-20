@@ -203,6 +203,7 @@ var users = [
 		handphone : '98264921',
 		email     : 'jixuan@gmail.com',
 		whatsapp  : 'NUS Eusoff block B room 104',
+		password  : 'password'
 	},
 	{
 		id        : '1',
@@ -210,6 +211,7 @@ var users = [
 		handphone : '98264922',
 		email     : 'jixuan@gmail.com',
 		whatsapp  : 'NUS Eusoff block B room 104',
+		password  : 'password'
 	},
 ];
 
