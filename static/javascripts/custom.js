@@ -183,6 +183,10 @@ $(document).on("click", "div[id^='n-nav-']", function() {
 		updateCurrentUser(currentUserID);
 		$('#n-nav-home').click();
 	} else {
+		if ($(this).attr('id') == 'n-nav-login') {
+			resetLoginButton();
+		}
+
 		var section = $(this).attr('id').substr(6);
 		$(".n-nav-icon").removeClass("active");
 		$(this).addClass("active");
@@ -311,6 +315,11 @@ function getSelectedFavorite() {
 //End of Account
 
 // Login
+function resetLoginButton() {
+	$('#n-login-btn').removeClass('btn-danger');
+	$('#n-login-btn').html('<i class="fa fa-check"></i>');
+}
+
 $(document).on("click", "#n-login-btn", function() {
 	var email = $('#n-login-email').val();
 	var password = $('#n-login-password').val();
@@ -323,7 +332,16 @@ $(document).on("click", "#n-login-btn", function() {
 		updateCurrentUser(currentUserID);
 		$('#n-nav-home').click();
 	} else {
-		$('#n-login-btn').addClass('n-invalid');
+		$('#n-login-btn').addClass('btn-danger');
+		$('#n-login-btn').html('<i class="fa fa-times"></i>');
 	}
+});
+
+$(document).on("focus", "#n-login-email", function() {
+	resetLoginButton();
+});
+
+$(document).on("focus", "#n-login-password", function() {
+	resetLoginButton();
 });
 // End of Login
