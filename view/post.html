@@ -13,7 +13,7 @@
 			<div class="row create-info-row">
 				<div class="col-xs-12">
 					<div class="input-group">
-						<span class="input-group-addon">Module *</span>
+						<span class="input-group-addon">Module <span class="required-mark">*</span></span>
 						<input class="form-control" placeholder="Module Code" id="post-code">
 					</div>
 				</div>
@@ -21,7 +21,7 @@
 			<div class="row create-info-row">
 				<div class="col-xs-12">
 					<div class="input-group">
-						<span class="input-group-addon">Title *</span>
+						<span class="input-group-addon">Title <span class="required-mark">*</span></span>
 						<input class="form-control" placeholder="Textbook Title" id="post-title">
 					</div>
 				</div>
@@ -29,7 +29,7 @@
 			<div class="row create-info-row">
 				<div class="col-xs-12 col-sm-6">
 					<div class="input-group">
-						<span class="input-group-addon">Condition *</span>
+						<span class="input-group-addon">Condition <span class="required-mark">*</span></span>
 						<input class="form-control" placeholder="from 1 to 10" id="post-condition">
 						<label class="input-group-addon free">/ 10</label>
 					</div>
@@ -68,7 +68,9 @@
 				</div>
 			</div>
 
-			<div class="row create-info-row hidden">
+			<hr>
+
+			<div class="row create-info-row">
 				<div class="col-xs-12">
 					<div class="input-group">
 						<span class="input-group-addon">Edition</span>
@@ -76,7 +78,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row create-info-row hidden">
+			<div class="row create-info-row">
 				<div class="col-xs-12">
 					<div class="input-group">
 						<span class="input-group-addon">Authors</span>
@@ -84,7 +86,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row create-info-row hidden">
+			<div class="row create-info-row">
 				<div class="col-xs-12">
 					<div class="input-group">
 						<span class="input-group-addon">Publisher</span>
@@ -93,7 +95,7 @@
 				</div>
 			</div>
 
-			<div class="row button-row">
+			<!-- <div class="row button-row">
 				<div class="col-xs-6 col-sm-3">
 					<div class="input-group">
 						<button class="btn btn-info" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="add edition field for this book">+ Edition</i></button>
@@ -117,14 +119,14 @@
 						<button class="btn btn-info" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="add pictures for this book">+ Picture</i></button>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 			<hr>
 
 			<div class="row create-info-row">
 				<div class="col-xs-12 col-sm-6">
 					<div class="input-group">
-						<span class="input-group-addon">Price *</span>
+						<span class="input-group-addon">Price <span class="required-mark">*</span></span>
 						<input class="form-control" placeholder="Price" id="post-price">
 						<span class="input-group-addon free">SGD</span>
 					</div>
@@ -139,7 +141,7 @@
 			<div class="row create-info-row">
 				<div class="col-xs-12">
 					<div class="input-group">
-						<span class="input-group-addon">Name *</span>
+						<span class="input-group-addon">Name <span class="required-mark">*</span></span>
 						<input class="form-control" placeholder="Full Name" value="{{ currentUser.name }}">
 					</div>
 				</div>
@@ -148,7 +150,7 @@
 			<div class="row create-info-row">
 				<div class="col-xs-12">
 					<div class="input-group">
-						<span class="input-group-addon">Phone *</span>
+						<span class="input-group-addon">Phone <span class="required-mark">*</span></span>
 						<input class="form-control" placeholder="Hand Phone Number" value="{{ currentUser.handphone }}">
 					</div>
 				</div>
@@ -157,7 +159,7 @@
 			<div class="row create-info-row">
 				<div class="col-xs-12">
 					<div class="input-group">
-						<span class="input-group-addon">Email *</span>
+						<span class="input-group-addon">Email <span class="required-mark">*</span></span>
 						<input class="form-control" placeholder="Email Address" value="{{ currentUser.email }}">
 					</div>
 				</div>
