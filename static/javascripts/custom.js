@@ -274,6 +274,7 @@ $(document).on("click", "div[id^='n-nav-']", function() {
 		$(this).addClass("active");
 		$(".n-main >div:visible").fadeOut(200, 'swing', function() {
 			$("#n-" + section + "-wrapper").fadeIn(200);
+			$(window).resize();
 		});
 		return false;
 	}
