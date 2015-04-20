@@ -10,24 +10,24 @@
 
 		<div class="col-md-8 n-nav-icons">	
 			<div class="icons">
-    			<a href="#favourite"><i class="fa fa-star"><span>Favourite</span></i></a>
-    			<a href="#history"><i class="fa fa-book"><span>History</span></i></a>
-    			<a href="#profile"><i class="fa fa-user"><span>Profile</span></i></a>
-    		</div>
-    	</div>
+				<a href="#favourite"><i class="fa fa-star"><span>Favourite</span></i></a>
+				<a href="#history"><i class="fa fa-book"><span>History</span></i></a>
+				<a href="#profile"><i class="fa fa-user"><span>Profile</span></i></a>
+			</div>
+		</div>
 	</div>
 
 	<div class="row account-pic-and-name">
   		<div class="col-md-10">
   			<div class="col-sm-1"></div>
-    		<div class="col-sm-4">
-      			<img class="account-profile-pic" src="static/images/gebilaowang.png">
-      		</div>
-      		<div class="col-sm-4" ng-repeat="user in user" on-finish-render="ngRepeatFinished">
-      			<h1 class="n-account-name" data-title="name">{{ user.name }}</h1>
-      		</div>
-    	</div>
-    </div>
+			<div class="col-sm-4">
+	  			<img class="account-profile-pic" src="static/images/gebilaowang.png">
+	  		</div>
+	  		<div class="col-sm-4" ng-repeat="user in user" on-finish-render="ngRepeatFinished">
+	  			<h1 class="n-account-name" data-title="name">{{ user.name }}</h1>
+	  		</div>
+		</div>
+	</div>
 	
 	
 	<div id="profile" class="n-account-toggle">
@@ -73,79 +73,79 @@
 	</div> 
 	<div id="favourite" class="n-account-toggle" style="display:none">
 		
-            <div class="table-responsive-vertical shadow-z-1">
-           
-            <table class="table table-hover table-mc-light-blue">
-                <thead>
-                    <tr>
-                        <th>Module Code</th>
-                        <th>Title</th>
-                        <th>Condition</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-	                <tr ng-repeat="book in favourite | filter: BookSearchQuery | orderBy: orderKey" on-finish-render="ngRepeatFinished">
-	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
-	                    <td data-title="Title">{{ book.title }}</td>
-	                    <td data-title="Condition">{{ book.condition.rank }}</td>
-	                    <td data-title="Price">{{ book.price }}</td>
-	                </tr>
-                </tbody>
-            </table>
-        </div>
+			<div class="table-responsive-vertical shadow-z-1">
+		   
+			<table class="table table-hover table-mc-light-blue">
+				<thead>
+					<tr>
+						<th>Module Code</th>
+						<th>Title</th>
+						<th>Condition</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="book in favourite | filter: BookSearchQuery | orderBy: orderKey" on-finish-render="ngRepeatFinished">
+						<td data-title="Module Code">{{ book.moduleCode }}</td>
+						<td data-title="Title">{{ book.title }}</td>
+						<td data-title="Condition">{{ book.condition.rank }}</td>
+						<td data-title="Price">{{ book.price }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 	</div>
 	<div id="history" class="n-account-toggle" style="display:none">
 		
-            <div class="table-responsive-vertical shadow-z-1">
-            
-            <table class="table table-hover table-mc-light-blue">
-                <thead>
-                    <tr>
-                        <th>Module Code</th>
-                        <th>Title</th>
-                        <th>Condition</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-	                <tr ng-repeat="book in historyPost | filter: BookSearchQuery | orderBy: orderKey" on-finish-render="ngRepeatFinished">
-	                    <td data-title="Module Code">{{ book.moduleCode }}</td>
-	                    <td data-title="Title">{{ book.title }}</td>
-	                    <td data-title="Condition">{{ book.condition.rank }}</td>
-	                    <td data-title="Price">{{ book.price }}</td>
-	                </tr>
-                </tbody>
-            </table>
-        </div>
+			<div class="table-responsive-vertical shadow-z-1">
+			
+			<table class="table table-hover table-mc-light-blue">
+				<thead>
+					<tr>
+						<th>Module Code</th>
+						<th>Title</th>
+						<th>Condition</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="book in historyPost | filter: BookSearchQuery | orderBy: orderKey" on-finish-render="ngRepeatFinished">
+						<td data-title="Module Code">{{ book.moduleCode }}</td>
+						<td data-title="Title">{{ book.title }}</td>
+						<td data-title="Condition">{{ book.condition.rank }}</td>
+						<td data-title="Price">{{ book.price }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
 	</div>
 </section> -->
 <section id="n-account">
-    <div class="n-container">
-        <div class="row n-title-bar">
-            <div class="col-xs-offset-3 col-xs-9">
-                <span class="n-title pull-right">ACCOUNT</span>
-            </div>
-        </div>	
+	<div class="n-container">
+		<div class="row n-title-bar">
+			<div class="col-xs-offset-3 col-xs-9">
+				<span class="n-title pull-right">ACCOUNT</span>
+			</div>
+		</div>	
 
-        <div class="content">
-        	<h4>
-        		<span href=".profile" class="selected">PROFILE</span>
-        		<span href=".posts">POSTS</span>
-        		<span href=".stars">STARS</span>
-        	</h4>
+		<div class="content">
+			<h4>
+				<span href=".profile" class="selected">PROFILE</span>
+				<span href=".posts">POSTS</span>
+				<span href=".stars">STARS</span>
+			</h4>
 			
 			<hr>
 			
-        	<div class="content-block profile">	
-	        	<div class="row">
-	        		<div class="col-xs-12 col-sm-3">
-	        			<div class="avatar-container"></div>
-	        		</div>
-	        		<div class="col-xs-12 col-sm-9">
-	        			<div class="input-group">
+			<div class="content-block profile">	
+				<div class="row">
+					<div class="col-xs-12 col-sm-3">
+						<div class="avatar-container"></div>
+					</div>
+					<div class="col-xs-12 col-sm-9">
+						<div class="input-group">
 						  	<span class="input-group-addon" id="sizing-addon2">Name</span>
 						  	<input type="text" class="form-control" placeholder="Full Name" aria-describedby="sizing-addon2" value="{{ currentUser.name }}">
 						</div>
@@ -159,94 +159,94 @@
 						  	<span class="input-group-addon" id="sizing-addon2">Email</span>
 						  	<input type="text" class="form-control" placeholder="Email" aria-describedby="sizing-addon2" value="{{ currentUser.email }}">
 						</div>
-	        		</div>
-        		</div>
-        	</div>
+					</div>
+				</div>
+			</div>
 
-        	<div class="content-block posts">
-        	    <div class="row search-bar">
-	        	    <div class="col-xs-12 col-sm-9">
-	        	    	<div class="input-group">
+			<div class="content-block posts">
+				<div class="row search-bar">
+					<div class="col-xs-12 col-sm-9">
+						<div class="input-group">
 							  	<span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"></i></span>
 							  	<input type="text" class="form-control" placeholder="Any Keywords" aria-describedby="sizing-addon2" ng-model="search.$">
 							</div>
-	        	    </div>
+					</div>
 
-	        	    <div class="col-xs-6 col-sm-1 btn-container">
-	        	    	<button class="btn btn-success" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="re-list the selected sold-out posts"><i class="fa fa-repeat"></i></button>
-	        	    </div>
-	        	    <div class="col-xs-6 col-sm-1 btn-container">
-	        	    	<button class="btn btn-primary" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="mark the selected posts as sold out"><i class="fa fa-ban"></i></button>
-	        	    </div>
-	        	    <div class="col-xs-6 col-sm-1 btn-container">
-	        	    	<button class="btn btn-danger" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="delete the selected posts"><i class="fa fa-trash-o"></i></button>
-	        	    </div>
-        		</div>
-        		<div class="table-responsive-vertical shadow-z-1">
-		            <table class="table table-hover table-mc-teal table-bordered">
-		                <thead>
-		                    <tr>
-		                        <th ng-click="setOrder('moduleCode')" class="n-cursor-pointer">Module</th>
-		                        <th ng-click="setOrder('title')" class="n-cursor-pointer">Title</th>
-		                        <th ng-click="setOrder('postTime')" class="n-cursor-pointer">Post Date</th>
-		                        <th class="n-cursor-pointer">
-		                        	<input class="grand-checkbox" type="checkbox" class="n-cursor-pointer">
-		                        </th>
-		                    </tr>
-		                </thead>
-		                <tbody>
-			                <tr ng-repeat="book in books | filter: search| filter: currentUserPastPostFilter | orderBy: orderKeyArray" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}">
-			                    <td class="acc-col-module-code" data-title="Title">{{ book.moduleCode }}</td>
-			                    <td class="acc-col-title" data-title="Condition">{{ book.title }}</td>
-			                    <td class="acc-col-post-date" data-title="Module Code">{{ book.postTime }}</td>
-		                        <td class="acc-col-selection" data-title="Select">
-		                            <input type="checkbox" ng-checked="book.isSelected" data-toggle="tooltip" data-delay="500" data-placement="left" title="You can check this box to narrow your search scope or hide unrelated items">
-		                        </td>
-			                </tr>
-		                </tbody>
-		            </table>
-		        </div>
-        	</div>
+					<div class="col-xs-6 col-sm-1 btn-container">
+						<button class="btn btn-success" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="re-list the selected sold-out posts"><i class="fa fa-repeat"></i></button>
+					</div>
+					<div class="col-xs-6 col-sm-1 btn-container">
+						<button class="btn btn-primary" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="mark the selected posts as sold out"><i class="fa fa-ban"></i></button>
+					</div>
+					<div class="col-xs-6 col-sm-1 btn-container">
+						<button class="btn btn-danger" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="delete the selected posts"><i class="fa fa-trash-o"></i></button>
+					</div>
+				</div>
+				<div class="table-responsive-vertical shadow-z-1">
+					<table class="table table-hover table-mc-teal table-bordered">
+						<thead>
+							<tr>
+								<th ng-click="setOrder('moduleCode')" class="n-cursor-pointer">Module</th>
+								<th ng-click="setOrder('title')" class="n-cursor-pointer">Title</th>
+								<th ng-click="setOrder('postTime')" class="n-cursor-pointer">Post Date</th>
+								<th class="n-cursor-pointer">
+									<input class="grand-checkbox" type="checkbox" class="n-cursor-pointer">
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="book in books | filter: search| filter: currentUserPastPostFilter | orderBy: orderKeyArray" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}">
+								<td class="acc-col-module-code" data-title="Title">{{ book.moduleCode }}</td>
+								<td class="acc-col-title" data-title="Condition">{{ book.title }}</td>
+								<td class="acc-col-post-date" data-title="Module Code">{{ book.postTime }}</td>
+								<td class="acc-col-selection" data-title="Select">
+									<input type="checkbox" ng-checked="book.isSelected" data-toggle="tooltip" data-delay="500" data-placement="left" title="You can check this box to narrow your search scope or hide unrelated items">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 
-        	<div class="content-block stars">
-        		<div class="row search-bar">
-	        	    <div class="col-xs-12 col-sm-11">
-	        	    	<div class="input-group">
+			<div class="content-block stars">
+				<div class="row search-bar">
+					<div class="col-xs-12 col-sm-11">
+						<div class="input-group">
 							  	<span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"></i></span>
 							  	<input type="text" class="form-control" placeholder="Any Keywords" aria-describedby="sizing-addon2" ng-model="search.$">
 							</div>
-	        	    </div>
-	        	    <div class="col-xs-12 col-sm-1 btn-container">
-	        	    	<button class="btn btn-danger" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="remove the selected posts out of the star list"><i class="fa fa-trash-o"></i></button>
-	        	    </div>
-        		</div>
-        		<div class="table-responsive-vertical shadow-z-1">
-		            <table class="table table-hover table-mc-teal table-bordered">
-		                <thead>
-		                    <tr>
-		                        <th ng-click="setOrder('moduleCode')" class="n-cursor-pointer">Module</th>
-		                        <th ng-click="setOrder('title')" class="n-cursor-pointer">Title</th>
-		                        <th ng-click="setOrder('conditionRank')" class="n-cursor-pointer">Condition</th>
-		                        <th ng-click="setOrder('price')" class="n-cursor-pointer">Price</th>
-		                        <th ng-click="setOrder('postTime')" class="n-cursor-pointer">Date Post</th>
-		                        <th class="n-cursor-pointer"><input class="grand-checkbox" type="checkbox"></th>
-		                    </tr>
-		                </thead>
-		                <tbody>
-			                <tr ng-repeat="book in books | filter: search | filter: currentUserFavoriteFilter | orderBy: orderKeyArray" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}"	>
-			                    <td class="acc-col-module-code" data-title="Module">{{ book.moduleCode }}</td>
-			                    <td class="acc-col-title" data-title="Title">{{ book.title }}</td>
-			                    <td class="acc-col-condition" data-title="Condition">{{ book.conditionRank + " / 10" }}</td>
-			                    <td class="acc-col-price" data-title="Price">{{ "S$" + book.price }}</td>
-			                    <td class="acc-col-post-date" data-title="Module Code">{{ book.postTime }}</td>
-		                        <td class="acc-col-selection" data-title="Select">
-		                            <input type="checkbox" ng-checked="book.isSelected" data-toggle="tooltip" data-delay="500" data-placement="left" title="You can check this box to narrow your search scope or hide unrelated items">
-		                        </td>
-			                </tr>
-		                </tbody>
-		            </table>
-		        </div>
-        	</div>
-        </div>
-    </div>
+					</div>
+					<div class="col-xs-12 col-sm-1 btn-container">
+						<button class="btn btn-danger" data-toggle="tooltip" data-delay="500" data-placement="bottom" title="remove the selected posts out of the star list"><i class="fa fa-trash-o"></i></button>
+					</div>
+				</div>
+				<div class="table-responsive-vertical shadow-z-1">
+					<table class="table table-hover table-mc-teal table-bordered">
+						<thead>
+							<tr>
+								<th ng-click="setOrder('moduleCode')" class="n-cursor-pointer">Module</th>
+								<th ng-click="setOrder('title')" class="n-cursor-pointer">Title</th>
+								<th ng-click="setOrder('conditionRank')" class="n-cursor-pointer">Condition</th>
+								<th ng-click="setOrder('price')" class="n-cursor-pointer">Price</th>
+								<th ng-click="setOrder('postTime')" class="n-cursor-pointer">Date Post</th>
+								<th class="n-cursor-pointer"><input class="grand-checkbox" type="checkbox"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="book in books | filter: search | filter: currentUserFavoriteFilter | orderBy: orderKeyArray" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" is-sold="{{ book.isSold }}"	>
+								<td class="acc-col-module-code" data-title="Module">{{ book.moduleCode }}</td>
+								<td class="acc-col-title" data-title="Title">{{ book.title }}</td>
+								<td class="acc-col-condition" data-title="Condition">{{ book.conditionRank + " / 10" }}</td>
+								<td class="acc-col-price" data-title="Price">{{ "S$" + book.price }}</td>
+								<td class="acc-col-post-date" data-title="Module Code">{{ book.postTime }}</td>
+								<td class="acc-col-selection" data-title="Select">
+									<input type="checkbox" ng-checked="book.isSelected" data-toggle="tooltip" data-delay="500" data-placement="left" title="You can check this box to narrow your search scope or hide unrelated items">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
