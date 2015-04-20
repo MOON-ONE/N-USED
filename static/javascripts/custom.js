@@ -309,3 +309,21 @@ function getSelectedFavorite() {
 
 
 //End of Account
+
+// Login
+$(document).on("click", "#n-login-btn", function() {
+	var email = $('#n-login-email').val();
+	var password = $('#n-login-password').val();
+	var user = users.filter(function (obj) {
+		return obj.email == email && obj.password == password;
+	});
+
+	if (user.length > 0) {
+		currentUserID = user[0].id;
+		updateCurrentUser(currentUserID);
+		$('#n-nav-home').click();
+	} else {
+		$('#n-login-btn').addClass('n-invalid');
+	}
+});
+// End of Login
