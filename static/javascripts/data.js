@@ -209,7 +209,7 @@ var users = [
 		id        : '1',
 		name      : 'Sun Jiba',
 		handphone : '98264922',
-		email     : 'jixuan@gmail.com',
+		email     : 'jiba@gmail.com',
 		whatsapp  : 'NUS Eusoff block B room 104',
 		password  : 'password'
 	},
