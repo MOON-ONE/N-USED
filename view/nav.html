@@ -16,24 +16,25 @@
 				</div>
 			</div>
 
-			<div class="n-nav-icon" id="n-nav-post">
-				<a href="#"><i class="fa fa-plus-circle"></i></a>
-				<div class="n-nav-text" style="color: #fff">
-					Post
+			<div ng-if="currentUser">
+				<div class="n-nav-icon" id="n-nav-post">
+					<a href="#"><i class="fa fa-thumb-tack"></i></a>
+					<div class="n-nav-text" style="color: #fff">
+						Post
+					</div>
+				</div>
+
+				<div class="n-nav-icon" id="n-nav-account">
+					<a href="#"><i class="fa fa-street-view"></i></a>
+					<div class="n-nav-text" style="color: #fff">
+						Account
+					</div>
 				</div>
 			</div>
-
-			<div class="n-nav-icon" id="n-nav-account">
-				<a href="#"><i class="fa fa-user"></i></a>
+			<div class="n-nav-icon n-bottom-icon {{currentUser ? '' : 'userless'}}" id="{{currentUser ? 'n-nav-logout' : 'n-nav-login'}}">
+				<a href="#"><i class="fa {{currentUser ? 'fa-sign-out' : 'fa-sign-in'}}"></i></a>
 				<div class="n-nav-text" style="color: #fff">
-					Account
-				</div>
-			</div>
-
-			<div class="n-nav-icon n-bottom-icon" id="n-nav-sign-out">
-				<a href="#"><i class="fa fa-sign-out"></i></a>
-				<div class="n-nav-text" style="color: #fff">
-					Log out
+					{{currentUser ? 'Log out' : 'Log in'}}
 				</div>
 			</div>
 		</div>
