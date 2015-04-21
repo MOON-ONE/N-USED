@@ -15,13 +15,6 @@ function viewDidLoad() {
 	});
 
 	$(".fancybox").fancybox();
-
-	$("#n-account tr").each(function(index) {
-		if ($(this).attr("is-sold") == "true") {
-			$(this).addClass("sold-entry-row");
-			$(this).children().addClass("sold-entry-row");
-		}
-	});
 }
 
 // Nav
@@ -175,6 +168,23 @@ function getSelectedFavorite() {
 			}
 			selectedItems.push(thisFavoriteObject);
 		}
+
+	})
+	return selectedItems;
+}
+
+function getSelectedPosts() {
+	var selectedItems = []
+	$("#n-account .content-block.posts .acc-col-selection input").each(function(index) {
+		if ($(this).prop("checked")) {
+			var thisSelectedObject = {
+				pid: $(this).parents('tr').attr('book-id'),
+				isSold: $(this).parents('tr').attr('is-sold')
+			}
+			selectedItems.push(thisSelectedObject);
+			// uncheck it
+			$(this).prop("checked", false);
+		}
 	})
 	return selectedItems;
 }
@@ -210,6 +220,49 @@ $(document).on("click", "#n-account .stars .btn-danger", function() {
 	if (res == true) {
 		removeFavorites(getSelectedFavorite());
 	}
+});
+
+// re-list the selected sold-out posts
+$(document).on("click", "#n-account .content-block.posts .btn-success", function() {
+	var posts = getSelectedPosts();
+	// only manipulate sold-out posts
+	$.each(posts, function(index, item) {
+		// get this book
+		var book = getBook(item.pid);
+		if (book.isSold) {
+			// reverse its status
+			book.isSold = false
+		}
+		updateBook(book);
+	});
+});
+
+// mark the selected posts as sold out
+$(document).on("click", "#n-account .content-block.posts .btn-primary", function() {
+
+	var posts = getSelectedPosts();
+	// only manipulate un-sold posts	
+	$.each(posts, function(index, item) {
+		// get this book
+		var book = getBook(item.pid);
+		if (!book.isSold) {
+			// reverse its status
+			book.isSold = true
+		}
+		updateBook(book);
+	});
+});
+
+// delete the selected posts
+$(document).on("click", "#n-account .content-block.posts .btn-danger", function() {
+	var posts = getSelectedPosts();
+	// delete selected posts
+	$.each(posts, function(index, item) {
+		// get this book
+		var book = getBook(item.pid);
+		removeBook(book);
+	});
+	
 });
 
 
