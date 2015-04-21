@@ -11,13 +11,13 @@ function addBook(book) {
 }
 
 function getBook(bookID) {
-	return books.filter(function (book) {
+	return data.books.filter(function (book) {
 		return book.pid === (bookID + "");
 	})[0];
 }
 
 function getUser(userID) {
-	return users.filter(function (user) {
+	return data.users.filter(function (user) {
 		return user.id === (userID + "");
 	})[0];
 }
@@ -47,7 +47,7 @@ function updateCurrentSeller(seller) {
 }
 
 function removeFavorites(itemsToRemove) {
-	favorites = favorites.filter(function(itemInFavorite) {
+	data.favorites = data.favorites.filter(function(itemInFavorite) {
 		return !containsObject(itemsToRemove, itemInFavorite);
 	})
 	angular.element("body").scope().$apply();
