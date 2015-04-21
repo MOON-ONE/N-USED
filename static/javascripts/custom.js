@@ -378,7 +378,13 @@ $(document).on("click", ".post-back-button", function() {
 	$("#n-view-post-wrapper").hide();
 	$("#n-gpost-wrapper").hide();
 	$("#n-home-wrapper").fadeIn(200);
-});	
+});
+
+$(document).on("click", ".btn-condition-check", function() {
+	var checkbox = "#" + $(this).attr("data-toggle");
+	alert(!$(checkbox).prop("checked"));
+	$(checkbox).prop('checked', !$(checkbox).prop("checked"));
+});
 
 $(document).on("click", ".like", function() {
 	$(this).toggleClass("on");
