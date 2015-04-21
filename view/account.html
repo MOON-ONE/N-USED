@@ -23,18 +23,23 @@
 					<div class="col-xs-12 col-sm-9">
 						<div class="input-group">
 						  	<span class="input-group-addon" id="sizing-addon2">Name</span>
-						  	<input type="text" class="form-control" placeholder="Full Name" aria-describedby="sizing-addon2" value="{{ currentUser.name }}">
+						  	<input type="text" class="form-control" placeholder="Full Name" aria-describedby="sizing-addon2" value="{{ currentUser.name }}" ng-model="currentUser.name">
 						</div>
 
 						<div class="input-group">
 						  	<span class="input-group-addon" id="sizing-addon2">Phone</span>
-						  	<input type="text" class="form-control" placeholder="Hand Phone" aria-describedby="sizing-addon2" value="{{ currentUser.handphone }}">
+						  	<input type="text" class="form-control" placeholder="Hand Phone" aria-describedby="sizing-addon2" value="{{ currentUser.handphone }}" ng-model="currentUser.handphone">
 						</div>
 
 						<div class="input-group">
 						  	<span class="input-group-addon" id="sizing-addon2">Email</span>
-						  	<input type="text" class="form-control" placeholder="Email" aria-describedby="sizing-addon2" value="{{ currentUser.email }}">
+						  	<input type="text" class="form-control" placeholder="Email" aria-describedby="sizing-addon2" value="{{ currentUser.email }}" ng-model="currentUser.email">
 						</div>
+					</div>
+				</div>
+				<div class="row tool-bar">
+					<div class="col-xs-12 col-sm-2 col-sm-offset-10">
+						<button class="btn btn-success btn-update" data-toggle="tooltip" data-delay="500" style="width:100%;" data-placement="bottom" title="update user information" ng-click="updateCurrentUserInfo()">Update</i></button>
 					</div>
 				</div>
 			</div>
