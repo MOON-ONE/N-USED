@@ -71,7 +71,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="book in books | filter: search| orderBy: orderKey" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" class="book-item">
+					<tr ng-repeat="book in books | filter: search| orderBy: orderKey" on-finish-render="ngRepeatFinished" book-id="{{ book.pid }}" class="book-item" ng-hide="book.isSold">
 							<td class="col-mc navigation" data-title="Module Code">{{ book.moduleCode }}</td>
 							<td class="col-title navigation" data-title="Title">{{ book.title }}</td>
 							<td class="col-condition" data-title="Condition">{{ book.conditionRank + " / 10"}}</td>
