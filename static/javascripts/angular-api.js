@@ -39,7 +39,7 @@ function updateCurrentSeller(seller) {
 	angular.element("body").scope().updateCurrentSeller(seller);
 }
 
-function removeFavorates(itemsToRemove) {
+function removeFavorites(itemsToRemove) {
 	favorites = favorites.filter(function(itemInFavorite) {
 		return !containsObject(itemsToRemove, itemInFavorite);
 	})
