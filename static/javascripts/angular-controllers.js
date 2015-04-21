@@ -1,4 +1,3 @@
-'use strict';
 
 angular.module('app.controllers', []).
 controller('main', function($scope) {
@@ -51,8 +50,26 @@ controller('main', function($scope) {
 		$scope.$apply();
 	}
 
+	$scope.updateBook = function(updatedBook) {
+		angular.forEach($scope.books, function(book, key) {
+			if (book.pid == updatedBook.pid) {
+				book = updatedBook;
+			}
+		});
+		$scope.$apply();
+	}
+
 	$scope.updateCurrentBook = function(book) {
 		$scope.currentBook = book;
+		$scope.$apply();
+	}
+
+	$scope.removeBook = function(deletedBook) {
+		for(var i = $scope.books.length; i--;) {
+		  if($scope.books[i].pid === deletedBook.pid) {
+		      $scope.books.splice(i, 1);
+		  }
+		}
 		$scope.$apply();
 	}
 
