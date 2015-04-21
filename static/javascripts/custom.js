@@ -50,27 +50,6 @@ function viewDidLoad() {
 
 	// 林狗
 	$(".fancybox").fancybox();
-	
-	$(".like").click(function() {
-		if ($(this).hasClass("on")) {
-			$(this).removeClass("on").addClass("off");
-		} else if ($(this).hasClass("off")){
-			$(this).removeClass("off").addClass("on");
-		} else {
-
-		}
-	});
-
-	$(document).on("click", ".book-item .navigation", function() {
-		var bid = $(this).parents().attr("book-id");
-		return renderViewPostPage(bid);
-	});
-
-	$(document).on("click", ".post-back-button", function() {
-		$("#n-view-post-wrapper").hide();
-		$("#n-gpost-wrapper").hide();
-		$("#n-home-wrapper").fadeIn(200);
-	});	
 
 	// 林狗完
 
@@ -220,7 +199,7 @@ $(document).on("click", "#n-home .col-selection input", function() {
 $(document).on("click", "#n-account .stars .btn-danger", function() {
 	var res = confirm("This action is not recoverable! Do you still want to continue?");
 	if (res == true) {
-		removeFavorates(getSelectedFavorite());
+		removeFavorites(getSelectedFavorite());
 	}
 });
 
@@ -250,6 +229,16 @@ function renderViewPostPage(bid) {
 	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
 		$("#n-view-post-wrapper").fadeIn(200);
 	});
+
+	var filteredBook = books.filter(function (obj) {
+		return obj.pid == bid;
+	});
+
+	if (filteredBook.length > 0) {
+		if (filteredBook[0].isSelected) {
+			$(".like").addClass("on");
+		}
+	}
 }
 
 function isValidPost(){
@@ -272,6 +261,21 @@ function clearPostInput() {
 	$("#post-cond-check-3").prop('checked', false);
 	$("#post-cond-check-4").prop('checked', false);
 }
+
+$(document).on("click", ".book-item .navigation", function() {
+	var bid = $(this).parents().attr("book-id");
+	return renderViewPostPage(bid);
+});
+
+$(document).on("click", ".post-back-button", function() {
+	$("#n-view-post-wrapper").hide();
+	$("#n-gpost-wrapper").hide();
+	$("#n-home-wrapper").fadeIn(200);
+});	
+
+$(document).on("click", ".like", function() {
+	$(this).toggleClass("on");
+});
 
 $(document).on("click", ".post-create", function() {
 	if (isValidPost()) {
