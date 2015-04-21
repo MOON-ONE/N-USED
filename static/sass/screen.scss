@@ -348,7 +348,6 @@ $container-transition-time: 0.4s;
 
 // 林狗
 #n-post, #n-view-post {
-
 	.col-xs-0,
 	.col-xs-1,
 	.col-xs-2,
@@ -493,6 +492,10 @@ $container-transition-time: 0.4s;
 				}
 				color: #aaa;
 				cursor: pointer;
+
+				i {
+					@include transition(all .2s ease);
+				}
 			}
 
 			.selected {
@@ -533,10 +536,7 @@ $container-transition-time: 0.4s;
 		/* animation */
 
 		div.gallery ul li, div.gallery li img {
-			-webkit-transition: all 0.1s ease-in-out;
-		  	-moz-transition: all 0.1s ease-in-out;
-		  	-o-transition: all 0.1s ease-in-out;
-		  	transition: all 0.1s ease-in-out;
+			@include transition(all 0.1s ease-in-out);
 		}
 
 		div.gallery ul li {
@@ -574,6 +574,10 @@ $container-transition-time: 0.4s;
 			margin-left: -130px;
 			top: 65%;
 			left: 65%;
+		}
+
+		.on {
+			color: #FFBE00;
 		}
 	}
 }
