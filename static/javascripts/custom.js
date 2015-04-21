@@ -382,8 +382,8 @@ $(document).on("click", ".post-back-button", function() {
 
 $(document).on("click", ".btn-condition-check", function() {
 	var checkbox = "#" + $(this).attr("data-toggle");
-	alert(!$(checkbox).prop("checked"));
 	$(checkbox).prop('checked', !$(checkbox).prop("checked"));
+	$(this).trigger("focusout");
 });
 
 $(document).on("click", ".like", function() {
