@@ -12,7 +12,6 @@ function addBook(book) {
 
 function getBook(bookID) {
 	return books.filter(function (book) {
-		// console.log(book.pid);
 		return book.pid === (bookID + "");
 	})[0];
 }
@@ -27,8 +26,16 @@ function updateCurrentUser(currentUserID) {
 	angular.element("body").scope().updateUser(getUser(currentUserID));
 }
 
+function updateBook(book) {
+	angular.element("body").scope().updateBook(book);
+}
+
 function updateCurrentBook(book) {
 	angular.element("body").scope().updateCurrentBook(book);
+}
+
+function removeBook(book) {
+	angular.element("body").scope().removeBook(book);
 }
 
 function getBookSeller(bookID) {
