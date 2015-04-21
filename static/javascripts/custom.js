@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	updateCurrentUser(currentUserID);
+	updateCurrentUser(data.currentUserID);
 	viewDidLoad();
 });
 
@@ -21,8 +21,8 @@ function viewDidLoad() {
 $(document).on("click", "div[id^='n-nav-']", function() {
 	if ($(this).attr('id') == 'n-nav-logout') {
 		// logout
-		currentUserID = "-1";
-		updateCurrentUser(currentUserID);
+		data.currentUserID = "-1";
+		updateCurrentUser(data.currentUserID);
 		$('#n-nav-home').click();
 	} else {
 		if ($(this).attr('id') == 'n-nav-login') {
@@ -115,7 +115,7 @@ $(document).on("click", "#n-home #home-grand-checkbox", function() {
 			var newValue = checkbox.prop("checked");
 			var row = $(this).closest("tr");
 			var bookID = row.attr("book-id");
-			$.each(books, function() {
+			$.each(data.books, function() {
 				if (this.pid == bookID) {
 					this.isSelected = newValue;
 				}
@@ -123,7 +123,6 @@ $(document).on("click", "#n-home #home-grand-checkbox", function() {
 		}
 	});
 	updateBookList();
-	console.log(books);
 });
 
 $(document).on("click", ".book-item .check", function() {
@@ -132,7 +131,7 @@ $(document).on("click", ".book-item .check", function() {
 	var newValue = checkbox.prop("checked");
 	var row = $(this).closest("tr");
 	var bookID = row.attr("book-id");
-	$.each(books, function() {
+	$.each(data.books, function() {
 		if (this.pid == bookID) {
 			this.isSelected = newValue;
 		}
@@ -145,7 +144,7 @@ $(document).on("click", "#n-home .col-selection input", function() {
 	var row = $(this).closest("tr");
 	var newValue = $(this).prop("checked");
 	var bookID = row.attr("book-id");
-	$.each(books, function() {
+	$.each(data.books, function() {
 		if (this.pid == bookID) {
 			this.isSelected = newValue;
 		}
@@ -163,7 +162,7 @@ function getSelectedFavorite() {
 	$("#n-account .stars .acc-col-selection input").each(function(index) {
 		if ($(this).prop("checked")) {
 			var thisFavoriteObject = {
-				uid: currentUserID,
+				uid: data.currentUserID,
 				pid: $(this).closest("tr").attr("book-id")
 			}
 			selectedItems.push(thisFavoriteObject);
@@ -190,7 +189,7 @@ function getSelectedPosts() {
 }
 
 $(document).on("click", "#n-account #post-grand-checkbox", function() {
-	$("#n-account .posts input").each	(function(index) {
+	$("#n-account .posts input").each(function(index) {
 		if ($(this).prop('checked') != $("#n-account #post-grand-checkbox").prop('checked')) {
 			var checkbox = $(this);
 			checkbox.prop("checked", !checkbox.prop("checked"));
@@ -199,7 +198,7 @@ $(document).on("click", "#n-account #post-grand-checkbox", function() {
 });
 
 $(document).on("click", "#n-account #star-grand-checkbox", function() {
-	$("#n-account .stars input").each	(function(index) {
+	$("#n-account .stars input").each(function(index) {
 		if ($(this).prop('checked') != $("#n-account #star-grand-checkbox").prop('checked')) {
 			var checkbox = $(this);
 			checkbox.prop("checked", !checkbox.prop("checked"));
@@ -272,15 +271,15 @@ $(document).on("click", "#n-account .content-block.posts .btn-danger", function(
 function renderViewPostPage(pid) {
 	var book = getBook(pid);
 	updateCurrentBook(book);
-	currentBook = angular.element("body").scope().currentBook;
+	data.currentBook = angular.element("body").scope().currentBook;
 	var seller = getBookSeller(pid);
 	updateCurrentSeller(seller);
 	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
 		$("#n-view-post-wrapper").fadeIn(200);
 	});
 
-	var filteredFavorite = favorites.filter(function (obj) {
-		return (obj.pid == pid) && (obj.uid == currentUserID);
+	var filteredFavorite = data.favorites.filter(function (obj) {
+		return (obj.pid == pid) && (obj.uid == data.currentUserID);
 	});
 
 	if (filteredFavorite.length > 0) {
@@ -386,21 +385,21 @@ $(document).on("click", ".post-back-button", function() {
 
 $(document).on("click", ".like", function() {
 	$(this).toggleClass("on");
-	var pid = currentBook.pid;
-	var uid = currentUserID;
+	var pid = data.currentBook.pid;
+	var uid = data.currentUserID;
 
-	var filteredFavorite = favorites.filter(function (obj) {
+	var filteredFavorite = data.favorites.filter(function (obj) {
 		return ((obj.pid != pid) || (obj.uid != uid));
 	});
 
 	if ($(this).hasClass("on")) {
 		// mark on
-		if (filteredFavorite.length == favorites.length) {
-			favorites.push({uid: uid, pid: pid});
+		if (filteredFavorite.length == data.favorites.length) {
+			data.favorites.push({uid: uid, pid: pid});
 		}
 	} else {
-		if (filteredFavorite.length == favorites.length - 1) {
-			favorites = filteredFavorite;
+		if (filteredFavorite.length == data.favorites.length - 1) {
+			data.favorites = filteredFavorite;
 		}
 	}
 
@@ -438,7 +437,7 @@ $(document).on("click", ".post-create", function() {
 			conditionCheckList : check_binary,
 			description        : description,
 			price              : price,
-			sid                : currentUserID,
+			sid                : data.currentUserID,
 			isSelected         : false,
 			postTime           : post_date,
 			isSold             : false
@@ -462,13 +461,13 @@ function resetLoginButton() {
 $(document).on("click", "#n-login-btn", function() {
 	var email = $('#n-login-email').val();
 	var password = $('#n-login-password').val();
-	var user = users.filter(function (obj) {
+	var user = data.users.filter(function (obj) {
 		return obj.email == email && obj.password == password;
 	});
 
 	if (user.length > 0) {
-		currentUserID = user[0].id;
-		updateCurrentUser(currentUserID);
+		data.currentUserID = user[0].id;
+		updateCurrentUser(data.currentUserID);
 		$('#n-login-email').val('');
 		$('#n-login-password').val('');
 		$('#n-nav-home').click();
