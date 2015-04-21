@@ -2,8 +2,8 @@
 angular.module('app.controllers', []).
 controller('main', function($scope) {
 	$scope.init = function() {
-		$scope.books = books;
-		$scope.users = users;
+		$scope.books = data.books;
+		$scope.users = data.users;
 	};
 
 	$scope.filter = "$";
@@ -41,12 +41,12 @@ controller('main', function($scope) {
 
 
 	$scope.addBook = function(book) {
-		books.push(book);
+		data.books.push(book);
 		$scope.updateBooks();
 	}
 
 	$scope.updateBooks = function() {
-		$scope.books = books;
+		$scope.books = data.books;
 		$scope.$apply();
 	}
 
@@ -83,8 +83,8 @@ controller('main', function($scope) {
 		$scope.currentUser = user;
 		$scope.currentUserPastPostFilter = { sid: id };
 		$scope.currentUserFavoriteFilter = function (book) {
-			return favorites.filter(function (b) {
-				return (b.uid === currentUserID) && (b.pid === book.pid);
+			return data.favorites.filter(function (b) {
+				return (b.uid === data.currentUserID) && (b.pid === book.pid);
 			}).length != 0;
 		};
 		$scope.$apply();
