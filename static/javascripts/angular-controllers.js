@@ -80,8 +80,5 @@ controller('main', function($scope) {
 	
 	$scope.orderKey = "-postTime";
 	$scope.orderKeyArray = ["isSold", "-postTime"];
-}).
-controller('postCtrl', function($scope) {
-
 })
 ;
