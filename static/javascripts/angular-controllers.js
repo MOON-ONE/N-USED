@@ -2,6 +2,7 @@
 angular.module('app.controllers', []).
 controller('main', function($scope) {
 	$scope.init = function() {
+		loadData();
 		$scope.books = data.books;
 		$scope.users = data.users;
 	};
@@ -90,6 +91,14 @@ controller('main', function($scope) {
 		$scope.$apply();
 	}
 
+	$scope.updateCurrentUserInfo = function() {
+		angular.forEach(data.users, function(user, key) {
+			if (user.id == $scope.currentUser.id) {
+				user = $scope.currentUser;
+			}
+		});
+		saveData();
+	}
 
 	$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
 					viewDidLoad();

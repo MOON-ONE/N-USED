@@ -4,7 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
-@import "	compass/css3";
+@import "compass/css3";
 
 
 
@@ -78,7 +78,6 @@
 $nav-width: 70px;
 $nav-active-width: 200px;
 $container-transition-time: 0.4s;
- 
 
 // 总 
 .n-main {
@@ -447,6 +446,13 @@ $container-transition-time: 0.4s;
 			}
 		}
 
+		.create-info-row {
+			button {
+				height: 40px;
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+			}
+		}
 
 		.content {
 			height: calc(100vh - #{$title-bar-height} - 30px);

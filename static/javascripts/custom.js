@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	// loadData();
 	updateCurrentUser(data.currentUserID);
 	viewDidLoad();
 });
@@ -15,6 +16,7 @@ function viewDidLoad() {
 	});
 
 	$(".fancybox").fancybox();
+	saveData();
 }
 
 // Nav
@@ -24,6 +26,7 @@ $(document).on("click", "div[id^='n-nav-']", function() {
 		data.currentUserID = "-1";
 		updateCurrentUser(data.currentUserID);
 		$('#n-nav-home').click();
+		saveData();
 	} else {
 		if ($(this).attr('id') == 'n-nav-login') {
 			resetLoginButton();
@@ -219,6 +222,7 @@ $(document).on("click", "#n-account .stars .btn-danger", function() {
 	if (res == true) {
 		removeFavorites(getSelectedFavorite());
 	}
+	saveData();
 });
 
 // re-list the selected sold-out posts
@@ -234,6 +238,7 @@ $(document).on("click", "#n-account .content-block.posts .btn-success", function
 		}
 		updateBook(book);
 	});
+	saveData();
 });
 
 // mark the selected posts as sold out
@@ -250,6 +255,7 @@ $(document).on("click", "#n-account .content-block.posts .btn-primary", function
 		}
 		updateBook(book);
 	});
+	saveData();
 });
 
 // delete the selected posts
@@ -261,7 +267,7 @@ $(document).on("click", "#n-account .content-block.posts .btn-danger", function(
 		var book = getBook(item.pid);
 		removeBook(book);
 	});
-	
+	saveData();
 });
 
 
@@ -292,9 +298,6 @@ function validateNotNull(item) {
 	var value = $(item).val().trim();
 	$(item).val($(item).val().trim());
 	if (!notNullReg.test(value)) {
-		// error
-		// do some css
-		console.log("error");
 		$(item).parent().addClass("has-error");
 	}
 }
@@ -303,9 +306,6 @@ function validateCondition(item) {
 	var conditionReg = new RegExp(/^([0-9]|10|[0-9]\.[0-9]+)$/);
 	var value = $(item).val();
 	if (!conditionReg.test(value)) {
-		// error
-		// do some css
-		console.log("error");
 		$(item).parent().addClass("has-error");
 	}
 }
@@ -314,9 +314,6 @@ function validatePrice(item) {
 	var priceReg = new RegExp(/^(\d+|\d+\.\d+)$/);
 	var value = $(item).val();
 	if (!priceReg.test(value)) {
-		// error
-		// do some css
-		console.log("error");
 		$(item).parent().addClass("has-error");
 	}
 }
@@ -381,7 +378,13 @@ $(document).on("click", ".post-back-button", function() {
 	$("#n-view-post-wrapper").hide();
 	$("#n-gpost-wrapper").hide();
 	$("#n-home-wrapper").fadeIn(200);
-});	
+});
+
+$(document).on("click", ".btn-condition-check", function() {
+	var checkbox = "#" + $(this).attr("data-toggle");
+	alert(!$(checkbox).prop("checked"));
+	$(checkbox).prop('checked', !$(checkbox).prop("checked"));
+});
 
 $(document).on("click", ".like", function() {
 	$(this).toggleClass("on");
@@ -404,6 +407,7 @@ $(document).on("click", ".like", function() {
 	}
 
 	angular.element("body").scope().$apply();
+	saveData();
 });
 
 $(document).on("click", ".post-create", function() {
@@ -449,6 +453,7 @@ $(document).on("click", ".post-create", function() {
 		alert("Please check your input.");
 		return false;
 	}
+	saveData();
 });
 // End of Post
 
@@ -475,6 +480,7 @@ $(document).on("click", "#n-login-btn", function() {
 		$('#n-login-btn').addClass('btn-danger');
 		$('#n-login-btn').html('<i class="fa fa-times"></i>');
 	}
+	saveData();
 });
 
 $(document).on("focus", "#n-login-email", function() {
@@ -485,3 +491,18 @@ $(document).on("focus", "#n-login-password", function() {
 	resetLoginButton();
 });
 // End of Login
+
+
+
+function saveData() {
+	localStorage.setItem("isStored", true);
+	localStorage.setItem("data", JSON.stringify(data));
+}
+
+function loadData() {
+	if (localStorage.isStored) {
+		data = JSON.parse(localStorage.getItem("data"));
+	} else {
+		data = defaultData;
+	}
+}
