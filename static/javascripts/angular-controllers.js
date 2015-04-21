@@ -91,6 +91,14 @@ controller('main', function($scope) {
 		$scope.$apply();
 	}
 
+	$scope.updateCurrentUserInfo = function() {
+		angular.forEach(data.users, function(user, key) {
+			if (user.id == $scope.currentUser.id) {
+				user = $scope.currentUser;
+			}
+		});
+		saveData();
+	}
 
 	$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
 					viewDidLoad();
