@@ -12,9 +12,9 @@
 
 			<div class="row create-info-row">
 				<div class="col-xs-12">
-					<div class="input-group">
+					<div class="input-group" >
 						<span class="input-group-addon">Module <span class="required-mark">*</span></span>
-						<input class="form-control" placeholder="Module Code" id="post-code">
+						<input class="form-control" placeholder="Module Code" id="post-code" onblur="validateNotNull(this)" onfocus="clearError(this)">
 					</div>
 				</div>
 			</div>
@@ -22,7 +22,7 @@
 				<div class="col-xs-12">
 					<div class="input-group">
 						<span class="input-group-addon">Title <span class="required-mark">*</span></span>
-						<input class="form-control" placeholder="Textbook Title" id="post-title">
+						<input class="form-control" placeholder="Textbook Title" id="post-title" onblur="validateNotNull(this)" onfocus="clearError(this)">
 					</div>
 				</div>
 			</div>
@@ -30,7 +30,7 @@
 				<div class="col-xs-12 col-sm-6">
 					<div class="input-group">
 						<span class="input-group-addon">Condition <span class="required-mark">*</span></span>
-						<input class="form-control" placeholder="from 1 to 10" id="post-condition">
+						<input class="form-control" placeholder="from 1 to 10" id="post-condition" onblur="validateCondition(this)" onfocus="clearError(this)">
 						<label class="input-group-addon free">/ 10</label>
 					</div>
 				</div>
@@ -127,7 +127,7 @@
 				<div class="col-xs-12 col-sm-6">
 					<div class="input-group">
 						<span class="input-group-addon">Price <span class="required-mark">*</span></span>
-						<input class="form-control" placeholder="Price" id="post-price">
+						<input class="form-control" placeholder="Price" id="post-price" onblur="validatePrice(this)" onfocus="clearError(this)">
 						<span class="input-group-addon free">SGD</span>
 					</div>
 				</div>

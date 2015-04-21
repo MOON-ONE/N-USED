@@ -217,11 +217,75 @@ function renderViewPostPage(bid) {
 	}
 }
 
+function validateNotNull(item) {
+	var notNullReg = new RegExp(/^(.+)$/);
+	var value = $(item).val().trim();
+	$(item).val($(item).val().trim());
+	if (!notNullReg.test(value)) {
+		// error
+		// do some css
+		console.log("error");
+		$(item).parent().addClass("has-error");
+	}
+}
+
+function validateCondition(item) {
+	var conditionReg = new RegExp(/^([0-9]|10|[0-9]\.[0-9]+)$/);
+	var value = $(item).val();
+	if (!conditionReg.test(value)) {
+		// error
+		// do some css
+		console.log("error");
+		$(item).parent().addClass("has-error");
+	}
+}
+
+function validatePrice(item) {
+	var priceReg = new RegExp(/^(\d+|\d+\.\d+)$/);
+	var value = $(item).val();
+	if (!priceReg.test(value)) {
+		// error
+		// do some css
+		console.log("error");
+		$(item).parent().addClass("has-error");
+	}
+}
+
+function clearError(item) {
+	$(item).parent().removeClass("has-error");
+}
+
 function isValidPost(){
+	var conditionReg = new RegExp(/^([0-9]|10|[0-9]\.[0-9]+)$/);
+	var priceReg = new RegExp(/^(\d+|\d+\.\d+)$/);
+	var notNullReg = new RegExp(/^(.+)$/);
+
 	var code = $("#post-code").val();
 	var title = $("#post-title").val();
 	var price = $("#post-price").val();
-	return (code != "" && title != "" && price != "");
+	var condition = $("#post-condition").val();
+
+	if (!notNullReg.test(code)) {
+		$("#post-code").parent().addClass("has-error");
+		return false;
+	}
+
+	if (!notNullReg.test(title)) {
+		$("#post-title").parent().addClass("has-error");
+		return false;
+	}
+
+	if (!priceReg.test(price)) {
+		$("#post-price").parent().addClass("has-error");
+		return false;
+	}
+
+	if (!conditionReg.test(condition)) {
+		$("#post-condition").parent().addClass("has-error");
+		return false;
+	}
+
+	return true;
 }
 
 function clearPostInput() {
@@ -293,7 +357,7 @@ $(document).on("click", ".post-create", function() {
 		clearPostInput();
 		$('#n-nav-home').click();
 	} else {
-		alert("incomplete post info");
+		alert("Please check your input.");
 		return false;
 	}
 });
