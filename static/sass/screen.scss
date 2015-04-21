@@ -37,6 +37,10 @@
 	}
 }
 
+button {
+	outline: none !important;
+}
+
 @mixin transition($transition) {
 	-webkit-transition: $transition;
 	-moz-transition: $transition;
@@ -59,6 +63,10 @@
 	-ms-filter: $filter;
 	-o-filter: $filter;
 	filter: $filter;
+}
+
+.thumbnail {
+	padding-top: 100%;
 }
 
 .n-cursor-pointer {
