@@ -13,7 +13,7 @@ var books = [
 		isSelected         : false,
 		postTime           : "2015/03/05",
         isSold             : false
-	}, 
+	},
 	{
 		pid                : '1',
 		moduleCode         : 'GEM2900',
@@ -28,7 +28,7 @@ var books = [
 		isSelected         : true,
 		postTime           : "2015/03/05",
         isSold             : true
-	}, 
+	},
 	{
 		pid                : '2',
 		moduleCode         : 'CS3241',

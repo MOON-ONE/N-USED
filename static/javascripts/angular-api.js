@@ -46,10 +46,6 @@ function removeFavorites(itemsToRemove) {
 	angular.element("body").scope().$apply();
 }
 
-
-
-
-
 //Helper Functions
 
 function containsObject(array, object) {
