@@ -62,6 +62,12 @@ controller('main', function($scope) {
 
 	$scope.updateCurrentBook = function(book) {
 		$scope.currentBook = book;
+    	var binaryString = (book.conditionCheckList >>> 0).toString(2);
+    	binaryString = ("00"+binaryString).slice(-4);
+    	$scope.currentBook.check0 = binaryString[0] == "1";
+    	$scope.currentBook.check1 = binaryString[1] == "1";
+    	$scope.currentBook.check2 = binaryString[2] == "1";
+    	$scope.currentBook.check3 = binaryString[3] == "1";
 		$scope.$apply();
 	}
 

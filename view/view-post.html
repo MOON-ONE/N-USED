@@ -10,7 +10,7 @@
 				<span class="n-title pull-right">DETAILS</span>
 			</div>
 		</div>
-
+	
 		<div class="content">
 			<h4>
 				{{ currentBook.moduleCode }}  &nbsp&nbsp-&nbsp&nbsp  {{ "S$" + currentBook.price }}
@@ -55,16 +55,16 @@
 							<tbody>
 								<tr>
 									<td data-title="edges are not curved">
-										<input type="checkbox" disabled>
+										<input type="checkbox" ng-model="currentBook.check0" disabled>
 									</td>
 									<td data-title="not containing any notes">
-										<input type="checkbox" disabled>
+										<input type="checkbox" ng-model="currentBook.check1" disabled>
 									</td>
 									<td data-title="purchased within one year">
-										<input type="checkbox" disabled>
+										<input type="checkbox" ng-model="currentBook.check2" disabled>
 									</td>
 									<td data-title="wrapped">
-										<input type="checkbox" disabled>
+										<input type="checkbox" ng-model="currentBook.check3" disabled>
 									</td>
 								</tr>
 								<tr>
