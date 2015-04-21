@@ -1,11 +1,10 @@
 $(document).ready(function() {
 	updateCurrentUser(currentUserID);
-	updateGrandCheckbox();
 	viewDidLoad();
 });
 
 function viewDidLoad() {
-
+	updateGrandCheckbox();
 	$('[data-toggle="tooltip"]').tooltip();
 
 	var table = $(".n-book-list-table table");
@@ -78,13 +77,13 @@ function updateGrandCheckbox() {
 		});
 
 		if (checked == 0) {
-			$('.grand-checkbox').prop('checked', false);
-			$('.grand-checkbox').prop('indeterminate', false);
+			$('#home-grand-checkbox').prop('checked', false);
+			$('#home-grand-checkbox').prop('indeterminate', false);
 		} else if (unchecked == 0) {
-			$('.grand-checkbox').prop('checked', true);
-			$('.grand-checkbox').prop('indeterminate', false);
+			$('#home-grand-checkbox').prop('checked', true);
+			$('#home-grand-checkbox').prop('indeterminate', false);
 		} else {
-			$('.grand-checkbox').prop('indeterminate', true);
+			$('#home-grand-checkbox').prop('indeterminate', true);
 		}
 	}
 }
@@ -115,7 +114,7 @@ $(document).on("click", "#selected-only-button", function() {
 	angular.element("body").scope().$apply();
 });
 
-$(document).on("click", "#n-home .grand-checkbox", function() {
+$(document).on("click", "#n-home #home-grand-checkbox", function() {
 	$("#n-home .col-selection input").each(function(index) {
 		if ($(this).prop('checked') != $("#n-home .grand-checkbox").prop('checked')) {
 			var checkbox = $(this);
@@ -180,6 +179,24 @@ function getSelectedFavorite() {
 	return selectedItems;
 }
 
+$(document).on("click", "#n-account #post-grand-checkbox", function() {
+	$("#n-account .posts input").each	(function(index) {
+		if ($(this).prop('checked') != $("#n-account #post-grand-checkbox").prop('checked')) {
+			var checkbox = $(this);
+			checkbox.prop("checked", !checkbox.prop("checked"));
+		}
+	});
+});
+
+$(document).on("click", "#n-account #star-grand-checkbox", function() {
+	$("#n-account .stars input").each	(function(index) {
+		if ($(this).prop('checked') != $("#n-account #star-grand-checkbox").prop('checked')) {
+			var checkbox = $(this);
+			checkbox.prop("checked", !checkbox.prop("checked"));
+		}
+	});
+});
+
 $(document).on("click", "#n-account .content h4 span", function() {
 	$("#n-account .content h4 span").removeClass("selected");
 	$(this).addClass("selected")
@@ -199,17 +216,18 @@ $(document).on("click", "#n-account .stars .btn-danger", function() {
 //End of Account
 
 // Post
-function renderViewPostPage(bid) {
-	var book = getBook(bid);
+function renderViewPostPage(pid) {
+	var book = getBook(pid);
 	updateCurrentBook(book);
-	var seller = getBookSeller(bid);
+	currentBook = angular.element("body").scope().currentBook;
+	var seller = getBookSeller(pid);
 	updateCurrentSeller(seller);
 	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
 		$("#n-view-post-wrapper").fadeIn(200);
 	});
 
 	var filteredFavorite = favorites.filter(function (obj) {
-		return (obj.pid == bid) && (obj.uid == currentUserID);
+		return (obj.pid == pid) && (obj.uid == currentUserID);
 	});
 
 	if (filteredFavorite.length > 0) {
@@ -315,6 +333,25 @@ $(document).on("click", ".post-back-button", function() {
 
 $(document).on("click", ".like", function() {
 	$(this).toggleClass("on");
+	var pid = currentBook.pid;
+	var uid = currentUserID;
+
+	var filteredFavorite = favorites.filter(function (obj) {
+		return ((obj.pid != pid) || (obj.uid != uid));
+	});
+
+	if ($(this).hasClass("on")) {
+		// mark on
+		if (filteredFavorite.length == favorites.length) {
+			favorites.push({uid: uid, pid: pid});
+		}
+	} else {
+		if (filteredFavorite.length == favorites.length - 1) {
+			favorites = filteredFavorite;
+		}
+	}
+
+	angular.element("body").scope().$apply();
 });
 
 $(document).on("click", ".post-create", function() {
