@@ -2,6 +2,7 @@
 angular.module('app.controllers', []).
 controller('main', function($scope) {
 	$scope.init = function() {
+		loadData();
 		$scope.books = data.books;
 		$scope.users = data.users;
 	};
