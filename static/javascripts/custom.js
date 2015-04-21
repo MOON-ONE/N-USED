@@ -50,6 +50,7 @@ function viewDidLoad() {
 
 	// 林狗
 	$(".fancybox").fancybox();
+	
 	$(".like").click(function() {
 		if ($(this).hasClass("on")) {
 			$(this).removeClass("on").addClass("off");
@@ -310,8 +311,7 @@ $(document).on("click", ".post-create", function() {
 		};
 		addBook(book);
 		clearPostInput();
-		$("#n-post-wrapper").hide();
-		$("#n-home-wrapper").fadeIn(200);
+		$('#n-nav-home').click();
 	} else {
 		alert("incomplete post info");
 		return false;
