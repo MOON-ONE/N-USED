@@ -230,14 +230,12 @@ function renderViewPostPage(bid) {
 		$("#n-view-post-wrapper").fadeIn(200);
 	});
 
-	var filteredBook = books.filter(function (obj) {
-		return obj.pid == bid;
+	var filteredFavorite = favorites.filter(function (obj) {
+		return (obj.pid == bid) && (obj.uid == currentUserID);
 	});
 
-	if (filteredBook.length > 0) {
-		if (filteredBook[0].isSelected) {
-			$(".like").addClass("on");
-		}
+	if (filteredFavorite.length > 0) {
+		$(".like").addClass("on");
 	}
 }
 
