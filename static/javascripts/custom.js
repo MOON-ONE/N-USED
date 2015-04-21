@@ -278,6 +278,7 @@ function renderViewPostPage(pid) {
 	var book = getBook(pid);
 	updateCurrentBook(book);
 	data.currentBook = angular.element("body").scope().currentBook;
+	
 	var seller = getBookSeller(pid);
 	updateCurrentSeller(seller);
 	$(".n-main >div:visible").fadeOut(200, 'swing', function() {
