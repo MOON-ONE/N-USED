@@ -43,12 +43,8 @@ function removeFavorites(itemsToRemove) {
 	favorites = favorites.filter(function(itemInFavorite) {
 		return !containsObject(itemsToRemove, itemInFavorite);
 	})
-	angular.element("body").scope().$apply()
+	angular.element("body").scope().$apply();
 }
-
-
-
-
 
 //Helper Functions
 
