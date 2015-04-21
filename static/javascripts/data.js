@@ -1,4 +1,6 @@
-var data = {
+var data;
+
+var defaultData = {
 	books : [
 		{
 			pid                : '0',
