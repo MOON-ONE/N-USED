@@ -19,7 +19,7 @@
 # ' --tag-name-filter cat -- --branches --tags
 
 git filter-branch -f --commit-filter '
-if [ "$GIT_AUTHOR_NAME" = "null09264" ];
+if [ "$GIT_COMMITTER_EMAIL" = "phantom.there@gmail.com" ];
 then
         skip_commit "$@";
 else
