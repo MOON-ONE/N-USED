@@ -18,7 +18,7 @@
 # fi
 # ' --tag-name-filter cat -- --branches --tags
 
-git filter-branch --commit-filter '
+git filter-branch -f --commit-filter '
 if [ "$GIT_AUTHOR_NAME" = "null09264" ];
 then
         skip_commit "$@";
